@@ -1,0 +1,460 @@
+{
+  "FizzEOne": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "FizzETwo": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "FizzE": {
+    "calculations": {
+      "EDamage": {
+        "mFormulaParts": [
+          {
+            "mDataValue": "BaseDamage",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          {
+            "mCoefficient": 0.949999988079071,
+            "__type": "StatByCoefficientCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      }
+    },
+    "dataValues": {
+      "BaseDamage": [
+        30.0,
+        80.0,
+        130.0,
+        180.0,
+        230.0,
+        280.0,
+        330.0
+      ],
+      "SmallAoESize": [
+        225.0,
+        225.0,
+        225.0,
+        225.0,
+        225.0,
+        225.0,
+        225.0
+      ],
+      "LargeAoESize": [
+        375.0,
+        375.0,
+        375.0,
+        375.0,
+        375.0,
+        375.0,
+        375.0
+      ],
+      "SlowDuration": [
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0
+      ],
+      "SlowAmount": [
+        0.3499999940395355,
+        0.4000000059604645,
+        0.44999998807907104,
+        0.5,
+        0.550000011920929,
+        0.6000000238418579,
+        0.6499999761581421
+      ]
+    }
+  },
+  "FizzEBuffer": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "FizzPassive": {
+    "calculations": {
+      "DamageReductionCalc": {
+        "mFormulaParts": [
+          {
+            "mDataValue": "DamageReduction",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          {
+            "mCoefficient": 0.009999999776482582,
+            "__type": "StatByCoefficientCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      }
+    },
+    "dataValues": {
+      "DamageReduction": [
+        4.0,
+        4.0,
+        4.0,
+        4.0,
+        4.0,
+        4.0,
+        4.0
+      ],
+      "DamageReductionMax": [
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5
+      ]
+    }
+  },
+  "FizzWBasicAttack": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "FizzW": {
+    "calculations": {
+      "DoTDamage": {
+        "mFormulaParts": [
+          {
+            "mDataValue": "DoTBaseDamage",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          {
+            "mCoefficient": 0.30000001192092896,
+            "__type": "StatByCoefficientCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      },
+      "ActiveDamage": {
+        "mFormulaParts": [
+          {
+            "mDataValue": "ActiveBaseDamage",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          {
+            "mCoefficient": 0.44999998807907104,
+            "__type": "StatByCoefficientCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      },
+      "OnHitBuffDamage": {
+        "mFormulaParts": [
+          {
+            "mDataValue": "OnHitBuffBaseDamage",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          {
+            "mCoefficient": 0.3499999940395355,
+            "__type": "StatByCoefficientCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      }
+    },
+    "dataValues": {
+      "DoTBaseDamage": [
+        10.0,
+        20.0,
+        30.0,
+        40.0,
+        50.0,
+        60.0,
+        70.0
+      ],
+      "ActiveBaseDamage": [
+        30.0,
+        50.0,
+        70.0,
+        90.0,
+        110.0,
+        130.0,
+        150.0
+      ],
+      "OnHitBuffBaseDamage": [
+        5.0,
+        10.0,
+        15.0,
+        20.0,
+        25.0,
+        30.0,
+        35.0
+      ],
+      "BleedDuration": [
+        3.0,
+        3.0,
+        3.0,
+        3.0,
+        3.0,
+        3.0,
+        3.0
+      ],
+      "DoTTicksPerSecond": [
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0
+      ],
+      "ActiveDuration": [
+        4.0,
+        4.0,
+        4.0,
+        4.0,
+        4.0,
+        4.0,
+        4.0
+      ],
+      "OnHitBuffDuration": [
+        5.0,
+        5.0,
+        5.0,
+        5.0,
+        5.0,
+        5.0,
+        5.0
+      ],
+      "OnKillManaRefund": [
+        20.0,
+        30.0,
+        40.0,
+        50.0,
+        60.0,
+        70.0,
+        80.0
+      ],
+      "OnKillNewCooldown": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "PassiveDoTDuration": [
+        3.0,
+        3.0,
+        3.0,
+        3.0,
+        3.0,
+        3.0,
+        3.0
+      ],
+      "TurretMod": [
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5
+      ]
+    }
+  },
+  "FizzWAttack": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "FizzRHop": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "FizzRMissile": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "FizzR": {
+    "calculations": {
+      "SmallSharkDamage": {
+        "mFormulaParts": [
+          {
+            "mDataValue": "SmallDamage",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          {
+            "mCoefficient": 0.800000011920929,
+            "__type": "StatByCoefficientCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      },
+      "{262c3c02}": {
+        "mFormulaParts": [
+          {
+            "mDataValue": "MidDamage",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          {
+            "mCoefficient": 1.0,
+            "__type": "StatByCoefficientCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      },
+      "BigSharkDamage": {
+        "mFormulaParts": [
+          {
+            "mDataValue": "BigDamage",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          {
+            "mCoefficient": 1.2000000476837158,
+            "__type": "StatByCoefficientCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      }
+    },
+    "dataValues": {
+      "SmallDamage": [
+        50.0,
+        150.0,
+        250.0,
+        350.0,
+        450.0,
+        550.0,
+        650.0
+      ],
+      "MidDamage": [
+        125.0,
+        225.0,
+        325.0,
+        425.0,
+        525.0,
+        625.0,
+        725.0
+      ],
+      "BigDamage": [
+        200.0,
+        300.0,
+        400.0,
+        500.0,
+        600.0,
+        700.0,
+        800.0
+      ],
+      "SmallFishSize": [
+        200.0,
+        200.0,
+        200.0,
+        200.0,
+        200.0,
+        200.0,
+        200.0
+      ],
+      "MidFishSize": [
+        325.0,
+        325.0,
+        325.0,
+        325.0,
+        325.0,
+        325.0,
+        325.0
+      ],
+      "BigFishSize": [
+        450.0,
+        450.0,
+        450.0,
+        450.0,
+        450.0,
+        450.0,
+        450.0
+      ],
+      "MissileWidthTiers": [
+        40.0,
+        80.0,
+        120.0,
+        160.0,
+        200.0,
+        240.0,
+        280.0
+      ],
+      "MaxDistance": [
+        1300.0,
+        1300.0,
+        1300.0,
+        1300.0,
+        1300.0,
+        1300.0,
+        1300.0
+      ],
+      "DetonationTime": [
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0
+      ],
+      "SlowDuration": [
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0
+      ],
+      "SlowAmount": [
+        60.0,
+        60.0,
+        60.0,
+        60.0,
+        60.0,
+        60.0,
+        60.0
+      ]
+    }
+  },
+  "FizzBasicAttack": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "FizzCritAttack": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "FizzQ": {
+    "calculations": {
+      "QDamage": {
+        "mFormulaParts": [
+          {
+            "mEffectIndex": 1,
+            "__type": "EffectValueCalculationPart"
+          },
+          {
+            "mCoefficient": 0.550000011920929,
+            "__type": "StatByCoefficientCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      },
+      "TotalDamage": {
+        "tooltipOnly": true,
+        "mFormulaParts": [
+          {
+            "mStat": 2,
+            "mCoefficient": 1.0,
+            "__type": "StatByCoefficientCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      }
+    },
+    "dataValues": {}
+  },
+  "FizzBasicAttack2": {
+    "calculations": {},
+    "dataValues": {}
+  }
+}

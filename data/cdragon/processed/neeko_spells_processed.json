@@ -1,0 +1,574 @@
+{
+  "NeekoW2": {
+    "calculations": {
+      "PassiveBonusDamageCalc": {
+        "mFormulaParts": [
+          {
+            "mDataValue": "PassiveDamage",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          {
+            "mCoefficient": 0.6000000238418579,
+            "__type": "StatByCoefficientCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      }
+    },
+    "dataValues": {
+      "CloneDuration": [
+        3.0,
+        3.0,
+        3.0,
+        3.0,
+        3.0,
+        3.0,
+        3.0
+      ],
+      "StealthDuration": [
+        0.0,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5
+      ],
+      "CloneDamageTimer": [
+        0.0,
+        0.75,
+        0.75,
+        0.75,
+        0.75,
+        0.75,
+        0.75
+      ],
+      "Haste": [
+        15.0,
+        20.0,
+        25.0,
+        30.0,
+        35.0,
+        40.0,
+        45.0
+      ],
+      "HasteDuration": [
+        3.0,
+        3.0,
+        3.0,
+        3.0,
+        3.0,
+        3.0,
+        3.0
+      ],
+      "PassiveDamage": [
+        20.0,
+        50.0,
+        80.0,
+        110.0,
+        140.0,
+        170.0,
+        200.0
+      ],
+      "PassiveHaste": [
+        2.5,
+        10.0,
+        17.5,
+        25.0,
+        32.5,
+        40.0,
+        47.5
+      ],
+      "PassiveHasteDuration": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ]
+    }
+  },
+  "NeekoW": {
+    "calculations": {
+      "PassiveBonusDamageCalc": {
+        "mFormulaParts": [
+          {
+            "mDataValue": "PassiveDamage",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          {
+            "mDataValue": "APRatio",
+            "__type": "StatByNamedDataValueCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      }
+    },
+    "dataValues": {
+      "CloneDuration": [
+        3.0,
+        3.0,
+        3.0,
+        3.0,
+        3.0,
+        3.0,
+        3.0
+      ],
+      "StealthDuration": [
+        0.0,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5
+      ],
+      "CloneDamageTimer": [
+        0.0,
+        0.75,
+        0.75,
+        0.75,
+        0.75,
+        0.75,
+        0.75
+      ],
+      "Haste": [
+        15.0,
+        20.0,
+        25.0,
+        30.0,
+        35.0,
+        40.0,
+        45.0
+      ],
+      "HasteDuration": [
+        3.0,
+        3.0,
+        3.0,
+        3.0,
+        3.0,
+        3.0,
+        3.0
+      ],
+      "PassiveDamage": [
+        -5.0,
+        30.0,
+        65.0,
+        100.0,
+        135.0,
+        170.0,
+        205.0
+      ],
+      "PassiveHaste": [
+        2.5,
+        10.0,
+        17.5,
+        25.0,
+        32.5,
+        40.0,
+        47.5
+      ],
+      "PassiveHasteDuration": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "MonsterBonus": [
+        75.0,
+        75.0,
+        75.0,
+        75.0,
+        75.0,
+        75.0,
+        75.0
+      ],
+      "APRatio": [
+        0.6000000238418579,
+        0.6000000238418579,
+        0.6000000238418579,
+        0.6000000238418579,
+        0.6000000238418579,
+        0.6000000238418579,
+        0.6000000238418579
+      ]
+    }
+  },
+  "NeekoWPassiveAttack": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "NeekoWPassiveMissile": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "NeekoDataSelector": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "NeekoRIndicatorMis": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "NeekoRDummySpell": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "NeekoR": {
+    "calculations": {
+      "TotalDamage": {
+        "mFormulaParts": [
+          {
+            "mDataValue": "Damage",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          {
+            "mCoefficient": 1.2000000476837158,
+            "__type": "StatByCoefficientCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      },
+      "BaseShield": {
+        "mFormulaParts": [
+          {
+            "mDataValue": "ShieldAmount",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          {
+            "mCoefficient": 0.75,
+            "__type": "StatByCoefficientCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      },
+      "ShieldMultiplier": {
+        "mFormulaParts": [
+          {
+            "mDataValue": "ShieldPerChampion",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          {
+            "mCoefficient": 0.4000000059604645,
+            "__type": "StatByCoefficientCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      }
+    },
+    "dataValues": {
+      "Damage": [
+        -50.0,
+        150.0,
+        350.0,
+        550.0,
+        750.0,
+        950.0,
+        1150.0
+      ],
+      "Duration": [
+        0.0,
+        2.5,
+        2.5,
+        2.5,
+        2.5,
+        2.5,
+        2.5
+      ],
+      "StunDuration": [
+        0.0,
+        0.75,
+        0.75,
+        0.75,
+        0.75,
+        0.75,
+        0.75
+      ],
+      "ShieldAmount": [
+        50.0,
+        75.0,
+        100.0,
+        125.0,
+        150.0,
+        175.0,
+        200.0
+      ],
+      "ShieldDuration": [
+        0.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0
+      ],
+      "DelayUntilReveal": [
+        0.0,
+        1.25,
+        1.25,
+        1.25,
+        1.25,
+        1.25,
+        1.25
+      ],
+      "DelayUntilExplosion": [
+        0.0,
+        0.6000000238418579,
+        0.6000000238418579,
+        0.6000000238418579,
+        0.6000000238418579,
+        0.6000000238418579,
+        0.6000000238418579
+      ],
+      "ShieldPerChampion": [
+        20.0,
+        40.0,
+        60.0,
+        80.0,
+        100.0,
+        120.0,
+        140.0
+      ],
+      "SlowAmount": [
+        40.0,
+        40.0,
+        40.0,
+        40.0,
+        40.0,
+        40.0,
+        40.0
+      ],
+      "DelayBeforePassiveRemoval": [
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5
+      ]
+    }
+  },
+  "NeekoBasicAttack": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "NeekoQ": {
+    "calculations": {
+      "ExplosionDamage": {
+        "mFormulaParts": [
+          {
+            "mDataValue": "ZoneDamage",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          {
+            "mCoefficient": 0.6000000238418579,
+            "__type": "StatByCoefficientCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      },
+      "SecondDamage": {
+        "mFormulaParts": [
+          {
+            "mDataValue": "SecondaryDamage",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          {
+            "mCoefficient": 0.25,
+            "__type": "StatByCoefficientCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      }
+    },
+    "dataValues": {
+      "SlowAmount": [
+        40.0,
+        40.0,
+        40.0,
+        40.0,
+        40.0,
+        40.0,
+        40.0
+      ],
+      "SlowDuration": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "ZoneDamage": [
+        10.0,
+        60.0,
+        110.0,
+        160.0,
+        210.0,
+        260.0,
+        310.0
+      ],
+      "SecondaryDamage": [
+        10.0,
+        35.0,
+        60.0,
+        85.0,
+        110.0,
+        135.0,
+        160.0
+      ],
+      "RepeatDelay": [
+        0.75,
+        0.75,
+        0.75,
+        0.75,
+        0.75,
+        0.75,
+        0.75
+      ],
+      "MonsterBonus": [
+        20.0,
+        35.0,
+        50.0,
+        65.0,
+        80.0,
+        95.0,
+        110.0
+      ]
+    }
+  },
+  "NeekoPassive": {
+    "calculations": {},
+    "dataValues": {
+      "MagicPen": [
+        0.20000000298023224,
+        0.20000000298023224,
+        0.20000000298023224,
+        0.20000000298023224,
+        0.20000000298023224,
+        0.20000000298023224,
+        0.20000000298023224
+      ],
+      "MagicPenDuration": [
+        4.0,
+        4.0,
+        4.0,
+        4.0,
+        4.0,
+        4.0,
+        4.0
+      ],
+      "ChargeTime": [
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0
+      ],
+      "PassiveCooldown": [
+        6.0,
+        6.0,
+        6.0,
+        6.0,
+        6.0,
+        6.0,
+        6.0
+      ]
+    }
+  },
+  "NeekoCritAttack": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "NeekoE": {
+    "calculations": {
+      "BaseDamage": {
+        "mFormulaParts": [
+          {
+            "mDataValue": "Damage",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          {
+            "mCoefficient": 0.6499999761581421,
+            "__type": "StatByCoefficientCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      }
+    },
+    "dataValues": {
+      "Damage": [
+        35.0,
+        70.0,
+        105.0,
+        140.0,
+        175.0,
+        210.0,
+        245.0
+      ],
+      "BaseRootDuration": [
+        0.0,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5
+      ],
+      "MinRootDuration": [
+        0.5,
+        0.699999988079071,
+        0.8999999761581421,
+        1.100000023841858,
+        1.2999999523162842,
+        1.5,
+        1.7000000476837158
+      ],
+      "TargetsRequiredForMaxValue": [
+        0.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0
+      ],
+      "MaxRootDuration": [
+        1.5,
+        1.7999999523162842,
+        2.0999999046325684,
+        2.4000000953674316,
+        2.700000047683716,
+        3.0,
+        3.299999952316284
+      ],
+      "EmpoweredWidth": [
+        100.0,
+        100.0,
+        100.0,
+        100.0,
+        100.0,
+        100.0,
+        100.0
+      ],
+      "EmpoweredSpeed": [
+        200.0,
+        200.0,
+        200.0,
+        200.0,
+        200.0,
+        200.0,
+        200.0
+      ]
+    }
+  }
+}

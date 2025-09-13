@@ -1,0 +1,593 @@
+{
+  "SyndraE5Sound": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "SyndraESound": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "SyndraEMissile3": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "SyndraEMissile2": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "SyndraEDebuff": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "SyndraE": {
+    "calculations": {
+      "TotalDamage": {
+        "mFormulaParts": [
+          {
+            "mDataValue": "BaseDamage",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          {
+            "mDataValue": "APRatio",
+            "__type": "StatByNamedDataValueCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      }
+    },
+    "dataValues": {
+      "ConeAngle": [
+        56.0,
+        56.0,
+        56.0,
+        56.0,
+        56.0,
+        56.0,
+        56.0
+      ],
+      "StunDuration": [
+        1.25,
+        1.25,
+        1.25,
+        1.25,
+        1.25,
+        1.25,
+        1.25
+      ],
+      "UpgradedSlowDuration": [
+        1.25,
+        1.25,
+        1.25,
+        1.25,
+        1.25,
+        1.25,
+        1.25
+      ],
+      "UpgradedSlowAmount": [
+        0.699999988079071,
+        0.699999988079071,
+        0.699999988079071,
+        0.699999988079071,
+        0.699999988079071,
+        0.699999988079071,
+        0.699999988079071
+      ],
+      "UpgradedConeAngle": [
+        84.0,
+        84.0,
+        84.0,
+        84.0,
+        84.0,
+        84.0,
+        84.0
+      ],
+      "BaseDamage": [
+        25.0,
+        60.0,
+        95.0,
+        130.0,
+        165.0,
+        200.0,
+        235.0
+      ],
+      "APRatio": [
+        0.6000000238418579,
+        0.6000000238418579,
+        0.6000000238418579,
+        0.6000000238418579,
+        0.6000000238418579,
+        0.6000000238418579,
+        0.6000000238418579
+      ]
+    }
+  },
+  "SyndraESphereMissile": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "SyndraE5": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "SyndraPassive": {
+    "calculations": {
+      "StacksPerProc": {
+        "mFormulaParts": [
+          {
+            "mLevel1Value": 1.0,
+            "mBreakpoints": [
+              {
+                "mLevel": 11,
+                "mAdditionalBonusAtThisLevel": 1.0,
+                "__type": "Breakpoint"
+              },
+              {
+                "mLevel": 18,
+                "mAdditionalBonusAtThisLevel": 1.0,
+                "__type": "Breakpoint"
+              }
+            ],
+            "__type": "ByCharLevelBreakpointsCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      },
+      "ManaPerProc": {
+        "mFormulaParts": [
+          {
+            "mLevel1Value": 20.0,
+            "mInitialBonusPerLevel": 5.0,
+            "mBreakpoints": [
+              {
+                "mLevel": 6,
+                "mBonusPerLevelAtAndAfter": 8.0,
+                "__type": "Breakpoint"
+              },
+              {
+                "mLevel": 11,
+                "mBonusPerLevelAtAndAfter": 15.0,
+                "__type": "Breakpoint"
+              },
+              {
+                "mLevel": 16,
+                "mBonusPerLevelAtAndAfter": 20.0,
+                "__type": "Breakpoint"
+              }
+            ],
+            "__type": "ByCharLevelBreakpointsCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      }
+    },
+    "dataValues": {
+      "MarkDuration": [
+        4.0,
+        4.0,
+        4.0,
+        4.0,
+        4.0,
+        4.0,
+        4.0
+      ],
+      "Q1UpgradeThreshold": [
+        40.0,
+        40.0,
+        40.0,
+        40.0,
+        40.0,
+        40.0,
+        40.0
+      ],
+      "WUpgradeThreshold": [
+        60.0,
+        60.0,
+        60.0,
+        60.0,
+        60.0,
+        60.0,
+        60.0
+      ],
+      "EUpgradeThreshold": [
+        80.0,
+        80.0,
+        80.0,
+        80.0,
+        80.0,
+        80.0,
+        80.0
+      ],
+      "RUpgradeThreshold": [
+        100.0,
+        100.0,
+        100.0,
+        100.0,
+        100.0,
+        100.0,
+        100.0
+      ],
+      "CapstoneAPPerc": [
+        0.15000000596046448,
+        0.15000000596046448,
+        0.15000000596046448,
+        0.15000000596046448,
+        0.15000000596046448,
+        0.15000000596046448,
+        0.15000000596046448
+      ],
+      "MaxStackAmount": [
+        120.0,
+        120.0,
+        120.0,
+        120.0,
+        120.0,
+        120.0,
+        120.0
+      ],
+      "StackPerSiege": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "PassiveMarkCooldown": [
+        8.0,
+        8.0,
+        8.0,
+        8.0,
+        8.0,
+        8.0,
+        8.0
+      ],
+      "PassiveStacksPerLevel": [
+        5.0,
+        5.0,
+        5.0,
+        5.0,
+        5.0,
+        5.0,
+        5.0
+      ]
+    }
+  },
+  "SyndraRBounce5": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "SyndraRSpread15": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "SyndraRSpell": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "SyndraR": {
+    "calculations": {
+      "DamageCalc": {
+        "mFormulaParts": [
+          {
+            "mDataValue": "DamagePerSphere",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          {
+            "mDataValue": "APRatio",
+            "__type": "StatByNamedDataValueCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      },
+      "MinDamageCalc": {
+        "mMultiplier": {
+          "mDataValue": "MinSpheresToUse",
+          "__type": "NamedDataValueCalculationPart"
+        },
+        "mModifiedGameCalculation": "DamageCalc",
+        "__type": "GameCalculationModified"
+      },
+      "MaxDamageCalc": {
+        "mMultiplier": {
+          "mDataValue": "MaxSpheresToUse",
+          "__type": "NamedDataValueCalculationPart"
+        },
+        "mSimpleTooltipCalculationDisplay": 6,
+        "mModifiedGameCalculation": "DamageCalc",
+        "__type": "GameCalculationModified"
+      }
+    },
+    "dataValues": {
+      "DamagePerSphere": [
+        50.0,
+        90.0,
+        130.0,
+        170.0,
+        210.0,
+        250.0,
+        290.0
+      ],
+      "MaxSpheresToUse": [
+        7.0,
+        7.0,
+        7.0,
+        7.0,
+        7.0,
+        7.0,
+        7.0
+      ],
+      "UpgradeExecuteThreshold": [
+        0.15000000596046448,
+        0.15000000596046448,
+        0.15000000596046448,
+        0.15000000596046448,
+        0.15000000596046448,
+        0.15000000596046448,
+        0.15000000596046448
+      ],
+      "QHastePerRank": [
+        10.0,
+        10.0,
+        10.0,
+        10.0,
+        10.0,
+        10.0,
+        10.0
+      ],
+      "TOOLTIPONLYTotalQHaste": [
+        0.0,
+        10.0,
+        20.0,
+        30.0,
+        40.0,
+        50.0,
+        60.0
+      ],
+      "MinSpheresToUse": [
+        3.0,
+        3.0,
+        3.0,
+        3.0,
+        3.0,
+        3.0,
+        3.0
+      ],
+      "APRatio": [
+        0.20000000298023224,
+        0.20000000298023224,
+        0.20000000298023224,
+        0.20000000298023224,
+        0.20000000298023224,
+        0.20000000298023224,
+        0.20000000298023224
+      ]
+    }
+  },
+  "SyndraQSpell": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "SyndraQ": {
+    "calculations": {
+      "TotalDamage": {
+        "mSimpleTooltipCalculationDisplay": 6,
+        "mFormulaParts": [
+          {
+            "mDataValue": "BaseDamage",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          {
+            "mCoefficient": 0.6000000238418579,
+            "__type": "StatByCoefficientCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      }
+    },
+    "dataValues": {
+      "Upgrade1MaxAmmo": [
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0
+      ],
+      "Upgrade2MaxAmmo": [
+        3.0,
+        3.0,
+        3.0,
+        3.0,
+        3.0,
+        3.0,
+        3.0
+      ],
+      "SphereDuration": [
+        6.0,
+        6.0,
+        6.0,
+        6.0,
+        6.0,
+        6.0,
+        6.0
+      ],
+      "BaseDamage": [
+        40.0,
+        75.0,
+        110.0,
+        145.0,
+        180.0,
+        215.0,
+        250.0
+      ]
+    }
+  },
+  "SyndraBasicAttack": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "SyndraWCDTimer": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "SyndraW": {
+    "calculations": {
+      "ThrowDamage": {
+        "mSimpleTooltipCalculationDisplay": 6,
+        "mFormulaParts": [
+          {
+            "mDataValue": "BaseDamage",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          {
+            "mCoefficient": 0.6499999761581421,
+            "__type": "StatByCoefficientCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      },
+      "PassiveBonusDamage": {
+        "mMultiplier": {
+          "mSubparts": [
+            {
+              "mNumber": 0.11999999731779099,
+              "__type": "NumberCalculationPart"
+            },
+            {
+              "mPart1": {
+                "mCoefficient": 0.019999999552965164,
+                "__type": "StatByCoefficientCalculationPart"
+              },
+              "mPart2": {
+                "mNumber": 0.009999999776482582,
+                "__type": "NumberCalculationPart"
+              },
+              "__type": "ProductOfSubPartsCalculationPart"
+            }
+          ],
+          "__type": "SumOfSubPartsCalculationPart"
+        },
+        "mSimpleTooltipCalculationDisplay": 6,
+        "mModifiedGameCalculation": "ThrowDamage",
+        "__type": "GameCalculationModified"
+      },
+      "TotalSlowAmount": {
+        "mFormulaParts": [
+          {
+            "mDataValue": "BaseSlow",
+            "__type": "NamedDataValueCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      },
+      "TOOLTIPONLYPassiveBonusPercent": {
+        "mMultiplier": {
+          "mNumber": 0.009999999776482582,
+          "__type": "NumberCalculationPart"
+        },
+        "tooltipOnly": true,
+        "mFormulaParts": [
+          {
+            "mNumber": 12.0,
+            "__type": "NumberCalculationPart"
+          },
+          {
+            "mCoefficient": 0.019999999552965164,
+            "__type": "StatByCoefficientCalculationPart"
+          }
+        ],
+        "mDisplayAsPercent": true,
+        "mPrecision": 1,
+        "__type": "GameCalculation"
+      }
+    },
+    "dataValues": {
+      "BaseSlow": [
+        25.0,
+        25.0,
+        25.0,
+        25.0,
+        25.0,
+        25.0,
+        25.0
+      ],
+      "SlowDuration": [
+        1.5,
+        1.5,
+        1.5,
+        1.5,
+        1.5,
+        1.5,
+        1.5
+      ],
+      "BaseDamage": [
+        35.0,
+        70.0,
+        105.0,
+        140.0,
+        175.0,
+        210.0,
+        245.0
+      ],
+      "ExtraSpherePickupRadius": [
+        450.0,
+        450.0,
+        450.0,
+        450.0,
+        450.0,
+        450.0,
+        450.0
+      ]
+    }
+  },
+  "SyndraWDebuff": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "SyndraWCast": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "SyndraRTrigger": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "SyndraRBounce": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "SyndraRCastTime": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "SyndraRSpread2": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "SyndraRSpread3": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "SyndraRSpread1": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "SyndraRSpread25": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "SyndraRSpread35": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "SyndraBasicAttack2": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "SyndraCritAttack": {
+    "calculations": {},
+    "dataValues": {}
+  }
+}

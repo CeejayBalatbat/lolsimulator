@@ -1,0 +1,539 @@
+{
+  "CamillePassive": {
+    "calculations": {
+      "PassiveCooldown": {
+        "mFormulaParts": [
+          {
+            "mLevel1Value": 18.0,
+            "mBreakpoints": [
+              {
+                "mLevel": 7,
+                "mAdditionalBonusAtThisLevel": -4.0,
+                "__type": "Breakpoint"
+              },
+              {
+                "mLevel": 13,
+                "mAdditionalBonusAtThisLevel": -4.0,
+                "__type": "Breakpoint"
+              },
+              {
+                "mLevel": 19,
+                "mAdditionalBonusAtThisLevel": -4.0,
+                "__type": "Breakpoint"
+              }
+            ],
+            "__type": "ByCharLevelBreakpointsCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      },
+      "ShieldAmount": {
+        "mSimpleTooltipCalculationDisplay": 6,
+        "mFormulaParts": [
+          {
+            "mStat": 12,
+            "mDataValue": "MaxHPCoefficient",
+            "__type": "StatByNamedDataValueCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      }
+    },
+    "dataValues": {
+      "MaxHPCoefficient": [
+        0.20000000298023224,
+        0.20000000298023224,
+        0.20000000298023224,
+        0.20000000298023224,
+        0.20000000298023224,
+        0.20000000298023224,
+        0.20000000298023224
+      ],
+      "ShieldDuration": [
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0
+      ]
+    }
+  },
+  "CamilleERightMissile": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "CamilleEDash2": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "CamilleE": {
+    "calculations": {
+      "TotalDamage": {
+        "mFormulaParts": [
+          {
+            "mDataValue": "BaseDamage",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          {
+            "mStat": 2,
+            "mStatFormula": 2,
+            "mDataValue": "BADRatio",
+            "__type": "StatByNamedDataValueCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      }
+    },
+    "dataValues": {
+      "EMinionMonsterGhostDuration": [
+        3.0,
+        3.0,
+        3.0,
+        3.0,
+        3.0,
+        3.0,
+        3.0
+      ],
+      "KnockupDuration": [
+        0.75,
+        0.75,
+        0.75,
+        0.75,
+        0.75,
+        0.75,
+        0.75
+      ],
+      "ASBuff": [
+        0.3499999940395355,
+        0.4000000059604645,
+        0.44999998807907104,
+        0.5,
+        0.550000011920929,
+        0.6000000238418579,
+        0.6499999761581421
+      ],
+      "BaseDamage": [
+        30.0,
+        60.0,
+        90.0,
+        120.0,
+        150.0,
+        180.0,
+        210.0
+      ],
+      "DashSpeed": [
+        1050.0,
+        1050.0,
+        1050.0,
+        1050.0,
+        1050.0,
+        1050.0,
+        1050.0
+      ],
+      "ASDuration": [
+        5.0,
+        5.0,
+        5.0,
+        5.0,
+        5.0,
+        5.0,
+        5.0
+      ],
+      "WallHangDuration": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "E2LongDashRange": [
+        800.0,
+        800.0,
+        800.0,
+        800.0,
+        800.0,
+        800.0,
+        800.0
+      ],
+      "E2ShortDashRange": [
+        400.0,
+        400.0,
+        400.0,
+        400.0,
+        400.0,
+        400.0,
+        400.0
+      ],
+      "ECollisionRange": [
+        130.0,
+        130.0,
+        130.0,
+        130.0,
+        130.0,
+        130.0,
+        130.0
+      ],
+      "BADRatio": [
+        0.75,
+        0.75,
+        0.75,
+        0.75,
+        0.75,
+        0.75,
+        0.75
+      ]
+    }
+  },
+  "CamilleELeftMissile": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "CamilleEMissile": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "CamilleBasicAttack": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "CamilleQ": {
+    "calculations": {
+      "DamageConversionPercentage": {
+        "mFormulaParts": [
+          {
+            "mLevel1Value": 0.4000000059604645,
+            "mInitialBonusPerLevel": 0.03999999910593033,
+            "mBreakpoints": [
+              {
+                "mLevel": 17,
+                "__type": "Breakpoint"
+              }
+            ],
+            "__type": "ByCharLevelBreakpointsCalculationPart"
+          }
+        ],
+        "mDisplayAsPercent": true,
+        "__type": "GameCalculation"
+      },
+      "BonusDamage": {
+        "mFormulaParts": [
+          {
+            "mStat": 2,
+            "mDataValue": "tADRatio",
+            "__type": "StatByNamedDataValueCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      },
+      "EmpoweredBonusDamage": {
+        "mMultiplier": {
+          "mDataValue": "QEmpoweredAmp",
+          "__type": "NamedDataValueCalculationPart"
+        },
+        "mModifiedGameCalculation": "BonusDamage",
+        "__type": "GameCalculationModified"
+      }
+    },
+    "dataValues": {
+      "QRampUpTime": [
+        1.5,
+        1.5,
+        1.5,
+        1.5,
+        1.5,
+        1.5,
+        1.5
+      ],
+      "BonusAARange": [
+        50.0,
+        50.0,
+        50.0,
+        50.0,
+        50.0,
+        50.0,
+        50.0
+      ],
+      "TADRatio": [
+        0.15000000596046448,
+        0.20000000298023224,
+        0.25,
+        0.30000001192092896,
+        0.3499999940395355,
+        0.4000000059604645,
+        0.44999998807907104
+      ],
+      "MSBonus": [
+        0.20000000298023224,
+        0.25,
+        0.30000001192092896,
+        0.3499999940395355,
+        0.4000000059604645,
+        0.44999998807907104,
+        0.5
+      ],
+      "MSDuration": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "QEmpoweredAmp": [
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0
+      ],
+      "Q2Duration": [
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0
+      ],
+      "QTotalRecastTime": [
+        3.5,
+        3.5,
+        3.5,
+        3.5,
+        3.5,
+        3.5,
+        3.5
+      ]
+    }
+  },
+  "CamilleQ2": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "CamilleQAttackEmpowered": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "CamilleQAttack": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "CamilleRTether": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "CamilleR": {
+    "calculations": {},
+    "dataValues": {
+      "RPercentCurrentHPDamage": [
+        2.0,
+        4.0,
+        6.0,
+        8.0,
+        10.0,
+        12.0,
+        14.0
+      ],
+      "ROnHitDamage": {
+        "mName": "ROnHitDamage",
+        "__type": "SpellDataValue"
+      },
+      "RDuration": [
+        1.75,
+        2.5,
+        3.25,
+        4.0,
+        4.75,
+        5.5,
+        6.25
+      ],
+      "RCircleRadius": [
+        425.0,
+        425.0,
+        425.0,
+        425.0,
+        425.0,
+        425.0,
+        425.0
+      ]
+    }
+  },
+  "CamilleW": {
+    "calculations": {
+      "OuterEdgeTooltip": {
+        "mFormulaParts": [
+          {
+            "mDataValue": "OuterConeMaxHPDamage",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          {
+            "mStat": 2,
+            "mStatFormula": 2,
+            "mDataValue": "ADRequiredTooltipOnly",
+            "__type": "StatByNamedDataValueCalculationPart"
+          }
+        ],
+        "mDisplayAsPercent": true,
+        "__type": "GameCalculation"
+      },
+      "BaseDamageTotal": {
+        "mFormulaParts": [
+          {
+            "mDataValue": "BaseDamage",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          {
+            "mStat": 2,
+            "mStatFormula": 2,
+            "mDataValue": "BADRatio",
+            "__type": "StatByNamedDataValueCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      },
+      "MonsterHealthDamageCap": {
+        "mExpandedTooltipCalculationDisplay": 5,
+        "mFormulaParts": [
+          {
+            "mNumber": 300.0,
+            "__type": "NumberCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      }
+    },
+    "dataValues": {
+      "BaseDamage": [
+        25.0,
+        50.0,
+        75.0,
+        100.0,
+        125.0,
+        150.0,
+        175.0
+      ],
+      "BADRatio": [
+        0.6000000238418579,
+        0.6000000238418579,
+        0.6000000238418579,
+        0.6000000238418579,
+        0.6000000238418579,
+        0.6000000238418579,
+        0.6000000238418579
+      ],
+      "SlowDuration": [
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0
+      ],
+      "ChargeDuration": [
+        0.75,
+        0.75,
+        0.75,
+        0.75,
+        0.75,
+        0.75,
+        0.75
+      ],
+      "SlowPercentage": [
+        80.0,
+        80.0,
+        80.0,
+        80.0,
+        80.0,
+        80.0,
+        80.0
+      ],
+      "OuterConeMaxHPDamage": [
+        0.054999999701976776,
+        0.05999999865889549,
+        0.06499999761581421,
+        0.07000000029802322,
+        0.07500000298023224,
+        0.07999999821186066,
+        0.08500000089406967
+      ],
+      "ADRequiredFor1PercentDamage": [
+        40.0,
+        40.0,
+        40.0,
+        40.0,
+        40.0,
+        40.0,
+        40.0
+      ],
+      "ADRequiredTooltipOnly": [
+        0.0002500000118743628,
+        0.0002500000118743628,
+        0.0002500000118743628,
+        0.0002500000118743628,
+        0.0002500000118743628,
+        0.0002500000118743628,
+        0.0002500000118743628
+      ],
+      "MonsterDamageReduction": [
+        50.0,
+        50.0,
+        50.0,
+        50.0,
+        50.0,
+        50.0,
+        50.0
+      ],
+      "OuterConeHealingRatio": [
+        100.0,
+        100.0,
+        100.0,
+        100.0,
+        100.0,
+        100.0,
+        100.0
+      ],
+      "BlastLength": [
+        650.0,
+        650.0,
+        650.0,
+        650.0,
+        650.0,
+        650.0,
+        650.0
+      ],
+      "ConeAngle": [
+        35.0,
+        35.0,
+        35.0,
+        35.0,
+        35.0,
+        35.0,
+        35.0
+      ]
+    }
+  },
+  "CamilleCritAttack": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "CamilleBasicAttack3": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "CamilleBasicAttack2": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "CamilleBasicAttack4": {
+    "calculations": {},
+    "dataValues": {}
+  }
+}

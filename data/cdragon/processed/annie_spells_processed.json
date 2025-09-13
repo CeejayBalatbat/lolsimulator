@@ -1,0 +1,480 @@
+{
+  "InfernalGuardianGuide": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "Incinerate": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "AnnieR": {
+    "calculations": {
+      "InitialBurstDamage": {
+        "mFormulaParts": [
+          {
+            "mDataValue": "InitialDamage",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          {
+            "mCoefficient": 0.75,
+            "__type": "StatByCoefficientCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      },
+      "TibbersAuraDamage": {
+        "mFormulaParts": [
+          {
+            "mDataValue": "AuraDamage",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          {
+            "mCoefficient": 0.03999999910593033,
+            "__type": "StatByCoefficientCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      },
+      "TibbersAADamage": {
+        "mFormulaParts": [
+          {
+            "mDataValue": "TibbersAttackDamage",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          {
+            "mDataValue": "TibbersAttackAPRatio",
+            "__type": "StatByNamedDataValueCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      },
+      "TibbersTotalHP": {
+        "mFormulaParts": [
+          {
+            "mPart1": {
+              "mLevel1Value": 1150.0,
+              "mBreakpoints": [
+                {
+                  "mLevel": 7,
+                  "mBonusPerLevelAtAndAfter": 50.0,
+                  "__type": "Breakpoint"
+                },
+                {
+                  "mLevel": 11,
+                  "mBonusPerLevelAtAndAfter": 250.0,
+                  "__type": "Breakpoint"
+                },
+                {
+                  "mLevel": 16,
+                  "mBonusPerLevelAtAndAfter": 300.0,
+                  "__type": "Breakpoint"
+                }
+              ],
+              "__type": "ByCharLevelBreakpointsCalculationPart"
+            },
+            "mPart2": {
+              "mDataValue": "TibbersModeSpecificHPMod",
+              "__type": "NamedDataValueCalculationPart"
+            },
+            "__type": "ProductOfSubPartsCalculationPart"
+          },
+          {
+            "mCoefficient": 0.5,
+            "__type": "StatByCoefficientCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      },
+      "TibbersTotalResists": {
+        "mFormulaParts": [
+          {
+            "mLevel1Value": 30.0,
+            "mBreakpoints": [
+              {
+                "mLevel": 7,
+                "mBonusPerLevelAtAndAfter": 5.0,
+                "__type": "Breakpoint"
+              }
+            ],
+            "__type": "ByCharLevelBreakpointsCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      }
+    },
+    "dataValues": {
+      "InitialDamage": [
+        25.0,
+        150.0,
+        275.0,
+        400.0,
+        525.0,
+        650.0,
+        775.0
+      ],
+      "AuraDamage": [
+        4.0,
+        8.0,
+        12.0,
+        16.0,
+        20.0,
+        24.0,
+        28.0
+      ],
+      "TibbersAttackDamage": [
+        15.0,
+        30.0,
+        45.0,
+        60.0,
+        75.0,
+        90.0,
+        105.0
+      ],
+      "TibbersAttackSpeedDecay": [
+        -0.10000000149011612,
+        -0.10000000149011612,
+        -0.10000000149011612,
+        -0.10000000149011612,
+        -0.10000000149011612,
+        -0.10000000149011612,
+        -0.10000000149011612
+      ],
+      "TibbersAttackAPRatio": [
+        0.10000000149011612,
+        0.10000000149011612,
+        0.10000000149011612,
+        0.10000000149011612,
+        0.10000000149011612,
+        0.10000000149011612,
+        0.10000000149011612
+      ],
+      "MovespeedBurst": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "EnrageDuration": [
+        3.0,
+        3.0,
+        3.0,
+        3.0,
+        3.0,
+        3.0,
+        3.0
+      ],
+      "AvengerEnrageDuration": [
+        10.0,
+        10.0,
+        10.0,
+        10.0,
+        10.0,
+        10.0,
+        10.0
+      ],
+      "TibbersLifetime": [
+        45.0,
+        45.0,
+        45.0,
+        45.0,
+        45.0,
+        45.0,
+        45.0
+      ],
+      "TibbersBonusMS": [
+        -25.0,
+        0.0,
+        25.0,
+        50.0,
+        75.0,
+        100.0,
+        125.0
+      ],
+      "TibbersModeSpecificHPMod": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "RPercentPenBuff": [
+        0.05000000074505806,
+        0.10000000149011612,
+        0.15000000596046448,
+        0.20000000298023224,
+        0.25,
+        0.30000001192092896,
+        0.3499999940395355
+      ]
+    }
+  },
+  "AnnieRController": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "Disintegrate": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "AnniePassive": {
+    "calculations": {
+      "StunDuration": {
+        "mFormulaParts": [
+          {
+            "mLevel1Value": 1.25,
+            "mBreakpoints": [
+              {
+                "mLevel": 6,
+                "mAdditionalBonusAtThisLevel": 0.25,
+                "__type": "Breakpoint"
+              },
+              {
+                "mLevel": 11,
+                "mAdditionalBonusAtThisLevel": 0.25,
+                "__type": "Breakpoint"
+              }
+            ],
+            "__type": "ByCharLevelBreakpointsCalculationPart"
+          }
+        ],
+        "mPrecision": 2,
+        "__type": "GameCalculation"
+      }
+    },
+    "dataValues": {
+      "MaxStacks": [
+        4.0,
+        4.0,
+        4.0,
+        4.0,
+        4.0,
+        4.0,
+        4.0
+      ],
+      "StunBaseDuration": [
+        1.25,
+        1.25,
+        1.25,
+        1.25,
+        1.25,
+        1.25,
+        1.25
+      ],
+      "StunDurationPerTier": [
+        0.25,
+        0.25,
+        0.25,
+        0.25,
+        0.25,
+        0.25,
+        0.25
+      ]
+    }
+  },
+  "MoltenShield": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "AnnieE": {
+    "calculations": {
+      "DamageReturn": {
+        "mSimpleTooltipCalculationDisplay": 6,
+        "mFormulaParts": [
+          {
+            "mDataValue": "DamageReflection",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          {
+            "mCoefficient": 0.4000000059604645,
+            "__type": "StatByCoefficientCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      },
+      "MoveSpeedCalc": {
+        "mFormulaParts": [
+          {
+            "mStartValue": 0.20000000298023224,
+            "mEndValue": 0.5,
+            "__type": "ByCharLevelInterpolationCalculationPart"
+          }
+        ],
+        "mDisplayAsPercent": true,
+        "__type": "GameCalculation"
+      },
+      "ShieldBlockTotal": {
+        "mFormulaParts": [
+          {
+            "mDataValue": "ShieldAmount",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          {
+            "mCoefficient": 0.4000000059604645,
+            "__type": "StatByCoefficientCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      }
+    },
+    "dataValues": {
+      "ShieldDuration": [
+        3.0,
+        3.0,
+        3.0,
+        3.0,
+        3.0,
+        3.0,
+        3.0
+      ],
+      "DamageReduction": [
+        9.0,
+        13.0,
+        17.0,
+        21.0,
+        25.0,
+        29.0,
+        33.0
+      ],
+      "DamageReflection": [
+        15.0,
+        25.0,
+        35.0,
+        45.0,
+        55.0,
+        65.0,
+        75.0
+      ],
+      "MovementSpeed": [
+        0.10000000149011612,
+        0.15000000596046448,
+        0.20000000298023224,
+        0.25,
+        0.30000001192092896,
+        0.3499999940395355,
+        0.4000000059604645
+      ],
+      "MovementSpeedDuration": [
+        1.5,
+        1.5,
+        1.5,
+        1.5,
+        1.5,
+        1.5,
+        1.5
+      ],
+      "ShieldAmount": [
+        25.0,
+        60.0,
+        95.0,
+        130.0,
+        165.0,
+        200.0,
+        235.0
+      ],
+      "CastRangeGenerosity": [
+        225.0,
+        225.0,
+        225.0,
+        225.0,
+        225.0,
+        225.0,
+        225.0
+      ]
+    }
+  },
+  "AnnieQ": {
+    "calculations": {
+      "TotalDamage": {
+        "mFormulaParts": [
+          {
+            "mDataValue": "BaseDamage",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          {
+            "mDataValue": "APRatio",
+            "__type": "StatByNamedDataValueCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      }
+    },
+    "dataValues": {
+      "BaseDamage": [
+        40.0,
+        80.0,
+        120.0,
+        160.0,
+        200.0,
+        240.0,
+        280.0
+      ],
+      "APRatio": [
+        0.800000011920929,
+        0.800000011920929,
+        0.800000011920929,
+        0.800000011920929,
+        0.800000011920929,
+        0.800000011920929,
+        0.800000011920929
+      ]
+    }
+  },
+  "InfernalGuardian": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "AnnieBasicAttack2": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "AnnieBasicAttack": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "AnnieW": {
+    "calculations": {
+      "TotalDamage": {
+        "mFormulaParts": [
+          {
+            "mDataValue": "BaseDamage",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          {
+            "mDataValue": "APRatio",
+            "__type": "StatByNamedDataValueCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      }
+    },
+    "dataValues": {
+      "BaseDamage": [
+        30.0,
+        70.0,
+        110.0,
+        150.0,
+        190.0,
+        230.0,
+        270.0
+      ],
+      "APRatio": [
+        0.800000011920929,
+        0.800000011920929,
+        0.800000011920929,
+        0.800000011920929,
+        0.800000011920929,
+        0.800000011920929,
+        0.800000011920929
+      ]
+    }
+  },
+  "AnnieCritAttack": {
+    "calculations": {},
+    "dataValues": {}
+  }
+}

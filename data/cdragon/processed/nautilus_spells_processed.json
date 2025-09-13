@@ -1,0 +1,483 @@
+{
+  "NautilusWideswingAttack": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "NautilusWDoT": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "NautilusPiercingGaze": {
+    "calculations": {
+      "DotDamageCalc": {
+        "mFormulaParts": [
+          {
+            "mDataValue": "DotDamageBase",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          {
+            "mDataValue": "DotDamageAPRatio",
+            "__type": "StatByNamedDataValueCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      },
+      "ShieldCalc": {
+        "mFormulaParts": [
+          {
+            "mDataValue": "ShieldBase",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          {
+            "mStat": 12,
+            "mDataValue": "ShieldHealthRatio",
+            "__type": "StatByNamedDataValueCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      }
+    },
+    "dataValues": {
+      "ShieldBase": [
+        40.0,
+        50.0,
+        60.0,
+        70.0,
+        80.0,
+        90.0,
+        100.0
+      ],
+      "ShieldHealthRatio": [
+        0.07000000029802322,
+        0.07999999821186066,
+        0.09000000357627869,
+        0.10000000149011612,
+        0.10999999940395355,
+        0.11999999731779099,
+        0.12999999523162842
+      ],
+      "ShieldDuration": [
+        6.0,
+        6.0,
+        6.0,
+        6.0,
+        6.0,
+        6.0,
+        6.0
+      ],
+      "DotDamageBase": [
+        20.0,
+        30.0,
+        40.0,
+        50.0,
+        60.0,
+        70.0,
+        80.0
+      ],
+      "DotDamageAPRatio": [
+        0.4000000059604645,
+        0.4000000059604645,
+        0.4000000059604645,
+        0.4000000059604645,
+        0.4000000059604645,
+        0.4000000059604645,
+        0.4000000059604645
+      ]
+    }
+  },
+  "NautilusSplashZoneSplash": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "NautilusSplashZone": {
+    "calculations": {
+      "DamageCalc": {
+        "mFormulaParts": [
+          {
+            "mDataValue": "DamageBase",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          {
+            "mDataValue": "DamageAPRatio",
+            "__type": "StatByNamedDataValueCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      },
+      "{da7c199d}": {
+        "mFormulaParts": [
+          {
+            "mDataValue": "{632794d1}",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          {
+            "mCoefficient": 0.5,
+            "__type": "StatByCoefficientCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      }
+    },
+    "dataValues": {
+      "DamageBase": [
+        20.0,
+        55.0,
+        90.0,
+        125.0,
+        160.0,
+        195.0,
+        230.0
+      ],
+      "SlowPercent": [
+        0.25,
+        0.30000001192092896,
+        0.3499999940395355,
+        0.4000000059604645,
+        0.44999998807907104,
+        0.5,
+        0.550000011920929
+      ],
+      "SlowDuration": [
+        1.25,
+        1.25,
+        1.25,
+        1.25,
+        1.25,
+        1.25,
+        1.25
+      ],
+      "MultiHitReduction": [
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5
+      ],
+      "DamageMonsterMod": [
+        1.5,
+        1.5,
+        1.5,
+        1.5,
+        1.5,
+        1.5,
+        1.5
+      ],
+      "DamageAPRatio": [
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5
+      ],
+      "ExtraWavePenalty": [
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5
+      ],
+      "DamageRadius": [
+        125.0,
+        125.0,
+        125.0,
+        125.0,
+        125.0,
+        125.0,
+        125.0
+      ],
+      "MonsterBonusDamage": [
+        85.0,
+        125.0,
+        165.0,
+        205.0,
+        245.0,
+        285.0,
+        325.0
+      ]
+    }
+  },
+  "NautilusAnchorDragMissile": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "NautilusAnchorDrag": {
+    "calculations": {
+      "QDamageCalc": {
+        "mFormulaParts": [
+          {
+            "mDataValue": "BaseDamage",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          {
+            "mCoefficient": 0.8999999761581421,
+            "__type": "StatByCoefficientCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      }
+    },
+    "dataValues": {
+      "BaseDamage": [
+        40.0,
+        85.0,
+        130.0,
+        175.0,
+        220.0,
+        265.0,
+        310.0
+      ],
+      "TerrainCDR": [
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5
+      ],
+      "TerrainMana": [
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5
+      ]
+    }
+  },
+  "NautilusGrandLineStart": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "NautilusGrandLine": {
+    "calculations": {
+      "PrimaryTargetDamage": {
+        "mFormulaParts": [
+          {
+            "mDataValue": "PrimaryDamage",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          {
+            "mCoefficient": 0.800000011920929,
+            "__type": "StatByCoefficientCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      },
+      "SecondaryTargetDamage": {
+        "mFormulaParts": [
+          {
+            "mDataValue": "SecondaryDamage",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          {
+            "mCoefficient": 0.4000000059604645,
+            "__type": "StatByCoefficientCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      }
+    },
+    "dataValues": {
+      "PrimaryDamage": [
+        25.0,
+        150.0,
+        275.0,
+        400.0,
+        525.0,
+        650.0,
+        775.0
+      ],
+      "SecondaryDamage": [
+        75.0,
+        125.0,
+        175.0,
+        225.0,
+        275.0,
+        325.0,
+        375.0
+      ],
+      "StunDuration": [
+        0.5,
+        1.0,
+        1.5,
+        2.0,
+        2.5,
+        3.0,
+        3.5
+      ]
+    }
+  },
+  "NautilusBackswingAttack": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "NautilusBasicAttack2": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "NautilusBasicAttack": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "NautilusRunCycleManager": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "NautilusPassive": {
+    "calculations": {
+      "BonusDamage": {
+        "mFormulaParts": [
+          {
+            "mValues": [
+              8.0,
+              14.0,
+              20.0,
+              26.0,
+              32.0,
+              38.0,
+              44.0,
+              50.0,
+              56.0,
+              62.0,
+              68.0,
+              74.0,
+              80.0,
+              86.0,
+              92.0,
+              98.0,
+              104.0,
+              110.0,
+              116.0,
+              122.0,
+              128.0,
+              134.0,
+              140.0,
+              146.0,
+              152.0,
+              158.0,
+              164.0,
+              170.0,
+              176.0,
+              182.0,
+              188.0
+            ],
+            "__type": "ByCharLevelFormulaCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      },
+      "TotalDamageTooltip": {
+        "tooltipOnly": true,
+        "mFormulaParts": [
+          {
+            "mValues": [
+              8.0,
+              14.0,
+              20.0,
+              26.0,
+              32.0,
+              38.0,
+              44.0,
+              50.0,
+              56.0,
+              62.0,
+              68.0,
+              74.0,
+              80.0,
+              86.0,
+              92.0,
+              98.0,
+              104.0,
+              110.0,
+              116.0,
+              122.0,
+              128.0,
+              134.0,
+              140.0,
+              146.0,
+              152.0,
+              158.0,
+              164.0,
+              170.0,
+              176.0,
+              182.0,
+              188.0
+            ],
+            "__type": "ByCharLevelFormulaCalculationPart"
+          },
+          {
+            "mStat": 2,
+            "mCoefficient": 1.0,
+            "__type": "StatByCoefficientCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      },
+      "RootDuration": {
+        "mSimpleTooltipCalculationDisplay": 6,
+        "mFormulaParts": [
+          {
+            "mLevel1Value": 0.75,
+            "mBreakpoints": [
+              {
+                "mLevel": 6,
+                "mAdditionalBonusAtThisLevel": 0.25,
+                "__type": "Breakpoint"
+              },
+              {
+                "mLevel": 11,
+                "mAdditionalBonusAtThisLevel": 0.25,
+                "__type": "Breakpoint"
+              },
+              {
+                "mLevel": 16,
+                "mAdditionalBonusAtThisLevel": 0.25,
+                "__type": "Breakpoint"
+              },
+              {
+                "mLevel": 21,
+                "mAdditionalBonusAtThisLevel": 0.25,
+                "__type": "Breakpoint"
+              },
+              {
+                "mLevel": 26,
+                "mAdditionalBonusAtThisLevel": 0.25,
+                "__type": "Breakpoint"
+              }
+            ],
+            "__type": "ByCharLevelBreakpointsCalculationPart"
+          }
+        ],
+        "mPrecision": 2,
+        "__type": "GameCalculation"
+      }
+    },
+    "dataValues": {
+      "PerTargetCD": [
+        6.0,
+        6.0,
+        6.0,
+        6.0,
+        6.0,
+        6.0,
+        6.0
+      ]
+    }
+  },
+  "NautilusCritAttack": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "NautilusRavageStrikeAttack": {
+    "calculations": {},
+    "dataValues": {}
+  }
+}

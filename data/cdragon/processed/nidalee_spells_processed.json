@@ -1,0 +1,477 @@
+{
+  "Takedown": {
+    "calculations": {},
+    "dataValues": {
+      "TotalADRatio": [
+        0.75,
+        0.75,
+        0.75,
+        0.75,
+        0.75,
+        0.75,
+        0.75
+      ]
+    }
+  },
+  "JavelinToss": {
+    "calculations": {
+      "HumanMinimumDamage": {
+        "tooltipOnly": true,
+        "mFormulaParts": [
+          {
+            "mDataValue": "SpearMinimumDamage",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          {
+            "mDataValue": "SpearMinimumAPRatio",
+            "__type": "StatByNamedDataValueCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      },
+      "HumanMaximumDamage": {
+        "mMultiplier": {
+          "mNumber": 3.25,
+          "__type": "NumberCalculationPart"
+        },
+        "tooltipOnly": true,
+        "mModifiedGameCalculation": "HumanMinimumDamage",
+        "__type": "GameCalculationModified"
+      },
+      "{38f95809}": {
+        "tooltipOnly": true,
+        "mFormulaParts": [
+          {
+            "mDataValue": "TooltipCougarMinimumDamage",
+            "__type": "NamedDataValueCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      }
+    },
+    "dataValues": {
+      "TooltipCougarMinimumDamage": [
+        -20.0,
+        5.0,
+        30.0,
+        55.0,
+        80.0,
+        105.0,
+        130.0
+      ],
+      "SpearMinimumAPRatio": [
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5
+      ],
+      "SpearMinimumDamage": [
+        50.0,
+        70.0,
+        90.0,
+        110.0,
+        130.0,
+        150.0,
+        170.0
+      ],
+      "SpearMaximumDamage": [
+        162.5,
+        227.5,
+        292.5,
+        357.5,
+        422.5,
+        487.5,
+        552.5
+      ]
+    }
+  },
+  "PrimalSurge": {
+    "calculations": {
+      "TotalHealing": {
+        "mFormulaParts": [
+          {
+            "mDataValue": "BaseHeal",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          {
+            "mCoefficient": 0.3499999940395355,
+            "__type": "StatByCoefficientCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      },
+      "MaxHealing": {
+        "mMultiplier": {
+          "mSubparts": [
+            {
+              "mNumber": 1.0,
+              "__type": "NumberCalculationPart"
+            },
+            {
+              "mDataValue": "MaxHealMult",
+              "__type": "NamedDataValueCalculationPart"
+            }
+          ],
+          "__type": "SumOfSubPartsCalculationPart"
+        },
+        "mModifiedGameCalculation": "TotalHealing",
+        "__type": "GameCalculationModified"
+      }
+    },
+    "dataValues": {
+      "BaseHeal": [
+        25.0,
+        50.0,
+        75.0,
+        100.0,
+        125.0,
+        150.0,
+        175.0
+      ],
+      "MaxHealMult": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "MaxHealThreshold": [
+        0.05000000074505806,
+        0.05000000074505806,
+        0.05000000074505806,
+        0.05000000074505806,
+        0.05000000074505806,
+        0.05000000074505806,
+        0.05000000074505806
+      ],
+      "BonusAS": [
+        0.20000000298023224,
+        0.30000001192092896,
+        0.4000000059604645,
+        0.5,
+        0.6000000238418579,
+        0.699999988079071,
+        0.800000011920929
+      ],
+      "ASDuration": [
+        7.0,
+        7.0,
+        7.0,
+        7.0,
+        7.0,
+        7.0,
+        7.0
+      ]
+    }
+  },
+  "NidaleeBasicAttack2": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "AspectOfTheCougar": {
+    "calculations": {
+      "TotalPounceDamage": {
+        "mFormulaParts": [
+          {
+            "mDataValue": "PounceDamage",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          {
+            "mStat": 2,
+            "mStatFormula": 2,
+            "mDataValue": "PounceADRatio",
+            "__type": "StatByNamedDataValueCalculationPart"
+          },
+          {
+            "mDataValue": "PounceAPRatio",
+            "__type": "StatByNamedDataValueCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      },
+      "TotalSwipeDamage": {
+        "mFormulaParts": [
+          {
+            "mDataValue": "SwipeDamage",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          {
+            "mStat": 2,
+            "mStatFormula": 2,
+            "mDataValue": "SwipeADRatio",
+            "__type": "StatByNamedDataValueCalculationPart"
+          },
+          {
+            "mDataValue": "SwipeAPRatio",
+            "__type": "StatByNamedDataValueCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      },
+      "TotalTakedownDamage": {
+        "mFormulaParts": [
+          {
+            "mDataValue": "TakedownBaseDamage",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          {
+            "mStat": 2,
+            "mDataValue": "TakedownADRatio",
+            "__type": "StatByNamedDataValueCalculationPart"
+          },
+          {
+            "mDataValue": "TakedownAPRatio",
+            "__type": "StatByNamedDataValueCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      }
+    },
+    "dataValues": {
+      "PassivePercentMS": [
+        10.0,
+        10.0,
+        10.0,
+        10.0,
+        10.0,
+        10.0,
+        10.0
+      ],
+      "TakedownBaseDamage": [
+        -20.0,
+        5.0,
+        30.0,
+        55.0,
+        80.0,
+        105.0,
+        130.0
+      ],
+      "TakedownADRatio": [
+        0.75,
+        0.75,
+        0.75,
+        0.75,
+        0.75,
+        0.75,
+        0.75
+      ],
+      "TakedownAPRatio": [
+        0.4000000059604645,
+        0.4000000059604645,
+        0.4000000059604645,
+        0.4000000059604645,
+        0.4000000059604645,
+        0.4000000059604645,
+        0.4000000059604645
+      ],
+      "TakedownDamageAmp": [
+        0.75,
+        1.0,
+        1.25,
+        1.5,
+        1.75,
+        2.0,
+        2.25
+      ],
+      "PounceCooldown": [
+        3.5,
+        3.0,
+        2.5,
+        2.0,
+        1.5,
+        1.5,
+        1.5
+      ],
+      "PounceDamage": [
+        10.0,
+        55.0,
+        100.0,
+        145.0,
+        190.0,
+        235.0,
+        280.0
+      ],
+      "PounceADRatio": [
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5
+      ],
+      "PounceAPRatio": [
+        0.30000001192092896,
+        0.30000001192092896,
+        0.30000001192092896,
+        0.30000001192092896,
+        0.30000001192092896,
+        0.30000001192092896,
+        0.30000001192092896
+      ],
+      "SwipeDamage": [
+        10.0,
+        70.0,
+        130.0,
+        190.0,
+        250.0,
+        310.0,
+        370.0
+      ],
+      "SwipeADRatio": [
+        0.699999988079071,
+        0.699999988079071,
+        0.699999988079071,
+        0.699999988079071,
+        0.699999988079071,
+        0.699999988079071,
+        0.699999988079071
+      ],
+      "SwipeAPRatio": [
+        0.550000011920929,
+        0.550000011920929,
+        0.550000011920929,
+        0.550000011920929,
+        0.550000011920929,
+        0.550000011920929,
+        0.550000011920929
+      ]
+    }
+  },
+  "NidaleeCougarTakedownAttack": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "Prowl": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "PounceEnabler": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "Swipe": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "Bushwhack": {
+    "calculations": {
+      "MaxTraps": {
+        "tooltipOnly": true,
+        "mFormulaParts": [
+          {
+            "mLevel1Value": 4.0,
+            "mBreakpoints": [
+              {
+                "mLevel": 6,
+                "mAdditionalBonusAtThisLevel": 2.0,
+                "__type": "Breakpoint"
+              },
+              {
+                "mLevel": 11,
+                "mAdditionalBonusAtThisLevel": 2.0,
+                "__type": "Breakpoint"
+              },
+              {
+                "mLevel": 16,
+                "mAdditionalBonusAtThisLevel": 2.0,
+                "__type": "Breakpoint"
+              }
+            ],
+            "__type": "ByCharLevelBreakpointsCalculationPart"
+          },
+          {
+            "mDataValue": "ModesBonusMaxTraps",
+            "__type": "NamedDataValueCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      },
+      "DamagePerSecond": {
+        "tooltipOnly": true,
+        "mFormulaParts": [
+          {
+            "mEffectIndex": 5,
+            "__type": "EffectValueCalculationPart"
+          },
+          {
+            "mCoefficient": 0.05000000074505806,
+            "__type": "StatByCoefficientCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      }
+    },
+    "dataValues": {
+      "ModesBonusMaxTraps": {
+        "mName": "ModesBonusMaxTraps",
+        "__type": "SpellDataValue"
+      }
+    }
+  },
+  "NidaleeTakedownAttack": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "NidaleePassiveHunted": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "NidaleePassiveHunting": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "NidaleePassiveHunt": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "PounceBlocker": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "Pounce": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "NidaleeCougarBasicAttack": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "NidaleeCougarScent": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "NidaleeCougarCritAttack": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "SwipeBlocker": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "NidaleeCritAttack": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "TakedownBlocker": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "NidaleeBasicAttack": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "NidaleeCougarBasicAttack2": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "PounceMS": {
+    "calculations": {},
+    "dataValues": {}
+  }
+}

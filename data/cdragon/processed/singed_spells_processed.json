@@ -1,0 +1,251 @@
+{
+  "SingedP": {
+    "calculations": {},
+    "dataValues": {
+      "MSPercent": [
+        0.25,
+        0.25,
+        0.25,
+        0.25,
+        0.25,
+        0.25,
+        0.25
+      ],
+      "MSDuration": [
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0
+      ],
+      "PerTargetCD": [
+        8.0,
+        8.0,
+        8.0,
+        8.0,
+        8.0,
+        8.0,
+        8.0
+      ],
+      "TriggerArea": [
+        225.0,
+        225.0,
+        225.0,
+        225.0,
+        225.0,
+        225.0,
+        225.0
+      ]
+    }
+  },
+  "PoisonTrail": {
+    "calculations": {
+      "DamagePerSecond": {
+        "mFormulaParts": [
+          {
+            "mDataValue": "BaseDamagePerSecond",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          {
+            "mDataValue": "APRatioPerSecond",
+            "__type": "StatByNamedDataValueCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      },
+      "ApproximateTotalDamageTooltip": {
+        "mMultiplier": {
+          "mNumber": 4.75,
+          "__type": "NumberCalculationPart"
+        },
+        "tooltipOnly": true,
+        "mModifiedGameCalculation": "DamagePerSecond",
+        "__type": "GameCalculationModified"
+      }
+    },
+    "dataValues": {
+      "BaseDamagePerSecond": [
+        10.0,
+        20.0,
+        30.0,
+        40.0,
+        50.0,
+        60.0,
+        70.0
+      ],
+      "APRatioPerSecond": [
+        0.42500001192092896,
+        0.42500001192092896,
+        0.42500001192092896,
+        0.42500001192092896,
+        0.42500001192092896,
+        0.42500001192092896,
+        0.42500001192092896
+      ],
+      "ToggleCooldown": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "CloudDuration": [
+        3.25,
+        3.25,
+        3.25,
+        3.25,
+        3.25,
+        3.25,
+        3.25
+      ],
+      "PoisonDuration": [
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0
+      ],
+      "TicksPerSecond": [
+        4.0,
+        4.0,
+        4.0,
+        4.0,
+        4.0,
+        4.0,
+        4.0
+      ],
+      "MaxLingerTicks": [
+        8.0,
+        8.0,
+        8.0,
+        8.0,
+        8.0,
+        8.0,
+        8.0
+      ]
+    }
+  },
+  "SingedWParticleMissile": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "Fling": {
+    "calculations": {
+      "BaseDamage": {
+        "tooltipOnly": true,
+        "mFormulaParts": [
+          {
+            "mEffectIndex": 1,
+            "__type": "EffectValueCalculationPart"
+          },
+          {
+            "mCoefficient": 0.550000011920929,
+            "__type": "StatByCoefficientCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      }
+    },
+    "dataValues": {}
+  },
+  "SingedBasicAttack": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "InsanityPotion": {
+    "calculations": {},
+    "dataValues": {
+      "StatAmount": [
+        -10.0,
+        25.0,
+        60.0,
+        95.0,
+        130.0,
+        165.0,
+        200.0
+      ],
+      "Duration": [
+        25.0,
+        25.0,
+        25.0,
+        25.0,
+        25.0,
+        25.0,
+        25.0
+      ],
+      "GrievousAmount": [
+        0.4000000059604645,
+        0.4000000059604645,
+        0.4000000059604645,
+        0.4000000059604645,
+        0.4000000059604645,
+        0.4000000059604645,
+        0.4000000059604645
+      ],
+      "GrievousDuration": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ]
+    }
+  },
+  "SingedCritAttack": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "SingedBasicAttack2": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "MegaAdhesive": {
+    "calculations": {},
+    "dataValues": {
+      "SlowPercent": [
+        45.0,
+        50.0,
+        55.0,
+        60.0,
+        65.0,
+        70.0,
+        75.0
+      ],
+      "WDuration": [
+        3.0,
+        3.0,
+        3.0,
+        3.0,
+        3.0,
+        3.0,
+        3.0
+      ],
+      "WRadius": [
+        265.0,
+        265.0,
+        265.0,
+        265.0,
+        265.0,
+        265.0,
+        265.0
+      ],
+      "DelayExecute": [
+        0.375,
+        0.375,
+        0.375,
+        0.375,
+        0.375,
+        0.375,
+        0.375
+      ]
+    }
+  }
+}

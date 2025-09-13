@@ -1,0 +1,649 @@
+{
+  "RengarEEmpMis": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "RengarEEmp": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "RengarQSound": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "RengarWEmp": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "RengarW": {
+    "calculations": {
+      "BonusMonsterDamage": {
+        "mFormulaParts": [
+          {
+            "mStartValue": 65.0,
+            "mEndValue": 130.0,
+            "__type": "ByCharLevelInterpolationCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      },
+      "TotalDamage": {
+        "mFormulaParts": [
+          {
+            "mDataValue": "BaseDamage",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          {
+            "mDataValue": "APRatio",
+            "__type": "StatByNamedDataValueCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      },
+      "TotalDamageEmpowered": {
+        "mFormulaParts": [
+          {
+            "mValues": [
+              0.0,
+              50.0,
+              60.0,
+              70.0,
+              80.0,
+              90.0,
+              100.0,
+              110.0,
+              120.0,
+              130.0,
+              140.0,
+              150.0,
+              160.0,
+              170.0,
+              180.0,
+              190.0,
+              200.0,
+              210.0,
+              220.0,
+              230.0,
+              240.0,
+              250.0,
+              260.0,
+              270.0,
+              280.0,
+              290.0,
+              300.0,
+              310.0,
+              320.0,
+              330.0,
+              340.0
+            ],
+            "__type": "ByCharLevelFormulaCalculationPart"
+          },
+          {
+            "mDataValue": "EmpoweredAPRatio",
+            "__type": "StatByNamedDataValueCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      }
+    },
+    "dataValues": {
+      "BaseDamage": [
+        20.0,
+        50.0,
+        80.0,
+        110.0,
+        140.0,
+        170.0,
+        200.0
+      ],
+      "DamagePercentageHealed": [
+        50.0,
+        50.0,
+        50.0,
+        50.0,
+        50.0,
+        50.0,
+        50.0
+      ],
+      "APRatio": [
+        0.800000011920929,
+        0.800000011920929,
+        0.800000011920929,
+        0.800000011920929,
+        0.800000011920929,
+        0.800000011920929,
+        0.800000011920929
+      ],
+      "EmpoweredAPRatio": [
+        0.800000011920929,
+        0.800000011920929,
+        0.800000011920929,
+        0.800000011920929,
+        0.800000011920929,
+        0.800000011920929,
+        0.800000011920929
+      ]
+    }
+  },
+  "RengarQ": {
+    "calculations": {
+      "EmpoweredQdamageTT": {
+        "tooltipOnly": true,
+        "mFormulaParts": [
+          {
+            "mLevel1Value": 30.0,
+            "mInitialBonusPerLevel": 15.0,
+            "mBreakpoints": [
+              {
+                "mLevel": 9,
+                "mBonusPerLevelAtAndAfter": 10.0,
+                "__type": "Breakpoint"
+              }
+            ],
+            "__type": "ByCharLevelBreakpointsCalculationPart"
+          },
+          {
+            "mStat": 2,
+            "mDataValue": "TotalEmpoweredADRatio",
+            "__type": "StatByNamedDataValueCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      },
+      "EmpoweredQAS": {
+        "mMultiplier": {
+          "mNumber": 0.009999999776482582,
+          "__type": "NumberCalculationPart"
+        },
+        "mFormulaParts": [
+          {
+            "mLevel1Value": 50.0,
+            "mInitialBonusPerLevel": 3.0,
+            "__type": "ByCharLevelBreakpointsCalculationPart"
+          }
+        ],
+        "mDisplayAsPercent": true,
+        "__type": "GameCalculation"
+      },
+      "TotalDamageTT": {
+        "tooltipOnly": true,
+        "mFormulaParts": [
+          {
+            "mDataValue": "BaseDamage",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          {
+            "mStat": 2,
+            "mDataValue": "TotalADRatio",
+            "__type": "StatByNamedDataValueCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      },
+      "{c285d829}": {
+        "mFormulaParts": [
+          {
+            "mLevel1Value": 30.0,
+            "mInitialBonusPerLevel": 15.0,
+            "mBreakpoints": [
+              {
+                "mLevel": 9,
+                "mBonusPerLevelAtAndAfter": 10.0,
+                "__type": "Breakpoint"
+              }
+            ],
+            "__type": "ByCharLevelBreakpointsCalculationPart"
+          },
+          {
+            "mStat": 2,
+            "mDataValue": "EmpoweredADRatio",
+            "__type": "StatByNamedDataValueCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      },
+      "{e29bb654}": {
+        "mFormulaParts": [
+          {
+            "mDataValue": "BaseDamage",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          {
+            "mStat": 2,
+            "mDataValue": "BaseADRatio",
+            "__type": "StatByNamedDataValueCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      },
+      "CritDamageScalar": {
+        "mFormulaParts": [
+          {
+            "mStat": 9,
+            "mDataValue": "CritScalingRatio",
+            "__type": "StatByNamedDataValueCalculationPart"
+          }
+        ],
+        "mDisplayAsPercent": true,
+        "__type": "GameCalculation"
+      }
+    },
+    "dataValues": {
+      "BaseDamage": [
+        0.0,
+        30.0,
+        60.0,
+        90.0,
+        120.0,
+        150.0,
+        180.0
+      ],
+      "BaseADRatio": [
+        -0.03750000149011612,
+        0.0,
+        0.03750000149011612,
+        0.07500000298023224,
+        0.11249999701976776,
+        0.15000000596046448,
+        0.1875
+      ],
+      "CritRatio": [
+        100.0,
+        100.0,
+        100.0,
+        100.0,
+        100.0,
+        100.0,
+        100.0
+      ],
+      "EmpoweredADRatio": [
+        0.30000001192092896,
+        0.30000001192092896,
+        0.30000001192092896,
+        0.30000001192092896,
+        0.30000001192092896,
+        0.30000001192092896,
+        0.30000001192092896
+      ],
+      "CritScalingRatio": [
+        0.75,
+        0.75,
+        0.75,
+        0.75,
+        0.75,
+        0.75,
+        0.75
+      ],
+      "TotalEmpoweredADRatio": [
+        1.2999999523162842,
+        1.2999999523162842,
+        1.2999999523162842,
+        1.2999999523162842,
+        1.2999999523162842,
+        1.2999999523162842,
+        1.2999999523162842
+      ],
+      "TotalADRatio": [
+        0.9624999761581421,
+        1.0,
+        1.037500023841858,
+        1.0750000476837158,
+        1.1124999523162842,
+        1.149999976158142,
+        1.1875
+      ],
+      "TowerMod": [
+        0.4000000059604645,
+        0.4000000059604645,
+        0.4000000059604645,
+        0.4000000059604645,
+        0.4000000059604645,
+        0.4000000059604645,
+        0.4000000059604645
+      ],
+      "QCritDamageScalar": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ]
+    }
+  },
+  "RengarQEmpAttack": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "RengarQAttack": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "RengarQEmp": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "RengarE": {
+    "calculations": {
+      "TotalDamage": {
+        "mFormulaParts": [
+          {
+            "mDataValue": "BaseDamage",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          {
+            "mStat": 2,
+            "mStatFormula": 2,
+            "mDataValue": "BonusADRatio",
+            "__type": "StatByNamedDataValueCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      },
+      "TotalEmpoweredDamage": {
+        "mFormulaParts": [
+          {
+            "mLevel1Value": 50.0,
+            "mInitialBonusPerLevel": 15.0,
+            "__type": "ByCharLevelBreakpointsCalculationPart"
+          },
+          {
+            "mStat": 2,
+            "mStatFormula": 2,
+            "mDataValue": "BonusADRatio",
+            "__type": "StatByNamedDataValueCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      }
+    },
+    "dataValues": {
+      "RevealDuration": [
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0
+      ],
+      "BaseDamage": [
+        10.0,
+        55.0,
+        100.0,
+        145.0,
+        190.0,
+        235.0,
+        280.0
+      ],
+      "SlowAmount": [
+        15.0,
+        30.0,
+        45.0,
+        60.0,
+        75.0,
+        90.0,
+        105.0
+      ],
+      "BonusADRatio": [
+        0.800000011920929,
+        0.800000011920929,
+        0.800000011920929,
+        0.800000011920929,
+        0.800000011920929,
+        0.800000011920929,
+        0.800000011920929
+      ]
+    }
+  },
+  "RengarEMis": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "RengarBasicAttack": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "RengarQ2": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "RengarPassiveBuffDash": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "RengarPassiveBuffDashAADummy": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "RengarR": {
+    "calculations": {
+      "BonusDamage": {
+        "mFormulaParts": [
+          {
+            "mStat": 2,
+            "mCoefficient": 1.0,
+            "__type": "StatByCoefficientCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      }
+    },
+    "dataValues": {
+      "StealthDuration": [
+        8.0,
+        12.0,
+        16.0,
+        20.0,
+        24.0,
+        28.0,
+        32.0
+      ],
+      "EnemyDetectionRange": [
+        1600.0,
+        1600.0,
+        1600.0,
+        1600.0,
+        1600.0,
+        1600.0,
+        1600.0
+      ],
+      "SelfVisionRange": [
+        2000.0,
+        2500.0,
+        3000.0,
+        3500.0,
+        4000.0,
+        4500.0,
+        5000.0
+      ],
+      "SelfRevealRange": [
+        750.0,
+        750.0,
+        750.0,
+        750.0,
+        750.0,
+        750.0,
+        750.0
+      ],
+      "StealthMS": [
+        30.0,
+        40.0,
+        50.0,
+        60.0,
+        70.0,
+        80.0,
+        90.0
+      ],
+      "FadeTime": [
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0
+      ],
+      "ArmorShred": [
+        10.0,
+        15.0,
+        20.0,
+        25.0,
+        30.0,
+        35.0,
+        40.0
+      ],
+      "ArmorShredDuration": [
+        4.0,
+        4.0,
+        4.0,
+        4.0,
+        4.0,
+        4.0,
+        4.0
+      ],
+      "LeapRange": [
+        725.0,
+        725.0,
+        725.0,
+        725.0,
+        725.0,
+        725.0,
+        725.0
+      ]
+    }
+  },
+  "RengarNewPassiveBuffDash": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "RengarQEmpowered": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "RengarRSpeed": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "RengarBasicAttack3": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "RengarBasicAttack2": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "RengarQ2Emp": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "RengarRLeap": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "RengarEFinalMAX": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "RengarCritAttack": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "RengarQ2Sound": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "RengarPassive": {
+    "calculations": {
+      "EmpoweredMS": {
+        "mFormulaParts": [
+          {
+            "mLevel1Value": 0.30000001192092896,
+            "mBreakpoints": [
+              {
+                "mLevel": 7,
+                "mAdditionalBonusAtThisLevel": 0.10000000149011612,
+                "__type": "Breakpoint"
+              },
+              {
+                "mLevel": 13,
+                "mAdditionalBonusAtThisLevel": 0.10000000149011612,
+                "__type": "Breakpoint"
+              },
+              {
+                "mLevel": 19,
+                "mAdditionalBonusAtThisLevel": 0.10000000149011612,
+                "__type": "Breakpoint"
+              },
+              {
+                "mLevel": 25,
+                "mAdditionalBonusAtThisLevel": 0.10000000149011612,
+                "__type": "Breakpoint"
+              }
+            ],
+            "__type": "ByCharLevelBreakpointsCalculationPart"
+          }
+        ],
+        "mDisplayAsPercent": true,
+        "__type": "GameCalculation"
+      }
+    },
+    "dataValues": {
+      "MaxFerocity": [
+        4.0,
+        4.0,
+        4.0,
+        4.0,
+        4.0,
+        4.0,
+        4.0
+      ],
+      "InCombatTimer": [
+        10.0,
+        10.0,
+        10.0,
+        10.0,
+        10.0,
+        10.0,
+        10.0
+      ],
+      "InCombatTimerVisual": [
+        10.0,
+        10.0,
+        10.0,
+        10.0,
+        10.0,
+        10.0,
+        10.0
+      ],
+      "EmpoweredMSDuration": [
+        1.5,
+        1.5,
+        1.5,
+        1.5,
+        1.5,
+        1.5,
+        1.5
+      ],
+      "RengarPassiveRangeIncrease": [
+        620.0,
+        620.0,
+        620.0,
+        620.0,
+        620.0,
+        620.0,
+        620.0
+      ],
+      "LeapFerocityGeneration": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ]
+    }
+  }
+}

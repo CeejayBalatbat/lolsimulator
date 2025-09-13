@@ -1,0 +1,367 @@
+{
+  "PoppyRSpell": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "PoppyR": {
+    "calculations": {
+      "Damage": {
+        "mFormulaParts": [
+          {
+            "mDataValue": "BaseDamage",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          {
+            "mStat": 2,
+            "mStatFormula": 2,
+            "mCoefficient": 0.8999999761581421,
+            "__type": "StatByCoefficientCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      },
+      "HalfDamage": {
+        "mMultiplier": {
+          "mDataValue": "SnapCastDamageRatio",
+          "__type": "NamedDataValueCalculationPart"
+        },
+        "tooltipOnly": true,
+        "mModifiedGameCalculation": "Damage",
+        "__type": "GameCalculationModified"
+      }
+    },
+    "dataValues": {
+      "BaseDamage": [
+        200.0,
+        200.0,
+        300.0,
+        400.0,
+        500.0,
+        600.0,
+        700.0
+      ],
+      "ChannelDistanceUpdateTick": [
+        0.25,
+        0.25,
+        0.25,
+        0.25,
+        0.25,
+        0.25,
+        0.25
+      ],
+      "ChannelMaxDuration": [
+        4.0,
+        4.0,
+        4.0,
+        4.0,
+        4.0,
+        4.0,
+        4.0
+      ],
+      "MaxKnockbackDistance": [
+        3400.0,
+        3400.0,
+        3400.0,
+        3400.0,
+        3400.0,
+        3400.0,
+        3400.0
+      ],
+      "KnockupDurationCharged": [
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0
+      ],
+      "KnockupDurationSnap": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "DurationUntilFullyCharged": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "SelfSlow": [
+        15.0,
+        15.0,
+        15.0,
+        15.0,
+        15.0,
+        15.0,
+        15.0
+      ],
+      "CancelCDRefund": [
+        15.0,
+        15.0,
+        15.0,
+        15.0,
+        15.0,
+        15.0,
+        15.0
+      ],
+      "SnapCastDamageRatio": [
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5
+      ]
+    }
+  },
+  "PoppyRMissile": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "PoppyRSpellInstant": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "PoppyW": {
+    "calculations": {
+      "BonusArmor": {
+        "mFormulaParts": [
+          {
+            "mStat": 1,
+            "mDataValue": "PassiveResistPercent",
+            "__type": "StatByNamedDataValueCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      },
+      "BonusMR": {
+        "mFormulaParts": [
+          {
+            "mStat": 6,
+            "mDataValue": "PassiveResistPercent",
+            "__type": "StatByNamedDataValueCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      },
+      "InterruptDamage": {
+        "mFormulaParts": [
+          {
+            "mEffectIndex": 5,
+            "__type": "EffectValueCalculationPart"
+          },
+          {
+            "mCoefficient": 0.699999988079071,
+            "__type": "StatByCoefficientCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      }
+    },
+    "dataValues": {
+      "GroundingDuration": [
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0
+      ],
+      "SlowAmount": [
+        -0.25,
+        -0.25,
+        -0.25,
+        -0.25,
+        -0.25,
+        -0.25,
+        -0.25
+      ],
+      "PassiveResistPercent": [
+        0.11999999731779099,
+        0.11999999731779099,
+        0.11999999731779099,
+        0.11999999731779099,
+        0.11999999731779099,
+        0.11999999731779099,
+        0.11999999731779099
+      ],
+      "PassiveEmpoweredHealthPercent": [
+        0.4000000059604645,
+        0.4000000059604645,
+        0.4000000059604645,
+        0.4000000059604645,
+        0.4000000059604645,
+        0.4000000059604645,
+        0.4000000059604645
+      ]
+    }
+  },
+  "PoppyQSpell": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "PoppyQ": {
+    "calculations": {
+      "BaseDamage": {
+        "mFormulaParts": [
+          {
+            "mEffectIndex": 1,
+            "__type": "EffectValueCalculationPart"
+          },
+          {
+            "mStat": 2,
+            "mStatFormula": 2,
+            "mCoefficient": 1.0,
+            "__type": "StatByCoefficientCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      }
+    },
+    "dataValues": {
+      "HealthDamagePercent": [
+        9.0,
+        9.0,
+        9.0,
+        9.0,
+        9.0,
+        9.0,
+        9.0
+      ]
+    }
+  },
+  "PoppyPassive": {
+    "calculations": {
+      "ActualCooldown": {
+        "mFormulaParts": [
+          {
+            "mLevel1Value": 16.0,
+            "mBreakpoints": [
+              {
+                "mLevel": 7,
+                "mAdditionalBonusAtThisLevel": -4.0,
+                "__type": "Breakpoint"
+              },
+              {
+                "mLevel": 13,
+                "mAdditionalBonusAtThisLevel": -4.0,
+                "__type": "Breakpoint"
+              },
+              {
+                "mLevel": 19,
+                "mAdditionalBonusAtThisLevel": -2.0,
+                "__type": "Breakpoint"
+              }
+            ],
+            "__type": "ByCharLevelBreakpointsCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      },
+      "TotalDamage": {
+        "mFormulaParts": [
+          {
+            "mStartValue": 20.0,
+            "mEndValue": 180.0,
+            "__type": "ByCharLevelInterpolationCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      },
+      "ShieldValue": {
+        "mFormulaParts": [
+          {
+            "mStat": 12,
+            "mSubpart": {
+              "mStartValue": 0.10999999940395355,
+              "mEndValue": 0.20000000298023224,
+              "__type": "ByCharLevelInterpolationCalculationPart"
+            },
+            "__type": "StatBySubPartCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      }
+    },
+    "dataValues": {
+      "BonusRange": [
+        350.0,
+        350.0,
+        350.0,
+        350.0,
+        350.0,
+        350.0,
+        350.0
+      ],
+      "ShieldDuration": [
+        3.0,
+        3.0,
+        3.0,
+        3.0,
+        3.0,
+        3.0,
+        3.0
+      ],
+      "ShieldPickUpTime": [
+        4.0,
+        4.0,
+        4.0,
+        4.0,
+        4.0,
+        4.0,
+        4.0
+      ]
+    }
+  },
+  "PoppyPassiveBounce": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "PoppyPassiveAttack": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "PoppyPassiveKillBounce": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "PoppyE": {
+    "calculations": {
+      "TackleDamage": {
+        "tooltipOnly": true,
+        "mFormulaParts": [
+          {
+            "mEffectIndex": 1,
+            "__type": "EffectValueCalculationPart"
+          },
+          {
+            "mStat": 2,
+            "mStatFormula": 2,
+            "mCoefficient": 0.6000000238418579,
+            "__type": "StatByCoefficientCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      }
+    },
+    "dataValues": {}
+  },
+  "PoppyBasicAttack": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "PoppyCritAttack": {
+    "calculations": {},
+    "dataValues": {}
+  }
+}

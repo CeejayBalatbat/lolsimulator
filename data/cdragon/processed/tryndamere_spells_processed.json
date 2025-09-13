@@ -1,0 +1,295 @@
+{
+  "slash": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "TryndamereE": {
+    "calculations": {
+      "TotalDamage": {
+        "tooltipOnly": true,
+        "mFormulaParts": [
+          {
+            "mDataValue": "Damage",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          {
+            "mStat": 2,
+            "mStatFormula": 2,
+            "mCoefficient": 1.2999999523162842,
+            "__type": "StatByCoefficientCalculationPart"
+          },
+          {
+            "mCoefficient": 0.800000011920929,
+            "__type": "StatByCoefficientCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      }
+    },
+    "dataValues": {
+      "Damage": [
+        45.0,
+        75.0,
+        105.0,
+        135.0,
+        165.0,
+        195.0,
+        225.0
+      ],
+      "NonChampCDRefund": [
+        0.75,
+        0.75,
+        0.75,
+        0.75,
+        0.75,
+        0.75,
+        0.75
+      ],
+      "ChampCDRefund": [
+        1.5,
+        1.5,
+        1.5,
+        1.5,
+        1.5,
+        1.5,
+        1.5
+      ],
+      "NonChampFuryGain": [
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0
+      ],
+      "ChampFuryGain": [
+        5.0,
+        5.0,
+        5.0,
+        5.0,
+        5.0,
+        5.0,
+        5.0
+      ],
+      "DamageAoE": [
+        225.0,
+        225.0,
+        225.0,
+        225.0,
+        225.0,
+        225.0,
+        225.0
+      ]
+    }
+  },
+  "TryndamereW": {
+    "calculations": {},
+    "dataValues": {
+      "ADReduction": [
+        -5.0,
+        -20.0,
+        -35.0,
+        -50.0,
+        -65.0,
+        -80.0,
+        -95.0
+      ],
+      "SlowPotency": [
+        -0.22499999403953552,
+        -0.30000001192092896,
+        -0.375,
+        -0.44999998807907104,
+        -0.5249999761581421,
+        -0.6000000238418579,
+        -0.675000011920929
+      ],
+      "ReductionDuration": [
+        4.0,
+        4.0,
+        4.0,
+        4.0,
+        4.0,
+        4.0,
+        4.0
+      ],
+      "SlowDuration": [
+        4.0,
+        4.0,
+        4.0,
+        4.0,
+        4.0,
+        4.0,
+        4.0
+      ]
+    }
+  },
+  "TryndamereBasicAttack": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "TryndamerePassive": {
+    "calculations": {
+      "PassiveCritConversionTooltip": {
+        "mFormulaParts": [
+          {
+            "mNumber": 0.5,
+            "__type": "NumberCalculationPart"
+          }
+        ],
+        "mPrecision": 2,
+        "__type": "GameCalculation"
+      },
+      "{dc63b617}": {
+        "mMultiplier": {
+          "mNumber": 0.10000000149011612,
+          "__type": "NumberCalculationPart"
+        },
+        "mFormulaParts": [
+          {
+            "mLevel1Value": 0.05000000074505806,
+            "__type": "ByCharLevelBreakpointsCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      }
+    },
+    "dataValues": {
+      "CherryFuryModifier": [
+        1.5,
+        1.5,
+        1.5,
+        1.5,
+        1.5,
+        1.5,
+        1.5
+      ]
+    }
+  },
+  "TryndamereBasicAttack2": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "UndyingRage": {
+    "calculations": {},
+    "dataValues": {
+      "TryndRFuryGain": [
+        50.0,
+        50.0,
+        75.0,
+        100.0,
+        125.0,
+        150.0,
+        175.0
+      ],
+      "TryndRMinHealth": [
+        30.0,
+        30.0,
+        50.0,
+        70.0,
+        90.0,
+        110.0,
+        130.0
+      ],
+      "TryndRDuration": [
+        5.0,
+        5.0,
+        5.0,
+        5.0,
+        5.0,
+        5.0,
+        5.0
+      ]
+    }
+  },
+  "TryndamereCritAttack": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "TryndamereQ": {
+    "calculations": {
+      "BaseHeal": {
+        "mFormulaParts": [
+          {
+            "mDataValue": "BaseHealing",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          {
+            "mDataValue": "APRatio",
+            "__type": "StatByNamedDataValueCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      },
+      "HealPerFury": {
+        "mFormulaParts": [
+          {
+            "mDataValue": "BonusHealPerFury",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          {
+            "mDataValue": "APRatioPerFury",
+            "__type": "StatByNamedDataValueCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      }
+    },
+    "dataValues": {
+      "BaseHealing": [
+        20.0,
+        30.0,
+        40.0,
+        50.0,
+        60.0,
+        70.0,
+        80.0
+      ],
+      "BonusHealPerFury": [
+        0.05000000074505806,
+        0.5,
+        0.949999988079071,
+        1.399999976158142,
+        1.850000023841858,
+        2.299999952316284,
+        2.75
+      ],
+      "APRatio": [
+        0.30000001192092896,
+        0.30000001192092896,
+        0.30000001192092896,
+        0.30000001192092896,
+        0.30000001192092896,
+        0.30000001192092896,
+        0.30000001192092896
+      ],
+      "APRatioPerFury": [
+        0.012000000104308128,
+        0.012000000104308128,
+        0.012000000104308128,
+        0.012000000104308128,
+        0.012000000104308128,
+        0.012000000104308128,
+        0.012000000104308128
+      ],
+      "FlatAD": [
+        0.0,
+        5.0,
+        10.0,
+        15.0,
+        20.0,
+        25.0,
+        30.0
+      ],
+      "ADPerOnePercentMissingHP": [
+        0.05000000074505806,
+        0.15000000596046448,
+        0.25,
+        0.3499999940395355,
+        0.44999998807907104,
+        0.550000011920929,
+        0.6499999761581421
+      ]
+    }
+  }
+}

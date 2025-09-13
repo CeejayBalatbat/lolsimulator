@@ -1,0 +1,273 @@
+{
+  "MorganaBasicAttack2": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "MorganaQ": {
+    "calculations": {
+      "TotalDamage": {
+        "mSimpleTooltipCalculationDisplay": 6,
+        "mFormulaParts": [
+          {
+            "mDataValue": "Damage",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          {
+            "mCoefficient": 0.8999999761581421,
+            "__type": "StatByCoefficientCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      }
+    },
+    "dataValues": {
+      "Damage": [
+        25.0,
+        80.0,
+        135.0,
+        190.0,
+        245.0,
+        300.0,
+        355.0
+      ],
+      "RootDuration": [
+        1.75,
+        2.0,
+        2.25,
+        2.5,
+        2.75,
+        3.0,
+        3.25
+      ]
+    }
+  },
+  "MorganaRVFXMis": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "MorganaR": {
+    "calculations": {
+      "TotalDamage": {
+        "mSimpleTooltipCalculationDisplay": 6,
+        "mFormulaParts": [
+          {
+            "mDataValue": "Damage",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          {
+            "mCoefficient": 0.800000011920929,
+            "__type": "StatByCoefficientCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      }
+    },
+    "dataValues": {
+      "Damage": [
+        125.0,
+        200.0,
+        275.0,
+        350.0,
+        425.0,
+        500.0,
+        575.0
+      ],
+      "ChainDuration": [
+        3.0,
+        3.0,
+        3.0,
+        3.0,
+        3.0,
+        3.0,
+        3.0
+      ],
+      "StunDuration": [
+        1.25,
+        1.5,
+        1.75,
+        2.0,
+        2.25,
+        2.5,
+        2.75
+      ],
+      "SlowPercent": [
+        20.0,
+        20.0,
+        20.0,
+        20.0,
+        20.0,
+        20.0,
+        20.0
+      ],
+      "HastePercent": [
+        0.0,
+        20.0,
+        40.0,
+        60.0,
+        80.0,
+        100.0,
+        120.0
+      ]
+    }
+  },
+  "MorganaCritAttack": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "MorganaW": {
+    "calculations": {
+      "TotalMinDamage": {
+        "mSimpleTooltipCalculationDisplay": 6,
+        "mFormulaParts": [
+          {
+            "mDataValue": "BaseDamage",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          {
+            "mDataValue": "{b109acb8}",
+            "__type": "StatByNamedDataValueCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      },
+      "TotalMaxDamage": {
+        "mMultiplier": {
+          "mSubparts": [
+            {
+              "mNumber": 1.0,
+              "__type": "NumberCalculationPart"
+            },
+            {
+              "mDataValue": "MissingHealthAmpPercent",
+              "__type": "NamedDataValueCalculationPart"
+            }
+          ],
+          "__type": "SumOfSubPartsCalculationPart"
+        },
+        "mModifiedGameCalculation": "TotalMinDamage",
+        "__type": "GameCalculationModified"
+      }
+    },
+    "dataValues": {
+      "BaseDamage": [
+        5.0,
+        18.0,
+        31.0,
+        44.0,
+        57.0,
+        70.0,
+        83.0
+      ],
+      "BaseAPRatio": [
+        0.20000000298023224,
+        0.20000000298023224,
+        0.20000000298023224,
+        0.20000000298023224,
+        0.20000000298023224,
+        0.20000000298023224,
+        0.20000000298023224
+      ],
+      "TickRate": [
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5
+      ],
+      "MissingHealthAmpPercent": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "WDuration": [
+        5.0,
+        5.0,
+        5.0,
+        5.0,
+        5.0,
+        5.0,
+        5.0
+      ],
+      "CDRefundPercent": [
+        0.05000000074505806,
+        0.05000000074505806,
+        0.05000000074505806,
+        0.05000000074505806,
+        0.05000000074505806,
+        0.05000000074505806,
+        0.05000000074505806
+      ],
+      "MonsterMod": [
+        170.0,
+        170.0,
+        170.0,
+        170.0,
+        170.0,
+        170.0,
+        170.0
+      ]
+    }
+  },
+  "MorganaPassive": {
+    "calculations": {},
+    "dataValues": {
+      "HealPercent": [
+        18.0,
+        18.0,
+        18.0,
+        18.0,
+        18.0,
+        18.0,
+        18.0
+      ]
+    }
+  },
+  "MorganaE": {
+    "calculations": {
+      "TotalShieldStrength": {
+        "mSimpleTooltipCalculationDisplay": 6,
+        "mFormulaParts": [
+          {
+            "mDataValue": "ShieldStrength",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          {
+            "mCoefficient": 0.699999988079071,
+            "__type": "StatByCoefficientCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      }
+    },
+    "dataValues": {
+      "ShieldStrength": [
+        45.0,
+        100.0,
+        155.0,
+        210.0,
+        265.0,
+        320.0,
+        375.0
+      ],
+      "ShieldDuration": [
+        5.0,
+        5.0,
+        5.0,
+        5.0,
+        5.0,
+        5.0,
+        5.0
+      ]
+    }
+  },
+  "MorganaBasicAttack": {
+    "calculations": {},
+    "dataValues": {}
+  }
+}

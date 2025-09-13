@@ -1,0 +1,530 @@
+{
+  "NilahCritAttack": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "NilahBasicAttack": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "NilahEQMis": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "NilahQ": {
+    "calculations": {
+      "DamageCalc": {
+        "mMultiplier": {
+          "mSubparts": [
+            {
+              "mNumber": 1.0,
+              "__type": "NumberCalculationPart"
+            },
+            {
+              "mStat": 8,
+              "mCoefficient": 1.0,
+              "__type": "StatByCoefficientCalculationPart"
+            }
+          ],
+          "__type": "SumOfSubPartsCalculationPart"
+        },
+        "mFormulaParts": [
+          {
+            "mDataValue": "BaseDamage",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          {
+            "mStat": 2,
+            "mDataValue": "QADRatio",
+            "__type": "StatByNamedDataValueCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      },
+      "AttackTotalDamageTooltip": {
+        "mFormulaParts": [
+          {
+            "mStat": 2,
+            "mCoefficient": 1.0,
+            "__type": "StatByCoefficientCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      },
+      "AttackBonusDamage": {
+        "mFormulaParts": [
+          {
+            "mStat": 2,
+            "__type": "StatByCoefficientCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      },
+      "BonusAttackSpeedCalc": {
+        "mFormulaParts": [
+          {
+            "mStartValue": 10.0,
+            "mEndValue": 60.0,
+            "__type": "ByCharLevelInterpolationCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      },
+      "CritLifesteal": {
+        "mFormulaParts": [
+          {
+            "mStat": 8,
+            "mDataValue": "CritHealScalar",
+            "__type": "StatByNamedDataValueCalculationPart"
+          }
+        ],
+        "mDisplayAsPercent": true,
+        "__type": "GameCalculation"
+      },
+      "CritArmorPen": {
+        "mFormulaParts": [
+          {
+            "mStat": 8,
+            "mDataValue": "CritArmorPenScalar",
+            "__type": "StatByNamedDataValueCalculationPart"
+          }
+        ],
+        "mDisplayAsPercent": true,
+        "__type": "GameCalculation"
+      }
+    },
+    "dataValues": {
+      "BaseDamage": [
+        0.0,
+        5.0,
+        10.0,
+        15.0,
+        20.0,
+        25.0,
+        30.0
+      ],
+      "CheatingThreshold": [
+        20.0,
+        20.0,
+        20.0,
+        20.0,
+        20.0,
+        20.0,
+        20.0
+      ],
+      "QADRatio": [
+        0.8500000238418579,
+        0.8999999761581421,
+        0.949999988079071,
+        1.0,
+        1.0499999523162842,
+        1.100000023841858,
+        1.149999976158142
+      ],
+      "CastRange": [
+        600.0,
+        600.0,
+        600.0,
+        600.0,
+        600.0,
+        600.0,
+        600.0
+      ],
+      "CritHealScalar": [
+        0.20000000298023224,
+        0.20000000298023224,
+        0.20000000298023224,
+        0.20000000298023224,
+        0.20000000298023224,
+        0.20000000298023224,
+        0.20000000298023224
+      ],
+      "CritArmorPenScalar": [
+        0.33000001311302185,
+        0.33000001311302185,
+        0.33000001311302185,
+        0.33000001311302185,
+        0.33000001311302185,
+        0.33000001311302185,
+        0.33000001311302185
+      ],
+      "CritDamageRatio": {
+        "mName": "CritDamageRatio",
+        "__type": "SpellDataValue"
+      },
+      "MinionMod": [
+        0.33000001311302185,
+        0.33000001311302185,
+        0.33000001311302185,
+        0.33000001311302185,
+        0.33000001311302185,
+        0.33000001311302185,
+        0.33000001311302185
+      ],
+      "BuffDuration": [
+        4.0,
+        4.0,
+        4.0,
+        4.0,
+        4.0,
+        4.0,
+        4.0
+      ],
+      "RangeIncrease": [
+        125.0,
+        125.0,
+        125.0,
+        125.0,
+        125.0,
+        125.0,
+        125.0
+      ],
+      "MonsterMod": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "ShieldDuration": [
+        4.0,
+        4.0,
+        4.0,
+        4.0,
+        4.0,
+        4.0,
+        4.0
+      ]
+    }
+  },
+  "NilahQWrapper": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "NilahQAttack": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "NilahQAttack2": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "NilahW": {
+    "calculations": {},
+    "dataValues": {
+      "MoveSpeedPercent": [
+        0.125,
+        0.15000000596046448,
+        0.17499999701976776,
+        0.20000000298023224,
+        0.22499999403953552,
+        0.25,
+        0.2750000059604645
+      ],
+      "BaseDuration": [
+        2.25,
+        2.25,
+        2.25,
+        2.25,
+        2.25,
+        2.25,
+        2.25
+      ],
+      "ShareBaseDuration": [
+        1.5,
+        1.5,
+        1.5,
+        1.5,
+        1.5,
+        1.5,
+        1.5
+      ],
+      "ExtensionBonus": [
+        0.75,
+        0.75,
+        0.75,
+        0.75,
+        0.75,
+        0.75,
+        0.75
+      ],
+      "AreaTriggerSize": [
+        150.0,
+        150.0,
+        150.0,
+        150.0,
+        150.0,
+        150.0,
+        150.0
+      ],
+      "MagicDamageReduction": [
+        0.25,
+        0.25,
+        0.25,
+        0.25,
+        0.25,
+        0.25,
+        0.25
+      ]
+    }
+  },
+  "NilahE": {
+    "calculations": {
+      "DashDamage": {
+        "mFormulaParts": [
+          {
+            "mDataValue": "BaseDamage",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          {
+            "mStat": 2,
+            "mStatFormula": 2,
+            "mCoefficient": 0.20000000298023224,
+            "__type": "StatByCoefficientCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      }
+    },
+    "dataValues": {
+      "BaseDamage": [
+        50.0,
+        60.0,
+        70.0,
+        80.0,
+        90.0,
+        100.0,
+        110.0
+      ],
+      "DashSpeed": [
+        2200.0,
+        2200.0,
+        2200.0,
+        2200.0,
+        2200.0,
+        2200.0,
+        2200.0
+      ],
+      "DashTotalDistance": [
+        600.0,
+        600.0,
+        600.0,
+        600.0,
+        600.0,
+        600.0,
+        600.0
+      ]
+    }
+  },
+  "NilahPassive": {
+    "calculations": {},
+    "dataValues": {
+      "ExperiencePercentage": [
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5
+      ],
+      "HealDistance": [
+        1000.0,
+        1000.0,
+        1000.0,
+        1000.0,
+        1000.0,
+        1000.0,
+        1000.0
+      ],
+      "ShieldIncrease": [
+        0.15000000596046448,
+        0.15000000596046448,
+        0.15000000596046448,
+        0.15000000596046448,
+        0.15000000596046448,
+        0.15000000596046448,
+        0.15000000596046448
+      ],
+      "HealingIncrease": [
+        0.07500000298023224,
+        0.07500000298023224,
+        0.07500000298023224,
+        0.07500000298023224,
+        0.07500000298023224,
+        0.07500000298023224,
+        0.07500000298023224
+      ],
+      "ShieldMaxDuration": [
+        4.0,
+        4.0,
+        4.0,
+        4.0,
+        4.0,
+        4.0,
+        4.0
+      ]
+    }
+  },
+  "NilahPMissile": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "NilahBasicAttack2": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "NilahR": {
+    "calculations": {
+      "DamageCalc": {
+        "mFormulaParts": [
+          {
+            "mDataValue": "DamageBase",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          {
+            "mStat": 2,
+            "mStatFormula": 2,
+            "mCoefficient": 1.0,
+            "__type": "StatByCoefficientCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      },
+      "ShieldCalc": {
+        "mFormulaParts": [
+          {
+            "mDataValue": "ShieldBase",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          {
+            "mStat": 2,
+            "mStatFormula": 2,
+            "mCoefficient": 1.0,
+            "__type": "StatByCoefficientCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      },
+      "DamagePerTickCalc": {
+        "mFormulaParts": [
+          {
+            "mDataValue": "DamagePerTick",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          {
+            "mStat": 2,
+            "mStatFormula": 2,
+            "mCoefficient": 0.10000000149011612,
+            "__type": "StatByCoefficientCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      },
+      "DamagePerTickCalcTooltip": {
+        "mMultiplier": {
+          "mNumber": 4.0,
+          "__type": "NumberCalculationPart"
+        },
+        "tooltipOnly": true,
+        "mModifiedGameCalculation": "DamagePerTickCalc",
+        "__type": "GameCalculationModified"
+      },
+      "ChampHealingPercent": {
+        "mFormulaParts": [
+          {
+            "mNumber": 0.20000000298023224,
+            "__type": "NumberCalculationPart"
+          },
+          {
+            "mStat": 8,
+            "mCoefficient": 0.10000000149011612,
+            "__type": "StatByCoefficientCalculationPart"
+          }
+        ],
+        "mDisplayAsPercent": true,
+        "__type": "GameCalculation"
+      }
+    },
+    "dataValues": {
+      "Duration": [
+        6.0,
+        6.0,
+        6.0,
+        6.0,
+        6.0,
+        6.0,
+        6.0
+      ],
+      "DamageBase": [
+        25.0,
+        125.0,
+        225.0,
+        325.0,
+        425.0,
+        525.0,
+        625.0
+      ],
+      "ShieldBase": [
+        15.0,
+        65.0,
+        115.0,
+        165.0,
+        215.0,
+        265.0,
+        315.0
+      ],
+      "DamagePerTick": [
+        5.0,
+        15.0,
+        25.0,
+        35.0,
+        45.0,
+        55.0,
+        65.0
+      ],
+      "OtherHealingPercent": [
+        0.10000000149011612,
+        0.10000000149011612,
+        0.10000000149011612,
+        0.10000000149011612,
+        0.10000000149011612,
+        0.10000000149011612,
+        0.10000000149011612
+      ],
+      "Microslow": [
+        -0.10000000149011612,
+        -0.10000000149011612,
+        -0.10000000149011612,
+        -0.10000000149011612,
+        -0.10000000149011612,
+        -0.10000000149011612,
+        -0.10000000149011612
+      ],
+      "NumTicks": [
+        6.0,
+        6.0,
+        6.0,
+        6.0,
+        6.0,
+        6.0,
+        6.0
+      ],
+      "TickDelay": [
+        0.20000000298023224,
+        0.20000000298023224,
+        0.20000000298023224,
+        0.20000000298023224,
+        0.20000000298023224,
+        0.20000000298023224,
+        0.20000000298023224
+      ]
+    }
+  },
+  "NilahCritAttack2": {
+    "calculations": {},
+    "dataValues": {}
+  }
+}

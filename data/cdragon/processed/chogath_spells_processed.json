@@ -1,0 +1,414 @@
+{
+  "ChogathFeastVFXMissile": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "Feast": {
+    "calculations": {
+      "RMonsterDamage": {
+        "mSimpleTooltipCalculationDisplay": 6,
+        "mFormulaParts": [
+          {
+            "mDataValue": "RBaseMonsterDamage",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          {
+            "mCoefficient": 0.5,
+            "__type": "StatByCoefficientCalculationPart"
+          },
+          {
+            "mStat": 12,
+            "mStatFormula": 2,
+            "mCoefficient": 0.10000000149011612,
+            "__type": "StatByCoefficientCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      },
+      "RDamage": {
+        "mSimpleTooltipCalculationDisplay": 6,
+        "mFormulaParts": [
+          {
+            "mDataValue": "RBaseDamage",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          {
+            "mCoefficient": 0.5,
+            "__type": "StatByCoefficientCalculationPart"
+          },
+          {
+            "mStat": 12,
+            "mStatFormula": 2,
+            "mCoefficient": 0.10000000149011612,
+            "__type": "StatByCoefficientCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      },
+      "BonusAttackRange": {
+        "mFormulaParts": [
+          {
+            "mBuffName": "{8682fc00}",
+            "mDataValue": "AttackRangePerStack",
+            "__type": "BuffCounterByNamedDataValueCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      },
+      "{9f798bd0}": {
+        "mFormulaParts": [
+          {
+            "mBuffName": "{8682fc00}",
+            "mDataValue": "CastRangePerStack",
+            "__type": "BuffCounterByNamedDataValueCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      }
+    },
+    "dataValues": {
+      "RBaseMonsterDamage": [
+        1200.0,
+        1200.0,
+        1200.0,
+        1200.0,
+        1200.0,
+        1200.0,
+        1200.0
+      ],
+      "RBaseDamage": [
+        125.0,
+        300.0,
+        475.0,
+        650.0,
+        825.0,
+        1000.0,
+        1175.0
+      ],
+      "RHealthPerStack": [
+        40.0,
+        80.0,
+        120.0,
+        160.0,
+        200.0,
+        240.0,
+        280.0
+      ],
+      "RMinionMaxStacks": [
+        6.0,
+        6.0,
+        6.0,
+        6.0,
+        6.0,
+        6.0,
+        6.0
+      ],
+      "RStoneplateRatio": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "CastRangePerStack": [
+        2.5,
+        2.5,
+        2.5,
+        2.5,
+        2.5,
+        2.5,
+        2.5
+      ],
+      "MaxBonusCastRange": [
+        25.0,
+        25.0,
+        25.0,
+        25.0,
+        25.0,
+        25.0,
+        25.0
+      ],
+      "AttackRangePerStack": [
+        3.200000047683716,
+        4.699999809265137,
+        6.199999809265137,
+        7.699999809265137,
+        9.199999809265137,
+        10.699999809265137,
+        12.199999809265137
+      ],
+      "MaxBonusAttackRange": [
+        75.0,
+        75.0,
+        75.0,
+        75.0,
+        75.0,
+        75.0,
+        75.0
+      ]
+    }
+  },
+  "VorpalSpikesMissle3": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "VorpalSpikesMissle2": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "VorpalSpikesMissle5": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "VorpalSpikesMissle4": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "VorpalSpikesMissle7": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "VorpalSpikesMissle6": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "VorpalSpikesMissle": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "VorpalSpikes": {
+    "calculations": {
+      "FlatDamageCalc": {
+        "mSimpleTooltipCalculationDisplay": 6,
+        "mFormulaParts": [
+          {
+            "mDataValue": "BaseDamage",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          {
+            "mDataValue": "APRatio",
+            "__type": "StatByNamedDataValueCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      },
+      "MaxHealthPercentCalc": {
+        "mMultiplier": {
+          "mNumber": 0.009999999776482582,
+          "__type": "NumberCalculationPart"
+        },
+        "mFormulaParts": [
+          {
+            "mDataValue": "PercentHealthDamage",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          {
+            "mBuffName": "{8682fc00}",
+            "mDataValue": "FeastStackMultiplier",
+            "__type": "BuffCounterByNamedDataValueCalculationPart"
+          }
+        ],
+        "mDisplayAsPercent": true,
+        "mPrecision": 1,
+        "__type": "GameCalculation"
+      }
+    },
+    "dataValues": {
+      "BaseDamage": [
+        0.0,
+        20.0,
+        40.0,
+        60.0,
+        80.0,
+        100.0,
+        120.0
+      ],
+      "APRatio": [
+        0.30000001192092896,
+        0.30000001192092896,
+        0.30000001192092896,
+        0.30000001192092896,
+        0.30000001192092896,
+        0.30000001192092896,
+        0.30000001192092896
+      ],
+      "PercentHealthDamage": [
+        2.1500000953674316,
+        2.5,
+        2.8499999046325684,
+        3.200000047683716,
+        3.549999952316284,
+        3.9000000953674316,
+        4.25
+      ],
+      "FeastStackMultiplier": [
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5
+      ],
+      "MonsterDamageCap": [
+        200.0,
+        200.0,
+        200.0,
+        200.0,
+        200.0,
+        200.0,
+        200.0
+      ],
+      "SlowAmountPercentage": [
+        25.0,
+        30.0,
+        35.0,
+        40.0,
+        45.0,
+        50.0,
+        55.0
+      ],
+      "SlowDuration": [
+        1.5,
+        1.5,
+        1.5,
+        1.5,
+        1.5,
+        1.5,
+        1.5
+      ],
+      "AttackRangeIncrease": [
+        50.0,
+        50.0,
+        50.0,
+        50.0,
+        50.0,
+        50.0,
+        50.0
+      ],
+      "MaximumAttacks": [
+        3.0,
+        3.0,
+        3.0,
+        3.0,
+        3.0,
+        3.0,
+        3.0
+      ],
+      "BuffDuration": [
+        6.0,
+        6.0,
+        6.0,
+        6.0,
+        6.0,
+        6.0,
+        6.0
+      ]
+    }
+  },
+  "Chogath_Skin07_Blackhole": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "FeralScream": {
+    "calculations": {
+      "TotalDamageTooltip": {
+        "mSimpleTooltipCalculationDisplay": 6,
+        "mFormulaParts": [
+          {
+            "mEffectIndex": 1,
+            "__type": "EffectValueCalculationPart"
+          },
+          {
+            "mCoefficient": 0.699999988079071,
+            "__type": "StatByCoefficientCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      }
+    },
+    "dataValues": {}
+  },
+  "ChogathEAttack": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "ChogathBasicAttack2": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "Rupture": {
+    "calculations": {
+      "TotalDamageTooltip": {
+        "mSimpleTooltipCalculationDisplay": 6,
+        "mFormulaParts": [
+          {
+            "mDataValue": "BaseDamage",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          {
+            "mCoefficient": 1.0,
+            "__type": "StatByCoefficientCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      }
+    },
+    "dataValues": {
+      "BaseDamage": [
+        25.0,
+        80.0,
+        135.0,
+        190.0,
+        245.0,
+        300.0,
+        355.0
+      ],
+      "SlowAmountPercentage": [
+        60.0,
+        60.0,
+        60.0,
+        60.0,
+        60.0,
+        60.0,
+        60.0
+      ]
+    }
+  },
+  "ChogathCritAttack": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "Carnivore": {
+    "calculations": {
+      "ChogathCarnivoreHeal": {
+        "mFormulaParts": [
+          {
+            "mLevel1Value": 18.0,
+            "mInitialBonusPerLevel": 2.0,
+            "__type": "ByCharLevelBreakpointsCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      },
+      "ChogathCarnivoreMana": {
+        "mFormulaParts": [
+          {
+            "mLevel1Value": 4.71999979019165,
+            "mInitialBonusPerLevel": 0.2800000011920929,
+            "__type": "ByCharLevelBreakpointsCalculationPart"
+          }
+        ],
+        "mPrecision": 1,
+        "__type": "GameCalculation"
+      }
+    },
+    "dataValues": {}
+  },
+  "ChogathBasicAttack": {
+    "calculations": {},
+    "dataValues": {}
+  }
+}

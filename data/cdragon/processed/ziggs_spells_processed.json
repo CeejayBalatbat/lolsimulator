@@ -1,0 +1,440 @@
+{
+  "ZiggsQ": {
+    "calculations": {
+      "TotalDamage": {
+        "mFormulaParts": [
+          {
+            "mDataValue": "BaseDamage",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          {
+            "mDataValue": "APRatio",
+            "__type": "StatByNamedDataValueCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      }
+    },
+    "dataValues": {
+      "BaseDamage": [
+        30.0,
+        80.0,
+        130.0,
+        180.0,
+        230.0,
+        280.0,
+        330.0
+      ],
+      "APRatio": [
+        0.550000011920929,
+        0.6000000238418579,
+        0.6499999761581421,
+        0.699999988079071,
+        0.75,
+        0.800000011920929,
+        0.8500000238418579
+      ],
+      "MaxRange": [
+        850.0,
+        850.0,
+        850.0,
+        850.0,
+        850.0,
+        850.0,
+        850.0
+      ],
+      "MaxRangeFirstBounce": [
+        325.0,
+        325.0,
+        325.0,
+        325.0,
+        325.0,
+        325.0,
+        325.0
+      ],
+      "MaxRangeSecondBounce": [
+        225.0,
+        225.0,
+        225.0,
+        225.0,
+        225.0,
+        225.0,
+        225.0
+      ]
+    }
+  },
+  "ZiggsR": {
+    "calculations": {
+      "EmpoweredDamage": {
+        "mFormulaParts": [
+          {
+            "mDataValue": "BaseDamage",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          {
+            "mDataValue": "APRatio",
+            "__type": "StatByNamedDataValueCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      },
+      "BlastDamage": {
+        "mMultiplier": {
+          "mDataValue": "{165e8cb3}",
+          "__type": "NamedDataValueCalculationPart"
+        },
+        "mModifiedGameCalculation": "EmpoweredDamage",
+        "__type": "GameCalculationModified"
+      }
+    },
+    "dataValues": {
+      "BaseDamage": [
+        100.0,
+        300.0,
+        500.0,
+        700.0,
+        900.0,
+        1100.0,
+        1300.0
+      ],
+      "APRatio": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "OuterRingModifier": [
+        0.6499999761581421,
+        0.6499999761581421,
+        0.6499999761581421,
+        0.6499999761581421,
+        0.6499999761581421,
+        0.6499999761581421,
+        0.6499999761581421
+      ],
+      "MaximumRadius": [
+        525.0,
+        525.0,
+        525.0,
+        525.0,
+        525.0,
+        525.0,
+        525.0
+      ],
+      "EmpoweredRadius": [
+        250.0,
+        250.0,
+        250.0,
+        250.0,
+        250.0,
+        250.0,
+        250.0
+      ]
+    }
+  },
+  "ZiggsE": {
+    "calculations": {
+      "TotalDamage": {
+        "mSimpleTooltipCalculationDisplay": 6,
+        "mFormulaParts": [
+          {
+            "mDataValue": "DamagePerMine",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          {
+            "mDataValue": "APRatioPerMine",
+            "__type": "StatByNamedDataValueCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      },
+      "ReducedDamage": {
+        "mMultiplier": {
+          "mEffectIndex": 5,
+          "__type": "EffectValueCalculationPart"
+        },
+        "mSimpleTooltipCalculationDisplay": 6,
+        "tooltipOnly": true,
+        "mModifiedGameCalculation": "TotalDamage",
+        "__type": "GameCalculationModified"
+      }
+    },
+    "dataValues": {
+      "APRatioPerMine": [
+        0.20000000298023224,
+        0.25,
+        0.30000001192092896,
+        0.3499999940395355,
+        0.4000000059604645,
+        0.44999998807907104,
+        0.5
+      ],
+      "Slow": [
+        -0.0,
+        -0.10000000149011612,
+        -0.20000000298023224,
+        -0.30000001192092896,
+        -0.4000000059604645,
+        -0.5,
+        -0.6000000238418579
+      ],
+      "DamagePerMine": [
+        -10.0,
+        30.0,
+        70.0,
+        110.0,
+        150.0,
+        190.0,
+        230.0
+      ],
+      "MineDuration": [
+        10.0,
+        10.0,
+        10.0,
+        10.0,
+        10.0,
+        10.0,
+        10.0
+      ]
+    }
+  },
+  "ZiggsESlow": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "ZiggsE2": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "ZiggsE3": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "ZiggsEMine": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "ZiggsWToggle": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "ZiggsW": {
+    "calculations": {
+      "TotalDamage": {
+        "mFormulaParts": [
+          {
+            "mDataValue": "BaseDamage",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          {
+            "mCoefficient": 0.5,
+            "__type": "StatByCoefficientCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      }
+    },
+    "dataValues": {
+      "BaseDamage": [
+        35.0,
+        70.0,
+        105.0,
+        140.0,
+        175.0,
+        210.0,
+        245.0
+      ],
+      "BombDuration": [
+        4.0,
+        4.0,
+        4.0,
+        4.0,
+        4.0,
+        4.0,
+        4.0
+      ],
+      "TurretDestroyPercent": [
+        0.22499999403953552,
+        0.25,
+        0.2750000059604645,
+        0.30000001192092896,
+        0.32499998807907104,
+        0.3499999940395355,
+        0.375
+      ],
+      "KnockbackSpeed": [
+        600.0,
+        600.0,
+        600.0,
+        600.0,
+        600.0,
+        600.0,
+        600.0
+      ],
+      "KnockbackGravity": [
+        50.0,
+        50.0,
+        50.0,
+        50.0,
+        50.0,
+        50.0,
+        50.0
+      ],
+      "KnockbackDistance": [
+        500.0,
+        500.0,
+        500.0,
+        500.0,
+        500.0,
+        500.0,
+        500.0
+      ],
+      "ExplosionRadius": [
+        325.0,
+        325.0,
+        325.0,
+        325.0,
+        325.0,
+        325.0,
+        325.0
+      ],
+      "KnockbackDistanceAlly": [
+        775.0,
+        775.0,
+        775.0,
+        775.0,
+        775.0,
+        775.0,
+        775.0
+      ],
+      "PerceptionBubbleRadius": [
+        400.0,
+        400.0,
+        400.0,
+        400.0,
+        400.0,
+        400.0,
+        400.0
+      ],
+      "PerceptionBubbleDuration": [
+        6.0,
+        6.0,
+        6.0,
+        6.0,
+        6.0,
+        6.0,
+        6.0
+      ],
+      "CherryBonusHaste": [
+        30.0,
+        30.0,
+        30.0,
+        30.0,
+        30.0,
+        30.0,
+        30.0
+      ]
+    }
+  },
+  "ZiggsCritAttack": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "ZiggsPassiveBuff": {
+    "calculations": {
+      "TotalDamage": {
+        "mSimpleTooltipCalculationDisplay": 6,
+        "mFormulaParts": [
+          {
+            "mLevel1Value": 20.0,
+            "mInitialBonusPerLevel": 4.0,
+            "mBreakpoints": [
+              {
+                "mLevel": 7,
+                "mBonusPerLevelAtAndAfter": 8.0,
+                "__type": "Breakpoint"
+              },
+              {
+                "mLevel": 13,
+                "mBonusPerLevelAtAndAfter": 12.0,
+                "__type": "Breakpoint"
+              }
+            ],
+            "__type": "ByCharLevelBreakpointsCalculationPart"
+          },
+          {
+            "mDataValue": "APRatio",
+            "__type": "StatByNamedDataValueCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      },
+      "SpellCdr": {
+        "mSimpleTooltipCalculationDisplay": 6,
+        "mFormulaParts": [
+          {
+            "mLevel1Value": 4.0,
+            "mBreakpoints": [
+              {
+                "mLevel": 7,
+                "mAdditionalBonusAtThisLevel": 1.0,
+                "__type": "Breakpoint"
+              },
+              {
+                "mLevel": 13,
+                "mAdditionalBonusAtThisLevel": 1.0,
+                "__type": "Breakpoint"
+              }
+            ],
+            "__type": "ByCharLevelBreakpointsCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      },
+      "StructureDamage": {
+        "mMultiplier": {
+          "mDataValue": "StructureDamageRatio",
+          "__type": "NamedDataValueCalculationPart"
+        },
+        "mSimpleTooltipCalculationDisplay": 6,
+        "mModifiedGameCalculation": "TotalDamage",
+        "__type": "GameCalculationModified"
+      }
+    },
+    "dataValues": {
+      "APRatio": [
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5
+      ],
+      "StructureDamageRatio": [
+        1.75,
+        1.75,
+        1.75,
+        1.75,
+        1.75,
+        1.75,
+        1.75
+      ]
+    }
+  },
+  "ZiggsPassiveAttack": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "ZiggsBasicAttack": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "ZiggsBasicAttack2": {
+    "calculations": {},
+    "dataValues": {}
+  }
+}

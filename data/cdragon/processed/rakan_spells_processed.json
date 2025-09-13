@@ -1,0 +1,294 @@
+{
+  "RakanWCast": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "RakanW": {
+    "calculations": {
+      "TotalDamage": {
+        "mFormulaParts": [
+          {
+            "mDataValue": "BaseDamage",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          {
+            "mCoefficient": 0.800000011920929,
+            "__type": "StatByCoefficientCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      }
+    },
+    "dataValues": {
+      "BasicBootsSpeedBonus": {
+        "mName": "BasicBootsSpeedBonus",
+        "__type": "SpellDataValue"
+      },
+      "CompletedBootsSpeedBonus": {
+        "mName": "CompletedBootsSpeedBonus",
+        "__type": "SpellDataValue"
+      },
+      "BaseDashSpeed": [
+        1700.0,
+        1700.0,
+        1700.0,
+        1700.0,
+        1700.0,
+        1700.0,
+        1700.0
+      ],
+      "BaseDamage": [
+        20.0,
+        70.0,
+        120.0,
+        170.0,
+        220.0,
+        270.0,
+        320.0
+      ],
+      "KnockupDuration": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ]
+    }
+  },
+  "RakanQ": {
+    "calculations": {
+      "TotalDamage": {
+        "mFormulaParts": [
+          {
+            "mDataValue": "BaseDamage",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          {
+            "mDataValue": "DamageAPRatio",
+            "__type": "StatByNamedDataValueCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      },
+      "TotalHeal": {
+        "mFormulaParts": [
+          {
+            "mStartValue": 40.0,
+            "mEndValue": 210.0,
+            "__type": "ByCharLevelInterpolationCalculationPart"
+          },
+          {
+            "mDataValue": "HealAPRatio",
+            "__type": "StatByNamedDataValueCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      },
+      "{b88e1204}": {
+        "mFormulaParts": [
+          {
+            "mPart1": {
+              "mDataValue": "BaseCDActual",
+              "__type": "NamedDataValueCalculationPart"
+            },
+            "mPart2": {
+              "__type": "CooldownMultiplierCalculationPart"
+            },
+            "__type": "ProductOfSubPartsCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      }
+    },
+    "dataValues": {
+      "BaseDamage": [
+        25.0,
+        70.0,
+        115.0,
+        160.0,
+        205.0,
+        250.0,
+        295.0
+      ],
+      "HealDelay": [
+        3.0,
+        3.0,
+        3.0,
+        3.0,
+        3.0,
+        3.0,
+        3.0
+      ],
+      "BaseCDActual": [
+        12.0,
+        11.0,
+        10.0,
+        9.0,
+        8.0,
+        7.0,
+        6.0
+      ],
+      "DamageAPRatio": [
+        0.699999988079071,
+        0.699999988079071,
+        0.699999988079071,
+        0.699999988079071,
+        0.699999988079071,
+        0.699999988079071,
+        0.699999988079071
+      ],
+      "HealAPRatio": [
+        0.550000011920929,
+        0.550000011920929,
+        0.550000011920929,
+        0.550000011920929,
+        0.550000011920929,
+        0.550000011920929,
+        0.550000011920929
+      ]
+    }
+  },
+  "RakanQMark": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "RakanQMis": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "RakanQReturnMis": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "RakanCritAttack": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "RakanE": {
+    "calculations": {
+      "TotalShield": {
+        "mFormulaParts": [
+          {
+            "mDataValue": "BaseShield",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          {
+            "mCoefficient": 0.699999988079071,
+            "__type": "StatByCoefficientCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      }
+    },
+    "dataValues": {
+      "BaseShield": [
+        25.0,
+        50.0,
+        75.0,
+        100.0,
+        125.0,
+        150.0,
+        175.0
+      ]
+    }
+  },
+  "RakanEShield": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "RakanECast": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "RakanERecast": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "RakanECastXaya": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "RakanBasicAttackShort": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "RakanPassive": {
+    "calculations": {
+      "TotalShield": {
+        "mFormulaParts": [
+          {
+            "mStartValue": 30.0,
+            "mEndValue": 225.0,
+            "__type": "ByCharLevelInterpolationCalculationPart"
+          },
+          {
+            "mCoefficient": 0.949999988079071,
+            "__type": "StatByCoefficientCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      },
+      "ShieldCooldown": {
+        "mFormulaParts": [
+          {
+            "mLevel1Value": 40.0,
+            "mInitialBonusPerLevel": -1.5,
+            "mBreakpoints": [
+              {
+                "mLevel": 19,
+                "mBonusPerLevelAtAndAfter": -0.875,
+                "__type": "Breakpoint"
+              }
+            ],
+            "__type": "ByCharLevelBreakpointsCalculationPart"
+          }
+        ],
+        "mPrecision": 1,
+        "__type": "GameCalculation"
+      }
+    },
+    "dataValues": {
+      "HitCooldown": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ]
+    }
+  },
+  "RakanBasicAttackShort2": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "RakanBasicAttack": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "RakanR": {
+    "calculations": {
+      "TotalDamageTooltip": {
+        "mFormulaParts": [
+          {
+            "mEffectIndex": 1,
+            "__type": "EffectValueCalculationPart"
+          },
+          {
+            "mCoefficient": 0.5,
+            "__type": "StatByCoefficientCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      }
+    },
+    "dataValues": {}
+  },
+  "RakanBasicAttack2": {
+    "calculations": {},
+    "dataValues": {}
+  }
+}

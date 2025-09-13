@@ -1,0 +1,425 @@
+{
+  "AsheSpiritOfTheHawkCast": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "AsheSpiritOfTheHawk": {
+    "calculations": {
+      "ChargeCooldown": {
+        "mSimpleTooltipCalculationDisplay": 5,
+        "mExpandedTooltipCalculationDisplay": 5,
+        "tooltipOnly": true,
+        "mFormulaParts": [
+          {
+            "mPart1": {
+              "__type": "CooldownMultiplierCalculationPart"
+            },
+            "mPart2": {
+              "mDataValue": "BaseCooldown",
+              "__type": "NamedDataValueCalculationPart"
+            },
+            "__type": "ProductOfSubPartsCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      }
+    },
+    "dataValues": {
+      "BaseCooldown": [
+        100.0,
+        90.0,
+        80.0,
+        70.0,
+        60.0,
+        50.0,
+        40.0
+      ]
+    }
+  },
+  "AsheQAttackNoOnHit": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "AsheQ": {
+    "calculations": {
+      "EmpoweredDamage": {
+        "mSimpleTooltipCalculationDisplay": 6,
+        "tooltipOnly": true,
+        "mFormulaParts": [
+          {
+            "mStat": 2,
+            "mDataValue": "DamagePerStrike",
+            "__type": "StatByNamedDataValueCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      }
+    },
+    "dataValues": {
+      "DamagePerStrike": [
+        1.024999976158142,
+        1.100000023841858,
+        1.1749999523162842,
+        1.25,
+        1.3250000476837158,
+        1.399999976158142,
+        1.475000023841858
+      ]
+    }
+  },
+  "AsheQAttack": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "EnchantedCrystalArrow": {
+    "calculations": {
+      "RMainDamage": {
+        "mFormulaParts": [
+          {
+            "mDataValue": "RBaseDamage",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          {
+            "mDataValue": "APRatio",
+            "__type": "StatByNamedDataValueCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      },
+      "{6b932875}": {
+        "mMultiplier": {
+          "mDataValue": "AoeCoefficient",
+          "__type": "NamedDataValueCalculationPart"
+        },
+        "mModifiedGameCalculation": "RMainDamage",
+        "__type": "GameCalculationModified"
+      }
+    },
+    "dataValues": {
+      "RBaseDamage": [
+        0.0,
+        200.0,
+        400.0,
+        600.0,
+        800.0,
+        1000.0,
+        1200.0
+      ],
+      "MinStunDuration": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "MaxStunDuration": [
+        3.5,
+        3.5,
+        3.5,
+        3.5,
+        3.5,
+        3.5,
+        3.5
+      ],
+      "SlowRadius": [
+        400.0,
+        400.0,
+        400.0,
+        400.0,
+        400.0,
+        400.0,
+        400.0
+      ],
+      "AoECoefficient": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "APRatio": [
+        1.2000000476837158,
+        1.2000000476837158,
+        1.2000000476837158,
+        1.2000000476837158,
+        1.2000000476837158,
+        1.2000000476837158,
+        1.2000000476837158
+      ]
+    }
+  },
+  "VolleyRightAttack": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "VolleyAttack": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "VolleyRank3": {
+    "calculations": {
+      "TotalDamage": {
+        "mSimpleTooltipCalculationDisplay": 6,
+        "mFormulaParts": [
+          {
+            "mDataValue": "BaseDamage",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          {
+            "mStat": 2,
+            "mCoefficient": 1.0,
+            "__type": "StatByCoefficientCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      }
+    },
+    "dataValues": {
+      "BaseDamage": [
+        5.0,
+        20.0,
+        35.0,
+        50.0,
+        65.0,
+        80.0,
+        95.0
+      ]
+    }
+  },
+  "VolleyRank2": {
+    "calculations": {
+      "TotalDamage": {
+        "mSimpleTooltipCalculationDisplay": 6,
+        "mFormulaParts": [
+          {
+            "mDataValue": "BaseDamage",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          {
+            "mStat": 2,
+            "mCoefficient": 1.0,
+            "__type": "StatByCoefficientCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      }
+    },
+    "dataValues": {
+      "BaseDamage": [
+        5.0,
+        20.0,
+        35.0,
+        50.0,
+        65.0,
+        80.0,
+        95.0
+      ]
+    }
+  },
+  "VolleyRank5": {
+    "calculations": {
+      "TotalDamage": {
+        "mSimpleTooltipCalculationDisplay": 6,
+        "mFormulaParts": [
+          {
+            "mDataValue": "BaseDamage",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          {
+            "mStat": 2,
+            "mCoefficient": 1.0,
+            "__type": "StatByCoefficientCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      }
+    },
+    "dataValues": {
+      "BaseDamage": [
+        5.0,
+        20.0,
+        35.0,
+        50.0,
+        65.0,
+        80.0,
+        95.0
+      ]
+    }
+  },
+  "VolleyRank4": {
+    "calculations": {
+      "TotalDamage": {
+        "mSimpleTooltipCalculationDisplay": 6,
+        "mFormulaParts": [
+          {
+            "mDataValue": "BaseDamage",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          {
+            "mStat": 2,
+            "mCoefficient": 1.0,
+            "__type": "StatByCoefficientCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      }
+    },
+    "dataValues": {
+      "BaseDamage": [
+        5.0,
+        20.0,
+        35.0,
+        50.0,
+        65.0,
+        80.0,
+        95.0
+      ]
+    }
+  },
+  "Volley": {
+    "calculations": {
+      "TotalDamage": {
+        "mSimpleTooltipCalculationDisplay": 6,
+        "mFormulaParts": [
+          {
+            "mDataValue": "BaseDamage",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          {
+            "mStat": 2,
+            "mStatFormula": 2,
+            "mDataValue": "ADRatio",
+            "__type": "StatByNamedDataValueCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      }
+    },
+    "dataValues": {
+      "BaseDamage": [
+        25.0,
+        60.0,
+        95.0,
+        130.0,
+        165.0,
+        200.0,
+        235.0
+      ],
+      "NumberOfArrowsTooltip": [
+        6.0,
+        7.0,
+        8.0,
+        9.0,
+        10.0,
+        11.0,
+        12.0
+      ],
+      "ADRatio": [
+        1.100000023841858,
+        1.100000023841858,
+        1.100000023841858,
+        1.100000023841858,
+        1.100000023841858,
+        1.100000023841858,
+        1.100000023841858
+      ]
+    }
+  },
+  "VolleyAttackWithSound": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "VolleyCenterAttack": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "AsheBasicAttack2": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "AshePassive": {
+    "calculations": {
+      "SlowAmount": {
+        "mSimpleTooltipCalculationDisplay": 6,
+        "mFormulaParts": [
+          {
+            "mStartValue": 0.20000000298023224,
+            "mEndValue": 0.30000001192092896,
+            "__type": "ByCharLevelInterpolationCalculationPart"
+          }
+        ],
+        "mDisplayAsPercent": true,
+        "__type": "GameCalculation"
+      },
+      "EmpoweredSlowAmount": {
+        "mSimpleTooltipCalculationDisplay": 6,
+        "mFormulaParts": [
+          {
+            "mStartValue": 0.4000000059604645,
+            "mEndValue": 0.6000000238418579,
+            "__type": "ByCharLevelInterpolationCalculationPart"
+          }
+        ],
+        "mDisplayAsPercent": true,
+        "__type": "GameCalculation"
+      },
+      "DamageBonus": {
+        "mSimpleTooltipCalculationDisplay": 6,
+        "mFormulaParts": [
+          {
+            "mNumber": 1.0,
+            "__type": "NumberCalculationPart"
+          },
+          {
+            "mStat": 8,
+            "mSubpart": {
+              "mSubparts": [
+                {
+                  "mNumber": 0.75,
+                  "__type": "NumberCalculationPart"
+                },
+                {
+                  "mStat": 9,
+                  "mStatFormula": 2,
+                  "mCoefficient": 1.0,
+                  "__type": "StatByCoefficientCalculationPart"
+                }
+              ],
+              "__type": "SumOfSubPartsCalculationPart"
+            },
+            "__type": "StatBySubPartCalculationPart"
+          }
+        ],
+        "mDisplayAsPercent": true,
+        "__type": "GameCalculation"
+      }
+    },
+    "dataValues": {
+      "SlowDuration": [
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0
+      ]
+    }
+  },
+  "AsheBasicAttack": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "ItemHurricaneAsheAttack": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "AsheCritAttack": {
+    "calculations": {},
+    "dataValues": {}
+  }
+}

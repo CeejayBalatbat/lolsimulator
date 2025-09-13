@@ -1,0 +1,654 @@
+{
+  "Hallucinate": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "HallucinateFull": {
+    "calculations": {
+      "STDamage": {
+        "mFormulaParts": [
+          {
+            "mDataValue": "STBaseDamage",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          {
+            "mCoefficient": 0.15000000596046448,
+            "__type": "StatByCoefficientCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      },
+      "AoEDamage": {
+        "mFormulaParts": [
+          {
+            "mDataValue": "AoEBaseDamage",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          {
+            "mCoefficient": 0.10000000149011612,
+            "__type": "StatByCoefficientCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      },
+      "ExplosionTotalDamage": {
+        "mFormulaParts": [
+          {
+            "mDataValue": "ExplosionBaseDamage",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          {
+            "mCoefficient": 0.699999988079071,
+            "__type": "StatByCoefficientCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      }
+    },
+    "dataValues": {
+      "TeleportRange": [
+        150.0,
+        150.0,
+        150.0,
+        150.0,
+        150.0,
+        150.0,
+        150.0
+      ],
+      "STBaseDamage": [
+        0.0,
+        25.0,
+        50.0,
+        75.0,
+        100.0,
+        125.0,
+        150.0
+      ],
+      "AoEBaseDamage": [
+        0.0,
+        10.0,
+        20.0,
+        30.0,
+        40.0,
+        50.0,
+        60.0
+      ],
+      "CloneAADamagePercent": [
+        0.6000000238418579,
+        0.6000000238418579,
+        0.6000000238418579,
+        0.6000000238418579,
+        0.6000000238418579,
+        0.6000000238418579,
+        0.6000000238418579
+      ],
+      "CloneIncomingDamagePercent": [
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5
+      ],
+      "BoxFearDuration": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "ExplosionBaseDamage": [
+        75.0,
+        150.0,
+        225.0,
+        300.0,
+        375.0,
+        450.0,
+        525.0
+      ],
+      "BoxArmTime": [
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0
+      ],
+      "BoxLifetime": [
+        6.0,
+        6.0,
+        6.0,
+        6.0,
+        6.0,
+        6.0,
+        6.0
+      ],
+      "CloneLifetime": [
+        18.0,
+        18.0,
+        18.0,
+        18.0,
+        18.0,
+        18.0,
+        18.0
+      ]
+    }
+  },
+  "HallucinateGuide": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "ShacoPassive": {
+    "calculations": {
+      "MonsterDamageTooltip": {
+        "mFormulaParts": [
+          {
+            "mStat": 2,
+            "mSubpart": {
+              "mSubparts": [
+                {
+                  "mDataValue": "MonsterCritMod",
+                  "__type": "NamedDataValueCalculationPart"
+                },
+                {
+                  "mStat": 9,
+                  "mStatFormula": 2,
+                  "mCoefficient": 1.0,
+                  "__type": "StatByCoefficientCalculationPart"
+                }
+              ],
+              "__type": "SumOfSubPartsCalculationPart"
+            },
+            "__type": "StatBySubPartCalculationPart"
+          },
+          {
+            "mDataValue": "APRatio",
+            "__type": "StatByNamedDataValueCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      },
+      "BasicAttackDamage": {
+        "mFormulaParts": [
+          {
+            "mStartValue": 20.0,
+            "mEndValue": 35.0,
+            "__type": "ByCharLevelInterpolationCalculationPart"
+          },
+          {
+            "mStat": 2,
+            "mStatFormula": 2,
+            "mDataValue": "AttackBonusADRatio",
+            "__type": "StatByNamedDataValueCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      },
+      "ShivDamage": {
+        "mFormulaParts": [
+          {
+            "mStartValue": 15.0,
+            "mEndValue": 50.0,
+            "__type": "ByCharLevelInterpolationCalculationPart"
+          },
+          {
+            "mCoefficient": 0.10000000149011612,
+            "__type": "StatByCoefficientCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      },
+      "{3445d362}": {
+        "mFormulaParts": [
+          {
+            "mStat": 9,
+            "mStatFormula": 1,
+            "mCoefficient": 1.0,
+            "__type": "StatByCoefficientCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      },
+      "ShivDamageExecute": {
+        "mMultiplier": {
+          "mDataValue": "ShivExecuteDamagePercent",
+          "__type": "NamedDataValueCalculationPart"
+        },
+        "mModifiedGameCalculation": "ShivDamage",
+        "__type": "GameCalculationModified"
+      }
+    },
+    "dataValues": {
+      "PerUnitCD": [
+        3.0,
+        3.0,
+        3.0,
+        3.0,
+        3.0,
+        3.0,
+        3.0
+      ],
+      "MonsterCritMod": [
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0
+      ],
+      "APRatio": [
+        0.4000000059604645,
+        0.4000000059604645,
+        0.4000000059604645,
+        0.4000000059604645,
+        0.4000000059604645,
+        0.4000000059604645,
+        0.4000000059604645
+      ],
+      "CloneMult": [
+        0.75,
+        0.75,
+        0.75,
+        0.75,
+        0.75,
+        0.75,
+        0.75
+      ],
+      "ShivSlowAmount": [
+        -0.4000000059604645,
+        -0.4000000059604645,
+        -0.4000000059604645,
+        -0.4000000059604645,
+        -0.4000000059604645,
+        -0.4000000059604645,
+        -0.4000000059604645
+      ],
+      "ShredDuration": [
+        4.0,
+        4.0,
+        4.0,
+        4.0,
+        4.0,
+        4.0,
+        4.0
+      ],
+      "ShivExecuteDamagePercent": [
+        1.5,
+        1.5,
+        1.5,
+        1.5,
+        1.5,
+        1.5,
+        1.5
+      ],
+      "AttackBonusADRatio": [
+        0.25,
+        0.25,
+        0.25,
+        0.25,
+        0.25,
+        0.25,
+        0.25
+      ]
+    }
+  },
+  "ShacoWPlacementMissile": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "ShacoBasicAttack2": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "ShacoQTrail": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "JackInTheBox": {
+    "calculations": {
+      "AoEDamage": {
+        "mFormulaParts": [
+          {
+            "mDataValue": "AoEBaseDamage",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          {
+            "mDataValue": "WAoEAPRatio",
+            "__type": "StatByNamedDataValueCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      },
+      "STDamage": {
+        "mFormulaParts": [
+          {
+            "mDataValue": "STBaseDamage",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          {
+            "mDataValue": "WSingleTargetAPRatio",
+            "__type": "StatByNamedDataValueCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      },
+      "TrapDuration": {
+        "mFormulaParts": [
+          {
+            "mEffectIndex": 4,
+            "__type": "EffectValueCalculationPart"
+          },
+          {
+            "mCoefficient": 0.10000000149011612,
+            "__type": "StatByCoefficientCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      }
+    },
+    "dataValues": {
+      "AoEBaseDamage": [
+        5.0,
+        10.0,
+        15.0,
+        20.0,
+        25.0,
+        30.0,
+        35.0
+      ],
+      "STBaseDamage": [
+        10.0,
+        25.0,
+        40.0,
+        55.0,
+        70.0,
+        85.0,
+        100.0
+      ],
+      "MinionFearDuration": [
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0
+      ],
+      "MonsterBonusDamage": [
+        5.0,
+        20.0,
+        35.0,
+        50.0,
+        65.0,
+        80.0,
+        95.0
+      ],
+      "MaxTraps": [
+        25000.0,
+        25000.0,
+        25000.0,
+        25000.0,
+        25000.0,
+        25000.0,
+        25000.0
+      ],
+      "FearDuration": [
+        0.25,
+        0.5,
+        0.75,
+        1.0,
+        1.25,
+        1.5,
+        1.75
+      ],
+      "WAoEAPRatio": [
+        0.11999999731779099,
+        0.11999999731779099,
+        0.11999999731779099,
+        0.11999999731779099,
+        0.11999999731779099,
+        0.11999999731779099,
+        0.11999999731779099
+      ],
+      "WSingleTargetAPRatio": [
+        0.18000000715255737,
+        0.18000000715255737,
+        0.18000000715255737,
+        0.18000000715255737,
+        0.18000000715255737,
+        0.18000000715255737,
+        0.18000000715255737
+      ]
+    }
+  },
+  "Deceive": {
+    "calculations": {
+      "TotalDamage": {
+        "mFormulaParts": [
+          {
+            "mDataValue": "BaseDamage",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          {
+            "mStat": 2,
+            "mStatFormula": 2,
+            "mDataValue": "BonusADRatio",
+            "__type": "StatByNamedDataValueCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      },
+      "QCritDamageMod": {
+        "mFormulaParts": [
+          {
+            "mSubparts": [
+              {
+                "mNumber": 1.5499999523162842,
+                "__type": "NumberCalculationPart"
+              },
+              {
+                "mStat": 9,
+                "mStatFormula": 2,
+                "mCoefficient": 1.0,
+                "__type": "StatByCoefficientCalculationPart"
+              }
+            ],
+            "__type": "SumOfSubPartsCalculationPart"
+          }
+        ],
+        "mDisplayAsPercent": true,
+        "__type": "GameCalculation"
+      }
+    },
+    "dataValues": {
+      "BaseDamage": [
+        15.0,
+        25.0,
+        35.0,
+        45.0,
+        55.0,
+        65.0,
+        75.0
+      ],
+      "StealthDuration": [
+        2.25,
+        2.5,
+        2.75,
+        3.0,
+        3.25,
+        3.5,
+        3.75
+      ],
+      "CDRefund": [
+        2.5,
+        2.5,
+        2.5,
+        2.5,
+        2.5,
+        2.5,
+        2.5
+      ],
+      "ExtraAATime": [
+        0.25,
+        0.25,
+        0.25,
+        0.25,
+        0.25,
+        0.25,
+        0.25
+      ],
+      "PseudoCastTime": [
+        0.125,
+        0.125,
+        0.125,
+        0.125,
+        0.125,
+        0.125,
+        0.125
+      ],
+      "BonusADRatio": [
+        0.6000000238418579,
+        0.6000000238418579,
+        0.6000000238418579,
+        0.6000000238418579,
+        0.6000000238418579,
+        0.6000000238418579,
+        0.6000000238418579
+      ]
+    }
+  },
+  "ShacoBoxBasicAttack": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "TwoShivPoison": {
+    "calculations": {
+      "TotalDamage": {
+        "mFormulaParts": [
+          {
+            "mDataValue": "BaseDamage",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          {
+            "mStat": 2,
+            "mStatFormula": 2,
+            "mDataValue": "BonusADRatio",
+            "__type": "StatByNamedDataValueCalculationPart"
+          },
+          {
+            "mDataValue": "APRatio",
+            "__type": "StatByNamedDataValueCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      },
+      "TotalExecuteDamage": {
+        "mMultiplier": {
+          "mDataValue": "ExecuteDamagePercent",
+          "__type": "NamedDataValueCalculationPart"
+        },
+        "mModifiedGameCalculation": "TotalDamage",
+        "__type": "GameCalculationModified"
+      }
+    },
+    "dataValues": {
+      "BaseDamage": [
+        45.0,
+        70.0,
+        95.0,
+        120.0,
+        145.0,
+        170.0,
+        195.0
+      ],
+      "ExecuteDamagePercent": [
+        1.5,
+        1.5,
+        1.5,
+        1.5,
+        1.5,
+        1.5,
+        1.5
+      ],
+      "ExecuteHealthThreshold": [
+        0.30000001192092896,
+        0.30000001192092896,
+        0.30000001192092896,
+        0.30000001192092896,
+        0.30000001192092896,
+        0.30000001192092896,
+        0.30000001192092896
+      ],
+      "SlowAmount": [
+        -0.17499999701976776,
+        -0.20000000298023224,
+        -0.22499999403953552,
+        -0.25,
+        -0.2750000059604645,
+        -0.30000001192092896,
+        -0.32499998807907104
+      ],
+      "SlowDurationPassive": [
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0
+      ],
+      "SlowDurationActive": [
+        3.0,
+        3.0,
+        3.0,
+        3.0,
+        3.0,
+        3.0,
+        3.0
+      ],
+      "APRatio": [
+        0.6000000238418579,
+        0.6000000238418579,
+        0.6000000238418579,
+        0.6000000238418579,
+        0.6000000238418579,
+        0.6000000238418579,
+        0.6000000238418579
+      ],
+      "BonusADRatio": [
+        0.800000011920929,
+        0.800000011920929,
+        0.800000011920929,
+        0.800000011920929,
+        0.800000011920929,
+        0.800000011920929,
+        0.800000011920929
+      ]
+    }
+  },
+  "ShacoCritAttack": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "ShacoBoxSpell": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "ShacoBoxSpell2": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "DeceiveCritBonus": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "ShacoBasicAttack": {
+    "calculations": {},
+    "dataValues": {}
+  }
+}

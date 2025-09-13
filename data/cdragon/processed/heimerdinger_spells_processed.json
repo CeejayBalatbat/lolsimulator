@@ -1,0 +1,727 @@
+{
+  "HeimerdingerUltWDummySpell": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "HeimerdingerRQVO": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "HeimerdingerEVO": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "HeimerdingerWAttack2Ult": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "HeimerdingerW": {
+    "calculations": {
+      "Damage": {
+        "mFormulaParts": [
+          {
+            "mDataValue": "BaseDamage",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          {
+            "mDataValue": "InitialDamageAPRatio",
+            "__type": "StatByNamedDataValueCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      },
+      "ExtraHitDamage": {
+        "mFormulaParts": [
+          {
+            "mDataValue": "ExtraHitBaseDamage",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          {
+            "mCoefficient": 0.11999999731779099,
+            "__type": "StatByCoefficientCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      },
+      "TotalDamage": {
+        "mFormulaParts": [
+          {
+            "mDataValue": "TotalBaseDamage",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          {
+            "mCoefficient": 1.0299999713897705,
+            "__type": "StatByCoefficientCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      },
+      "ExtraHitDamageMinions": {
+        "mMultiplier": {
+          "mNumber": 3.0,
+          "__type": "NumberCalculationPart"
+        },
+        "mModifiedGameCalculation": "ExtraHitDamage",
+        "__type": "GameCalculationModified"
+      }
+    },
+    "dataValues": {
+      "Rockets": [
+        5.0,
+        5.0,
+        5.0,
+        5.0,
+        5.0,
+        5.0,
+        5.0
+      ],
+      "BaseDamage": [
+        15.0,
+        40.0,
+        65.0,
+        90.0,
+        115.0,
+        140.0,
+        165.0
+      ],
+      "ExtraHitBaseDamage": [
+        5.0,
+        10.0,
+        15.0,
+        20.0,
+        25.0,
+        30.0,
+        35.0
+      ],
+      "TotalBaseDamage": [
+        45.0,
+        80.0,
+        115.0,
+        150.0,
+        185.0,
+        220.0,
+        255.0
+      ],
+      "InitialDamageAPRatio": [
+        0.550000011920929,
+        0.550000011920929,
+        0.550000011920929,
+        0.550000011920929,
+        0.550000011920929,
+        0.550000011920929,
+        0.550000011920929
+      ]
+    }
+  },
+  "HeimerdingerWAttack2_Ult": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "HeimerdingerWAttack2": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "HeimerdingerQUlt": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "HeimerdingerR": {
+    "calculations": {
+      "QUltTurretHealth": {
+        "mFormulaParts": [
+          {
+            "mLevel1Value": 725.0,
+            "mBreakpoints": [
+              {
+                "mLevel": 7,
+                "mBonusPerLevelAtAndAfter": 25.0,
+                "__type": "Breakpoint"
+              },
+              {
+                "mLevel": 11,
+                "mBonusPerLevelAtAndAfter": 50.0,
+                "__type": "Breakpoint"
+              },
+              {
+                "mLevel": 16,
+                "mBonusPerLevelAtAndAfter": 150.0,
+                "__type": "Breakpoint"
+              }
+            ],
+            "__type": "ByCharLevelBreakpointsCalculationPart"
+          },
+          {
+            "mCoefficient": 0.5,
+            "__type": "StatByCoefficientCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      },
+      "QUltDamage": {
+        "mFormulaParts": [
+          {
+            "mDataValue": "QUltBaseDamage",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          {
+            "mCoefficient": 0.3499999940395355,
+            "__type": "StatByCoefficientCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      },
+      "QUltDamageBeam": {
+        "mFormulaParts": [
+          {
+            "mDataValue": "QUltBaseDamageBeam",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          {
+            "mCoefficient": 0.699999988079071,
+            "__type": "StatByCoefficientCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      },
+      "WUltDamage": {
+        "mFormulaParts": [
+          {
+            "mDataValue": "WUltBaseDamage",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          {
+            "mCoefficient": 0.44999998807907104,
+            "__type": "StatByCoefficientCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      },
+      "{a8af07ef}": {
+        "mFormulaParts": [
+          {
+            "mDataValue": "WUltExtraHitBaseDamage",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          {
+            "mCoefficient": 0.11999999731779099,
+            "__type": "StatByCoefficientCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      },
+      "{f058914b}": {
+        "mMultiplier": {
+          "mNumber": 0.5,
+          "__type": "NumberCalculationPart"
+        },
+        "mModifiedGameCalculation": "{a8af07ef}",
+        "__type": "GameCalculationModified"
+      },
+      "WUltTotalDamage": {
+        "mFormulaParts": [
+          {
+            "mDataValue": "WUltTotalBaseDamage",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          {
+            "mCoefficient": 1.8300000429153442,
+            "__type": "StatByCoefficientCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      },
+      "EUltDamage": {
+        "mFormulaParts": [
+          {
+            "mDataValue": "EUltBaseDamage",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          {
+            "mCoefficient": 0.6000000238418579,
+            "__type": "StatByCoefficientCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      },
+      "{0df0e2e2}": {
+        "mMultiplier": {
+          "mNumber": 20.0,
+          "__type": "NumberCalculationPart"
+        },
+        "mModifiedGameCalculation": "WUltTotalDamage",
+        "__type": "GameCalculationModified"
+      },
+      "RQTurretResists": {
+        "mFormulaParts": [
+          {
+            "mLevel1Value": 30.0,
+            "mBreakpoints": [
+              {
+                "mLevel": 7,
+                "mBonusPerLevelAtAndAfter": 5.0,
+                "__type": "Breakpoint"
+              }
+            ],
+            "__type": "ByCharLevelBreakpointsCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      }
+    },
+    "dataValues": {
+      "QUltBaseDamage": [
+        60.0,
+        80.0,
+        100.0,
+        120.0,
+        140.0,
+        160.0,
+        180.0
+      ],
+      "QUltBaseDamageBeam": [
+        60.0,
+        100.0,
+        140.0,
+        180.0,
+        220.0,
+        260.0,
+        300.0
+      ],
+      "WUltBaseDamage": [
+        90.0,
+        135.0,
+        180.0,
+        225.0,
+        270.0,
+        315.0,
+        360.0
+      ],
+      "WUltExtraHitBaseDamage": [
+        19.0,
+        32.0,
+        45.0,
+        58.0,
+        71.0,
+        84.0,
+        97.0
+      ],
+      "WUltTotalBaseDamage": [
+        0.0,
+        503.0,
+        697.5,
+        892.0,
+        1086.5,
+        1281.0,
+        1475.5
+      ],
+      "EUltBaseDamage": [
+        0.0,
+        100.0,
+        200.0,
+        300.0,
+        400.0,
+        500.0,
+        600.0
+      ]
+    }
+  },
+  "HeimerdingerEUlt": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "HeimerdingerWUlt": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "HeimerdingerESpell_ult3": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "HeimerdingerESpell_ult2": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "HeimerdingerE_Ult": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "HeimerdingerESpell": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "HeimerdingerESpell_ult": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "HeimerdingerE": {
+    "calculations": {
+      "Damage": {
+        "mFormulaParts": [
+          {
+            "mDataValue": "BaseDamage",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          {
+            "mCoefficient": 0.6000000238418579,
+            "__type": "StatByCoefficientCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      }
+    },
+    "dataValues": {
+      "BaseDamage": [
+        20.0,
+        60.0,
+        100.0,
+        140.0,
+        180.0,
+        220.0,
+        260.0
+      ],
+      "SlowDuration": [
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0
+      ],
+      "SlowPercent": [
+        0.3499999940395355,
+        0.3499999940395355,
+        0.3499999940395355,
+        0.3499999940395355,
+        0.3499999940395355,
+        0.3499999940395355,
+        0.3499999940395355
+      ],
+      "StunDuration": [
+        1.5,
+        1.5,
+        1.5,
+        1.5,
+        1.5,
+        1.5,
+        1.5
+      ]
+    }
+  },
+  "HeimerdingerQVO": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "HeimerdingerBasicAttack2": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "HeimerdingerQSpawnDestroyAudio": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "HeimerdingerQSpell1": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "HeimerdingerQSpell3": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "HeimerdingerQSpell2": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "HeimerdingerRQEngineAudio": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "HeimerdingerQ": {
+    "calculations": {
+      "TurretHealth": {
+        "mMultiplier": {
+          "mDataValue": "TurretHealthMod",
+          "__type": "NamedDataValueCalculationPart"
+        },
+        "mFormulaParts": [
+          {
+            "mStartValue": 130.0,
+            "mEndValue": 640.0,
+            "__type": "ByCharLevelInterpolationCalculationPart"
+          },
+          {
+            "mSubpart": {
+              "mLevel1Value": 0.05000000074505806,
+              "mInitialBonusPerLevel": 0.004999999888241291,
+              "mBreakpoints": [
+                {
+                  "mLevel": 10,
+                  "mBonusPerLevelAtAndAfter": 0.03999999910593033,
+                  "__type": "Breakpoint"
+                }
+              ],
+              "__type": "ByCharLevelBreakpointsCalculationPart"
+            },
+            "__type": "StatBySubPartCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      },
+      "{f0517331}": {
+        "mFormulaParts": [
+          {
+            "mBreakpoints": [
+              {
+                "mLevel": 6,
+                "mAdditionalBonusAtThisLevel": 5.0,
+                "__type": "Breakpoint"
+              },
+              {
+                "mLevel": 8,
+                "mAdditionalBonusAtThisLevel": 5.0,
+                "__type": "Breakpoint"
+              },
+              {
+                "mLevel": 10,
+                "mBonusPerLevelAtAndAfter": 5.0,
+                "__type": "Breakpoint"
+              },
+              {
+                "mLevel": 14,
+                "mBonusPerLevelAtAndAfter": 10.0,
+                "__type": "Breakpoint"
+              }
+            ],
+            "__type": "ByCharLevelBreakpointsCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      },
+      "{8109ae7b}": {
+        "mFormulaParts": [
+          {
+            "mBreakpoints": [
+              {
+                "mLevel": 8,
+                "mAdditionalBonusAtThisLevel": 0.5,
+                "__type": "Breakpoint"
+              },
+              {
+                "mLevel": 10,
+                "mAdditionalBonusAtThisLevel": 0.5,
+                "__type": "Breakpoint"
+              },
+              {
+                "mLevel": 12,
+                "mBonusPerLevelAtAndAfter": 5.0,
+                "__type": "Breakpoint"
+              },
+              {
+                "mLevel": 18,
+                "mBonusPerLevelAtAndAfter": 10.0,
+                "__type": "Breakpoint"
+              }
+            ],
+            "__type": "ByCharLevelBreakpointsCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      },
+      "KitCooldown": {
+        "mMultiplier": {
+          "__type": "CooldownMultiplierCalculationPart"
+        },
+        "mSimpleTooltipCalculationDisplay": 5,
+        "mExpandedTooltipCalculationDisplay": 5,
+        "mFormulaParts": [
+          {
+            "mNumber": 20.0,
+            "__type": "NumberCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      },
+      "BeamCooldown": {
+        "mMultiplier": {
+          "__type": "CooldownMultiplierCalculationPart"
+        },
+        "mFormulaParts": [
+          {
+            "mNumber": 90.0,
+            "__type": "NumberCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      },
+      "Damage": {
+        "mFormulaParts": [
+          {
+            "mDataValue": "BaseDamage",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          {
+            "mDataValue": "TurretAPRatio",
+            "__type": "StatByNamedDataValueCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      },
+      "DamageBeam": {
+        "mFormulaParts": [
+          {
+            "mDataValue": "BaseDamageBeam",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          {
+            "mDataValue": "BeamAPRatio",
+            "__type": "StatByNamedDataValueCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      }
+    },
+    "dataValues": {
+      "MaxTurrets": [
+        0.0,
+        3.0,
+        3.0,
+        3.0,
+        3.0,
+        3.0,
+        3.0
+      ],
+      "MaxKits": [
+        0.0,
+        3.0,
+        3.0,
+        3.0,
+        3.0,
+        3.0,
+        3.0
+      ],
+      "KitCost": [
+        0.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "DistanceToHeimer": [
+        0.0,
+        900.0,
+        900.0,
+        900.0,
+        900.0,
+        900.0,
+        900.0
+      ],
+      "BaseDamage": [
+        3.0,
+        7.0,
+        11.0,
+        15.0,
+        19.0,
+        23.0,
+        27.0
+      ],
+      "BaseDamageBeam": [
+        20.0,
+        40.0,
+        60.0,
+        80.0,
+        100.0,
+        120.0,
+        140.0
+      ],
+      "TurretAPRatio": [
+        0.3499999940395355,
+        0.3499999940395355,
+        0.3499999940395355,
+        0.3499999940395355,
+        0.3499999940395355,
+        0.3499999940395355,
+        0.3499999940395355
+      ],
+      "BeamAPRatio": [
+        0.550000011920929,
+        0.550000011920929,
+        0.550000011920929,
+        0.550000011920929,
+        0.550000011920929,
+        0.550000011920929,
+        0.550000011920929
+      ],
+      "TurretHealthMod": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ]
+    }
+  },
+  "HeimerdingerRWVO": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "HeimerdingerEngineAudio": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "HeimerdingerUltQDummySpell": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "HeimerdingerCritAttack": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "HeimerdingerPassive": {
+    "calculations": {},
+    "dataValues": {
+      "MovementSpeed": [
+        0.20000000298023224,
+        0.20000000298023224,
+        0.20000000298023224,
+        0.20000000298023224,
+        0.20000000298023224,
+        0.20000000298023224,
+        0.20000000298023224
+      ]
+    }
+  },
+  "HeimerdingerPassiveSpeed": {
+    "calculations": {},
+    "dataValues": {
+      "MovementSpeed": [
+        0.20000000298023224,
+        0.20000000298023224,
+        0.20000000298023224,
+        0.20000000298023224,
+        0.20000000298023224,
+        0.20000000298023224,
+        0.20000000298023224
+      ]
+    }
+  },
+  "HeimerdingerWVO": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "HeimerdingerBasicAttack": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "HeimerdingerUltEDummySpell": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "HeimerdingerREVO": {
+    "calculations": {},
+    "dataValues": {}
+  }
+}

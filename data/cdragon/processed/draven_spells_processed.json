@@ -1,0 +1,328 @@
+{
+  "DravenBasicAttack2": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "DravenSpinningAttack": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "DravenSpinning": {
+    "calculations": {
+      "TotalDamage": {
+        "mSimpleTooltipCalculationDisplay": 6,
+        "mFormulaParts": [
+          {
+            "mDataValue": "BaseDamage",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          {
+            "mStat": 2,
+            "mStatFormula": 2,
+            "mDataValue": "ADScaling",
+            "__type": "StatByNamedDataValueCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      }
+    },
+    "dataValues": {
+      "ADScaling": [
+        0.6499999761581421,
+        0.75,
+        0.8500000238418579,
+        0.949999988079071,
+        1.0499999523162842,
+        1.149999976158142,
+        1.25
+      ],
+      "DurationTOOLTIP": [
+        6.0,
+        6.0,
+        6.0,
+        6.0,
+        6.0,
+        6.0,
+        6.0
+      ],
+      "BaseDamage": [
+        35.0,
+        40.0,
+        45.0,
+        50.0,
+        55.0,
+        60.0,
+        65.0
+      ]
+    }
+  },
+  "DravenSpinningReturn": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "DravenSpinningAttackCrit": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "DravenSpinningReturnLeftAxe": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "DravenSpinningReturnCatch": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "DravenSpinningAttack2": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "DravenSpinningAttack2Crit": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "DravenFury": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "DravenDoubleShot": {
+    "calculations": {
+      "TotalDamage": {
+        "mSimpleTooltipCalculationDisplay": 6,
+        "mFormulaParts": [
+          {
+            "mDataValue": "BaseDamage",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          {
+            "mStat": 2,
+            "mStatFormula": 2,
+            "mCoefficient": 0.5,
+            "__type": "StatByCoefficientCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      }
+    },
+    "dataValues": {
+      "BaseDamage": [
+        40.0,
+        75.0,
+        110.0,
+        145.0,
+        180.0,
+        215.0,
+        250.0
+      ]
+    }
+  },
+  "DravenDoubleShotMissile": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "DravenPassive": {
+    "calculations": {
+      "DravenPassiveGoldEarned": {
+        "mSimpleTooltipCalculationDisplay": 5,
+        "mExpandedTooltipCalculationDisplay": 5,
+        "mFormulaParts": [
+          {
+            "mBuffName": "DravenPassiveGoldEarned",
+            "mCoefficient": 1.0,
+            "__type": "BuffCounterByCoefficientCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      },
+      "DravenPassiveHighestBounty": {
+        "mSimpleTooltipCalculationDisplay": 5,
+        "mExpandedTooltipCalculationDisplay": 5,
+        "mFormulaParts": [
+          {
+            "mBuffName": "DravenPassiveHighestBounty",
+            "mCoefficient": 1.0,
+            "__type": "BuffCounterByCoefficientCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      }
+    },
+    "dataValues": {
+      "PassiveGoldBase": [
+        25.0,
+        25.0,
+        25.0,
+        25.0,
+        25.0,
+        25.0,
+        25.0
+      ],
+      "PassiveGoldPerStack": [
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0
+      ],
+      "PercentOfStacksLost": [
+        50.0,
+        50.0,
+        50.0,
+        50.0,
+        50.0,
+        50.0,
+        50.0
+      ],
+      "StackGain": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "StackGainEnemy": [
+        10.0,
+        10.0,
+        10.0,
+        10.0,
+        10.0,
+        10.0,
+        10.0
+      ],
+      "CherryStacksPerRoundBeforeMultiplier": [
+        10.0,
+        10.0,
+        10.0,
+        10.0,
+        10.0,
+        10.0,
+        10.0
+      ],
+      "CherryStackMultiplier": [
+        5.0,
+        5.0,
+        5.0,
+        5.0,
+        5.0,
+        5.0,
+        5.0
+      ]
+    }
+  },
+  "DravenCritAttack": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "DravenBasicAttack": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "DravenR": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "DravenRDoublecast": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "DravenRCast": {
+    "calculations": {
+      "RCalculatedDamage": {
+        "mSimpleTooltipCalculationDisplay": 6,
+        "mFormulaParts": [
+          {
+            "mDataValue": "RBaseDamage",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          {
+            "mStat": 2,
+            "mStatFormula": 2,
+            "mDataValue": "RCoefficient",
+            "__type": "StatByNamedDataValueCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      },
+      "RPassiveTrueDamage": {
+        "mFormulaParts": [
+          {
+            "mBuffName": "{577427b5}",
+            "mDataValue": "RPassiveStacksCoefficient",
+            "__type": "BuffCounterByNamedDataValueCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      }
+    },
+    "dataValues": {
+      "RBaseDamage": [
+        75.0,
+        175.0,
+        275.0,
+        375.0,
+        475.0,
+        575.0,
+        675.0
+      ],
+      "RMinDamagePercent": [
+        40.0,
+        40.0,
+        40.0,
+        40.0,
+        40.0,
+        40.0,
+        40.0
+      ],
+      "RDamageReductionPerHit": [
+        0.07999999821186066,
+        0.07999999821186066,
+        0.07999999821186066,
+        0.07999999821186066,
+        0.07999999821186066,
+        0.07999999821186066,
+        0.07999999821186066
+      ],
+      "RCoefficient": [
+        0.8999999761581421,
+        1.100000023841858,
+        1.2999999523162842,
+        1.5,
+        1.7000000476837158,
+        1.899999976158142,
+        2.0999999046325684
+      ],
+      "RPassiveStacksCoefficient": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ]
+    }
+  },
+  "DravenAttackP_L": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "DravenAttackP_R": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "DravenAttackP_RC": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "DravenAttackP_LQ": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "DravenAttackP_RQ": {
+    "calculations": {},
+    "dataValues": {}
+  }
+}

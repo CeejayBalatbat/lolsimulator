@@ -1,0 +1,479 @@
+{
+  "KogMawBioArcaneBarrage": {
+    "calculations": {
+      "TotalHealthDamage": {
+        "mMultiplier": {
+          "mNumber": 0.009999999776482582,
+          "__type": "NumberCalculationPart"
+        },
+        "mFormulaParts": [
+          {
+            "mDataValue": "MaxHealthDamage",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          {
+            "mDataValue": "APRatio",
+            "__type": "StatByNamedDataValueCalculationPart"
+          }
+        ],
+        "mDisplayAsPercent": true,
+        "mPrecision": 2,
+        "__type": "GameCalculation"
+      }
+    },
+    "dataValues": {
+      "MaxHealthDamage": [
+        2.25,
+        3.0,
+        3.75,
+        4.5,
+        5.25,
+        6.0,
+        6.75
+      ],
+      "APRatio": [
+        0.014999999664723873,
+        0.014999999664723873,
+        0.014999999664723873,
+        0.014999999664723873,
+        0.014999999664723873,
+        0.014999999664723873,
+        0.014999999664723873
+      ],
+      "Range": [
+        110.0,
+        130.0,
+        150.0,
+        170.0,
+        190.0,
+        210.0,
+        230.0
+      ],
+      "Duration": [
+        8.0,
+        8.0,
+        8.0,
+        8.0,
+        8.0,
+        8.0,
+        8.0
+      ],
+      "MonsterDamageCap": [
+        100.0,
+        100.0,
+        100.0,
+        100.0,
+        100.0,
+        100.0,
+        100.0
+      ]
+    }
+  },
+  "KogMawBioArcaneBarrageAttack": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "KogMawLivingArtillery": {
+    "calculations": {
+      "BaseDamageCalc": {
+        "mFormulaParts": [
+          {
+            "mDataValue": "Damage",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          {
+            "mDataValue": "APRatio",
+            "__type": "StatByNamedDataValueCalculationPart"
+          },
+          {
+            "mStat": 2,
+            "mStatFormula": 2,
+            "mCoefficient": 0.75,
+            "__type": "StatByCoefficientCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      },
+      "MidDamageCalc": {
+        "mMultiplier": {
+          "mDataValue": "MidDamageMult",
+          "__type": "NamedDataValueCalculationPart"
+        },
+        "mModifiedGameCalculation": "BaseDamageCalc",
+        "__type": "GameCalculationModified"
+      },
+      "MaxDamageCalc": {
+        "mMultiplier": {
+          "mDataValue": "FinalDamageMult",
+          "__type": "NamedDataValueCalculationPart"
+        },
+        "mModifiedGameCalculation": "BaseDamageCalc",
+        "__type": "GameCalculationModified"
+      }
+    },
+    "dataValues": {
+      "Damage": [
+        60.0,
+        100.0,
+        140.0,
+        180.0,
+        220.0,
+        260.0,
+        300.0
+      ],
+      "ManaCostDuration": [
+        8.0,
+        8.0,
+        8.0,
+        8.0,
+        8.0,
+        8.0,
+        8.0
+      ],
+      "Range": [
+        105.0,
+        130.0,
+        155.0,
+        180.0,
+        205.0,
+        230.0,
+        255.0
+      ],
+      "BaseCost": [
+        40.0,
+        40.0,
+        40.0,
+        40.0,
+        40.0,
+        40.0,
+        40.0
+      ],
+      "ManaCostCap": [
+        400.0,
+        400.0,
+        400.0,
+        400.0,
+        400.0,
+        400.0,
+        400.0
+      ],
+      "VisionDebuffDuration": [
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0
+      ],
+      "FinalDamageMult": [
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0
+      ],
+      "MaxExtraCost": [
+        360.0,
+        360.0,
+        360.0,
+        360.0,
+        360.0,
+        360.0,
+        360.0
+      ],
+      "VisionRadius": [
+        400.0,
+        400.0,
+        400.0,
+        400.0,
+        400.0,
+        400.0,
+        400.0
+      ],
+      "MidDamageMult": [
+        1.5,
+        1.5,
+        1.5,
+        1.5,
+        1.5,
+        1.5,
+        1.5
+      ],
+      "TooltipMissingHealthDamageAmp": [
+        0.833329975605011,
+        0.833329975605011,
+        0.833329975605011,
+        0.833329975605011,
+        0.833329975605011,
+        0.833329975605011,
+        0.833329975605011
+      ],
+      "APRatio": [
+        0.3499999940395355,
+        0.3499999940395355,
+        0.4000000059604645,
+        0.44999998807907104,
+        0.44999998807907104,
+        0.44999998807907104,
+        0.44999998807907104
+      ]
+    }
+  },
+  "KogMawQ": {
+    "calculations": {
+      "TotalDamage": {
+        "mFormulaParts": [
+          {
+            "mDataValue": "BaseDamage",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          {
+            "mDataValue": "APRatio",
+            "__type": "StatByNamedDataValueCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      }
+    },
+    "dataValues": {
+      "AttackSpeed": [
+        0.05000000074505806,
+        0.10000000149011612,
+        0.15000000596046448,
+        0.20000000298023224,
+        0.25,
+        0.30000001192092896,
+        0.3499999940395355
+      ],
+      "BaseDamage": [
+        35.0,
+        80.0,
+        125.0,
+        170.0,
+        215.0,
+        260.0,
+        305.0
+      ],
+      "APRatio": [
+        0.8999999761581421,
+        0.8999999761581421,
+        0.8999999761581421,
+        0.8999999761581421,
+        0.8999999761581421,
+        0.8999999761581421,
+        0.8999999761581421
+      ],
+      "ShredAmount": [
+        12.0,
+        16.0,
+        20.0,
+        24.0,
+        28.0,
+        32.0,
+        36.0
+      ],
+      "ShredDuration": [
+        4.0,
+        4.0,
+        4.0,
+        4.0,
+        4.0,
+        4.0,
+        4.0
+      ]
+    }
+  },
+  "KogMawQMis": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "KogMawCausticSpittle": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "KogMawVoidOozeMissile": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "KogMawVoidOoze": {
+    "calculations": {
+      "TotalDamage": {
+        "mFormulaParts": [
+          {
+            "mDataValue": "BaseDamage",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          {
+            "mDataValue": "APRatio",
+            "__type": "StatByNamedDataValueCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      }
+    },
+    "dataValues": {
+      "BaseDamage": [
+        30.0,
+        70.0,
+        110.0,
+        150.0,
+        190.0,
+        230.0,
+        270.0
+      ],
+      "APRatio": [
+        0.6499999761581421,
+        0.6499999761581421,
+        0.6499999761581421,
+        0.6499999761581421,
+        0.6499999761581421,
+        0.6499999761581421,
+        0.6499999761581421
+      ],
+      "SlowAmount": [
+        35.0,
+        40.0,
+        45.0,
+        50.0,
+        55.0,
+        60.0,
+        65.0
+      ],
+      "TrailDuration": [
+        3.0,
+        3.0,
+        3.0,
+        3.0,
+        3.0,
+        3.0,
+        3.0
+      ],
+      "SlowDuration": [
+        0.25,
+        0.25,
+        0.25,
+        0.25,
+        0.25,
+        0.25,
+        0.25
+      ]
+    }
+  },
+  "KogMawBasicAttack2": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "KogMawIcathianSurprise": {
+    "calculations": {
+      "PassiveDamage": {
+        "mFormulaParts": [
+          {
+            "mStartValue": 125.0,
+            "mEndValue": 550.0,
+            "__type": "ByCharLevelInterpolationCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      }
+    },
+    "dataValues": {
+      "TooltipPassiveMS": [
+        0.4000000059604645,
+        0.4000000059604645,
+        0.4000000059604645,
+        0.4000000059604645,
+        0.4000000059604645,
+        0.4000000059604645,
+        0.4000000059604645
+      ],
+      "TooltipPassiveDuration": [
+        4.0,
+        4.0,
+        4.0,
+        4.0,
+        4.0,
+        4.0,
+        4.0
+      ]
+    }
+  },
+  "KogMawIcathianDisplay": {
+    "calculations": {
+      "PassiveDamage": {
+        "mFormulaParts": [
+          {
+            "mStartValue": 140.0,
+            "mEndValue": 650.0,
+            "__type": "ByCharLevelInterpolationCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      }
+    },
+    "dataValues": {
+      "TooltipPassiveMS": [
+        0.4000000059604645,
+        0.4000000059604645,
+        0.4000000059604645,
+        0.4000000059604645,
+        0.4000000059604645,
+        0.4000000059604645,
+        0.4000000059604645
+      ],
+      "TooltipPassiveDuration": [
+        4.0,
+        4.0,
+        4.0,
+        4.0,
+        4.0,
+        4.0,
+        4.0
+      ]
+    }
+  },
+  "KogMawIcathianSurpriseReady": {
+    "calculations": {
+      "PassiveDamage": {
+        "mFormulaParts": [
+          {
+            "mStartValue": 140.0,
+            "mEndValue": 650.0,
+            "__type": "ByCharLevelInterpolationCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      }
+    },
+    "dataValues": {
+      "TooltipPassiveMS": [
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5
+      ],
+      "TooltipPassiveDuration": [
+        4.0,
+        4.0,
+        4.0,
+        4.0,
+        4.0,
+        4.0,
+        4.0
+      ]
+    }
+  },
+  "KogMawBasicAttack": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "KogMawCritAttack": {
+    "calculations": {},
+    "dataValues": {}
+  }
+}

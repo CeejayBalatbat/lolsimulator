@@ -1,0 +1,752 @@
+{
+  "RekSaiWBurrowed": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "RekSaiE": {
+    "calculations": {
+      "BaseDamage": {
+        "mMultiplier": {
+          "mDataValue": "{42702779}",
+          "__type": "NamedDataValueCalculationPart"
+        },
+        "mModifiedGameCalculation": "EmpoweredDamage",
+        "__type": "GameCalculationModified"
+      },
+      "EmpoweredDamage": {
+        "mFormulaParts": [
+          {
+            "mDataValue": "EmpoweredBaseDamage",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          {
+            "mStat": 2,
+            "mStatFormula": 2,
+            "mDataValue": "EmpoweredADRatio",
+            "__type": "StatByNamedDataValueCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      },
+      "DashSpeed": {
+        "mFormulaParts": [
+          {
+            "mDataValue": "DashSpeedBase",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          {
+            "mStat": 7,
+            "mDataValue": "DashSpeedMod",
+            "__type": "StatByNamedDataValueCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      },
+      "{009db1c8}": {
+        "mMultiplier": {
+          "mNumber": 60.0,
+          "__type": "NumberCalculationPart"
+        },
+        "mFormulaParts": [
+          {
+            "mDataValue": "TunnelDurationMinutes",
+            "__type": "NamedDataValueCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      },
+      "{438d87f9}": {
+        "mMultiplier": {
+          "mDataValue": "TunnelTimeRatio",
+          "__type": "NamedDataValueCalculationPart"
+        },
+        "mModifiedGameCalculation": "DashSpeed",
+        "__type": "GameCalculationModified"
+      }
+    },
+    "dataValues": {
+      "EmpoweredBaseDamage": [
+        65.0,
+        100.0,
+        135.0,
+        170.0,
+        205.0,
+        240.0,
+        275.0
+      ],
+      "EmpoweredADRatio": [
+        0.800000011920929,
+        0.800000011920929,
+        0.800000011920929,
+        0.800000011920929,
+        0.800000011920929,
+        0.800000011920929,
+        0.800000011920929
+      ],
+      "UnempoweredModifier": [
+        0.800000011920929,
+        0.800000011920929,
+        0.800000011920929,
+        0.800000011920929,
+        0.800000011920929,
+        0.800000011920929,
+        0.800000011920929
+      ],
+      "_____BURROWED_DATA_____": {
+        "mName": "_____BURROWED_DATA_____",
+        "__type": "SpellDataValue"
+      },
+      "DashDistance": [
+        850.0,
+        850.0,
+        850.0,
+        850.0,
+        850.0,
+        850.0,
+        850.0
+      ],
+      "MinimumRange": [
+        850.0,
+        850.0,
+        850.0,
+        850.0,
+        850.0,
+        850.0,
+        850.0
+      ],
+      "DashSpeedBase": [
+        500.0,
+        500.0,
+        500.0,
+        500.0,
+        500.0,
+        500.0,
+        500.0
+      ],
+      "DashSpeedMod": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "MaximumTunnels": [
+        8.0,
+        8.0,
+        8.0,
+        8.0,
+        8.0,
+        8.0,
+        8.0
+      ],
+      "TunnelDurationMinutes": [
+        10.0,
+        10.0,
+        10.0,
+        10.0,
+        10.0,
+        10.0,
+        10.0
+      ],
+      "TunnelReuseCooldown": [
+        7.0,
+        6.0,
+        5.0,
+        4.0,
+        3.0,
+        2.0,
+        1.0
+      ],
+      "DashCooldown": [
+        19.0,
+        18.0,
+        17.0,
+        16.0,
+        15.0,
+        14.0,
+        13.0
+      ],
+      "TunnelTimeRatio": [
+        0.6499999761581421,
+        0.6499999761581421,
+        0.6499999761581421,
+        0.6499999761581421,
+        0.6499999761581421,
+        0.6499999761581421,
+        0.6499999761581421
+      ]
+    }
+  },
+  "RekSaiESpellPassive": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "RekSaiQBurrowedMis": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "RekSaiQBurrowed": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "RekSaiPassive": {
+    "calculations": {
+      "HealAmount": {
+        "mFormulaParts": [
+          {
+            "mStat": 12,
+            "mSubpart": {
+              "mStartValue": 0.10000000149011612,
+              "mEndValue": 0.20000000298023224,
+              "__type": "ByCharLevelInterpolationCalculationPart"
+            },
+            "__type": "StatBySubPartCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      }
+    },
+    "dataValues": {
+      "FuryFromAttacks": [
+        25.0,
+        25.0,
+        25.0,
+        25.0,
+        25.0,
+        25.0,
+        25.0
+      ],
+      "FuryFromAbilities": [
+        25.0,
+        25.0,
+        25.0,
+        25.0,
+        25.0,
+        25.0,
+        25.0
+      ],
+      "FuryMinionMod": [
+        0.20000000298023224,
+        0.20000000298023224,
+        0.20000000298023224,
+        0.20000000298023224,
+        0.20000000298023224,
+        0.20000000298023224,
+        0.20000000298023224
+      ],
+      "HealDuration": [
+        3.0,
+        3.0,
+        3.0,
+        3.0,
+        3.0,
+        3.0,
+        3.0
+      ],
+      "PauseDuration": [
+        5.0,
+        5.0,
+        5.0,
+        5.0,
+        5.0,
+        5.0,
+        5.0
+      ]
+    }
+  },
+  "RekSaiBasicAttack5": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "RekSaiBasicAttack4": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "RekSaiBasicAttack6": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "RekSaiBasicAttack3": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "RekSaiBasicAttack2": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "RekSaiQSpellPassive": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "RekSaiQAttack3": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "RekSaiQAttack2": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "RekSaiQ": {
+    "calculations": {
+      "TotalDamageTooltip": {
+        "mFormulaParts": [
+          {
+            "mStat": 2,
+            "mDataValue": "UnburrowedADRatio",
+            "__type": "StatByNamedDataValueCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      },
+      "BurrowDamageTooltip": {
+        "mFormulaParts": [
+          {
+            "mDataValue": "BurrowedBaseDamage",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          {
+            "mStat": 2,
+            "mStatFormula": 2,
+            "mDataValue": "BurrowedBonusADRatio",
+            "__type": "StatByNamedDataValueCalculationPart"
+          },
+          {
+            "mDataValue": "BurrowedAPRatio",
+            "__type": "StatByNamedDataValueCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      }
+    },
+    "dataValues": {
+      "BuffDuration": [
+        3.0,
+        3.0,
+        3.0,
+        3.0,
+        3.0,
+        3.0,
+        3.0
+      ],
+      "UnburrowedBaseDamage": [
+        0.0,
+        5.0,
+        10.0,
+        15.0,
+        20.0,
+        25.0,
+        30.0
+      ],
+      "UnburrowedADRatio": [
+        0.25,
+        0.30000001192092896,
+        0.3499999940395355,
+        0.4000000059604645,
+        0.44999998807907104,
+        0.5,
+        0.550000011920929
+      ],
+      "AoERange": [
+        300.0,
+        300.0,
+        300.0,
+        300.0,
+        300.0,
+        300.0,
+        300.0
+      ],
+      "AttackSpeed": [
+        0.3499999940395355,
+        0.3499999940395355,
+        0.3499999940395355,
+        0.3499999940395355,
+        0.3499999940395355,
+        0.3499999940395355,
+        0.3499999940395355
+      ],
+      "____BURROWED_DATA____": {
+        "mName": "____BURROWED_DATA____",
+        "__type": "SpellDataValue"
+      },
+      "BurrowedBaseDamage": [
+        20.0,
+        50.0,
+        80.0,
+        110.0,
+        140.0,
+        170.0,
+        200.0
+      ],
+      "BurrowedBonusADRatio": [
+        0.25,
+        0.25,
+        0.25,
+        0.25,
+        0.25,
+        0.25,
+        0.25
+      ],
+      "BurrowedAPRatio": [
+        0.699999988079071,
+        0.699999988079071,
+        0.699999988079071,
+        0.699999988079071,
+        0.699999988079071,
+        0.699999988079071,
+        0.699999988079071
+      ],
+      "BurrowedCooldown": [
+        12.5,
+        12.0,
+        11.5,
+        11.0,
+        10.5,
+        10.0,
+        9.5
+      ],
+      "BurrowedAoE": [
+        200.0,
+        200.0,
+        200.0,
+        200.0,
+        200.0,
+        200.0,
+        200.0
+      ],
+      "BurrowedDebuffDuration": [
+        5.0,
+        5.0,
+        5.0,
+        5.0,
+        5.0,
+        5.0,
+        5.0
+      ]
+    }
+  },
+  "RekSaiQAttack": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "RekSaiInCombat": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "RekSaiR": {
+    "calculations": {
+      "RBaseDamageCalc": {
+        "mFormulaParts": [
+          {
+            "mDataValue": "RBaseDamage",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          {
+            "mStat": 2,
+            "mStatFormula": 2,
+            "mDataValue": "ADRatio",
+            "__type": "StatByNamedDataValueCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      }
+    },
+    "dataValues": {
+      "TravelDistancePercent": [
+        0.4000000059604645,
+        0.4000000059604645,
+        0.4000000059604645,
+        0.4000000059604645,
+        0.4000000059604645,
+        0.4000000059604645,
+        0.4000000059604645
+      ],
+      "ExtraDistance": [
+        125.0,
+        125.0,
+        125.0,
+        125.0,
+        125.0,
+        125.0,
+        125.0
+      ],
+      "LeapMovementSpeed": [
+        1400.0,
+        1400.0,
+        1400.0,
+        1400.0,
+        1400.0,
+        1400.0,
+        1400.0
+      ],
+      "VODistance": [
+        4000.0,
+        4000.0,
+        4000.0,
+        4000.0,
+        4000.0,
+        4000.0,
+        4000.0
+      ],
+      "DamageCheckRadius": [
+        1000.0,
+        1000.0,
+        1000.0,
+        1000.0,
+        1000.0,
+        1000.0,
+        1000.0
+      ],
+      "PreyMarkDuration": [
+        5.0,
+        5.0,
+        5.0,
+        5.0,
+        5.0,
+        5.0,
+        5.0
+      ],
+      "RBaseDamage": [
+        50.0,
+        150.0,
+        250.0,
+        350.0,
+        450.0,
+        550.0,
+        650.0
+      ],
+      "PercentHealthDamage": [
+        10.0,
+        15.0,
+        20.0,
+        25.0,
+        30.0,
+        35.0,
+        40.0
+      ],
+      "CastBuffDuration": [
+        1.100000023841858,
+        1.100000023841858,
+        1.100000023841858,
+        1.100000023841858,
+        1.100000023841858,
+        1.100000023841858,
+        1.100000023841858
+      ],
+      "ADRatio": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ]
+    }
+  },
+  "RekSaiCritAttack": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "RekSaiW": {
+    "calculations": {
+      "UnburrowDamage": {
+        "mFormulaParts": [
+          {
+            "mDataValue": "BaseDamage",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          {
+            "mDataValue": "APRatio",
+            "__type": "StatByNamedDataValueCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      }
+    },
+    "dataValues": {
+      "BaseDamage": [
+        5.0,
+        30.0,
+        55.0,
+        80.0,
+        105.0,
+        130.0,
+        155.0
+      ],
+      "ADRatio": [
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5
+      ],
+      "APRatio": [
+        0.800000011920929,
+        0.800000011920929,
+        0.800000011920929,
+        0.800000011920929,
+        0.800000011920929,
+        0.800000011920929,
+        0.800000011920929
+      ],
+      "KnockupDuration": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "KnockupImmunity": [
+        11.0,
+        10.0,
+        9.0,
+        8.0,
+        7.0,
+        6.0,
+        5.0
+      ],
+      "ChampKnockbackRange": [
+        250.0,
+        250.0,
+        250.0,
+        250.0,
+        250.0,
+        250.0,
+        250.0
+      ],
+      "OtherKnockbackRange": [
+        175.0,
+        175.0,
+        175.0,
+        175.0,
+        175.0,
+        175.0,
+        175.0
+      ],
+      "KnockbackDuration": [
+        0.30000001192092896,
+        0.30000001192092896,
+        0.30000001192092896,
+        0.30000001192092896,
+        0.30000001192092896,
+        0.30000001192092896,
+        0.30000001192092896
+      ],
+      "Slow": [
+        -0.25,
+        -0.30000001192092896,
+        -0.3499999940395355,
+        -0.4000000059604645,
+        -0.44999998807907104,
+        -0.5,
+        -0.550000011920929
+      ],
+      "SlowDuration": [
+        1.25,
+        1.25,
+        1.25,
+        1.25,
+        1.25,
+        1.25,
+        1.25
+      ],
+      "VisionRadiusMod": [
+        -0.6499999761581421,
+        -0.6499999761581421,
+        -0.6499999761581421,
+        -0.6499999761581421,
+        -0.6499999761581421,
+        -0.6499999761581421,
+        -0.6499999761581421
+      ],
+      "KnockupRange": [
+        220.0,
+        220.0,
+        220.0,
+        220.0,
+        220.0,
+        220.0,
+        220.0
+      ],
+      "LockoutTime": [
+        0.15000000596046448,
+        0.15000000596046448,
+        0.15000000596046448,
+        0.15000000596046448,
+        0.15000000596046448,
+        0.15000000596046448,
+        0.15000000596046448
+      ],
+      "___TREMOR_SENSE___": {
+        "mName": "___TREMOR_SENSE___",
+        "__type": "SpellDataValue"
+      },
+      "SearchRange": [
+        1500.0,
+        1500.0,
+        1500.0,
+        1500.0,
+        1500.0,
+        1500.0,
+        1500.0
+      ],
+      "TremorTickTime": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "DistanceCheck": [
+        85.0,
+        85.0,
+        85.0,
+        85.0,
+        85.0,
+        85.0,
+        85.0
+      ],
+      "BurrowedMoveSpeed": [
+        0.0,
+        5.0,
+        10.0,
+        15.0,
+        20.0,
+        25.0,
+        30.0
+      ]
+    }
+  },
+  "RekSaiWAttack": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "RekSaiWSpellPassive": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "RekSaiWUnburrowLockout": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "RekSaiJetSkiManager": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "RekSaiEBurrowed": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "RekSaiBasicAttack": {
+    "calculations": {},
+    "dataValues": {}
+  }
+}

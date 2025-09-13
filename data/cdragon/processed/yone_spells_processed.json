@@ -1,0 +1,773 @@
+{
+  "YoneQ": {
+    "calculations": {
+      "QDamage": {
+        "mFormulaParts": [
+          {
+            "mDataValue": "BaseDamage",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          {
+            "mStat": 2,
+            "mDataValue": "ADRatio",
+            "__type": "StatByNamedDataValueCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      },
+      "TotalDamageCrit": {
+        "mFormulaParts": [
+          {
+            "mDataValue": "BaseDamage",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          {
+            "mStat": 2,
+            "mSubpart": {
+              "mStat": 9,
+              "mCoefficient": 1.0499999523162842,
+              "__type": "StatByCoefficientCalculationPart"
+            },
+            "__type": "StatBySubPartCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      }
+    },
+    "dataValues": {
+      "BaseDamage": [
+        -5.0,
+        20.0,
+        45.0,
+        70.0,
+        95.0,
+        120.0,
+        145.0
+      ],
+      "ADRatio": [
+        1.0499999523162842,
+        1.0499999523162842,
+        1.0499999523162842,
+        1.0499999523162842,
+        1.0499999523162842,
+        1.0499999523162842,
+        1.0499999523162842
+      ],
+      "Width": [
+        80.0,
+        80.0,
+        80.0,
+        80.0,
+        80.0,
+        80.0,
+        80.0
+      ],
+      "BuffDuration": [
+        6.0,
+        6.0,
+        6.0,
+        6.0,
+        6.0,
+        6.0,
+        6.0
+      ],
+      "Q3MaxDistance": [
+        450.0,
+        450.0,
+        450.0,
+        450.0,
+        450.0,
+        450.0,
+        450.0
+      ],
+      "Q3MinDistance": [
+        450.0,
+        450.0,
+        450.0,
+        450.0,
+        450.0,
+        450.0,
+        450.0
+      ],
+      "Q3DashSpeed": [
+        1500.0,
+        1500.0,
+        1500.0,
+        1500.0,
+        1500.0,
+        1500.0,
+        1500.0
+      ],
+      "Q3AoESize": [
+        100.0,
+        100.0,
+        100.0,
+        100.0,
+        100.0,
+        100.0,
+        100.0
+      ],
+      "QAttackSpeedCDPercent": [
+        0.6000000238418579,
+        0.6000000238418579,
+        0.6000000238418579,
+        0.6000000238418579,
+        0.6000000238418579,
+        0.6000000238418579,
+        0.6000000238418579
+      ],
+      "QAttackSpeedCDMax": [
+        0.666670024394989,
+        0.666670024394989,
+        0.666670024394989,
+        0.666670024394989,
+        0.666670024394989,
+        0.666670024394989,
+        0.666670024394989
+      ],
+      "QAttackSpeedCastReductionPercent": [
+        0.4166699945926666,
+        0.4166699945926666,
+        0.4166699945926666,
+        0.4166699945926666,
+        0.4166699945926666,
+        0.4166699945926666,
+        0.4166699945926666
+      ],
+      "QAttackSpeedCastReductionMax": [
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5
+      ],
+      "QBaseCastTime": [
+        0.3499999940395355,
+        0.3499999940395355,
+        0.3499999940395355,
+        0.3499999940395355,
+        0.3499999940395355,
+        0.3499999940395355,
+        0.3499999940395355
+      ],
+      "Q3KnockupHeight": [
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5
+      ],
+      "Q3KnockupDuration": [
+        0.75,
+        0.75,
+        0.75,
+        0.75,
+        0.75,
+        0.75,
+        0.75
+      ]
+    }
+  },
+  "YoneQ3Missile": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "YoneQ3": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "YoneR": {
+    "calculations": {
+      "Damage": {
+        "mFormulaParts": [
+          {
+            "mDataValue": "BaseDamage",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          {
+            "mStat": 2,
+            "mStatFormula": 2,
+            "mDataValue": "ADRatio",
+            "__type": "StatByNamedDataValueCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      },
+      "TooltipDamage": {
+        "mMultiplier": {
+          "mNumber": 0.5,
+          "__type": "NumberCalculationPart"
+        },
+        "mModifiedGameCalculation": "Damage",
+        "__type": "GameCalculationModified"
+      }
+    },
+    "dataValues": {
+      "BaseDamage": [
+        0.0,
+        200.0,
+        400.0,
+        600.0,
+        800.0,
+        1000.0,
+        1200.0
+      ],
+      "ADRatio": [
+        0.800000011920929,
+        0.800000011920929,
+        0.800000011920929,
+        0.800000011920929,
+        0.800000011920929,
+        0.800000011920929,
+        0.800000011920929
+      ],
+      "BlinkDistanceBehindTarget": [
+        200.0,
+        200.0,
+        200.0,
+        200.0,
+        200.0,
+        200.0,
+        200.0
+      ],
+      "Width": [
+        225.0,
+        225.0,
+        225.0,
+        225.0,
+        225.0,
+        225.0,
+        225.0
+      ],
+      "RKnockupHeight": [
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5
+      ],
+      "RKnockupDuration": [
+        0.75,
+        0.75,
+        0.75,
+        0.75,
+        0.75,
+        0.75,
+        0.75
+      ],
+      "RKnockTowardsSpeed": [
+        3000.0,
+        3000.0,
+        3000.0,
+        3000.0,
+        3000.0,
+        3000.0,
+        3000.0
+      ],
+      "RKnockTowardsDampener": [
+        0.800000011920929,
+        0.800000011920929,
+        0.800000011920929,
+        0.800000011920929,
+        0.800000011920929,
+        0.800000011920929,
+        0.800000011920929
+      ]
+    }
+  },
+  "YoneCritAttack": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "YoneCritAttack3": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "YoneCritAttack2": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "YoneCritAttack4": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "YoneBasicAttack": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "YoneE": {
+    "calculations": {
+      "{df232269}": {
+        "mFormulaParts": [
+          {
+            "mDataValue": "DeathmarkBase",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          {
+            "mStat": 2,
+            "mCoefficient": 0.25,
+            "__type": "StatByCoefficientCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      }
+    },
+    "dataValues": {
+      "ReturnTimer": [
+        5.0,
+        5.0,
+        5.0,
+        5.0,
+        5.0,
+        5.0,
+        5.0
+      ],
+      "MovementSpeed": [
+        0.30000001192092896,
+        0.30000001192092896,
+        0.30000001192092896,
+        0.30000001192092896,
+        0.30000001192092896,
+        0.30000001192092896,
+        0.30000001192092896
+      ],
+      "DeathmarkBase": [
+        5.0,
+        20.0,
+        35.0,
+        50.0,
+        65.0,
+        80.0,
+        95.0
+      ],
+      "DeathmarkPercent": [
+        0.22499999403953552,
+        0.25,
+        0.2750000059604645,
+        0.30000001192092896,
+        0.32499998807907104,
+        0.3499999940395355,
+        0.375
+      ],
+      "RecastLockout": [
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5
+      ],
+      "EDashRange": [
+        300.0,
+        300.0,
+        300.0,
+        300.0,
+        300.0,
+        300.0,
+        300.0
+      ],
+      "EDashSpeed": [
+        1200.0,
+        1200.0,
+        1200.0,
+        1200.0,
+        1200.0,
+        1200.0,
+        1200.0
+      ],
+      "OnHitIncrease": [
+        0.25,
+        0.25,
+        0.25,
+        0.25,
+        0.25,
+        0.25,
+        0.25
+      ],
+      "StartingMS": [
+        0.10000000149011612,
+        0.10000000149011612,
+        0.10000000149011612,
+        0.10000000149011612,
+        0.10000000149011612,
+        0.10000000149011612,
+        0.10000000149011612
+      ],
+      "MissingHealthPercent": [
+        0.22499999403953552,
+        0.25,
+        0.2750000059604645,
+        0.30000001192092896,
+        0.32499998807907104,
+        0.3499999940395355,
+        0.375
+      ]
+    }
+  },
+  "YoneEDeathmark": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "YoneW": {
+    "calculations": {
+      "WDamage": {
+        "mFormulaParts": [
+          {
+            "mDataValue": "BaseDamage",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          {
+            "mStat": 2,
+            "mCoefficient": 1.0,
+            "__type": "StatByCoefficientCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      },
+      "{8dfeb810}": {
+        "mMultiplier": {
+          "mStartValue": 0.20000000298023224,
+          "mEndValue": 1.0,
+          "__type": "ByCharLevelInterpolationCalculationPart"
+        },
+        "mFormulaParts": [
+          {
+            "mStat": 2,
+            "mCoefficient": 1.0,
+            "__type": "StatByCoefficientCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      },
+      "WShield": {
+        "mFormulaParts": [
+          {
+            "mStartValue": 40.0,
+            "mEndValue": 90.0,
+            "__type": "ByCharLevelInterpolationCalculationPart"
+          },
+          {
+            "mStat": 2,
+            "mStatFormula": 2,
+            "mDataValue": "ShieldBADRatio",
+            "__type": "StatByNamedDataValueCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      },
+      "MinimumDamageMinions": {
+        "mSimpleTooltipCalculationDisplay": 6,
+        "mExpandedTooltipCalculationDisplay": 6,
+        "mFormulaParts": [
+          {
+            "mLevel1Value": 30.0,
+            "mBreakpoints": [
+              {
+                "mBonusPerLevelAtAndAfter": 10.0,
+                "__type": "Breakpoint"
+              },
+              {
+                "mLevel": 9,
+                "mBonusPerLevelAtAndAfter": 20.0,
+                "__type": "Breakpoint"
+              },
+              {
+                "mLevel": 14,
+                "mBonusPerLevelAtAndAfter": 40.0,
+                "__type": "Breakpoint"
+              }
+            ],
+            "__type": "ByCharLevelBreakpointsCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      },
+      "MonsterDamageCap": {
+        "mFormulaParts": [
+          {
+            "mValues": [
+              140.0,
+              150.0,
+              160.0,
+              170.0,
+              180.0,
+              190.0,
+              200.0,
+              210.0,
+              220.0,
+              230.0,
+              240.0,
+              250.0,
+              260.0,
+              270.0,
+              280.0,
+              290.0,
+              300.0,
+              310.0,
+              320.0,
+              330.0,
+              340.0,
+              350.0,
+              360.0,
+              370.0,
+              380.0,
+              390.0,
+              400.0,
+              410.0,
+              420.0,
+              430.0,
+              440.0
+            ],
+            "__type": "ByCharLevelFormulaCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      }
+    },
+    "dataValues": {
+      "BaseDamage": [
+        0.0,
+        10.0,
+        20.0,
+        30.0,
+        40.0,
+        50.0,
+        60.0
+      ],
+      "MinionMod": [
+        0.25,
+        0.25,
+        0.25,
+        0.25,
+        0.25,
+        0.25,
+        0.25
+      ],
+      "HealthStealMultiplier": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "ConeWidth": [
+        40.0,
+        40.0,
+        40.0,
+        40.0,
+        40.0,
+        40.0,
+        40.0
+      ],
+      "WAttackSpeedCDPercent": [
+        0.6000000238418579,
+        0.6000000238418579,
+        0.6000000238418579,
+        0.6000000238418579,
+        0.6000000238418579,
+        0.6000000238418579,
+        0.6000000238418579
+      ],
+      "WAttackSpeedCDMax": [
+        0.5714200139045715,
+        0.5714200139045715,
+        0.5714200139045715,
+        0.5714200139045715,
+        0.5714200139045715,
+        0.5714200139045715,
+        0.5714200139045715
+      ],
+      "WAttackSpeedCastReductionPercent": [
+        0.4166699945926666,
+        0.4166699945926666,
+        0.4166699945926666,
+        0.4166699945926666,
+        0.4166699945926666,
+        0.4166699945926666,
+        0.4166699945926666
+      ],
+      "WAttackSpeedCastReductionMax": [
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5
+      ],
+      "WBaseCastTime": [
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5
+      ],
+      "WCritMultiplier": [
+        0.800000011920929,
+        0.800000011920929,
+        0.800000011920929,
+        0.800000011920929,
+        0.800000011920929,
+        0.800000011920929,
+        0.800000011920929
+      ],
+      "MaxHealthDamage": [
+        0.07000000029802322,
+        0.07999999821186066,
+        0.09000000357627869,
+        0.10000000149011612,
+        0.10999999940395355,
+        0.11999999731779099,
+        0.12999999523162842
+      ],
+      "BaseHealing": {
+        "mName": "BaseHealing",
+        "__type": "SpellDataValue"
+      },
+      "BaseShield": [
+        0.0,
+        10.0,
+        20.0,
+        30.0,
+        40.0,
+        50.0,
+        60.0
+      ],
+      "FirstChampShieldMultiplier": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "SecondChampShieldMultiplier": [
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5
+      ],
+      "ShieldDuration": [
+        1.5,
+        1.5,
+        1.5,
+        1.5,
+        1.5,
+        1.5,
+        1.5
+      ],
+      "ShieldbADRatio": [
+        0.6499999761581421,
+        0.6499999761581421,
+        0.6499999761581421,
+        0.6499999761581421,
+        0.6499999761581421,
+        0.6499999761581421,
+        0.6499999761581421
+      ]
+    }
+  },
+  "YonePassive": {
+    "calculations": {
+      "CurrentCritDamage": {
+        "mFormulaParts": [
+          {
+            "mStat": 9,
+            "mCoefficient": 1.0,
+            "__type": "StatByCoefficientCalculationPart"
+          }
+        ],
+        "mDisplayAsPercent": true,
+        "mPrecision": 1,
+        "__type": "GameCalculation"
+      }
+    },
+    "dataValues": {
+      "AttackADRatio": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "MagicDamageSplit": [
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5
+      ],
+      "YonePercentCritDmgMod": {
+        "mName": "YonePercentCritDmgMod",
+        "__type": "SpellDataValue"
+      },
+      "YoneCritTooltip": [
+        150.0,
+        150.0,
+        150.0,
+        150.0,
+        150.0,
+        150.0,
+        150.0
+      ],
+      "YoneReductionTooltip": [
+        10.0,
+        10.0,
+        10.0,
+        10.0,
+        10.0,
+        10.0,
+        10.0
+      ],
+      "YoneCritToAD": [
+        50.0,
+        50.0,
+        50.0,
+        50.0,
+        50.0,
+        50.0,
+        50.0
+      ],
+      "CritChanceMultiplier": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ]
+    }
+  },
+  "YoneBasicAttack3": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "YoneBasicAttack2": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "YoneBasicAttack4": {
+    "calculations": {},
+    "dataValues": {}
+  }
+}

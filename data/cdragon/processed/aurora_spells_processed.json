@@ -1,0 +1,373 @@
+{
+  "AuroraE": {
+    "calculations": {
+      "DamageCalc": {
+        "mFormulaParts": [
+          {
+            "mDataValue": "BaseDamage",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          {
+            "mCoefficient": 0.699999988079071,
+            "__type": "StatByCoefficientCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      }
+    },
+    "dataValues": {
+      "BaseDamage": [
+        30.0,
+        70.0,
+        110.0,
+        150.0,
+        190.0,
+        230.0,
+        270.0
+      ],
+      "SlowPercent": [
+        -0.800000011920929,
+        -0.800000011920929,
+        -0.800000011920929,
+        -0.800000011920929,
+        -0.800000011920929,
+        -0.800000011920929,
+        -0.800000011920929
+      ],
+      "SelfKnockBackDistance": [
+        250.0,
+        250.0,
+        250.0,
+        250.0,
+        250.0,
+        250.0,
+        250.0
+      ],
+      "AoELength": [
+        825.0,
+        825.0,
+        825.0,
+        825.0,
+        825.0,
+        825.0,
+        825.0
+      ],
+      "AoEWidth": [
+        175.0,
+        175.0,
+        175.0,
+        175.0,
+        175.0,
+        175.0,
+        175.0
+      ],
+      "SlowDecay": [
+        0.8500000238418579,
+        0.8500000238418579,
+        0.8500000238418579,
+        0.8500000238418579,
+        0.8500000238418579,
+        0.8500000238418579,
+        0.8500000238418579
+      ],
+      "SlowDuration": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ]
+    }
+  },
+  "AuroraR": {
+    "calculations": {
+      "DamageCalc": {
+        "mFormulaParts": [
+          {
+            "mDataValue": "BaseDamage",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          {
+            "mCoefficient": 0.699999988079071,
+            "__type": "StatByCoefficientCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      }
+    },
+    "dataValues": {
+      "BaseDamage": [
+        75.0,
+        175.0,
+        275.0,
+        375.0,
+        475.0,
+        575.0,
+        675.0
+      ],
+      "SlowPercent": [
+        -0.30000001192092896,
+        -0.30000001192092896,
+        -0.30000001192092896,
+        -0.30000001192092896,
+        -0.30000001192092896,
+        -0.30000001192092896,
+        -0.30000001192092896
+      ],
+      "ExitBaseDamage": [
+        0.0,
+        50.0,
+        100.0,
+        150.0,
+        200.0,
+        250.0,
+        300.0
+      ],
+      "ExitSlowPercent": [
+        -0.5,
+        -0.5,
+        -0.5,
+        -0.5,
+        -0.5,
+        -0.5,
+        -0.5
+      ],
+      "AreaDuration": [
+        1.75,
+        2.5,
+        3.25,
+        4.0,
+        4.75,
+        5.5,
+        6.25
+      ],
+      "RBuffDuration": [
+        2.75,
+        3.5,
+        4.25,
+        5.0,
+        5.75,
+        6.5,
+        7.25
+      ],
+      "AoESize": [
+        700.0,
+        700.0,
+        700.0,
+        700.0,
+        700.0,
+        700.0,
+        700.0
+      ],
+      "StunDuration": [
+        1.25,
+        1.5,
+        1.75,
+        2.0,
+        2.25,
+        2.5,
+        2.75
+      ],
+      "MSMultiplier": [
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0
+      ],
+      "JumpMaxDistance": [
+        250.0,
+        250.0,
+        250.0,
+        250.0,
+        250.0,
+        250.0,
+        250.0
+      ],
+      "JumpMinDistance": [
+        25.0,
+        25.0,
+        25.0,
+        25.0,
+        25.0,
+        25.0,
+        25.0
+      ]
+    }
+  },
+  "AuroraQ": {
+    "calculations": {
+      "Damage": {
+        "mSimpleTooltipCalculationDisplay": 6,
+        "mFormulaParts": [
+          {
+            "mDataValue": "BaseDamage",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          {
+            "mCoefficient": 0.4000000059604645,
+            "__type": "StatByCoefficientCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      },
+      "{f7c018c7}": {
+        "mFormulaParts": [
+          {
+            "mDataValue": "Q2BaseDamage",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          {
+            "mCoefficient": 0.4000000059604645,
+            "__type": "StatByCoefficientCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      },
+      "Q2DamageMax": {
+        "mMultiplier": {
+          "mNumber": 1.5,
+          "__type": "NumberCalculationPart"
+        },
+        "mFormulaParts": [
+          {
+            "mDataValue": "Q2BaseDamage",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          {
+            "mCoefficient": 0.4000000059604645,
+            "__type": "StatByCoefficientCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      }
+    },
+    "dataValues": {
+      "BaseDamage": [
+        20.0,
+        45.0,
+        70.0,
+        95.0,
+        120.0,
+        145.0,
+        170.0
+      ],
+      "DamageReduction": [
+        0.20000000298023224,
+        0.20000000298023224,
+        0.20000000298023224,
+        0.20000000298023224,
+        0.20000000298023224,
+        0.20000000298023224,
+        0.20000000298023224
+      ],
+      "Q2BaseDamage": [
+        20.0,
+        45.0,
+        70.0,
+        95.0,
+        120.0,
+        145.0,
+        170.0
+      ],
+      "MarkDuration": [
+        3.5,
+        3.5,
+        3.5,
+        3.5,
+        3.5,
+        3.5,
+        3.5
+      ],
+      "MinionDamageReduction": [
+        0.10000000149011612,
+        0.10000000149011612,
+        0.10000000149011612,
+        0.10000000149011612,
+        0.10000000149011612,
+        0.10000000149011612,
+        0.10000000149011612
+      ],
+      "MissingHealthPercentMod": [
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5
+      ],
+      "Q2MinionMod": [
+        0.4000000059604645,
+        0.4000000059604645,
+        0.4000000059604645,
+        0.4000000059604645,
+        0.4000000059604645,
+        0.4000000059604645,
+        0.4000000059604645
+      ]
+    }
+  },
+  "AuroraW": {
+    "calculations": {},
+    "dataValues": {
+      "InvisDuration": [
+        0.8500000238418579,
+        1.0,
+        1.149999976158142,
+        1.2999999523162842,
+        1.4500000476837158,
+        1.600000023841858,
+        1.75
+      ],
+      "DashBonusSpeed": [
+        350.0,
+        350.0,
+        350.0,
+        350.0,
+        350.0,
+        350.0,
+        350.0
+      ],
+      "JumpDistance": [
+        300.0,
+        300.0,
+        300.0,
+        300.0,
+        300.0,
+        300.0,
+        300.0
+      ],
+      "WallCheatDistance": [
+        450.0,
+        450.0,
+        450.0,
+        450.0,
+        450.0,
+        450.0,
+        450.0
+      ],
+      "MoveSpeedBonus": [
+        15.0,
+        20.0,
+        25.0,
+        30.0,
+        35.0,
+        40.0,
+        45.0
+      ]
+    }
+  },
+  "AuroraCritAttack": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "AuroraBasicAttack2": {
+    "calculations": {},
+    "dataValues": {}
+  }
+}

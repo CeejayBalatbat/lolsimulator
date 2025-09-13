@@ -1,0 +1,617 @@
+{
+  "YasuoQ3Mis": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "YasuoQ": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "YasuoQ1Wrapper": {
+    "calculations": {
+      "TotalDamage": {
+        "mFormulaParts": [
+          {
+            "mDataValue": "BaseDamage",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          {
+            "mStat": 2,
+            "mCoefficient": 1.0499999523162842,
+            "__type": "StatByCoefficientCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      },
+      "TotalDamageCrit": {
+        "mFormulaParts": [
+          {
+            "mDataValue": "BaseDamage",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          {
+            "mStat": 2,
+            "mSubpart": {
+              "mStat": 9,
+              "mCoefficient": 1.0499999523162842,
+              "__type": "StatByCoefficientCalculationPart"
+            },
+            "__type": "StatBySubPartCalculationPart"
+          }
+        ],
+        "mPrecision": 1,
+        "__type": "GameCalculation"
+      }
+    },
+    "dataValues": {
+      "BaseDamage": [
+        -5.0,
+        20.0,
+        45.0,
+        70.0,
+        95.0,
+        120.0,
+        145.0
+      ],
+      "StabRange": [
+        450.0,
+        450.0,
+        450.0,
+        450.0,
+        450.0,
+        450.0,
+        450.0
+      ],
+      "TornadoRange": [
+        1100.0,
+        1100.0,
+        1100.0,
+        1100.0,
+        1100.0,
+        1100.0,
+        1100.0
+      ],
+      "Cooldown": [
+        4.0,
+        4.0,
+        4.0,
+        4.0,
+        4.0,
+        4.0,
+        4.0
+      ],
+      "StabWidth": [
+        80.0,
+        80.0,
+        80.0,
+        80.0,
+        80.0,
+        80.0,
+        80.0
+      ],
+      "SpinWidth": [
+        260.0,
+        260.0,
+        260.0,
+        260.0,
+        260.0,
+        260.0,
+        260.0
+      ],
+      "GatheringStormDuration": [
+        6.0,
+        6.0,
+        6.0,
+        6.0,
+        6.0,
+        6.0,
+        6.0
+      ],
+      "KnockUpDurationTOOLTIPONLY": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ]
+    }
+  },
+  "YasuoQ2Wrapper": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "YasuoQ3MisMinion": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "YasuoQ3": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "YasuoQ2": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "YasuoQ1": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "YasuoQW": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "YasuoQ3W": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "YasuoQ2W": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "YasuoQ3Wrapper": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "YasuoBasicAttack": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "YasuoCritMod": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "YasuoPassiveMSShieldOn": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "YasuoEDash": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "YasuoDashWrapper": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "YasuoWindWallTimerMis1": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "YasuoEQComboSoundHit": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "YasuoE": {
+    "calculations": {
+      "TotalDamage": {
+        "mFormulaParts": [
+          {
+            "mDataValue": "BaseDamage",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          {
+            "mStat": 2,
+            "mStatFormula": 2,
+            "mDataValue": "ADRatio",
+            "__type": "StatByNamedDataValueCalculationPart"
+          },
+          {
+            "mDataValue": "APRatio",
+            "__type": "StatByNamedDataValueCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      },
+      "BonusDamagePerStack": {
+        "mMultiplier": {
+          "mNumber": 0.25,
+          "__type": "NumberCalculationPart"
+        },
+        "mModifiedGameCalculation": "TotalDamage",
+        "__type": "GameCalculationModified"
+      }
+    },
+    "dataValues": {
+      "MaxStacks": [
+        4.0,
+        4.0,
+        4.0,
+        4.0,
+        4.0,
+        4.0,
+        4.0
+      ],
+      "StackDuration": [
+        5.0,
+        5.0,
+        5.0,
+        5.0,
+        5.0,
+        5.0,
+        5.0
+      ],
+      "BaseDamage": [
+        55.0,
+        70.0,
+        85.0,
+        100.0,
+        115.0,
+        130.0,
+        145.0
+      ],
+      "APRatio": [
+        0.6000000238418579,
+        0.6000000238418579,
+        0.6000000238418579,
+        0.6000000238418579,
+        0.6000000238418579,
+        0.6000000238418579,
+        0.6000000238418579
+      ],
+      "ADRatio": [
+        0.20000000298023224,
+        0.20000000298023224,
+        0.20000000298023224,
+        0.20000000298023224,
+        0.20000000298023224,
+        0.20000000298023224,
+        0.20000000298023224
+      ]
+    }
+  },
+  "YasuoDummySpell": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "YasuoDashScalar": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "YasuoR": {
+    "calculations": {
+      "Damage": {
+        "mFormulaParts": [
+          {
+            "mDataValue": "RBaseDamage",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          {
+            "mStat": 2,
+            "mStatFormula": 2,
+            "mCoefficient": 1.5,
+            "__type": "StatByCoefficientCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      }
+    },
+    "dataValues": {
+      "RBaseDamage": [
+        50.0,
+        200.0,
+        350.0,
+        500.0,
+        650.0,
+        800.0,
+        950.0
+      ],
+      "RPercentArmorPen": [
+        60.0,
+        60.0,
+        60.0,
+        60.0,
+        60.0,
+        60.0,
+        60.0
+      ],
+      "RBuffDuration": [
+        15.0,
+        15.0,
+        15.0,
+        15.0,
+        15.0,
+        15.0,
+        15.0
+      ],
+      "RKnockupDuration": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "RRadius": [
+        400.0,
+        400.0,
+        400.0,
+        400.0,
+        400.0,
+        400.0,
+        400.0
+      ],
+      "RCastSearchRadius": [
+        1100.0,
+        1100.0,
+        1100.0,
+        1100.0,
+        1100.0,
+        1100.0,
+        1100.0
+      ]
+    }
+  },
+  "YasuoPassive": {
+    "calculations": {
+      "ShieldValue": {
+        "mFormulaParts": [
+          {
+            "mStartValue": 125.0,
+            "mEndValue": 600.0,
+            "mScaleByStatProgressionMultiplier": true,
+            "__type": "ByCharLevelInterpolationCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      },
+      "{74ce5438}": {
+        "mFormulaParts": [
+          {
+            "mLevel1Value": 55.0,
+            "mBreakpoints": [
+              {
+                "mLevel": 7,
+                "mAdditionalBonusAtThisLevel": -5.0,
+                "__type": "Breakpoint"
+              },
+              {
+                "mLevel": 13,
+                "mAdditionalBonusAtThisLevel": -5.0,
+                "__type": "Breakpoint"
+              },
+              {
+                "mLevel": 19,
+                "mAdditionalBonusAtThisLevel": -5.0,
+                "__type": "Breakpoint"
+              },
+              {
+                "mLevel": 25,
+                "mAdditionalBonusAtThisLevel": -5.0,
+                "__type": "Breakpoint"
+              }
+            ],
+            "__type": "ByCharLevelBreakpointsCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      },
+      "CurrentCritDamage": {
+        "mFormulaParts": [
+          {
+            "mStat": 9,
+            "mCoefficient": 1.0,
+            "__type": "StatByCoefficientCalculationPart"
+          }
+        ],
+        "mDisplayAsPercent": true,
+        "mPrecision": 1,
+        "__type": "GameCalculation"
+      }
+    },
+    "dataValues": {
+      "YasuoCritToAD": [
+        50.0,
+        50.0,
+        50.0,
+        50.0,
+        50.0,
+        50.0,
+        50.0
+      ],
+      "CritChanceMultiplier": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "PercentCritDamageReduction": {
+        "mName": "PercentCritDamageReduction",
+        "__type": "SpellDataValue"
+      },
+      "CherryShieldAmp": [
+        1.2999999523162842,
+        1.2999999523162842,
+        1.2999999523162842,
+        1.2999999523162842,
+        1.2999999523162842,
+        1.2999999523162842,
+        1.2999999523162842
+      ]
+    }
+  },
+  "YasuoWChildMis": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "YasuoCritAttack5": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "YasuoCritAttack4": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "YasuoBasicAttack5": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "YasuoBasicAttack4": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "YasuoBasicAttack6": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "YasuoCritAttack3": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "YasuoCritAttack2": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "YasuoBasicAttack3": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "YasuoBasicAttack2": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "YasuoW_VisualMis": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "YasuoCritAttack": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "YasuoWMovingWallMisOld": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "YasuoWMovingWallMisVis": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "YasuoQE3": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "YasuoQE2": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "YasuoQE1": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "YasuoPassiveShield": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "YasuoRDummySpell": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "YasuoWMovingWall": {
+    "calculations": {},
+    "dataValues": {
+      "WallLife": [
+        4.0,
+        4.0,
+        4.0,
+        4.0,
+        4.0,
+        4.0,
+        4.0
+      ]
+    }
+  },
+  "YasuoRKnockUpComboW": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "YasuoWMovingWallMisR": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "YasuoEQCombo": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "YasuoWMovingWallMisL": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "YasuoDash": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "YasuoWMovingWallEnemy": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "YasuoRKnockUpCombo": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "YasuoR_TeleportVFX_Mis": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "YasuoW": {
+    "calculations": {},
+    "dataValues": {
+      "WallLife": [
+        4.0,
+        4.0,
+        4.0,
+        4.0,
+        4.0,
+        4.0,
+        4.0
+      ],
+      "Width": [
+        250.0,
+        320.0,
+        390.0,
+        460.0,
+        530.0,
+        600.0,
+        670.0
+      ],
+      "TravelRange": [
+        450.0,
+        450.0,
+        450.0,
+        450.0,
+        450.0,
+        450.0,
+        450.0
+      ],
+      "BubbleRadius": [
+        300.0,
+        300.0,
+        300.0,
+        300.0,
+        300.0,
+        300.0,
+        300.0
+      ],
+      "Thickness": [
+        100.0,
+        100.0,
+        100.0,
+        100.0,
+        100.0,
+        100.0,
+        100.0
+      ]
+    }
+  },
+  "YasuoRKnockUpComboVFX": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "YasuoWMovingWallMis": {
+    "calculations": {},
+    "dataValues": {}
+  }
+}

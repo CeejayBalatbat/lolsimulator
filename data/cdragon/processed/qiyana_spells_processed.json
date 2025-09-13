@@ -1,0 +1,1423 @@
+{
+  "QiyanaWMis_Grass": {
+    "calculations": {},
+    "dataValues": {
+      "1": [
+        0.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ]
+    }
+  },
+  "QiyanaWMis_Water": {
+    "calculations": {},
+    "dataValues": {
+      "1": [
+        0.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ]
+    }
+  },
+  "QiyanaW": {
+    "calculations": {
+      "CleaveDamage": {
+        "mFormulaParts": [
+          {
+            "mDataValue": "BaseDamage",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          {
+            "mStat": 2,
+            "mStatFormula": 2,
+            "mCoefficient": 1.0,
+            "__type": "StatByCoefficientCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      },
+      "TremorDamage": {
+        "mMultiplier": {
+          "mDataValue": "TremorBonus",
+          "__type": "NamedDataValueCalculationPart"
+        },
+        "mModifiedGameCalculation": "CleaveDamage",
+        "__type": "GameCalculationModified"
+      },
+      "OnHitDamage": {
+        "mFormulaParts": [
+          {
+            "mDataValue": "BaseDamage",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          {
+            "mDataValue": "OnHitAPRatio",
+            "__type": "StatByNamedDataValueCalculationPart"
+          },
+          {
+            "mStat": 2,
+            "mStatFormula": 2,
+            "mDataValue": "OnHitADRatio",
+            "__type": "StatByNamedDataValueCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      }
+    },
+    "dataValues": {
+      "BaseDamage": [
+        0.0,
+        8.0,
+        16.0,
+        24.0,
+        32.0,
+        40.0,
+        48.0
+      ],
+      "StealthDuration": [
+        3.0,
+        3.0,
+        3.0,
+        3.0,
+        3.0,
+        3.0,
+        3.0
+      ],
+      "SlowDuration": [
+        1.5,
+        1.5,
+        1.5,
+        1.5,
+        1.5,
+        1.5,
+        1.5
+      ],
+      "Range": [
+        425.0,
+        425.0,
+        425.0,
+        425.0,
+        425.0,
+        425.0,
+        425.0
+      ],
+      "AttackSpeed": [
+        0.10000000149011612,
+        0.15000000596046448,
+        0.20000000298023224,
+        0.25,
+        0.30000001192092896,
+        0.3499999940395355,
+        0.4000000059604645
+      ],
+      "TremorBonus": [
+        0.3499999940395355,
+        0.3499999940395355,
+        0.3499999940395355,
+        0.3499999940395355,
+        0.3499999940395355,
+        0.3499999940395355,
+        0.3499999940395355
+      ],
+      "PassiveMS": [
+        0.009999999776482582,
+        0.029999999329447746,
+        0.05000000074505806,
+        0.07000000029802322,
+        0.09000000357627869,
+        0.10999999940395355,
+        0.12999999523162842
+      ],
+      "TravelDistance": [
+        300.0,
+        300.0,
+        300.0,
+        300.0,
+        300.0,
+        300.0,
+        300.0
+      ],
+      "TravelDistanceShort": {
+        "mName": "TravelDistanceShort",
+        "__type": "SpellDataValue"
+      },
+      "DashSpeed": [
+        440.0,
+        440.0,
+        440.0,
+        440.0,
+        440.0,
+        440.0,
+        440.0
+      ],
+      "OnHitAPRatio": [
+        0.44999998807907104,
+        0.44999998807907104,
+        0.44999998807907104,
+        0.44999998807907104,
+        0.44999998807907104,
+        0.44999998807907104,
+        0.44999998807907104
+      ],
+      "OnHitADRatio": [
+        0.20000000298023224,
+        0.20000000298023224,
+        0.20000000298023224,
+        0.20000000298023224,
+        0.20000000298023224,
+        0.20000000298023224,
+        0.20000000298023224
+      ]
+    }
+  },
+  "QiyanaWMis_Rock": {
+    "calculations": {},
+    "dataValues": {
+      "1": [
+        0.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ]
+    }
+  },
+  "QiyanaR": {
+    "calculations": {
+      "Damage": {
+        "mFormulaParts": [
+          {
+            "mDataValue": "BaseDamage",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          {
+            "mStat": 2,
+            "mStatFormula": 2,
+            "mCoefficient": 1.25,
+            "__type": "StatByCoefficientCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      },
+      "MissingHealthDamageRock": {
+        "mExpandedTooltipCalculationDisplay": 5,
+        "mFormulaParts": [
+          {
+            "mDataValue": "PercentHPDamageBaseRock",
+            "__type": "NamedDataValueCalculationPart"
+          }
+        ],
+        "mDisplayAsPercent": true,
+        "__type": "GameCalculation"
+      },
+      "MonsterCap": {
+        "mFormulaParts": [
+          {
+            "mDataValue": "MonsterCapBase",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          {
+            "mStat": 2,
+            "mStatFormula": 2,
+            "mCoefficient": 1.25,
+            "__type": "StatByCoefficientCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      }
+    },
+    "dataValues": {
+      "BaseDamage": [
+        0.0,
+        100.0,
+        200.0,
+        300.0,
+        400.0,
+        500.0,
+        600.0
+      ],
+      "Slow": [
+        0.30000001192092896,
+        0.4000000059604645,
+        0.5,
+        0.6000000238418579,
+        0.699999988079071,
+        0.800000011920929,
+        0.8999999761581421
+      ],
+      "BonusDamageBase": [
+        0.0,
+        50.0,
+        100.0,
+        150.0,
+        200.0,
+        250.0,
+        300.0
+      ],
+      "SlowDuration": [
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0
+      ],
+      "RecastWindow": [
+        10.0,
+        10.0,
+        10.0,
+        10.0,
+        10.0,
+        10.0,
+        10.0
+      ],
+      "StunDuration": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "MonsterCapBase": [
+        250.0,
+        500.0,
+        750.0,
+        1000.0,
+        1250.0,
+        1500.0,
+        1750.0
+      ],
+      "PercentHPDamageBaseRock": [
+        0.10000000149011612,
+        0.10000000149011612,
+        0.10000000149011612,
+        0.10000000149011612,
+        0.10000000149011612,
+        0.10000000149011612,
+        0.10000000149011612
+      ],
+      "RootDuration": [
+        1.5,
+        1.5,
+        1.5,
+        1.5,
+        1.5,
+        1.5,
+        1.5
+      ],
+      "StunDurationMin": [
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5
+      ]
+    }
+  },
+  "QiyanaRWallHitMis": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "QiyanaRWallFollowMisCounterClockwise": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "QiyanaRWallFollowMisShadowCounterClockwise": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "QiyanaRMis": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "QiyanaRWallFollowMisShadow": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "QiyanaRWallFollowMis": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "QiyanaQ_Grass": {
+    "calculations": {
+      "EnchantedDamage": {
+        "mFormulaParts": [
+          {
+            "mDataValue": "BaseDamage",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          {
+            "mStat": 2,
+            "mStatFormula": 2,
+            "mCoefficient": 0.8999999761581421,
+            "__type": "StatByCoefficientCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      },
+      "VanillaDamage": {
+        "mFormulaParts": [
+          {
+            "mDataValue": "VanillaBase",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          {
+            "mStat": 2,
+            "mStatFormula": 2,
+            "mCoefficient": 0.8999999761581421,
+            "__type": "StatByCoefficientCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      },
+      "TremorDamage": {
+        "mMultiplier": {
+          "mLevel1Value": 0.6000000238418579,
+          "mBreakpoints": [
+            {
+              "mLevel": 6,
+              "__type": "Breakpoint"
+            },
+            {
+              "mLevel": 11,
+              "__type": "Breakpoint"
+            }
+          ],
+          "__type": "ByCharLevelBreakpointsCalculationPart"
+        },
+        "mModifiedGameCalculation": "EnchantedDamage",
+        "__type": "GameCalculationModified"
+      },
+      "{7dc40c72}": {
+        "mFormulaParts": [
+          {
+            "mNumber": 0.05999999865889549,
+            "__type": "NumberCalculationPart"
+          },
+          {
+            "mStat": 2,
+            "mStatFormula": 2,
+            "mCoefficient": 0.0006000000284984708,
+            "__type": "StatByCoefficientCalculationPart"
+          }
+        ],
+        "mDisplayAsPercent": true,
+        "__type": "GameCalculation"
+      },
+      "FalloffDamage": {
+        "mExpandedTooltipCalculationDisplay": 5,
+        "mFormulaParts": [
+          {
+            "mDataValue": "FalloffMod",
+            "__type": "NamedDataValueCalculationPart"
+          }
+        ],
+        "mDisplayAsPercent": true,
+        "__type": "GameCalculation"
+      },
+      "EnchantedFalloff": {
+        "mMultiplier": {
+          "mDataValue": "FalloffMod",
+          "__type": "NamedDataValueCalculationPart"
+        },
+        "mExpandedTooltipCalculationDisplay": 5,
+        "mModifiedGameCalculation": "EnchantedDamage",
+        "__type": "GameCalculationModified"
+      },
+      "VanillaFalloff": {
+        "mMultiplier": {
+          "mDataValue": "FalloffMod",
+          "__type": "NamedDataValueCalculationPart"
+        },
+        "mExpandedTooltipCalculationDisplay": 5,
+        "mModifiedGameCalculation": "VanillaDamage",
+        "__type": "GameCalculationModified"
+      }
+    },
+    "dataValues": {
+      "VanillaBase": [
+        40.0,
+        70.0,
+        100.0,
+        130.0,
+        160.0,
+        190.0,
+        220.0
+      ],
+      "BaseDamage": [
+        40.0,
+        70.0,
+        100.0,
+        130.0,
+        160.0,
+        190.0,
+        220.0
+      ],
+      "StealthDuration": [
+        3.0,
+        3.0,
+        3.0,
+        3.0,
+        3.0,
+        3.0,
+        3.0
+      ],
+      "TremorBonus": [
+        0.4000000059604645,
+        0.4000000059604645,
+        0.4000000059604645,
+        0.4000000059604645,
+        0.4000000059604645,
+        0.4000000059604645,
+        0.4000000059604645
+      ],
+      "Haste": [
+        0.20000000298023224,
+        0.20000000298023224,
+        0.20000000298023224,
+        0.20000000298023224,
+        0.20000000298023224,
+        0.20000000298023224,
+        0.20000000298023224
+      ],
+      "RockExplosionDelay": [
+        0.4000000059604645,
+        0.4000000059604645,
+        0.4000000059604645,
+        0.4000000059604645,
+        0.4000000059604645,
+        0.4000000059604645,
+        0.4000000059604645
+      ],
+      "RootDuration": [
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5
+      ],
+      "SlowDuration": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "SlowPotency": [
+        -0.20000000298023224,
+        -0.20000000298023224,
+        -0.20000000298023224,
+        -0.20000000298023224,
+        -0.20000000298023224,
+        -0.20000000298023224,
+        -0.20000000298023224
+      ],
+      "CritThreshold": [
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5
+      ],
+      "FalloffMod": [
+        0.75,
+        0.75,
+        0.75,
+        0.75,
+        0.75,
+        0.75,
+        0.75
+      ],
+      "JungleDamageAmp": [
+        1.75,
+        1.75,
+        1.75,
+        1.75,
+        1.75,
+        1.75,
+        1.75
+      ]
+    }
+  },
+  "QiyanaQ_Water": {
+    "calculations": {
+      "EnchantedDamage": {
+        "mFormulaParts": [
+          {
+            "mDataValue": "BaseDamage",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          {
+            "mStat": 2,
+            "mStatFormula": 2,
+            "mCoefficient": 0.8999999761581421,
+            "__type": "StatByCoefficientCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      },
+      "VanillaDamage": {
+        "mFormulaParts": [
+          {
+            "mDataValue": "VanillaBase",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          {
+            "mStat": 2,
+            "mStatFormula": 2,
+            "mCoefficient": 0.8999999761581421,
+            "__type": "StatByCoefficientCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      },
+      "TremorDamage": {
+        "mMultiplier": {
+          "mLevel1Value": 0.6000000238418579,
+          "mBreakpoints": [
+            {
+              "mLevel": 6,
+              "__type": "Breakpoint"
+            },
+            {
+              "mLevel": 11,
+              "__type": "Breakpoint"
+            }
+          ],
+          "__type": "ByCharLevelBreakpointsCalculationPart"
+        },
+        "mModifiedGameCalculation": "EnchantedDamage",
+        "__type": "GameCalculationModified"
+      },
+      "{7dc40c72}": {
+        "mFormulaParts": [
+          {
+            "mNumber": 0.05999999865889549,
+            "__type": "NumberCalculationPart"
+          },
+          {
+            "mStat": 2,
+            "mStatFormula": 2,
+            "mCoefficient": 0.0006000000284984708,
+            "__type": "StatByCoefficientCalculationPart"
+          }
+        ],
+        "mDisplayAsPercent": true,
+        "__type": "GameCalculation"
+      },
+      "FalloffDamage": {
+        "mExpandedTooltipCalculationDisplay": 5,
+        "mFormulaParts": [
+          {
+            "mDataValue": "FalloffMod",
+            "__type": "NamedDataValueCalculationPart"
+          }
+        ],
+        "mDisplayAsPercent": true,
+        "__type": "GameCalculation"
+      },
+      "EnchantedFalloff": {
+        "mMultiplier": {
+          "mDataValue": "FalloffMod",
+          "__type": "NamedDataValueCalculationPart"
+        },
+        "mExpandedTooltipCalculationDisplay": 5,
+        "mModifiedGameCalculation": "EnchantedDamage",
+        "__type": "GameCalculationModified"
+      },
+      "VanillaFalloff": {
+        "mMultiplier": {
+          "mDataValue": "FalloffMod",
+          "__type": "NamedDataValueCalculationPart"
+        },
+        "mExpandedTooltipCalculationDisplay": 5,
+        "mModifiedGameCalculation": "VanillaDamage",
+        "__type": "GameCalculationModified"
+      }
+    },
+    "dataValues": {
+      "VanillaBase": [
+        40.0,
+        70.0,
+        100.0,
+        130.0,
+        160.0,
+        190.0,
+        220.0
+      ],
+      "BaseDamage": [
+        40.0,
+        70.0,
+        100.0,
+        130.0,
+        160.0,
+        190.0,
+        220.0
+      ],
+      "StealthDuration": [
+        3.0,
+        3.0,
+        3.0,
+        3.0,
+        3.0,
+        3.0,
+        3.0
+      ],
+      "TremorBonus": [
+        0.4000000059604645,
+        0.4000000059604645,
+        0.4000000059604645,
+        0.4000000059604645,
+        0.4000000059604645,
+        0.4000000059604645,
+        0.4000000059604645
+      ],
+      "Haste": [
+        0.20000000298023224,
+        0.20000000298023224,
+        0.20000000298023224,
+        0.20000000298023224,
+        0.20000000298023224,
+        0.20000000298023224,
+        0.20000000298023224
+      ],
+      "RockExplosionDelay": [
+        0.4000000059604645,
+        0.4000000059604645,
+        0.4000000059604645,
+        0.4000000059604645,
+        0.4000000059604645,
+        0.4000000059604645,
+        0.4000000059604645
+      ],
+      "RootDuration": [
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5
+      ],
+      "SlowDuration": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "SlowPotency": [
+        -0.20000000298023224,
+        -0.20000000298023224,
+        -0.20000000298023224,
+        -0.20000000298023224,
+        -0.20000000298023224,
+        -0.20000000298023224,
+        -0.20000000298023224
+      ],
+      "CritThreshold": [
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5
+      ],
+      "FalloffMod": [
+        0.75,
+        0.75,
+        0.75,
+        0.75,
+        0.75,
+        0.75,
+        0.75
+      ],
+      "JungleDamageAmp": [
+        1.75,
+        1.75,
+        1.75,
+        1.75,
+        1.75,
+        1.75,
+        1.75
+      ]
+    }
+  },
+  "QiyanaQ": {
+    "calculations": {
+      "EnchantedDamage": {
+        "mFormulaParts": [
+          {
+            "mDataValue": "BaseDamage",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          {
+            "mStat": 2,
+            "mStatFormula": 2,
+            "mCoefficient": 0.8999999761581421,
+            "__type": "StatByCoefficientCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      },
+      "VanillaDamage": {
+        "mFormulaParts": [
+          {
+            "mDataValue": "VanillaBase",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          {
+            "mStat": 2,
+            "mStatFormula": 2,
+            "mCoefficient": 0.8999999761581421,
+            "__type": "StatByCoefficientCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      },
+      "TremorDamage": {
+        "mMultiplier": {
+          "mLevel1Value": 0.6000000238418579,
+          "mBreakpoints": [
+            {
+              "mLevel": 6,
+              "__type": "Breakpoint"
+            },
+            {
+              "mLevel": 11,
+              "__type": "Breakpoint"
+            }
+          ],
+          "__type": "ByCharLevelBreakpointsCalculationPart"
+        },
+        "mModifiedGameCalculation": "EnchantedDamage",
+        "__type": "GameCalculationModified"
+      },
+      "{7dc40c72}": {
+        "mFormulaParts": [
+          {
+            "mNumber": 0.05999999865889549,
+            "__type": "NumberCalculationPart"
+          },
+          {
+            "mStat": 2,
+            "mStatFormula": 2,
+            "mCoefficient": 0.0006000000284984708,
+            "__type": "StatByCoefficientCalculationPart"
+          }
+        ],
+        "mDisplayAsPercent": true,
+        "__type": "GameCalculation"
+      },
+      "FalloffDamage": {
+        "mExpandedTooltipCalculationDisplay": 5,
+        "mFormulaParts": [
+          {
+            "mDataValue": "FalloffMod",
+            "__type": "NamedDataValueCalculationPart"
+          }
+        ],
+        "mDisplayAsPercent": true,
+        "__type": "GameCalculation"
+      },
+      "EnchantedFalloff": {
+        "mMultiplier": {
+          "mDataValue": "FalloffMod",
+          "__type": "NamedDataValueCalculationPart"
+        },
+        "mExpandedTooltipCalculationDisplay": 5,
+        "mModifiedGameCalculation": "EnchantedDamage",
+        "__type": "GameCalculationModified"
+      },
+      "VanillaFalloff": {
+        "mMultiplier": {
+          "mDataValue": "FalloffMod",
+          "__type": "NamedDataValueCalculationPart"
+        },
+        "mExpandedTooltipCalculationDisplay": 5,
+        "mModifiedGameCalculation": "VanillaDamage",
+        "__type": "GameCalculationModified"
+      }
+    },
+    "dataValues": {
+      "VanillaBase": [
+        40.0,
+        70.0,
+        100.0,
+        130.0,
+        160.0,
+        190.0,
+        220.0
+      ],
+      "BaseDamage": [
+        40.0,
+        70.0,
+        100.0,
+        130.0,
+        160.0,
+        190.0,
+        220.0
+      ],
+      "StealthDuration": [
+        3.0,
+        3.0,
+        3.0,
+        3.0,
+        3.0,
+        3.0,
+        3.0
+      ],
+      "TremorBonus": [
+        0.4000000059604645,
+        0.4000000059604645,
+        0.4000000059604645,
+        0.4000000059604645,
+        0.4000000059604645,
+        0.4000000059604645,
+        0.4000000059604645
+      ],
+      "Haste": [
+        0.20000000298023224,
+        0.20000000298023224,
+        0.20000000298023224,
+        0.20000000298023224,
+        0.20000000298023224,
+        0.20000000298023224,
+        0.20000000298023224
+      ],
+      "RockExplosionDelay": [
+        0.4000000059604645,
+        0.4000000059604645,
+        0.4000000059604645,
+        0.4000000059604645,
+        0.4000000059604645,
+        0.4000000059604645,
+        0.4000000059604645
+      ],
+      "RootDuration": [
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5
+      ],
+      "SlowDuration": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "SlowPotency": [
+        -0.20000000298023224,
+        -0.20000000298023224,
+        -0.20000000298023224,
+        -0.20000000298023224,
+        -0.20000000298023224,
+        -0.20000000298023224,
+        -0.20000000298023224
+      ],
+      "CritThreshold": [
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5
+      ],
+      "FalloffMod": [
+        0.75,
+        0.75,
+        0.75,
+        0.75,
+        0.75,
+        0.75,
+        0.75
+      ],
+      "JungleDamageAmp": [
+        1.75,
+        1.75,
+        1.75,
+        1.75,
+        1.75,
+        1.75,
+        1.75
+      ]
+    }
+  },
+  "QiyanaQ_ExplosionMissile": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "QiyanaQ_Rock": {
+    "calculations": {
+      "EnchantedDamage": {
+        "mFormulaParts": [
+          {
+            "mDataValue": "BaseDamage",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          {
+            "mStat": 2,
+            "mStatFormula": 2,
+            "mCoefficient": 0.8999999761581421,
+            "__type": "StatByCoefficientCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      },
+      "VanillaDamage": {
+        "mFormulaParts": [
+          {
+            "mDataValue": "VanillaBase",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          {
+            "mStat": 2,
+            "mStatFormula": 2,
+            "mCoefficient": 0.8999999761581421,
+            "__type": "StatByCoefficientCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      },
+      "TremorDamage": {
+        "mMultiplier": {
+          "mLevel1Value": 0.6000000238418579,
+          "mBreakpoints": [
+            {
+              "mLevel": 6,
+              "__type": "Breakpoint"
+            },
+            {
+              "mLevel": 11,
+              "__type": "Breakpoint"
+            }
+          ],
+          "__type": "ByCharLevelBreakpointsCalculationPart"
+        },
+        "mModifiedGameCalculation": "EnchantedDamage",
+        "__type": "GameCalculationModified"
+      },
+      "{7dc40c72}": {
+        "mFormulaParts": [
+          {
+            "mNumber": 0.05999999865889549,
+            "__type": "NumberCalculationPart"
+          },
+          {
+            "mStat": 2,
+            "mStatFormula": 2,
+            "mCoefficient": 0.0006000000284984708,
+            "__type": "StatByCoefficientCalculationPart"
+          }
+        ],
+        "mDisplayAsPercent": true,
+        "__type": "GameCalculation"
+      },
+      "FalloffDamage": {
+        "mExpandedTooltipCalculationDisplay": 5,
+        "mFormulaParts": [
+          {
+            "mDataValue": "FalloffMod",
+            "__type": "NamedDataValueCalculationPart"
+          }
+        ],
+        "mDisplayAsPercent": true,
+        "__type": "GameCalculation"
+      },
+      "EnchantedFalloff": {
+        "mMultiplier": {
+          "mDataValue": "FalloffMod",
+          "__type": "NamedDataValueCalculationPart"
+        },
+        "mExpandedTooltipCalculationDisplay": 5,
+        "mModifiedGameCalculation": "EnchantedDamage",
+        "__type": "GameCalculationModified"
+      },
+      "VanillaFalloff": {
+        "mMultiplier": {
+          "mDataValue": "FalloffMod",
+          "__type": "NamedDataValueCalculationPart"
+        },
+        "mExpandedTooltipCalculationDisplay": 5,
+        "mModifiedGameCalculation": "VanillaDamage",
+        "__type": "GameCalculationModified"
+      }
+    },
+    "dataValues": {
+      "VanillaBase": [
+        40.0,
+        70.0,
+        100.0,
+        130.0,
+        160.0,
+        190.0,
+        220.0
+      ],
+      "BaseDamage": [
+        40.0,
+        70.0,
+        100.0,
+        130.0,
+        160.0,
+        190.0,
+        220.0
+      ],
+      "StealthDuration": [
+        3.0,
+        3.0,
+        3.0,
+        3.0,
+        3.0,
+        3.0,
+        3.0
+      ],
+      "TremorBonus": [
+        0.4000000059604645,
+        0.4000000059604645,
+        0.4000000059604645,
+        0.4000000059604645,
+        0.4000000059604645,
+        0.4000000059604645,
+        0.4000000059604645
+      ],
+      "Haste": [
+        0.20000000298023224,
+        0.20000000298023224,
+        0.20000000298023224,
+        0.20000000298023224,
+        0.20000000298023224,
+        0.20000000298023224,
+        0.20000000298023224
+      ],
+      "RockExplosionDelay": [
+        0.4000000059604645,
+        0.4000000059604645,
+        0.4000000059604645,
+        0.4000000059604645,
+        0.4000000059604645,
+        0.4000000059604645,
+        0.4000000059604645
+      ],
+      "RootDuration": [
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5
+      ],
+      "SlowDuration": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "SlowPotency": [
+        -0.20000000298023224,
+        -0.20000000298023224,
+        -0.20000000298023224,
+        -0.20000000298023224,
+        -0.20000000298023224,
+        -0.20000000298023224,
+        -0.20000000298023224
+      ],
+      "CritThreshold": [
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5
+      ],
+      "FalloffMod": [
+        0.75,
+        0.75,
+        0.75,
+        0.75,
+        0.75,
+        0.75,
+        0.75
+      ],
+      "JungleDamageAmp": [
+        1.75,
+        1.75,
+        1.75,
+        1.75,
+        1.75,
+        1.75,
+        1.75
+      ]
+    }
+  },
+  "QiyanaBasicAttack3": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "QiyanaBasicAttack2": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "QiyanaCritAttack": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "QiyanaBasicAttack": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "QiyanaPassive": {
+    "calculations": {
+      "FinalDamage": {
+        "mFormulaParts": [
+          {
+            "mLevel1Value": 15.0,
+            "mInitialBonusPerLevel": 4.0,
+            "mBreakpoints": [
+              {
+                "mLevel": 6,
+                "mBonusPerLevelAtAndAfter": 4.0,
+                "__type": "Breakpoint"
+              },
+              {
+                "mLevel": 11,
+                "mBonusPerLevelAtAndAfter": 4.0,
+                "__type": "Breakpoint"
+              }
+            ],
+            "__type": "ByCharLevelBreakpointsCalculationPart"
+          },
+          {
+            "mStat": 2,
+            "mStatFormula": 2,
+            "mDataValue": "BonusADRatio",
+            "__type": "StatByNamedDataValueCalculationPart"
+          },
+          {
+            "mDataValue": "APRatio",
+            "__type": "StatByNamedDataValueCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      },
+      "ICD": {
+        "mFormulaParts": [
+          {
+            "mStartValue": 14.0,
+            "mEndValue": 14.0,
+            "__type": "ByCharLevelInterpolationCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      },
+      "{222614ec}": {
+        "mFormulaParts": [
+          {
+            "mLevel1Value": 1.0,
+            "mBreakpoints": [
+              {
+                "mLevel": 6,
+                "__type": "Breakpoint"
+              },
+              {
+                "mLevel": 11,
+                "__type": "Breakpoint"
+              },
+              {
+                "mLevel": 16,
+                "__type": "Breakpoint"
+              }
+            ],
+            "__type": "ByCharLevelBreakpointsCalculationPart"
+          }
+        ],
+        "mDisplayAsPercent": true,
+        "__type": "GameCalculation"
+      }
+    },
+    "dataValues": {
+      "BurnDuration": [
+        4.0,
+        4.0,
+        4.0,
+        4.0,
+        4.0,
+        4.0,
+        4.0
+      ],
+      "SlowDuration": [
+        1.5,
+        1.5,
+        1.5,
+        1.5,
+        1.5,
+        1.5,
+        1.5
+      ],
+      "StunDuration": [
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5
+      ],
+      "HasteDuration": [
+        1.5,
+        1.5,
+        1.5,
+        1.5,
+        1.5,
+        1.5,
+        1.5
+      ],
+      "StoneExecuteBase": [
+        0.05999999865889549,
+        0.05999999865889549,
+        0.05999999865889549,
+        0.05999999865889549,
+        0.05999999865889549,
+        0.05999999865889549,
+        0.05999999865889549
+      ],
+      "HealDuration": [
+        4.0,
+        4.0,
+        4.0,
+        4.0,
+        4.0,
+        4.0,
+        4.0
+      ],
+      "HealRadius": [
+        360.0,
+        360.0,
+        360.0,
+        360.0,
+        360.0,
+        360.0,
+        360.0
+      ],
+      "DoubleHitBuffDuration": [
+        6.0,
+        6.0,
+        6.0,
+        6.0,
+        6.0,
+        6.0,
+        6.0
+      ],
+      "BonusADRatio": [
+        0.25,
+        0.25,
+        0.25,
+        0.25,
+        0.25,
+        0.25,
+        0.25
+      ],
+      "APRatio": [
+        0.30000001192092896,
+        0.30000001192092896,
+        0.30000001192092896,
+        0.30000001192092896,
+        0.30000001192092896,
+        0.30000001192092896,
+        0.30000001192092896
+      ]
+    }
+  },
+  "QiyanaE": {
+    "calculations": {
+      "Damage": {
+        "mFormulaParts": [
+          {
+            "mDataValue": "BaseDamage",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          {
+            "mStat": 2,
+            "mStatFormula": 2,
+            "mDataValue": "ADRatio",
+            "__type": "StatByNamedDataValueCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      }
+    },
+    "dataValues": {
+      "BaseDamage": [
+        10.0,
+        50.0,
+        90.0,
+        130.0,
+        170.0,
+        210.0,
+        250.0
+      ],
+      "DashSpeed": [
+        600.0,
+        600.0,
+        600.0,
+        600.0,
+        600.0,
+        600.0,
+        600.0
+      ],
+      "DashSpeedMax": [
+        1200.0,
+        1200.0,
+        1200.0,
+        1200.0,
+        1200.0,
+        1200.0,
+        1200.0
+      ],
+      "ADRatio": [
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5
+      ]
+    }
+  }
+}

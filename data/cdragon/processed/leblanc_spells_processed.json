@@ -1,0 +1,457 @@
+{
+  "LeblancBasicAttack": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "LeblancERoot": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "LeblancE": {
+    "calculations": {
+      "InitialDamage": {
+        "mFormulaParts": [
+          {
+            "mDataValue": "BaseInitialDamage",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          {
+            "mDataValue": "{4db10781}",
+            "__type": "StatByNamedDataValueCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      },
+      "DelayedDamage": {
+        "mFormulaParts": [
+          {
+            "mDataValue": "BaseDelayedDamage",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          {
+            "mDataValue": "{16e82c6b}",
+            "__type": "StatByNamedDataValueCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      }
+    },
+    "dataValues": {
+      "BaseInitialDamage": [
+        30.0,
+        50.0,
+        70.0,
+        90.0,
+        110.0,
+        130.0,
+        150.0
+      ],
+      "BaseDelayedDamage": [
+        40.0,
+        80.0,
+        120.0,
+        160.0,
+        200.0,
+        240.0,
+        280.0
+      ],
+      "InitialAPRatio": [
+        0.4000000059604645,
+        0.4000000059604645,
+        0.4000000059604645,
+        0.4000000059604645,
+        0.4000000059604645,
+        0.4000000059604645,
+        0.4000000059604645
+      ],
+      "DelayedAPRatio": [
+        0.8500000238418579,
+        0.8500000238418579,
+        0.8500000238418579,
+        0.8500000238418579,
+        0.8500000238418579,
+        0.8500000238418579,
+        0.8500000238418579
+      ]
+    }
+  },
+  "LeblancEMissile": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "LeblancRERoot": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "LeblancREMissile": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "LeblancRE": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "LeblancRREMissile": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "LeblancQ": {
+    "calculations": {
+      "Damage": {
+        "mFormulaParts": [
+          {
+            "mDataValue": "BaseDamage",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          {
+            "mDataValue": "APRatio",
+            "__type": "StatByNamedDataValueCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      },
+      "MarkDamage": {
+        "mFormulaParts": [
+          {
+            "mDataValue": "BaseMarkDamage",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          {
+            "mDataValue": "APRatio",
+            "__type": "StatByNamedDataValueCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      },
+      "BonusMinionDamage": {
+        "mFormulaParts": [
+          {
+            "mLevel1Value": 10.0,
+            "mInitialBonusPerLevel": 8.0,
+            "mBreakpoints": [
+              {
+                "mLevel": 19,
+                "__type": "Breakpoint"
+              }
+            ],
+            "__type": "ByCharLevelBreakpointsCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      }
+    },
+    "dataValues": {
+      "BaseDamage": [
+        40.0,
+        65.0,
+        90.0,
+        115.0,
+        140.0,
+        165.0,
+        190.0
+      ],
+      "BaseMarkDamage": [
+        40.0,
+        65.0,
+        90.0,
+        115.0,
+        140.0,
+        165.0,
+        190.0
+      ],
+      "MarkDuration": [
+        3.5,
+        3.5,
+        3.5,
+        3.5,
+        3.5,
+        3.5,
+        3.5
+      ],
+      "CooldownRefund": [
+        0.30000001192092896,
+        0.30000001192092896,
+        0.30000001192092896,
+        0.30000001192092896,
+        0.30000001192092896,
+        0.30000001192092896,
+        0.30000001192092896
+      ],
+      "ManaRefund": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "APRatio": [
+        0.4000000059604645,
+        0.4000000059604645,
+        0.4000000059604645,
+        0.4000000059604645,
+        0.4000000059604645,
+        0.4000000059604645,
+        0.4000000059604645
+      ]
+    }
+  },
+  "LeblancQMark": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "LeblancRW": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "LeblancRWReturn": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "LeblancP": {
+    "calculations": {},
+    "dataValues": {
+      "TooltipCooldown": [
+        60.0,
+        60.0,
+        60.0,
+        60.0,
+        60.0,
+        60.0,
+        60.0
+      ]
+    }
+  },
+  "LeblancWReturn": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "LeblancWMove": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "LeblancW": {
+    "calculations": {
+      "TotalDamage": {
+        "mFormulaParts": [
+          {
+            "mDataValue": "BaseDamage",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          {
+            "mDataValue": "WAPRatio",
+            "__type": "StatByNamedDataValueCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      }
+    },
+    "dataValues": {
+      "WAPRatio": [
+        0.699999988079071,
+        0.699999988079071,
+        0.699999988079071,
+        0.699999988079071,
+        0.699999988079071,
+        0.699999988079071,
+        0.699999988079071
+      ],
+      "BaseDamage": [
+        35.0,
+        75.0,
+        115.0,
+        155.0,
+        195.0,
+        235.0,
+        275.0
+      ]
+    }
+  },
+  "LeblancRToggle": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "LeblancWReturnSFX": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "LeblancRQ": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "LeblancRQMark": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "LeblancRQMissile": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "LeblancBasicAttack2": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "LeblancRWMove": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "LeblancCritAttack": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "LeblancRStealth": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "LeblancQChain": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "LeblancPMarkProc": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "LeblancPMark": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "LeblancR": {
+    "calculations": {
+      "RQ1Damage": {
+        "mFormulaParts": [
+          {
+            "mDataValue": "RQ1Base",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          {
+            "mDataValue": "RQ1RE1BaseAPRatio",
+            "__type": "StatByNamedDataValueCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      },
+      "RQ2Damage": {
+        "mFormulaParts": [
+          {
+            "mDataValue": "RQ2Base",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          {
+            "mCoefficient": 0.800000011920929,
+            "__type": "StatByCoefficientCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      },
+      "RWDamage": {
+        "mFormulaParts": [
+          {
+            "mDataValue": "RWBase",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          {
+            "mCoefficient": 0.75,
+            "__type": "StatByCoefficientCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      },
+      "RE1Damage": {
+        "mFormulaParts": [
+          {
+            "mDataValue": "RE1Base",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          {
+            "mDataValue": "RQ1RE1BaseAPRatio",
+            "__type": "StatByNamedDataValueCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      },
+      "RE2Damage": {
+        "mFormulaParts": [
+          {
+            "mDataValue": "RE2Base",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          {
+            "mCoefficient": 0.8500000238418579,
+            "__type": "StatByCoefficientCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      }
+    },
+    "dataValues": {
+      "RQ1Base": [
+        0.0,
+        70.0,
+        140.0,
+        210.0,
+        280.0,
+        350.0,
+        420.0
+      ],
+      "RQ2Base": [
+        0.0,
+        140.0,
+        280.0,
+        420.0,
+        560.0,
+        700.0,
+        840.0
+      ],
+      "RWBase": [
+        0.0,
+        150.0,
+        300.0,
+        450.0,
+        600.0,
+        750.0,
+        900.0
+      ],
+      "RE1Base": [
+        0.0,
+        70.0,
+        140.0,
+        210.0,
+        280.0,
+        350.0,
+        420.0
+      ],
+      "RE2Base": [
+        0.0,
+        140.0,
+        280.0,
+        420.0,
+        560.0,
+        700.0,
+        840.0
+      ],
+      "RQMarkDuration": [
+        3.5,
+        3.5,
+        3.5,
+        3.5,
+        3.5,
+        3.5,
+        3.5
+      ],
+      "RQ1RE1BaseAPRatio": [
+        0.4000000059604645,
+        0.4000000059604645,
+        0.4000000059604645,
+        0.4000000059604645,
+        0.4000000059604645,
+        0.4000000059604645,
+        0.4000000059604645
+      ]
+    }
+  },
+  "LeblancRRQ": {
+    "calculations": {},
+    "dataValues": {}
+  }
+}

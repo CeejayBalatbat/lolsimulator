@@ -1,0 +1,592 @@
+{
+  "MasterYiPassive": {
+    "calculations": {
+      "TotalDamage": {
+        "mSimpleTooltipCalculationDisplay": 6,
+        "mFormulaParts": [
+          {
+            "mStat": 2,
+            "mCoefficient": 0.5,
+            "__type": "StatByCoefficientCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      }
+    },
+    "dataValues": {
+      "StackDuration": [
+        4.0,
+        4.0,
+        4.0,
+        4.0,
+        4.0,
+        4.0,
+        4.0
+      ],
+      "AttackCount": [
+        4.0,
+        4.0,
+        4.0,
+        4.0,
+        4.0,
+        4.0,
+        4.0
+      ]
+    }
+  },
+  "MasterYiDoubleStrike": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "MasterYiBasicAttack2": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "MasterYiBasicAttack": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "AlphaStrikeTeleport": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "AlphaStrikeMissileReturn": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "AlphaStrikeBounce": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "AlphaStrike": {
+    "calculations": {
+      "TotalDamage": {
+        "mSimpleTooltipCalculationDisplay": 6,
+        "mFormulaParts": [
+          {
+            "mDataValue": "BaseDamage",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          {
+            "mStat": 2,
+            "mDataValue": "AttackDamageRatio",
+            "__type": "StatByNamedDataValueCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      },
+      "SubesquentDamage": {
+        "mMultiplier": {
+          "mDataValue": "SubsequentHitMultiplier",
+          "__type": "NamedDataValueCalculationPart"
+        },
+        "mFormulaParts": [
+          {
+            "mSubparts": [
+              {
+                "mDataValue": "BaseDamage",
+                "__type": "NamedDataValueCalculationPart"
+              },
+              {
+                "mStat": 2,
+                "mDataValue": "AttackDamageRatio",
+                "__type": "StatByNamedDataValueCalculationPart"
+              }
+            ],
+            "__type": "SumOfSubPartsCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      },
+      "CritBonus": {
+        "mMultiplier": {
+          "mPart1": {
+            "mDataValue": "BonusCritDamageRatio",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          "mPart2": {
+            "mSubparts": [
+              {
+                "mStat": 9,
+                "mCoefficient": 1.0,
+                "__type": "StatByCoefficientCalculationPart"
+              },
+              {
+                "mNumber": -1.0,
+                "__type": "NumberCalculationPart"
+              }
+            ],
+            "__type": "SumOfSubPartsCalculationPart"
+          },
+          "__type": "ProductOfSubPartsCalculationPart"
+        },
+        "mModifiedGameCalculation": "TotalDamage",
+        "__type": "GameCalculationModified"
+      },
+      "{b0f66055}": {
+        "mMultiplier": {
+          "mPart1": {
+            "mDataValue": "BonusCritDamageRatio",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          "mPart2": {
+            "mSubparts": [
+              {
+                "mStat": 9,
+                "mCoefficient": 1.0,
+                "__type": "StatByCoefficientCalculationPart"
+              },
+              {
+                "mNumber": -1.0,
+                "__type": "NumberCalculationPart"
+              }
+            ],
+            "__type": "SumOfSubPartsCalculationPart"
+          },
+          "__type": "ProductOfSubPartsCalculationPart"
+        },
+        "mModifiedGameCalculation": "SubesquentDamage",
+        "__type": "GameCalculationModified"
+      },
+      "BasicAttackCDR": {
+        "mFormulaParts": [
+          {
+            "mPart1": {
+              "__type": "CooldownMultiplierCalculationPart"
+            },
+            "mPart2": {
+              "mDataValue": "BaseBasicAttackCDR",
+              "__type": "NamedDataValueCalculationPart"
+            },
+            "__type": "ProductOfSubPartsCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      },
+      "SingleTotalDamage": {
+        "mMultiplier": {
+          "mSubparts": [
+            {
+              "mNumber": 1.0,
+              "__type": "NumberCalculationPart"
+            },
+            {
+              "mPart1": {
+                "mDataValue": "SubsequentHitMultiplier",
+                "__type": "NamedDataValueCalculationPart"
+              },
+              "mPart2": {
+                "mSubparts": [
+                  {
+                    "mNumber": -1.0,
+                    "__type": "NumberCalculationPart"
+                  },
+                  {
+                    "mDataValue": "AlphaStrikeBounces",
+                    "__type": "NamedDataValueCalculationPart"
+                  }
+                ],
+                "__type": "SumOfSubPartsCalculationPart"
+              },
+              "__type": "ProductOfSubPartsCalculationPart"
+            }
+          ],
+          "__type": "SumOfSubPartsCalculationPart"
+        },
+        "mModifiedGameCalculation": "TotalDamage",
+        "__type": "GameCalculationModified"
+      },
+      "SingleCritTotalDamage": {
+        "mMultiplier": {
+          "mPart1": {
+            "mDataValue": "BonusCritDamageRatio",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          "mPart2": {
+            "mStat": 9,
+            "mCoefficient": 1.0,
+            "__type": "StatByCoefficientCalculationPart"
+          },
+          "__type": "ProductOfSubPartsCalculationPart"
+        },
+        "mFormulaParts": [
+          {
+            "mPart1": {
+              "mSubparts": [
+                {
+                  "mDataValue": "BaseDamage",
+                  "__type": "NamedDataValueCalculationPart"
+                },
+                {
+                  "mStat": 2,
+                  "mDataValue": "AttackDamageRatio",
+                  "__type": "StatByNamedDataValueCalculationPart"
+                }
+              ],
+              "__type": "SumOfSubPartsCalculationPart"
+            },
+            "mPart2": {
+              "mSubparts": [
+                {
+                  "mNumber": 1.0,
+                  "__type": "NumberCalculationPart"
+                },
+                {
+                  "mPart1": {
+                    "mDataValue": "SubsequentHitMultiplier",
+                    "__type": "NamedDataValueCalculationPart"
+                  },
+                  "mPart2": {
+                    "mSubparts": [
+                      {
+                        "mNumber": -1.0,
+                        "__type": "NumberCalculationPart"
+                      },
+                      {
+                        "mDataValue": "AlphaStrikeBounces",
+                        "__type": "NamedDataValueCalculationPart"
+                      }
+                    ],
+                    "__type": "SumOfSubPartsCalculationPart"
+                  },
+                  "__type": "ProductOfSubPartsCalculationPart"
+                }
+              ],
+              "__type": "SumOfSubPartsCalculationPart"
+            },
+            "__type": "ProductOfSubPartsCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      }
+    },
+    "dataValues": {
+      "SubsequentHitMultiplier": [
+        0.25,
+        0.25,
+        0.25,
+        0.25,
+        0.25,
+        0.25,
+        0.25
+      ],
+      "BaseDamage": [
+        0.0,
+        20.0,
+        40.0,
+        60.0,
+        80.0,
+        100.0,
+        120.0
+      ],
+      "BonusMonsterDamage": [
+        35.0,
+        60.0,
+        85.0,
+        110.0,
+        135.0,
+        160.0,
+        185.0
+      ],
+      "AttackDamageRatio": [
+        0.699999988079071,
+        0.699999988079071,
+        0.699999988079071,
+        0.699999988079071,
+        0.699999988079071,
+        0.699999988079071,
+        0.699999988079071
+      ],
+      "BonusCritDamageRatio": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "BaseBasicAttackCDR": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "AlphaStrikeBounces": [
+        4.0,
+        4.0,
+        4.0,
+        4.0,
+        4.0,
+        4.0,
+        4.0
+      ],
+      "BaseOnHitMultiplier": [
+        0.6499999761581421,
+        0.6499999761581421,
+        0.6499999761581421,
+        0.6499999761581421,
+        0.6499999761581421,
+        0.6499999761581421,
+        0.6499999761581421
+      ]
+    }
+  },
+  "AlphaStrikeMissile": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "Meditate": {
+    "calculations": {
+      "TotalHeal": {
+        "mSimpleTooltipCalculationDisplay": 6,
+        "mFormulaParts": [
+          {
+            "mDataValue": "BaseHeal",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          {
+            "mCoefficient": 1.0,
+            "__type": "StatByCoefficientCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      },
+      "InitialDR": {
+        "mFormulaParts": [
+          {
+            "mSubparts": [
+              {
+                "mDataValue": "DamageReduction",
+                "__type": "NamedDataValueCalculationPart"
+              },
+              {
+                "mDataValue": "InitialExtraDR",
+                "__type": "NamedDataValueCalculationPart"
+              }
+            ],
+            "__type": "SumOfSubPartsCalculationPart"
+          }
+        ],
+        "mDisplayAsPercent": true,
+        "__type": "GameCalculation"
+      }
+    },
+    "dataValues": {
+      "BaseHeal": [
+        40.0,
+        120.0,
+        200.0,
+        280.0,
+        360.0,
+        440.0,
+        520.0
+      ],
+      "HealDuration": [
+        4.0,
+        4.0,
+        4.0,
+        4.0,
+        4.0,
+        4.0,
+        4.0
+      ],
+      "MaxMissingHealthPercent": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "TickFrequency": [
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5
+      ],
+      "DamageReduction": [
+        0.42500001192092896,
+        0.44999998807907104,
+        0.4749999940395355,
+        0.5,
+        0.5249999761581421,
+        0.550000011920929,
+        0.574999988079071
+      ],
+      "DamageReductionTowerMod": [
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5
+      ],
+      "BaseManaCost": [
+        40.0,
+        40.0,
+        40.0,
+        40.0,
+        40.0,
+        40.0,
+        40.0
+      ],
+      "PercentManaCostPerSecond": [
+        0.05999999865889549,
+        0.05999999865889549,
+        0.05999999865889549,
+        0.05999999865889549,
+        0.05999999865889549,
+        0.05999999865889549,
+        0.05999999865889549
+      ],
+      "InitialExtraDR": [
+        0.2750000059604645,
+        0.25,
+        0.22499999403953552,
+        0.20000000298023224,
+        0.17499999701976776,
+        0.15000000596046448,
+        0.125
+      ],
+      "InitialExtraDRDuration": [
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5
+      ],
+      "DRLinger": [
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5
+      ]
+    }
+  },
+  "WujuStyle": {
+    "calculations": {
+      "TotalDamage": {
+        "mSimpleTooltipCalculationDisplay": 6,
+        "mFormulaParts": [
+          {
+            "mDataValue": "BaseDamage",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          {
+            "mStat": 2,
+            "mStatFormula": 2,
+            "mDataValue": "ADRatio",
+            "__type": "StatByNamedDataValueCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      }
+    },
+    "dataValues": {
+      "BaseDamage": [
+        15.0,
+        20.0,
+        25.0,
+        30.0,
+        35.0,
+        40.0,
+        45.0
+      ],
+      "ADRatio": [
+        0.3499999940395355,
+        0.3499999940395355,
+        0.3499999940395355,
+        0.3499999940395355,
+        0.3499999940395355,
+        0.3499999940395355,
+        0.3499999940395355
+      ],
+      "Duration": [
+        5.0,
+        5.0,
+        5.0,
+        5.0,
+        5.0,
+        5.0,
+        5.0
+      ],
+      "LegacySwordVFXDuration": [
+        3.0,
+        3.0,
+        3.0,
+        3.0,
+        3.0,
+        3.0,
+        3.0
+      ]
+    }
+  },
+  "Highlander": {
+    "calculations": {},
+    "dataValues": {
+      "RDuration": [
+        7.0,
+        7.0,
+        7.0,
+        7.0,
+        7.0,
+        7.0,
+        7.0
+      ],
+      "RASBonus": [
+        5.0,
+        25.0,
+        45.0,
+        65.0,
+        85.0,
+        105.0,
+        125.0
+      ],
+      "RMSBonus": [
+        25.0,
+        35.0,
+        45.0,
+        55.0,
+        65.0,
+        75.0,
+        85.0
+      ],
+      "RKillAssistExtension": [
+        7.0,
+        7.0,
+        7.0,
+        7.0,
+        7.0,
+        7.0,
+        7.0
+      ],
+      "RCooldownRefund": [
+        0.699999988079071,
+        0.699999988079071,
+        0.699999988079071,
+        0.699999988079071,
+        0.699999988079071,
+        0.699999988079071,
+        0.699999988079071
+      ]
+    }
+  },
+  "MasterYiCritAttack": {
+    "calculations": {},
+    "dataValues": {}
+  }
+}

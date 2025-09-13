@@ -1,0 +1,367 @@
+{
+  "KennenDoubleStrikeProc": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "KennenMoSDiminish": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "KennenPassive": {
+    "calculations": {},
+    "dataValues": {
+      "EnergyRestore": [
+        25.0,
+        25.0,
+        25.0,
+        25.0,
+        25.0,
+        25.0,
+        25.0
+      ],
+      "StunDuration": [
+        1.25,
+        1.25,
+        1.25,
+        1.25,
+        1.25,
+        1.25,
+        1.25
+      ],
+      "ReducedStunDuration": [
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5
+      ],
+      "MarkDuration": [
+        6.0,
+        6.0,
+        6.0,
+        6.0,
+        6.0,
+        6.0,
+        6.0
+      ],
+      "DiminishingReturnDuration": [
+        6.0,
+        6.0,
+        6.0,
+        6.0,
+        6.0,
+        6.0,
+        6.0
+      ]
+    }
+  },
+  "KennenShurikenStorm": {
+    "calculations": {
+      "PerTickDamageCalculated": {
+        "mSimpleTooltipCalculationDisplay": 6,
+        "mFormulaParts": [
+          {
+            "mDataValue": "BaseDamage",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          {
+            "mDataValue": "APRatio",
+            "__type": "StatByNamedDataValueCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      }
+    },
+    "dataValues": {
+      "BaseDamage": [
+        5.0,
+        40.0,
+        75.0,
+        110.0,
+        145.0,
+        180.0,
+        215.0
+      ],
+      "APRatio": [
+        0.22499999403953552,
+        0.22499999403953552,
+        0.22499999403953552,
+        0.22499999403953552,
+        0.22499999403953552,
+        0.22499999403953552,
+        0.22499999403953552
+      ],
+      "DamageAmp": [
+        0.10000000149011612,
+        0.10000000149011612,
+        0.10000000149011612,
+        0.10000000149011612,
+        0.10000000149011612,
+        0.10000000149011612,
+        0.10000000149011612
+      ],
+      "KennenRTickRate": [
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5
+      ],
+      "KennenRDefenses": [
+        0.0,
+        20.0,
+        40.0,
+        60.0,
+        80.0,
+        100.0,
+        120.0
+      ],
+      "KennenRDuration": [
+        3.0,
+        3.0,
+        3.0,
+        3.0,
+        3.0,
+        3.0,
+        3.0
+      ]
+    }
+  },
+  "KennenLightningRushDamage": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "KennenLightningRush": {
+    "calculations": {
+      "TotalDamage": {
+        "mSimpleTooltipCalculationDisplay": 6,
+        "tooltipOnly": true,
+        "mFormulaParts": [
+          {
+            "mDataValue": "BaseDamage",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          {
+            "mCoefficient": 0.800000011920929,
+            "__type": "StatByCoefficientCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      }
+    },
+    "dataValues": {
+      "BaseDamage": [
+        40.0,
+        80.0,
+        120.0,
+        160.0,
+        200.0,
+        240.0,
+        280.0
+      ],
+      "EnergyRefund": [
+        40.0,
+        40.0,
+        40.0,
+        40.0,
+        40.0,
+        40.0,
+        40.0
+      ],
+      "defenses": {
+        "mName": "defenses",
+        "__type": "SpellDataValue"
+      },
+      "MovementSpeed": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "DurationAsBall": [
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0
+      ],
+      "AttackSpeed": [
+        0.30000001192092896,
+        0.4000000059604645,
+        0.5,
+        0.6000000238418579,
+        0.699999988079071,
+        0.800000011920929,
+        0.8999999761581421
+      ],
+      "DurationAfterBall": [
+        4.0,
+        4.0,
+        4.0,
+        4.0,
+        4.0,
+        4.0,
+        4.0
+      ],
+      "DamageToMinions": [
+        0.6499999761581421,
+        0.6499999761581421,
+        0.6499999761581421,
+        0.6499999761581421,
+        0.6499999761581421,
+        0.6499999761581421,
+        0.6499999761581421
+      ],
+      "DamageRadius": [
+        200.0,
+        200.0,
+        200.0,
+        200.0,
+        200.0,
+        200.0,
+        200.0
+      ],
+      "linger": [
+        0.15000000596046448,
+        0.15000000596046448,
+        0.15000000596046448,
+        0.15000000596046448,
+        0.15000000596046448,
+        0.15000000596046448,
+        0.15000000596046448
+      ]
+    }
+  },
+  "KennenLRCancel": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "KennenBasicAttack2": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "KennenShurikenHurlMissile1": {
+    "calculations": {
+      "TotalDamage": {
+        "mSimpleTooltipCalculationDisplay": 6,
+        "tooltipOnly": true,
+        "mFormulaParts": [
+          {
+            "mEffectIndex": 1,
+            "__type": "EffectValueCalculationPart"
+          },
+          {
+            "mCoefficient": 0.75,
+            "__type": "StatByCoefficientCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      }
+    },
+    "dataValues": {}
+  },
+  "KennenShurikenHurl1": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "KennenCritAttack": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "KennenBasicAttack": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "KennenMegaProc": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "KennenBringTheLight": {
+    "calculations": {
+      "TotalDamagePassive": {
+        "mSimpleTooltipCalculationDisplay": 6,
+        "mFormulaParts": [
+          {
+            "mDataValue": "BaseOnHitDamage",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          {
+            "mCoefficient": 0.3499999940395355,
+            "__type": "StatByCoefficientCalculationPart"
+          },
+          {
+            "mStat": 2,
+            "mStatFormula": 2,
+            "mSubpart": {
+              "mDataValue": "BADRatio",
+              "__type": "NamedDataValueCalculationPart"
+            },
+            "__type": "StatBySubPartCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      },
+      "TotalDamageActive": {
+        "mSimpleTooltipCalculationDisplay": 6,
+        "mFormulaParts": [
+          {
+            "mDataValue": "BaseDamageActive",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          {
+            "mDataValue": "APRatioActive",
+            "__type": "StatByNamedDataValueCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      }
+    },
+    "dataValues": {
+      "bADRatio": [
+        0.699999988079071,
+        0.800000011920929,
+        0.8999999761581421,
+        1.0,
+        1.100000023841858,
+        1.2000000476837158,
+        1.2999999523162842
+      ],
+      "BaseOnHitDamage": [
+        25.0,
+        35.0,
+        45.0,
+        55.0,
+        65.0,
+        75.0,
+        85.0
+      ],
+      "BaseDamageActive": [
+        45.0,
+        70.0,
+        95.0,
+        120.0,
+        145.0,
+        170.0,
+        195.0
+      ],
+      "APRatioActive": [
+        0.800000011920929,
+        0.800000011920929,
+        0.800000011920929,
+        0.800000011920929,
+        0.800000011920929,
+        0.800000011920929,
+        0.800000011920929
+      ]
+    }
+  }
+}

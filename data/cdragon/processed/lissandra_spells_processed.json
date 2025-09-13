@@ -1,0 +1,346 @@
+{
+  "LissandraW": {
+    "calculations": {
+      "TotalDamage": {
+        "mFormulaParts": [
+          {
+            "mEffectIndex": 1,
+            "__type": "EffectValueCalculationPart"
+          },
+          {
+            "mCoefficient": 0.699999988079071,
+            "__type": "StatByCoefficientCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      }
+    },
+    "dataValues": {}
+  },
+  "LissandraWFrozen": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "LissandraRDamage": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "LissandraR": {
+    "calculations": {
+      "CalculatedDamage": {
+        "mFormulaParts": [
+          {
+            "mDataValue": "BaseDamage",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          {
+            "mDataValue": "APRatio",
+            "__type": "StatByNamedDataValueCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      },
+      "HealAmount": {
+        "mFormulaParts": [
+          {
+            "mDataValue": "SelfCastFlatHeal",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          {
+            "mDataValue": "PercentMissingHPRatio",
+            "__type": "StatByNamedDataValueCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      }
+    },
+    "dataValues": {
+      "APRatio": [
+        0.75,
+        0.75,
+        0.75,
+        0.75,
+        0.75,
+        0.75,
+        0.75
+      ],
+      "BaseDamage": [
+        50.0,
+        150.0,
+        250.0,
+        350.0,
+        450.0,
+        550.0,
+        650.0
+      ],
+      "SlowAmount": [
+        -0.30000001192092896,
+        -0.44999998807907104,
+        -0.6000000238418579,
+        -0.75,
+        -0.8999999761581421,
+        -1.0499999523162842,
+        -1.2000000476837158
+      ],
+      "SlowDuration": [
+        3.0,
+        3.0,
+        3.0,
+        3.0,
+        3.0,
+        3.0,
+        3.0
+      ],
+      "EnemyCastDuration": [
+        1.5,
+        1.5,
+        1.5,
+        1.5,
+        1.5,
+        1.5,
+        1.5
+      ],
+      "SelfCastDuration": [
+        2.5,
+        2.5,
+        2.5,
+        2.5,
+        2.5,
+        2.5,
+        2.5
+      ],
+      "SelfCastFlatHeal": [
+        50.0,
+        100.0,
+        150.0,
+        200.0,
+        250.0,
+        300.0,
+        350.0
+      ],
+      "SelfCastMissingHPRatio": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "SelfCastMissingHPPerAbove": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "StartingAoESize": [
+        292.0,
+        292.0,
+        292.0,
+        292.0,
+        292.0,
+        292.0,
+        292.0
+      ],
+      "PercentMissingHPRatio": [
+        0.550000011920929,
+        0.550000011920929,
+        0.550000011920929,
+        0.550000011920929,
+        0.550000011920929,
+        0.550000011920929,
+        0.550000011920929
+      ]
+    }
+  },
+  "LissandraREnemy2": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "LissandraRSpellShieldCheck": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "LissandraREnemy": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "LissandraRSelf": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "LissandraRSlow": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "LissandraRRemoval": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "LissandraEMissile": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "LissandraEBuffer": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "LissandraE": {
+    "calculations": {
+      "TotalDamage": {
+        "mFormulaParts": [
+          {
+            "mEffectIndex": 1,
+            "__type": "EffectValueCalculationPart"
+          },
+          {
+            "mCoefficient": 0.6000000238418579,
+            "__type": "StatByCoefficientCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      }
+    },
+    "dataValues": {}
+  },
+  "LissandraEDamage": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "LissandraQ": {
+    "calculations": {
+      "TotalDamage": {
+        "mFormulaParts": [
+          {
+            "mDataValue": "Damage",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          {
+            "mCoefficient": 0.75,
+            "__type": "StatByCoefficientCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      }
+    },
+    "dataValues": {
+      "damage": [
+        45.0,
+        80.0,
+        115.0,
+        150.0,
+        185.0,
+        220.0,
+        255.0
+      ],
+      "slowDuration": [
+        1.5,
+        1.5,
+        1.5,
+        1.5,
+        1.5,
+        1.5,
+        1.5
+      ],
+      "slowPercentage": [
+        -0.1599999964237213,
+        -0.20000000298023224,
+        -0.23999999463558197,
+        -0.2800000011920929,
+        -0.3199999928474426,
+        -0.36000001430511475,
+        -0.4000000059604645
+      ]
+    }
+  },
+  "LissandraQShards": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "LissandraQMissile": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "LissandraPassiveAttack": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "LissandraPassive": {
+    "calculations": {
+      "TotalDamage": {
+        "mFormulaParts": [
+          {
+            "mLevel1Value": 120.0,
+            "mInitialBonusPerLevel": 20.0,
+            "mBreakpoints": [
+              {
+                "mLevel": 13,
+                "mBonusPerLevelAtAndAfter": 30.0,
+                "__type": "Breakpoint"
+              }
+            ],
+            "__type": "ByCharLevelBreakpointsCalculationPart"
+          },
+          {
+            "mCoefficient": 0.5,
+            "__type": "StatByCoefficientCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      }
+    },
+    "dataValues": {
+      "MoveSpeedMod": [
+        -0.25,
+        -0.25,
+        -0.25,
+        -0.25,
+        -0.25,
+        -0.25,
+        -0.25
+      ],
+      "ExplosionDelay": [
+        4.0,
+        4.0,
+        4.0,
+        4.0,
+        4.0,
+        4.0,
+        4.0
+      ],
+      "Range": [
+        1350.0,
+        1350.0,
+        1350.0,
+        1350.0,
+        1350.0,
+        1350.0,
+        1350.0
+      ],
+      "Radius": [
+        450.0,
+        450.0,
+        450.0,
+        450.0,
+        450.0,
+        450.0,
+        450.0
+      ]
+    }
+  },
+  "LissandraCritAttack": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "LissandraBasicAttack2": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "LissandraBasicAttack": {
+    "calculations": {},
+    "dataValues": {}
+  }
+}

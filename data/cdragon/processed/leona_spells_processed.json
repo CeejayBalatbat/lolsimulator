@@ -1,0 +1,321 @@
+{
+  "LeonaSunlightPassive": {
+    "calculations": {
+      "TotalDamage": {
+        "mFormulaParts": [
+          {
+            "mValues": [
+              25.0,
+              32.0,
+              39.0,
+              46.0,
+              53.0,
+              60.0,
+              67.0,
+              74.0,
+              81.0,
+              88.0,
+              95.0,
+              102.0,
+              109.0,
+              116.0,
+              123.0,
+              130.0,
+              137.0,
+              144.0,
+              151.0,
+              158.0,
+              165.0,
+              172.0,
+              179.0,
+              186.0,
+              193.0,
+              200.0,
+              207.0,
+              214.0,
+              221.0,
+              228.0,
+              235.0
+            ],
+            "__type": "ByCharLevelFormulaCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      }
+    },
+    "dataValues": {
+      "MarkDuration": [
+        2.5,
+        2.5,
+        2.5,
+        2.5,
+        2.5,
+        2.5,
+        2.5
+      ]
+    }
+  },
+  "LeonaSunlight": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "LeonaShieldOfDaybreakAttack": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "LeonaShieldOfDaybreak": {
+    "calculations": {
+      "TotalDamageTooltip": {
+        "mSimpleTooltipCalculationDisplay": 6,
+        "mFormulaParts": [
+          {
+            "mEffectIndex": 2,
+            "__type": "EffectValueCalculationPart"
+          },
+          {
+            "mCoefficient": 0.30000001192092896,
+            "__type": "StatByCoefficientCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      }
+    },
+    "dataValues": {}
+  },
+  "LeonaZenithBlade": {
+    "calculations": {
+      "TotalDamageTooltip": {
+        "mSimpleTooltipCalculationDisplay": 6,
+        "mFormulaParts": [
+          {
+            "mEffectIndex": 1,
+            "__type": "EffectValueCalculationPart"
+          },
+          {
+            "mCoefficient": 0.4000000059604645,
+            "__type": "StatByCoefficientCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      }
+    },
+    "dataValues": {}
+  },
+  "LeonaZenithBladeMissile": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "LeonaSolarFlare": {
+    "calculations": {
+      "{f4c90e5c}": {
+        "mFormulaParts": [
+          {
+            "mDataValue": "OnHitBaseDamage",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          {
+            "mDataValue": "OnHitAPRatio",
+            "__type": "StatByNamedDataValueCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      },
+      "ExplosionCalculatedDamage": {
+        "mSimpleTooltipCalculationDisplay": 6,
+        "mFormulaParts": [
+          {
+            "mDataValue": "ExplosionBaseDamage",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          {
+            "mDataValue": "ExplosionAPRatio",
+            "__type": "StatByNamedDataValueCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      }
+    },
+    "dataValues": {
+      "OnHitBaseDamage": [
+        20.0,
+        30.0,
+        40.0,
+        50.0,
+        60.0,
+        70.0,
+        80.0
+      ],
+      "OnHitStacks": [
+        2.0,
+        3.0,
+        4.0,
+        5.0,
+        6.0,
+        7.0,
+        8.0
+      ],
+      "OnHitDuration": [
+        5.0,
+        5.0,
+        5.0,
+        5.0,
+        5.0,
+        5.0,
+        5.0
+      ],
+      "AttackRangeIncrease": [
+        100.0,
+        100.0,
+        100.0,
+        100.0,
+        100.0,
+        100.0,
+        100.0
+      ],
+      "OnHitAPRatio": [
+        0.15000000596046448,
+        0.15000000596046448,
+        0.15000000596046448,
+        0.15000000596046448,
+        0.15000000596046448,
+        0.15000000596046448,
+        0.15000000596046448
+      ],
+      "ExplosionBaseDamage": [
+        75.0,
+        150.0,
+        225.0,
+        300.0,
+        375.0,
+        450.0,
+        525.0
+      ],
+      "ExplosionAPRatio": [
+        0.800000011920929,
+        0.800000011920929,
+        0.800000011920929,
+        0.800000011920929,
+        0.800000011920929,
+        0.800000011920929,
+        0.800000011920929
+      ],
+      "SlowPercent": [
+        80.0,
+        80.0,
+        80.0,
+        80.0,
+        80.0,
+        80.0,
+        80.0
+      ],
+      "CCDuration": [
+        1.75,
+        1.75,
+        1.75,
+        1.75,
+        1.75,
+        1.75,
+        1.75
+      ]
+    }
+  },
+  "LeonaBasicAttack4": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "LeonaBasicAttack3": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "LeonaBasicAttack2": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "LeonaBasicAttack": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "LeonaSolarBarrier": {
+    "calculations": {
+      "BonusArmorTooltip": {
+        "mSimpleTooltipCalculationDisplay": 6,
+        "mFormulaParts": [
+          {
+            "mEffectIndex": 4,
+            "__type": "EffectValueCalculationPart"
+          },
+          {
+            "mStat": 1,
+            "mStatFormula": 2,
+            "mCoefficient": 0.20000000298023224,
+            "__type": "StatByCoefficientCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      },
+      "BonusMRTooltip": {
+        "mSimpleTooltipCalculationDisplay": 6,
+        "mFormulaParts": [
+          {
+            "mEffectIndex": 4,
+            "__type": "EffectValueCalculationPart"
+          },
+          {
+            "mStat": 6,
+            "mStatFormula": 2,
+            "mCoefficient": 0.20000000298023224,
+            "__type": "StatByCoefficientCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      },
+      "TotalDamageTooltip": {
+        "mSimpleTooltipCalculationDisplay": 6,
+        "mFormulaParts": [
+          {
+            "mEffectIndex": 1,
+            "__type": "EffectValueCalculationPart"
+          },
+          {
+            "mDataValue": "APRatio",
+            "__type": "StatByNamedDataValueCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      }
+    },
+    "dataValues": {
+      "FlatDamageReduction": [
+        4.0,
+        8.0,
+        12.0,
+        16.0,
+        20.0,
+        24.0,
+        28.0
+      ],
+      "FlatDamageReductionMax": [
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5
+      ],
+      "APRatio": [
+        0.4000000059604645,
+        0.4000000059604645,
+        0.4000000059604645,
+        0.4000000059604645,
+        0.4000000059604645,
+        0.4000000059604645,
+        0.4000000059604645
+      ]
+    }
+  },
+  "LeonaCritAttack": {
+    "calculations": {},
+    "dataValues": {}
+  }
+}

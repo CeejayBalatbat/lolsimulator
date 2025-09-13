@@ -1,0 +1,259 @@
+{
+  "ZyraR": {
+    "calculations": {
+      "TotalDamage": {
+        "mSimpleTooltipCalculationDisplay": 6,
+        "tooltipOnly": true,
+        "mFormulaParts": [
+          {
+            "mEffectIndex": 3,
+            "__type": "EffectValueCalculationPart"
+          },
+          {
+            "mCoefficient": 0.699999988079071,
+            "__type": "StatByCoefficientCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      }
+    },
+    "dataValues": {
+      "PlantDamageBonus": [
+        50.0,
+        50.0,
+        50.0,
+        50.0,
+        50.0,
+        50.0,
+        50.0
+      ]
+    }
+  },
+  "ZyraRSplash": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "ZyraWSeedMis": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "ZyraW": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "ZyraSeedTrapVision": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "ZyraQPlantMissileOnSpawn": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "ZyraQ": {
+    "calculations": {
+      "InitialDamage": {
+        "mSimpleTooltipCalculationDisplay": 6,
+        "tooltipOnly": true,
+        "mFormulaParts": [
+          {
+            "mEffectIndex": 1,
+            "__type": "EffectValueCalculationPart"
+          },
+          {
+            "mCoefficient": 0.6499999761581421,
+            "__type": "StatByCoefficientCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      }
+    },
+    "dataValues": {}
+  },
+  "ZyraQPlantMissile": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "ZyraQPlant": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "ZyraEPlantAttack": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "ZyraEPlant": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "ZyraEPlantAttack2": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "ZyraE": {
+    "calculations": {
+      "TotalDamage": {
+        "mSimpleTooltipCalculationDisplay": 6,
+        "mFormulaParts": [
+          {
+            "mDataValue": "BaseDamage",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          {
+            "mCoefficient": 0.6000000238418579,
+            "__type": "StatByCoefficientCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      }
+    },
+    "dataValues": {
+      "MaxSlowStacks": [
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0
+      ],
+      "PheromoneDuration": [
+        4.0,
+        4.0,
+        4.0,
+        4.0,
+        4.0,
+        4.0,
+        4.0
+      ],
+      "RootDuration": [
+        0.75,
+        1.0,
+        1.25,
+        1.5,
+        1.75,
+        2.0,
+        2.25
+      ],
+      "BaseDamage": [
+        25.0,
+        60.0,
+        95.0,
+        130.0,
+        165.0,
+        200.0,
+        235.0
+      ]
+    }
+  },
+  "ZyraCritAttack": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "ZyraP": {
+    "calculations": {
+      "SeedCooldown": {
+        "mFormulaParts": [
+          {
+            "mStartValue": 13.600000381469727,
+            "mEndValue": 9.050000190734863,
+            "__type": "ByCharLevelInterpolationCalculationPart"
+          }
+        ],
+        "mPrecision": 1,
+        "__type": "GameCalculation"
+      },
+      "PlantDamage": {
+        "mFormulaParts": [
+          {
+            "mStartValue": 15.0,
+            "mEndValue": 75.0,
+            "__type": "ByCharLevelInterpolationCalculationPart"
+          },
+          {
+            "mDataValue": "APRatio",
+            "__type": "StatByNamedDataValueCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      },
+      "monstermod": {
+        "mFormulaParts": [
+          {
+            "mStartValue": 50.0,
+            "mEndValue": 100.0,
+            "__type": "ByCharLevelInterpolationCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      },
+      "{c951f1e1}": {
+        "mFormulaParts": [
+          {
+            "mLevel1Value": 50.0,
+            "mInitialBonusPerLevel": -1.0,
+            "__type": "ByCharLevelBreakpointsCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      }
+    },
+    "dataValues": {
+      "PlantDuration": [
+        8.0,
+        8.0,
+        8.0,
+        8.0,
+        8.0,
+        8.0,
+        8.0
+      ],
+      "PlantBaseDmg": [
+        12.0,
+        12.0,
+        12.0,
+        12.0,
+        12.0,
+        12.0,
+        12.0
+      ],
+      "PlantLvlScaling": [
+        4.0,
+        4.0,
+        4.0,
+        4.0,
+        4.0,
+        4.0,
+        4.0
+      ],
+      "APRatio": [
+        0.20000000298023224,
+        0.20000000298023224,
+        0.20000000298023224,
+        0.20000000298023224,
+        0.20000000298023224,
+        0.20000000298023224,
+        0.20000000298023224
+      ]
+    }
+  },
+  "ZyraPSeedMis": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "ZyraBasicAttack2": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "ZyraPassiveDeathManager": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "ZyraBasicAttack": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "ZyraPQueenOfThorns": {
+    "calculations": {},
+    "dataValues": {}
+  }
+}

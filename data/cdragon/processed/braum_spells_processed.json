@@ -1,0 +1,468 @@
+{
+  "BraumWDummySpell": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "BraumW": {
+    "calculations": {
+      "GrantedAllyArmor": {
+        "mFormulaParts": [
+          {
+            "mDataValue": "BaseResists",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          {
+            "mStat": 1,
+            "mStatFormula": 2,
+            "mDataValue": "AllyArmorPercent",
+            "__type": "StatByNamedDataValueCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      },
+      "GrantedAllyMR": {
+        "mFormulaParts": [
+          {
+            "mDataValue": "BaseResists",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          {
+            "mStat": 6,
+            "mStatFormula": 2,
+            "mDataValue": "AllyArmorPercent",
+            "__type": "StatByNamedDataValueCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      },
+      "GrantedBraumArmor": {
+        "mFormulaParts": [
+          {
+            "mDataValue": "BaseResists",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          {
+            "mStat": 1,
+            "mStatFormula": 2,
+            "mDataValue": "BraumArmorPercent",
+            "__type": "StatByNamedDataValueCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      },
+      "GrantedBraumMR": {
+        "mFormulaParts": [
+          {
+            "mDataValue": "BaseResists",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          {
+            "mStat": 6,
+            "mStatFormula": 2,
+            "mDataValue": "BraumArmorPercent",
+            "__type": "StatByNamedDataValueCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      }
+    },
+    "dataValues": {
+      "RangedDamageThreshold": [
+        400.0,
+        400.0,
+        400.0,
+        400.0,
+        400.0,
+        400.0,
+        400.0
+      ],
+      "AllyArmorPercent": [
+        0.11999999731779099,
+        0.11999999731779099,
+        0.11999999731779099,
+        0.11999999731779099,
+        0.11999999731779099,
+        0.11999999731779099,
+        0.11999999731779099
+      ],
+      "BraumArmorPercent": [
+        0.36000001430511475,
+        0.36000001430511475,
+        0.36000001430511475,
+        0.36000001430511475,
+        0.36000001430511475,
+        0.36000001430511475,
+        0.36000001430511475
+      ],
+      "BaseResists": [
+        15.0,
+        20.0,
+        25.0,
+        30.0,
+        35.0,
+        40.0,
+        45.0
+      ]
+    }
+  },
+  "BraumPulseLinePopup": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "BraumE": {
+    "calculations": {},
+    "dataValues": {
+      "RangedReflect": [
+        0.15000000596046448,
+        0.15000000596046448,
+        0.15000000596046448,
+        0.15000000596046448,
+        0.15000000596046448,
+        0.15000000596046448,
+        0.15000000596046448
+      ]
+    }
+  },
+  "BraumQ": {
+    "calculations": {
+      "TotalDamage": {
+        "mSimpleTooltipCalculationDisplay": 6,
+        "mFormulaParts": [
+          {
+            "mDataValue": "BaseDamage",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          {
+            "mStat": 12,
+            "mDataValue": "{9f758bbd}",
+            "__type": "StatByNamedDataValueCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      }
+    },
+    "dataValues": {
+      "BaseDamage": [
+        25.0,
+        75.0,
+        125.0,
+        175.0,
+        225.0,
+        275.0,
+        325.0
+      ],
+      "MaxHPDamageValue": [
+        0.02500000037252903,
+        0.02500000037252903,
+        0.02500000037252903,
+        0.02500000037252903,
+        0.02500000037252903,
+        0.02500000037252903,
+        0.02500000037252903
+      ]
+    }
+  },
+  "BraumQMissile": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "BraumEDummyVONami": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "BraumBasicAttack3": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "BraumBasicAttack2": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "BraumPulseLineWrapper": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "BraumRWrapper": {
+    "calculations": {
+      "TotalDamage": {
+        "mFormulaParts": [
+          {
+            "mDataValue": "BaseDamage",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          {
+            "mCoefficient": 0.6000000238418579,
+            "__type": "StatByCoefficientCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      }
+    },
+    "dataValues": {
+      "BaseDamage": [
+        0.0,
+        150.0,
+        300.0,
+        450.0,
+        600.0,
+        750.0,
+        900.0
+      ],
+      "KnockupDuration": [
+        0.6000000238418579,
+        0.6000000238418579,
+        0.6000000238418579,
+        0.6000000238418579,
+        0.6000000238418579,
+        0.6000000238418579,
+        0.6000000238418579
+      ],
+      "FirstKnockupDuration": [
+        0.5,
+        1.0,
+        1.5,
+        2.0,
+        2.5,
+        3.0,
+        3.5
+      ],
+      "MoveSpeedMod": [
+        30.0,
+        40.0,
+        50.0,
+        60.0,
+        70.0,
+        80.0,
+        90.0
+      ],
+      "SlowZoneDuration": [
+        4.0,
+        4.0,
+        4.0,
+        4.0,
+        4.0,
+        4.0,
+        4.0
+      ],
+      "SlowDebuffDuration": [
+        0.25,
+        0.25,
+        0.25,
+        0.25,
+        0.25,
+        0.25,
+        0.25
+      ],
+      "MinKnockup": [
+        0.6000000238418579,
+        0.6000000238418579,
+        0.6000000238418579,
+        0.6000000238418579,
+        0.6000000238418579,
+        0.6000000238418579,
+        0.6000000238418579
+      ],
+      "MaxKnockup": [
+        0.5,
+        1.0,
+        1.5,
+        2.0,
+        2.5,
+        3.0,
+        3.5
+      ],
+      "MaxKnockupRatio": [
+        0.8999999761581421,
+        0.8999999761581421,
+        0.8999999761581421,
+        0.8999999761581421,
+        0.8999999761581421,
+        0.8999999761581421,
+        0.8999999761581421
+      ]
+    }
+  },
+  "BraumRMissile": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "BraumEDummyVOCaitlyn": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "BraumEDummyVORiven": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "BraumCritAttack": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "BraumBasicAttackShieldOverride": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "BraumMark": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "BraumPassive": {
+    "calculations": {
+      "TotalDamage": {
+        "mSimpleTooltipCalculationDisplay": 6,
+        "mFormulaParts": [
+          {
+            "mValues": [
+              16.0,
+              26.0,
+              36.0,
+              46.0,
+              56.0,
+              66.0,
+              76.0,
+              86.0,
+              96.0,
+              106.0,
+              116.0,
+              126.0,
+              136.0,
+              146.0,
+              156.0,
+              166.0,
+              176.0,
+              186.0,
+              196.0,
+              206.0,
+              216.0,
+              226.0,
+              236.0,
+              246.0,
+              256.0,
+              266.0,
+              276.0,
+              286.0,
+              296.0,
+              306.0,
+              316.0
+            ],
+            "__type": "ByCharLevelFormulaCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      },
+      "OnHitDamage": {
+        "mMultiplier": {
+          "mDataValue": "{9e75385b}",
+          "__type": "NamedDataValueCalculationPart"
+        },
+        "mSimpleTooltipCalculationDisplay": 6,
+        "mModifiedGameCalculation": "TotalDamage",
+        "__type": "GameCalculationModified"
+      },
+      "StunCD": {
+        "mFormulaParts": [
+          {
+            "mLevel1Value": 8.0,
+            "mBreakpoints": [
+              {
+                "mLevel": 6,
+                "mAdditionalBonusAtThisLevel": -2.0,
+                "__type": "Breakpoint"
+              },
+              {
+                "mLevel": 11,
+                "mAdditionalBonusAtThisLevel": -2.0,
+                "__type": "Breakpoint"
+              }
+            ],
+            "__type": "ByCharLevelBreakpointsCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      },
+      "StunDuration": {
+        "mFormulaParts": [
+          {
+            "mLevel1Value": 1.25,
+            "mBreakpoints": [
+              {
+                "mLevel": 7,
+                "mAdditionalBonusAtThisLevel": 0.25,
+                "__type": "Breakpoint"
+              },
+              {
+                "mLevel": 13,
+                "mAdditionalBonusAtThisLevel": 0.25,
+                "__type": "Breakpoint"
+              }
+            ],
+            "__type": "ByCharLevelBreakpointsCalculationPart"
+          }
+        ],
+        "mPrecision": 2,
+        "__type": "GameCalculation"
+      }
+    },
+    "dataValues": {
+      "StackDuration": [
+        4.0,
+        4.0,
+        4.0,
+        4.0,
+        4.0,
+        4.0,
+        4.0
+      ],
+      "StackCap": [
+        4.0,
+        4.0,
+        4.0,
+        4.0,
+        4.0,
+        4.0,
+        4.0
+      ],
+      "AlreadyStunnedDamageAmp": [
+        0.20000000298023224,
+        0.20000000298023224,
+        0.20000000298023224,
+        0.20000000298023224,
+        0.20000000298023224,
+        0.20000000298023224,
+        0.20000000298023224
+      ]
+    }
+  },
+  "BraumBlockStanceTimerMis1": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "BraumEDummyVODraven": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "BraumEDummyVOEzreal": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "BraumBasicAttackPassiveOverride": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "BraumEDummyVOAshe": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "BraumBasicAttack": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "BraumBasicAttackTower": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "BraumPulseLine": {
+    "calculations": {},
+    "dataValues": {}
+  }
+}

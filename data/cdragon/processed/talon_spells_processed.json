@@ -1,0 +1,392 @@
+{
+  "TalonRStealth": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "TalonRToggle": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "TalonRMisTwo": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "TalonRMisOne": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "TalonRHaste": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "TalonR": {
+    "calculations": {
+      "Damage": {
+        "mFormulaParts": [
+          {
+            "mDataValue": "BaseDamage",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          {
+            "mStat": 2,
+            "mStatFormula": 2,
+            "mCoefficient": 1.0,
+            "__type": "StatByCoefficientCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      }
+    },
+    "dataValues": {
+      "BaseDamage": [
+        45.0,
+        90.0,
+        135.0,
+        180.0,
+        225.0,
+        270.0,
+        315.0
+      ],
+      "MoveSpeed": [
+        0.25,
+        0.4000000059604645,
+        0.550000011920929,
+        0.699999988079071,
+        0.8500000238418579,
+        1.0,
+        1.149999976158142
+      ],
+      "Duration": [
+        2.5,
+        2.5,
+        2.5,
+        2.5,
+        2.5,
+        2.5,
+        2.5
+      ]
+    }
+  },
+  "TalonEHop": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "TalonE2": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "TalonE": {
+    "calculations": {},
+    "dataValues": {
+      "WallCD": [
+        185.0,
+        160.0,
+        135.0,
+        110.0,
+        85.0,
+        60.0,
+        35.0
+      ]
+    }
+  },
+  "TalonBasicAttack": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "TalonPassive": {
+    "calculations": {
+      "BleedDamage": {
+        "mFormulaParts": [
+          {
+            "mStartValue": 80.0,
+            "mEndValue": 280.0,
+            "__type": "ByCharLevelInterpolationCalculationPart"
+          },
+          {
+            "mStat": 2,
+            "mStatFormula": 2,
+            "mDataValue": "BonusADRatio",
+            "__type": "StatByNamedDataValueCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      }
+    },
+    "dataValues": {
+      "MonsterMod": [
+        1.100000023841858,
+        1.100000023841858,
+        1.100000023841858,
+        1.100000023841858,
+        1.100000023841858,
+        1.100000023841858,
+        1.100000023841858
+      ],
+      "StackDuration": [
+        6.0,
+        6.0,
+        6.0,
+        6.0,
+        6.0,
+        6.0,
+        6.0
+      ],
+      "BleedDuration": [
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0
+      ],
+      "BonusADRatio": [
+        2.0999999046325684,
+        2.0999999046325684,
+        2.0999999046325684,
+        2.0999999046325684,
+        2.0999999046325684,
+        2.0999999046325684,
+        2.0999999046325684
+      ]
+    }
+  },
+  "TalonPassiveAttack": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "TalonPassiveStack": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "TalonPassiveBleed": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "TalonWMissileTwo": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "TalonWMissileOne": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "TalonW": {
+    "calculations": {
+      "TotalInitialDamage": {
+        "mFormulaParts": [
+          {
+            "mDataValue": "InitialBaseDamage",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          {
+            "mStat": 2,
+            "mStatFormula": 2,
+            "mDataValue": "{0a76d866}",
+            "__type": "StatByNamedDataValueCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      },
+      "TotalReturnDamage": {
+        "mFormulaParts": [
+          {
+            "mDataValue": "ReturnBaseDamage",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          {
+            "mStat": 2,
+            "mStatFormula": 2,
+            "mDataValue": "{9b8976c2}",
+            "__type": "StatByNamedDataValueCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      }
+    },
+    "dataValues": {
+      "InitialBaseDamage": [
+        40.0,
+        50.0,
+        60.0,
+        70.0,
+        80.0,
+        90.0,
+        100.0
+      ],
+      "ReturnBaseDamage": [
+        30.0,
+        60.0,
+        90.0,
+        120.0,
+        150.0,
+        180.0,
+        210.0
+      ],
+      "MovespeedSlow": [
+        0.3499999940395355,
+        0.4000000059604645,
+        0.44999998807907104,
+        0.5,
+        0.550000011920929,
+        0.6000000238418579,
+        0.6499999761581421
+      ],
+      "SlowDuration": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "ReturnDelay": [
+        0.699999988079071,
+        0.699999988079071,
+        0.699999988079071,
+        0.699999988079071,
+        0.699999988079071,
+        0.699999988079071,
+        0.699999988079071
+      ],
+      "MonsterDamageMod": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "InitialBonusADRatio": [
+        0.4000000059604645,
+        0.4000000059604645,
+        0.4000000059604645,
+        0.4000000059604645,
+        0.4000000059604645,
+        0.4000000059604645,
+        0.4000000059604645
+      ],
+      "ReturnBonusADRatio": [
+        0.8999999761581421,
+        0.8999999761581421,
+        0.8999999761581421,
+        0.8999999761581421,
+        0.8999999761581421,
+        0.8999999761581421,
+        0.8999999761581421
+      ]
+    }
+  },
+  "TalonRakeMissileTwoDead": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "TalonQ": {
+    "calculations": {
+      "TotalHealing": {
+        "mFormulaParts": [
+          {
+            "mStartValue": 9.0,
+            "mEndValue": 55.0,
+            "__type": "ByCharLevelInterpolationCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      },
+      "LeapDamage": {
+        "mFormulaParts": [
+          {
+            "mDataValue": "BaseDamage",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          {
+            "mStat": 2,
+            "mStatFormula": 2,
+            "mDataValue": "BonusADRatio",
+            "__type": "StatByNamedDataValueCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      },
+      "CriticalDamage": {
+        "mMultiplier": {
+          "mSubparts": [
+            {
+              "mDataValue": "EnhancedDamageMod",
+              "__type": "NamedDataValueCalculationPart"
+            },
+            {
+              "mStat": 9,
+              "mStatFormula": 2,
+              "mCoefficient": 1.0,
+              "__type": "StatByCoefficientCalculationPart"
+            }
+          ],
+          "__type": "SumOfSubPartsCalculationPart"
+        },
+        "mModifiedGameCalculation": "LeapDamage",
+        "__type": "GameCalculationModified"
+      }
+    },
+    "dataValues": {
+      "BaseDamage": [
+        45.0,
+        65.0,
+        85.0,
+        105.0,
+        125.0,
+        145.0,
+        165.0
+      ],
+      "BonusADRatio": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "EnhancedDamageMod": [
+        1.5,
+        1.5,
+        1.5,
+        1.5,
+        1.5,
+        1.5,
+        1.5
+      ],
+      "CooldownRefund": [
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5
+      ]
+    }
+  },
+  "TalonQAttack": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "TalonQDashAttack": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "TalonShadowAssaultMisOneHalf": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "TalonBasicAttack2": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "TalonCritAttack": {
+    "calculations": {},
+    "dataValues": {}
+  }
+}

@@ -1,0 +1,367 @@
+{
+  "NasusPassive": {
+    "calculations": {
+      "LifestealTooltip": {
+        "mFormulaParts": [
+          {
+            "mLevel1Value": 12.0,
+            "mBreakpoints": [
+              {
+                "mLevel": 7,
+                "mAdditionalBonusAtThisLevel": 6.0,
+                "__type": "Breakpoint"
+              },
+              {
+                "mLevel": 13,
+                "mAdditionalBonusAtThisLevel": 6.0,
+                "__type": "Breakpoint"
+              }
+            ],
+            "__type": "ByCharLevelBreakpointsCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      }
+    },
+    "dataValues": {}
+  },
+  "NasusQStacks": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "NasusQAttack": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "SiphoningStrike": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "NasusQ": {
+    "calculations": {
+      "TotalDamage": {
+        "mFormulaParts": [
+          {
+            "mDataValue": "BonusDamage",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          {
+            "mStat": 2,
+            "mCoefficient": 1.0,
+            "__type": "StatByCoefficientCalculationPart"
+          },
+          {
+            "mBuffName": "{1b1d7345}",
+            "mIconKey": "%i:nasusStackIcon%",
+            "mCoefficient": 1.0,
+            "__type": "BuffCounterByCoefficientCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      },
+      "CritDamage": {
+        "mSimpleTooltipCalculationDisplay": 6,
+        "mExpandedTooltipCalculationDisplay": 6,
+        "StaticTooltipCalculationDisplay": 6,
+        "mFormulaParts": [
+          {
+            "mPart1": {
+              "mStat": 9,
+              "mCoefficient": 1.0,
+              "__type": "StatByCoefficientCalculationPart"
+            },
+            "mPart2": {
+              "mSubparts": [
+                {
+                  "mDataValue": "BonusDamage",
+                  "__type": "NamedDataValueCalculationPart"
+                },
+                {
+                  "mStat": 2,
+                  "mCoefficient": 1.0,
+                  "__type": "StatByCoefficientCalculationPart"
+                }
+              ],
+              "__type": "SumOfSubPartsCalculationPart"
+            },
+            "__type": "ProductOfSubPartsCalculationPart"
+          },
+          {
+            "mBuffName": "{1b1d7345}",
+            "mIconKey": "%i:nasusStackIcon%",
+            "mCoefficient": 1.0,
+            "__type": "BuffCounterByCoefficientCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      }
+    },
+    "dataValues": {
+      "BonusRange": [
+        50.0,
+        50.0,
+        50.0,
+        50.0,
+        50.0,
+        50.0,
+        50.0
+      ],
+      "BonusDamage": [
+        15.0,
+        35.0,
+        55.0,
+        75.0,
+        95.0,
+        115.0,
+        135.0
+      ],
+      "BasicStacks": [
+        3.0,
+        3.0,
+        3.0,
+        3.0,
+        3.0,
+        3.0,
+        3.0
+      ],
+      "BigStacks": [
+        12.0,
+        12.0,
+        12.0,
+        12.0,
+        12.0,
+        12.0,
+        12.0
+      ],
+      "BuffDuration": [
+        10.0,
+        10.0,
+        10.0,
+        10.0,
+        10.0,
+        10.0,
+        10.0
+      ]
+    }
+  },
+  "NasusBasicAttack": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "NasusE": {
+    "calculations": {
+      "TotalDotDamage": {
+        "mMultiplier": {
+          "mEffectIndex": 3,
+          "__type": "EffectValueCalculationPart"
+        },
+        "mSimpleTooltipCalculationDisplay": 6,
+        "tooltipOnly": true,
+        "mFormulaParts": [
+          {
+            "mEffectIndex": 1,
+            "__type": "EffectValueCalculationPart"
+          },
+          {
+            "mCoefficient": 0.11999999731779099,
+            "__type": "StatByCoefficientCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      },
+      "InitialDamage": {
+        "mSimpleTooltipCalculationDisplay": 6,
+        "tooltipOnly": true,
+        "mFormulaParts": [
+          {
+            "mEffectIndex": 4,
+            "__type": "EffectValueCalculationPart"
+          },
+          {
+            "mCoefficient": 0.6000000238418579,
+            "__type": "StatByCoefficientCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      }
+    },
+    "dataValues": {}
+  },
+  "NasusR": {
+    "calculations": {
+      "DamageCalc": {
+        "mFormulaParts": [
+          {
+            "mDataValue": "AoeDamagePercent",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          {
+            "mCoefficient": 9.999999747378752e-05,
+            "__type": "StatByCoefficientCalculationPart"
+          }
+        ],
+        "mDisplayAsPercent": true,
+        "__type": "GameCalculation"
+      }
+    },
+    "dataValues": {
+      "BonusHealth": [
+        150.0,
+        300.0,
+        450.0,
+        600.0,
+        750.0,
+        900.0,
+        1050.0
+      ],
+      "AttackRangeIncrease": [
+        50.0,
+        50.0,
+        50.0,
+        50.0,
+        50.0,
+        50.0,
+        50.0
+      ],
+      "AOEDamagePercent": [
+        0.019999999552965164,
+        0.029999999329447746,
+        0.03999999910593033,
+        0.05000000074505806,
+        0.05999999865889549,
+        0.07000000029802322,
+        0.07999999821186066
+      ],
+      "TickRate": [
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5
+      ],
+      "InitialResistGain": [
+        25.0,
+        40.0,
+        55.0,
+        70.0,
+        85.0,
+        100.0,
+        115.0
+      ],
+      "MaxDamageCap": [
+        240.0,
+        240.0,
+        240.0,
+        240.0,
+        240.0,
+        240.0,
+        240.0
+      ],
+      "Duration": [
+        15.0,
+        15.0,
+        15.0,
+        15.0,
+        15.0,
+        15.0,
+        15.0
+      ],
+      "QCDR": [
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5
+      ],
+      "SizeIncreasePercent": [
+        0.25,
+        0.30000001192092896,
+        0.3499999940395355,
+        0.4000000059604645,
+        0.44999998807907104,
+        0.5,
+        0.550000011920929
+      ],
+      "BaseAoERadius": [
+        376.0,
+        376.0,
+        376.0,
+        376.0,
+        376.0,
+        376.0,
+        376.0
+      ],
+      "MinAoERadius": [
+        400.0,
+        400.0,
+        400.0,
+        400.0,
+        400.0,
+        400.0,
+        400.0
+      ]
+    }
+  },
+  "NasusW": {
+    "calculations": {},
+    "dataValues": {
+      "SlowBase": [
+        35.0,
+        35.0,
+        35.0,
+        35.0,
+        35.0,
+        35.0,
+        35.0
+      ],
+      "SlowPerTick": [
+        0.0,
+        3.0,
+        6.0,
+        9.0,
+        12.0,
+        15.0,
+        18.0
+      ],
+      "MaxSlowTooltipOnly": [
+        35.0,
+        47.0,
+        59.0,
+        71.0,
+        83.0,
+        95.0,
+        107.0
+      ],
+      "AttackSpeedSlowMult": [
+        0.75,
+        0.75,
+        0.75,
+        0.75,
+        0.75,
+        0.75,
+        0.75
+      ],
+      "Duration": [
+        5.0,
+        5.0,
+        5.0,
+        5.0,
+        5.0,
+        5.0,
+        5.0
+      ]
+    }
+  },
+  "NasusBasicAttack2": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "NasusCritAttack": {
+    "calculations": {},
+    "dataValues": {}
+  }
+}

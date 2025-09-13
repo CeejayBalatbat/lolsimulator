@@ -1,0 +1,782 @@
+{
+  "ShyvanaTransformSizeBuff": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "ShyvanaFireball": {
+    "calculations": {
+      "DamageCalc": {
+        "mFormulaParts": [
+          {
+            "mDataValue": "BaseDamage",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          {
+            "mCoefficient": 0.699999988079071,
+            "__type": "StatByCoefficientCalculationPart"
+          },
+          {
+            "mStat": 2,
+            "mStatFormula": 2,
+            "mCoefficient": 0.5,
+            "__type": "StatByCoefficientCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      },
+      "DragonExplosionCalc": {
+        "mFormulaParts": [
+          {
+            "mLevel1Value": 75.0,
+            "mBreakpoints": [
+              {
+                "mLevel": 7,
+                "mBonusPerLevelAtAndAfter": 5.0,
+                "__type": "Breakpoint"
+              }
+            ],
+            "__type": "ByCharLevelBreakpointsCalculationPart"
+          },
+          {
+            "mCoefficient": 0.20000000298023224,
+            "__type": "StatByCoefficientCalculationPart"
+          },
+          {
+            "mStat": 2,
+            "mStatFormula": 2,
+            "mDataValue": "DragonExplosionADRatio",
+            "__type": "StatByNamedDataValueCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      },
+      "DragonDamagePerSecondCalc": {
+        "mFormulaParts": [
+          {
+            "mLevel1Value": 40.0,
+            "mBreakpoints": [
+              {
+                "mLevel": 7,
+                "mBonusPerLevelAtAndAfter": 5.0,
+                "__type": "Breakpoint"
+              }
+            ],
+            "__type": "ByCharLevelBreakpointsCalculationPart"
+          },
+          {
+            "mCoefficient": 0.20000000298023224,
+            "__type": "StatByCoefficientCalculationPart"
+          },
+          {
+            "mStat": 2,
+            "mStatFormula": 2,
+            "mCoefficient": 0.30000001192092896,
+            "__type": "StatByCoefficientCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      },
+      "DragonDamagePerTickCalc": {
+        "mMultiplier": {
+          "mDataValue": "SecondsPerTick",
+          "__type": "NamedDataValueCalculationPart"
+        },
+        "mModifiedGameCalculation": "DragonDamagePerSecondCalc",
+        "__type": "GameCalculationModified"
+      },
+      "DragonDamageTotalCalc": {
+        "mMultiplier": {
+          "mDataValue": "GroundDurationForTooltipCalc",
+          "__type": "NamedDataValueCalculationPart"
+        },
+        "tooltipOnly": true,
+        "mModifiedGameCalculation": "DragonDamagePerSecondCalc",
+        "__type": "GameCalculationModified"
+      },
+      "PercentHPDamageOnHit": {
+        "tooltipOnly": true,
+        "mFormulaParts": [
+          {
+            "mDataValue": "PercentHPDamage",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          {
+            "mStat": 2,
+            "mStatFormula": 2,
+            "mDataValue": "ADPercent",
+            "__type": "StatByNamedDataValueCalculationPart"
+          }
+        ],
+        "mPrecision": 1,
+        "__type": "GameCalculation"
+      }
+    },
+    "dataValues": {
+      "BaseDamage": [
+        45.0,
+        85.0,
+        125.0,
+        165.0,
+        205.0,
+        245.0,
+        285.0
+      ],
+      "MarkDuration": [
+        5.0,
+        5.0,
+        5.0,
+        5.0,
+        5.0,
+        5.0,
+        5.0
+      ],
+      "MaxDamageVsMonsters": [
+        150.0,
+        150.0,
+        150.0,
+        150.0,
+        150.0,
+        150.0,
+        150.0
+      ],
+      "PercentHPDamage": [
+        3.0,
+        3.0,
+        3.0,
+        3.0,
+        3.0,
+        3.0,
+        3.0
+      ],
+      "DragonFireballDamage": [
+        20.0,
+        40.0,
+        60.0,
+        80.0,
+        100.0,
+        120.0,
+        140.0
+      ],
+      "GroundMarkDuration": [
+        4.5,
+        4.5,
+        4.5,
+        4.5,
+        4.5,
+        4.5,
+        4.5
+      ],
+      "GroundMarkRadius": [
+        345.0,
+        345.0,
+        345.0,
+        345.0,
+        345.0,
+        345.0,
+        345.0
+      ],
+      "SecondsPerTick": [
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5
+      ],
+      "ADPercent": [
+        0.009999999776482582,
+        0.009999999776482582,
+        0.009999999776482582,
+        0.009999999776482582,
+        0.009999999776482582,
+        0.009999999776482582,
+        0.009999999776482582
+      ],
+      "GroundDurationForTooltipCalc": [
+        4.0,
+        4.0,
+        4.0,
+        4.0,
+        4.0,
+        4.0,
+        4.0
+      ],
+      "DragonExplosionADRatio": [
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5
+      ]
+    }
+  },
+  "ShyvanaFireballDragonMissile": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "ShyvanaFireballDragonMissileBig": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "ShyvanaFireballDragonMissileMax": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "ShyvanaFireballMissile": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "ShyvanaFireballDragon2": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "ShyvanaFireballDragonFxMissile": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "ShyvanaImmolationAura": {
+    "calculations": {
+      "DamagePerTickCalc": {
+        "mFormulaParts": [
+          {
+            "mDataValue": "DamagePerTick",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          {
+            "mStat": 2,
+            "mStatFormula": 2,
+            "mDataValue": "DamagePerTickADRatio",
+            "__type": "StatByNamedDataValueCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      },
+      "DamageOnHitCalc": {
+        "mFormulaParts": [
+          {
+            "mDataValue": "OnHitDamage",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          {
+            "mStat": 2,
+            "mStatFormula": 2,
+            "mDataValue": "OnHitADRatio",
+            "__type": "StatByNamedDataValueCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      },
+      "FinalMSPerc": {
+        "mFormulaParts": [
+          {
+            "mDataValue": "MSPercent",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          {
+            "mDataValue": "MSAPRatio",
+            "__type": "StatByNamedDataValueCalculationPart"
+          }
+        ],
+        "mDisplayAsPercent": true,
+        "__type": "GameCalculation"
+      }
+    },
+    "dataValues": {
+      "DamagePerTick": [
+        10.0,
+        20.0,
+        30.0,
+        40.0,
+        50.0,
+        60.0,
+        70.0
+      ],
+      "MSPercent": [
+        0.25,
+        0.30000001192092896,
+        0.3499999940395355,
+        0.4000000059604645,
+        0.44999998807907104,
+        0.5,
+        0.550000011920929
+      ],
+      "MSDecayPercent": [
+        0.8500000238418579,
+        0.8500000238418579,
+        0.8500000238418579,
+        0.8500000238418579,
+        0.8500000238418579,
+        0.8500000238418579,
+        0.8500000238418579
+      ],
+      "OnHitDamage": [
+        3.0,
+        5.0,
+        7.0,
+        9.0,
+        11.0,
+        13.0,
+        15.0
+      ],
+      "AuraRadius": [
+        325.0,
+        325.0,
+        325.0,
+        325.0,
+        325.0,
+        325.0,
+        325.0
+      ],
+      "BaseDuration": [
+        3.0,
+        3.0,
+        3.0,
+        3.0,
+        3.0,
+        3.0,
+        3.0
+      ],
+      "BonusDurationOnHit": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "MaxBuffDuration": [
+        7.0,
+        7.0,
+        7.0,
+        7.0,
+        7.0,
+        7.0,
+        7.0
+      ],
+      "DragonAuraRadius": [
+        335.0,
+        350.0,
+        365.0,
+        380.0,
+        395.0,
+        410.0,
+        425.0
+      ],
+      "DamagePerTickADRatio": [
+        0.20000000298023224,
+        0.20000000298023224,
+        0.20000000298023224,
+        0.20000000298023224,
+        0.20000000298023224,
+        0.20000000298023224,
+        0.20000000298023224
+      ],
+      "OnHitADRatio": [
+        0.05000000074505806,
+        0.05000000074505806,
+        0.05000000074505806,
+        0.05000000074505806,
+        0.05000000074505806,
+        0.05000000074505806,
+        0.05000000074505806
+      ],
+      "MSAPRatio": [
+        0.0010000000474974513,
+        0.0010000000474974513,
+        0.0010000000474974513,
+        0.0010000000474974513,
+        0.0010000000474974513,
+        0.0010000000474974513,
+        0.0010000000474974513
+      ]
+    }
+  },
+  "ShyvanaImmolateDragon": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "ShyvanaDragonBasicAttack": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "ShyvanaPassiveHA": {
+    "calculations": {},
+    "dataValues": {
+      "BonusResistsPerStackHA": [
+        1.5,
+        1.5,
+        1.5,
+        1.5,
+        1.5,
+        1.5,
+        1.5
+      ],
+      "Range": [
+        1400.0,
+        1400.0,
+        1400.0,
+        1400.0,
+        1400.0,
+        1400.0,
+        1400.0
+      ],
+      "FuryGainPerDragonCount": [
+        0.20000000298023224,
+        0.20000000298023224,
+        0.20000000298023224,
+        0.20000000298023224,
+        0.20000000298023224,
+        0.20000000298023224,
+        0.20000000298023224
+      ]
+    }
+  },
+  "ShyvanaPassiveCounter": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "ShyvanaPassiveNB": {
+    "calculations": {},
+    "dataValues": {
+      "BonusResistsPerStack": [
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0
+      ],
+      "Range": [
+        1400.0,
+        1400.0,
+        1400.0,
+        1400.0,
+        1400.0,
+        1400.0,
+        1400.0
+      ],
+      "FuryGainPerDragonCount": [
+        0.05000000074505806,
+        0.05000000074505806,
+        0.05000000074505806,
+        0.05000000074505806,
+        0.05000000074505806,
+        0.05000000074505806,
+        0.05000000074505806
+      ]
+    }
+  },
+  "ShyvanaPassive": {
+    "calculations": {},
+    "dataValues": {
+      "BonusPercentDamageToDragons": [
+        0.20000000298023224,
+        0.20000000298023224,
+        0.20000000298023224,
+        0.20000000298023224,
+        0.20000000298023224,
+        0.20000000298023224,
+        0.20000000298023224
+      ],
+      "BonusResistsBase": [
+        5.0,
+        5.0,
+        5.0,
+        5.0,
+        5.0,
+        5.0,
+        5.0
+      ],
+      "BonusResistsPerDragon": [
+        5.0,
+        5.0,
+        5.0,
+        5.0,
+        5.0,
+        5.0,
+        5.0
+      ],
+      "BonusDragonFuryRegen": [
+        0.20000000298023224,
+        0.20000000298023224,
+        0.20000000298023224,
+        0.20000000298023224,
+        0.20000000298023224,
+        0.20000000298023224,
+        0.20000000298023224
+      ]
+    }
+  },
+  "ShyvanaFireballMissileMinion": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "ShyvanaTransformCast": {
+    "calculations": {
+      "DamageCalc": {
+        "mFormulaParts": [
+          {
+            "mDataValue": "Damage",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          {
+            "mCoefficient": 1.0,
+            "__type": "StatByCoefficientCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      }
+    },
+    "dataValues": {
+      "Damage": [
+        50.0,
+        150.0,
+        250.0,
+        350.0,
+        450.0,
+        550.0,
+        650.0
+      ],
+      "FuryGainOnHit": [
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0
+      ],
+      "FuryGainPerTick": [
+        0.5,
+        1.0,
+        1.5,
+        2.0,
+        2.5,
+        3.0,
+        3.5
+      ],
+      "FuryDrainPerSecond": [
+        5.0,
+        5.0,
+        5.0,
+        5.0,
+        5.0,
+        5.0,
+        5.0
+      ],
+      "LeapSpeed": [
+        1100.0,
+        1100.0,
+        1100.0,
+        1100.0,
+        1100.0,
+        1100.0,
+        1100.0
+      ],
+      "MaxKnockbackDistance": [
+        275.0,
+        275.0,
+        275.0,
+        275.0,
+        275.0,
+        275.0,
+        275.0
+      ],
+      "FuryToActivate": [
+        100.0,
+        100.0,
+        100.0,
+        100.0,
+        100.0,
+        100.0,
+        100.0
+      ],
+      "TransformLeapWidth": [
+        170.0,
+        200.0,
+        230.0,
+        260.0,
+        290.0,
+        320.0,
+        350.0
+      ],
+      "SizeModifier": [
+        0.0,
+        0.0,
+        0.08500000089406967,
+        0.1599999964237213,
+        0.1599999964237213,
+        0.1599999964237213,
+        0.1599999964237213
+      ],
+      "BonusHP": [
+        50.0,
+        150.0,
+        250.0,
+        350.0,
+        450.0,
+        550.0,
+        650.0
+      ],
+      "FuryDrainPerSecondPercent": [
+        0.05000000074505806,
+        0.05000000074505806,
+        0.05000000074505806,
+        0.05000000074505806,
+        0.05000000074505806,
+        0.05000000074505806,
+        0.05000000074505806
+      ],
+      "FuryGainOnHitPercent": [
+        0.019999999552965164,
+        0.019999999552965164,
+        0.019999999552965164,
+        0.019999999552965164,
+        0.019999999552965164,
+        0.019999999552965164,
+        0.019999999552965164
+      ],
+      "FuryGainPerTickPercent": [
+        0.004999999888241291,
+        0.009999999776482582,
+        0.014999999664723873,
+        0.019999999552965164,
+        0.02500000037252903,
+        0.029999999329447746,
+        0.03500000014901161
+      ]
+    }
+  },
+  "ShyvanaBasicAttack": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "ShyvanaTransform": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "ShyvanaCritAttack": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "ShyvanaTransformLeap": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "ShyvanaDoubleAttackHit": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "ShyvanaDoubleAttack": {
+    "calculations": {
+      "FirstHitDamageCalc": {
+        "mFormulaParts": [
+          {
+            "mStat": 2,
+            "mCoefficient": 1.0,
+            "__type": "StatByCoefficientCalculationPart"
+          },
+          {
+            "mCoefficient": 0.5,
+            "__type": "StatByCoefficientCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      },
+      "SecondHitDamageCalc": {
+        "mFormulaParts": [
+          {
+            "mStat": 2,
+            "mDataValue": "SecondHitDamage",
+            "__type": "StatByNamedDataValueCalculationPart"
+          },
+          {
+            "mCoefficient": 0.25,
+            "__type": "StatByCoefficientCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      }
+    },
+    "dataValues": {
+      "SecondHitDamage": [
+        0.0,
+        0.20000000298023224,
+        0.4000000059604645,
+        0.6000000238418579,
+        0.800000011920929,
+        1.0,
+        1.2000000476837158
+      ],
+      "CleaveRadius": [
+        250.0,
+        250.0,
+        250.0,
+        250.0,
+        250.0,
+        250.0,
+        250.0
+      ],
+      "CDReductionOnHit": [
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5
+      ],
+      "RangeBonus": [
+        25.0,
+        25.0,
+        25.0,
+        25.0,
+        25.0,
+        25.0,
+        25.0
+      ],
+      "BonusAS": [
+        45.0,
+        50.0,
+        55.0,
+        60.0,
+        65.0,
+        70.0,
+        75.0
+      ]
+    }
+  },
+  "ShyvanaDoubleAttackHitDragon": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "ShyvanaDoubleAttackHitDragon2": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "ShyvanaDoubleAttackDragon": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "ShyvanaBasicAttack3": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "ShyvanaBasicAttack2": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "ShyvanaDragonBasicAttack2": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "ShyvanaTransformSpellPassive": {
+    "calculations": {},
+    "dataValues": {}
+  }
+}

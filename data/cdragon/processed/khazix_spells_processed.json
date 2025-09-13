@@ -1,0 +1,541 @@
+{
+  "KhazixPAttack": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "KhazixCritAttack": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "KhazixQ": {
+    "calculations": {
+      "{ba2719ef}": {
+        "tooltipOnly": true,
+        "mFormulaParts": [
+          {
+            "mNumber": 1.0,
+            "__type": "NumberCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      },
+      "{8b6fe763}": {
+        "tooltipOnly": true,
+        "mFormulaParts": [
+          {
+            "__type": "NumberCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      },
+      "IsEvolved": {
+        "tooltipOnly": true,
+        "mDefaultGameCalculation": "{8b6fe763}",
+        "mConditionalGameCalculation": "{ba2719ef}",
+        "mConditionalCalculationRequirements": {
+          "mBuffName": "{99a499bd}",
+          "__type": "HasBuffCastRequirement"
+        },
+        "__type": "GameCalculationConditional"
+      },
+      "BaseDamage": {
+        "tooltipOnly": true,
+        "mFormulaParts": [
+          {
+            "mEffectIndex": 1,
+            "__type": "EffectValueCalculationPart"
+          },
+          {
+            "mStat": 2,
+            "mStatFormula": 2,
+            "mDataValue": "BonusADRatio",
+            "__type": "StatByNamedDataValueCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      },
+      "IsoDamage": {
+        "mMultiplier": {
+          "mNumber": 2.0999999046325684,
+          "__type": "NumberCalculationPart"
+        },
+        "mModifiedGameCalculation": "BaseDamage",
+        "__type": "GameCalculationModified"
+      }
+    },
+    "dataValues": {
+      "EvolutionIsolationCDRPercentage": [
+        45.0,
+        45.0,
+        45.0,
+        45.0,
+        45.0,
+        45.0,
+        45.0
+      ],
+      "BonusADRatio": [
+        1.100000023841858,
+        1.100000023841858,
+        1.100000023841858,
+        1.100000023841858,
+        1.100000023841858,
+        1.100000023841858,
+        1.100000023841858
+      ]
+    }
+  },
+  "KhazixQDR": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "KhazixQEvo": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "KhazixQLong": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "KhazixBasicAttack": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "KhazixR": {
+    "calculations": {
+      "{ba2719ef}": {
+        "mExpandedTooltipCalculationDisplay": 5,
+        "tooltipOnly": true,
+        "mFormulaParts": [
+          {
+            "mNumber": 1.0,
+            "__type": "NumberCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      },
+      "{8b6fe763}": {
+        "mExpandedTooltipCalculationDisplay": 5,
+        "tooltipOnly": true,
+        "mFormulaParts": [
+          {
+            "__type": "NumberCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      },
+      "IsEvolved": {
+        "mExpandedTooltipCalculationDisplay": 6,
+        "tooltipOnly": true,
+        "mDefaultGameCalculation": "{8b6fe763}",
+        "mConditionalGameCalculation": "{ba2719ef}",
+        "mConditionalCalculationRequirements": {
+          "mBuffName": "{7bcf22fa}",
+          "__type": "HasBuffCastRequirement"
+        },
+        "__type": "GameCalculationConditional"
+      }
+    },
+    "dataValues": {
+      "StealthDuration": [
+        1.25,
+        1.25,
+        1.25,
+        1.25,
+        1.25,
+        1.25,
+        1.25
+      ],
+      "RecastWindow": [
+        12.0,
+        12.0,
+        12.0,
+        12.0,
+        12.0,
+        12.0,
+        12.0
+      ],
+      "BonusMovementSpeedPercent": [
+        0.4000000059604645,
+        0.4000000059604645,
+        0.4000000059604645,
+        0.4000000059604645,
+        0.4000000059604645,
+        0.4000000059604645,
+        0.4000000059604645
+      ],
+      "EvolutionsAvailable": [
+        0.0,
+        1.0,
+        2.0,
+        3.0,
+        3.0,
+        3.0,
+        3.0
+      ],
+      "EvolvedStealthDuration": [
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0
+      ],
+      "RecastCD": [
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0
+      ],
+      "NumberOfCasts": [
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0
+      ],
+      "EvolvedNumberOfCasts": [
+        3.0,
+        3.0,
+        3.0,
+        3.0,
+        3.0,
+        3.0,
+        3.0
+      ]
+    }
+  },
+  "KhazixREvo": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "KhazixEEvo": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "KhazixEInvisMissile": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "KhazixE": {
+    "calculations": {
+      "{ba2719ef}": {
+        "tooltipOnly": true,
+        "mFormulaParts": [
+          {
+            "mNumber": 1.0,
+            "__type": "NumberCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      },
+      "{8b6fe763}": {
+        "mExpandedTooltipCalculationDisplay": 1,
+        "tooltipOnly": true,
+        "mFormulaParts": [
+          {
+            "__type": "NumberCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      },
+      "IsEvolved": {
+        "mExpandedTooltipCalculationDisplay": 5,
+        "tooltipOnly": true,
+        "mDefaultGameCalculation": "{8b6fe763}",
+        "mConditionalGameCalculation": "{ba2719ef}",
+        "mConditionalCalculationRequirements": {
+          "mBuffName": "{0f374711}",
+          "__type": "HasBuffCastRequirement"
+        },
+        "__type": "GameCalculationConditional"
+      },
+      "TotalDamage": {
+        "mFormulaParts": [
+          {
+            "mEffectIndex": 1,
+            "__type": "EffectValueCalculationPart"
+          },
+          {
+            "mStat": 2,
+            "mStatFormula": 2,
+            "mCoefficient": 0.4000000059604645,
+            "__type": "StatByCoefficientCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      }
+    },
+    "dataValues": {
+      "EvolvedLeapRange": [
+        900.0,
+        900.0,
+        900.0,
+        900.0,
+        900.0,
+        900.0,
+        900.0
+      ],
+      "BaseDamage": [
+        30.0,
+        65.0,
+        100.0,
+        135.0,
+        170.0,
+        205.0,
+        240.0
+      ],
+      "ADRatio": [
+        0.4000000059604645,
+        0.4000000059604645,
+        0.4000000059604645,
+        0.4000000059604645,
+        0.4000000059604645,
+        0.4000000059604645,
+        0.4000000059604645
+      ]
+    }
+  },
+  "KhazixELong": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "KhazixWMissile": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "KhazixWLong": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "KhazixW": {
+    "calculations": {
+      "{ba2719ef}": {
+        "mExpandedTooltipCalculationDisplay": 5,
+        "tooltipOnly": true,
+        "mFormulaParts": [
+          {
+            "mNumber": 1.0,
+            "__type": "NumberCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      },
+      "{8b6fe763}": {
+        "mExpandedTooltipCalculationDisplay": 5,
+        "tooltipOnly": true,
+        "mFormulaParts": [
+          {
+            "__type": "NumberCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      },
+      "IsEvolved": {
+        "mExpandedTooltipCalculationDisplay": 5,
+        "tooltipOnly": true,
+        "mDefaultGameCalculation": "{8b6fe763}",
+        "mConditionalGameCalculation": "{ba2719ef}",
+        "mConditionalCalculationRequirements": {
+          "mBuffName": "{ff849683}",
+          "__type": "HasBuffCastRequirement"
+        },
+        "__type": "GameCalculationConditional"
+      },
+      "BaseDamage": {
+        "mFormulaParts": [
+          {
+            "mEffectIndex": 1,
+            "__type": "EffectValueCalculationPart"
+          },
+          {
+            "mStat": 2,
+            "mStatFormula": 2,
+            "mCoefficient": 1.0,
+            "__type": "StatByCoefficientCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      },
+      "HealAmount": {
+        "mFormulaParts": [
+          {
+            "mDataValue": "BaseHeal",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          {
+            "mDataValue": "HealAPRatio",
+            "__type": "StatByNamedDataValueCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      }
+    },
+    "dataValues": {
+      "BaseHeal": [
+        35.0,
+        55.0,
+        75.0,
+        95.0,
+        115.0,
+        135.0,
+        155.0
+      ],
+      "HealAPRatio": [
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5
+      ],
+      "SlowPercentage": [
+        40.0,
+        40.0,
+        40.0,
+        40.0,
+        40.0,
+        40.0,
+        40.0
+      ],
+      "SlowDuration": [
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0
+      ],
+      "IsolatedSlowPercentage": [
+        60.0,
+        60.0,
+        60.0,
+        60.0,
+        60.0,
+        60.0,
+        60.0
+      ],
+      "IsolatedSlowDuration": [
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0
+      ]
+    }
+  },
+  "KhazixWEvo": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "KhazixWEvoSlow": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "KhazixPDamage": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "KhazixPassive": {
+    "calculations": {
+      "TotalDamage": {
+        "mFormulaParts": [
+          {
+            "mValues": [
+              10.0,
+              17.0,
+              24.0,
+              31.0,
+              38.0,
+              45.0,
+              52.0,
+              59.0,
+              66.0,
+              73.0,
+              80.0,
+              87.0,
+              94.0,
+              101.0,
+              108.0,
+              115.0,
+              122.0,
+              129.0,
+              136.0,
+              143.0,
+              150.0,
+              157.0,
+              164.0,
+              171.0,
+              178.0,
+              185.0,
+              192.0,
+              199.0,
+              206.0,
+              213.0,
+              220.0
+            ],
+            "__type": "ByCharLevelFormulaCalculationPart"
+          },
+          {
+            "mStat": 2,
+            "mStatFormula": 2,
+            "mDataValue": "BonusADRatio",
+            "__type": "StatByNamedDataValueCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      }
+    },
+    "dataValues": {
+      "SlowAmount": [
+        0.25,
+        0.25,
+        0.25,
+        0.25,
+        0.25,
+        0.25,
+        0.25
+      ],
+      "SlowDuration": [
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0
+      ],
+      "IsolationRange": [
+        375.0,
+        375.0,
+        375.0,
+        375.0,
+        375.0,
+        375.0,
+        375.0
+      ],
+      "BonusADRatio": [
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5
+      ]
+    }
+  },
+  "KhazixBasicAttack2": {
+    "calculations": {},
+    "dataValues": {}
+  }
+}

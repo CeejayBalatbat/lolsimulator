@@ -1,0 +1,246 @@
+{
+  "KarthusCritAttack": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "KarthusLayWasteDeadA1": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "KarthusLayWasteDeadA3": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "KarthusLayWaste2": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "KarthusLayWasteDeadA2": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "KarthusLayWasteA3": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "KarthusLayWasteA2": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "KarthusLayWasteA1": {
+    "calculations": {
+      "QDamage": {
+        "mFormulaParts": [
+          {
+            "mDataValue": "BaseDamage",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          {
+            "mDataValue": "APRatio",
+            "__type": "StatByNamedDataValueCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      },
+      "QSingleTargetDamage": {
+        "mMultiplier": {
+          "mNumber": 2.0,
+          "__type": "NumberCalculationPart"
+        },
+        "tooltipOnly": true,
+        "mModifiedGameCalculation": "QDamage",
+        "__type": "GameCalculationModified"
+      }
+    },
+    "dataValues": {
+      "MonsterMod": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "BaseDamage": [
+        21.0,
+        40.0,
+        59.0,
+        78.0,
+        97.0,
+        116.0,
+        135.0
+      ],
+      "APRatio": [
+        0.3499999940395355,
+        0.3499999940395355,
+        0.3499999940395355,
+        0.3499999940395355,
+        0.3499999940395355,
+        0.3499999940395355,
+        0.3499999940395355
+      ]
+    }
+  },
+  "KarthusLayWasteExtra": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "KarthusDeathDefied": {
+    "calculations": {},
+    "dataValues": {
+      "PassiveDuration": [
+        7.0,
+        7.0,
+        7.0,
+        7.0,
+        7.0,
+        7.0,
+        7.0
+      ]
+    }
+  },
+  "KarthusFallenOneExtra": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "KarthusFallenOne2": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "KarthusFallenOne": {
+    "calculations": {
+      "TotalDamage": {
+        "mFormulaParts": [
+          {
+            "mDataValue": "BaseDamage",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          {
+            "mDataValue": "APRatio",
+            "__type": "StatByNamedDataValueCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      }
+    },
+    "dataValues": {
+      "BaseDamage": [
+        50.0,
+        200.0,
+        350.0,
+        500.0,
+        650.0,
+        800.0,
+        950.0
+      ],
+      "APRatio": [
+        0.699999988079071,
+        0.699999988079071,
+        0.699999988079071,
+        0.699999988079071,
+        0.699999988079071,
+        0.699999988079071,
+        0.699999988079071
+      ]
+    }
+  },
+  "KarthusLayWaste": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "KarthusFallenOneExtra2": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "KarthusDefile": {
+    "calculations": {
+      "TotalDPS": {
+        "mFormulaParts": [
+          {
+            "mDataValue": "DamagePerSecond",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          {
+            "mDataValue": "APRatioPerSecond",
+            "__type": "StatByNamedDataValueCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      },
+      "{57456bbc}": {
+        "mMultiplier": {
+          "mNumber": 0.25,
+          "__type": "NumberCalculationPart"
+        },
+        "mModifiedGameCalculation": "TotalDPS",
+        "__type": "GameCalculationModified"
+      }
+    },
+    "dataValues": {
+      "DamagePerSecond": [
+        10.0,
+        30.0,
+        50.0,
+        70.0,
+        90.0,
+        110.0,
+        130.0
+      ],
+      "APRatioPerSecond": [
+        0.20000000298023224,
+        0.20000000298023224,
+        0.20000000298023224,
+        0.20000000298023224,
+        0.20000000298023224,
+        0.20000000298023224,
+        0.20000000298023224
+      ],
+      "ManaRestoreOnKill": [
+        0.0,
+        10.0,
+        20.0,
+        30.0,
+        40.0,
+        50.0,
+        60.0
+      ]
+    }
+  },
+  "KarthusDefileSoundDummy2": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "KarthusDefile2": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "KarthusWallOfPain": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "KarthusWallOfPain2": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "KarthusWallofPainExtra": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "KarthusWallOfPainExtra2": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "KarthusBasicAttack2": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "KarthusBasicAttack": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "KarthusCritAttack2": {
+    "calculations": {},
+    "dataValues": {}
+  }
+}

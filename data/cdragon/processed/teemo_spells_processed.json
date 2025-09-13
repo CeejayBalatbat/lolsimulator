@@ -1,0 +1,384 @@
+{
+  "TeemoW": {
+    "calculations": {},
+    "dataValues": {
+      "PassiveMoveSpeedBonus": [
+        0.07999999821186066,
+        0.11999999731779099,
+        0.1599999964237213,
+        0.20000000298023224,
+        0.23999999463558197,
+        0.2800000011920929,
+        0.3199999928474426
+      ],
+      "ActiveMoveSpeedBuffDuration": [
+        3.0,
+        3.0,
+        3.0,
+        3.0,
+        3.0,
+        3.0,
+        3.0
+      ],
+      "ActiveMoveSpeedBonus": [
+        0.1599999964237213,
+        0.23999999463558197,
+        0.3199999928474426,
+        0.4000000059604645,
+        0.47999998927116394,
+        0.5600000023841858,
+        0.6399999856948853
+      ],
+      "PassiveCooldownOnDamageTaken": [
+        5.0,
+        5.0,
+        5.0,
+        5.0,
+        5.0,
+        5.0,
+        5.0
+      ]
+    }
+  },
+  "TeemoR": {
+    "calculations": {
+      "TotalDamage": {
+        "mFormulaParts": [
+          {
+            "mDataValue": "BaseDamage",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          {
+            "mDataValue": "APRatioPerTick",
+            "__type": "StatByNamedDataValueCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      }
+    },
+    "dataValues": {
+      "TriggerRadius": [
+        160.0,
+        160.0,
+        160.0,
+        160.0,
+        160.0,
+        160.0,
+        160.0
+      ],
+      "MaxAmmo": [
+        2.0,
+        3.0,
+        4.0,
+        5.0,
+        6.0,
+        7.0,
+        8.0
+      ],
+      "MaxBounceDistance": [
+        360.0,
+        360.0,
+        440.0,
+        550.0,
+        550.0,
+        550.0,
+        550.0
+      ],
+      "ArmTime": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "MushroomDuration": [
+        5.0,
+        5.0,
+        5.0,
+        5.0,
+        5.0,
+        5.0,
+        5.0
+      ],
+      "BaseDamage": [
+        75.0,
+        200.0,
+        325.0,
+        450.0,
+        575.0,
+        700.0,
+        825.0
+      ],
+      "SlowAmount": [
+        20.0,
+        30.0,
+        40.0,
+        50.0,
+        60.0,
+        70.0,
+        80.0
+      ],
+      "DebuffDuration": [
+        4.0,
+        4.0,
+        4.0,
+        4.0,
+        4.0,
+        4.0,
+        4.0
+      ],
+      "APRatioPerTick": [
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5
+      ],
+      "ExplosionRadius": [
+        450.0,
+        450.0,
+        450.0,
+        450.0,
+        450.0,
+        450.0,
+        450.0
+      ],
+      "MaxTraps": [
+        25000.0,
+        25000.0,
+        25000.0,
+        25000.0,
+        25000.0,
+        25000.0,
+        25000.0
+      ],
+      "MinTossDistanceBounceThreshold": [
+        150.0,
+        220.0,
+        500.0,
+        500.0,
+        500.0,
+        500.0,
+        500.0
+      ],
+      "VisionRadius": [
+        210.0,
+        210.0,
+        210.0,
+        210.0,
+        210.0,
+        210.0,
+        210.0
+      ]
+    }
+  },
+  "TeemoE": {
+    "calculations": {
+      "TickCalculatedDamage": {
+        "mFormulaParts": [
+          {
+            "mDataValue": "TickBaseDamage",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          {
+            "mDataValue": "TickAPRatio",
+            "__type": "StatByNamedDataValueCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      },
+      "ImpactCalculatedDamage": {
+        "mFormulaParts": [
+          {
+            "mDataValue": "ImpactBaseDamage",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          {
+            "mDataValue": "ImpactAPRatio",
+            "__type": "StatByNamedDataValueCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      },
+      "TotalDotDamage": {
+        "mMultiplier": {
+          "mDataValue": "PoisonDuration",
+          "__type": "NamedDataValueCalculationPart"
+        },
+        "tooltipOnly": true,
+        "mModifiedGameCalculation": "TickCalculatedDamage",
+        "__type": "GameCalculationModified"
+      },
+      "{8b70cfd6}": {
+        "mMultiplier": {
+          "mDataValue": "monstermod",
+          "__type": "NamedDataValueCalculationPart"
+        },
+        "mModifiedGameCalculation": "ImpactCalculatedDamage",
+        "__type": "GameCalculationModified"
+      },
+      "{938cba49}": {
+        "mMultiplier": {
+          "mDataValue": "monstermod",
+          "__type": "NamedDataValueCalculationPart"
+        },
+        "mModifiedGameCalculation": "TickCalculatedDamage",
+        "__type": "GameCalculationModified"
+      }
+    },
+    "dataValues": {
+      "TickBaseDamage": [
+        0.0,
+        6.0,
+        12.0,
+        18.0,
+        24.0,
+        30.0,
+        36.0
+      ],
+      "TickAPRatio": [
+        0.10000000149011612,
+        0.10000000149011612,
+        0.10000000149011612,
+        0.10000000149011612,
+        0.10000000149011612,
+        0.10000000149011612,
+        0.10000000149011612
+      ],
+      "ImpactBaseDamage": [
+        -5.0,
+        9.0,
+        23.0,
+        37.0,
+        51.0,
+        65.0,
+        79.0
+      ],
+      "ImpactAPRatio": [
+        0.30000001192092896,
+        0.30000001192092896,
+        0.30000001192092896,
+        0.30000001192092896,
+        0.30000001192092896,
+        0.30000001192092896,
+        0.30000001192092896
+      ],
+      "PoisonDuration": [
+        4.0,
+        4.0,
+        4.0,
+        4.0,
+        4.0,
+        4.0,
+        4.0
+      ],
+      "TickFrequency": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "MonsterMod": [
+        1.4500000476837158,
+        1.4500000476837158,
+        1.4500000476837158,
+        1.4500000476837158,
+        1.4500000476837158,
+        1.4500000476837158,
+        1.4500000476837158
+      ]
+    }
+  },
+  "TeemoQ": {
+    "calculations": {
+      "CalculatedDamage": {
+        "mFormulaParts": [
+          {
+            "mDataValue": "BaseDamage",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          {
+            "mDataValue": "APRatio",
+            "__type": "StatByNamedDataValueCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      },
+      "{0f87e4ba}": {
+        "mMultiplier": {
+          "mDataValue": "MinionMonsterDurationMod",
+          "__type": "NamedDataValueCalculationPart"
+        },
+        "mFormulaParts": [
+          {
+            "mDataValue": "BlindDuration",
+            "__type": "NamedDataValueCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      }
+    },
+    "dataValues": {
+      "BaseDamage": [
+        35.0,
+        80.0,
+        125.0,
+        170.0,
+        215.0,
+        260.0,
+        305.0
+      ],
+      "APRatio": [
+        0.699999988079071,
+        0.699999988079071,
+        0.699999988079071,
+        0.699999988079071,
+        0.699999988079071,
+        0.699999988079071,
+        0.699999988079071
+      ],
+      "BlindDuration": [
+        1.75,
+        2.0,
+        2.25,
+        2.5,
+        2.75,
+        3.0,
+        3.25
+      ],
+      "MissChance": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "MinionMonsterDurationMod": [
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0
+      ]
+    }
+  },
+  "TeemoBasicAttack": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "TeemoCritAttack": {
+    "calculations": {},
+    "dataValues": {}
+  }
+}

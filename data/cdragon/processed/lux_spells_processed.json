@@ -1,0 +1,329 @@
+{
+  "LuxPrismaticWaveMissile": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "LuxPrismaticWaveReturnDead": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "LuxPrismaticWave": {
+    "calculations": {
+      "TotalShieldTT": {
+        "mSimpleTooltipCalculationDisplay": 6,
+        "mFormulaParts": [
+          {
+            "mDataValue": "BaseShieldAmount",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          {
+            "mDataValue": "APRatio",
+            "__type": "StatByNamedDataValueCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      }
+    },
+    "dataValues": {
+      "BaseShieldAmount": [
+        25.0,
+        40.0,
+        55.0,
+        70.0,
+        85.0,
+        100.0,
+        115.0
+      ],
+      "APRatio": [
+        0.4000000059604645,
+        0.4000000059604645,
+        0.4000000059604645,
+        0.4000000059604645,
+        0.4000000059604645,
+        0.4000000059604645,
+        0.4000000059604645
+      ],
+      "ShieldDuration": [
+        2.5,
+        2.5,
+        2.5,
+        2.5,
+        2.5,
+        2.5,
+        2.5
+      ]
+    }
+  },
+  "LuxPrismaticWaveReturn": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "LuxLightBindingDummy": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "LuxLightBindingMis": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "LuxLightBinding": {
+    "calculations": {
+      "TotalDamageTT": {
+        "mSimpleTooltipCalculationDisplay": 6,
+        "mFormulaParts": [
+          {
+            "mDataValue": "BaseDamage",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          {
+            "mDataValue": "APRatio",
+            "__type": "StatByNamedDataValueCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      }
+    },
+    "dataValues": {
+      "BaseDamage": [
+        40.0,
+        80.0,
+        120.0,
+        160.0,
+        200.0,
+        240.0,
+        280.0
+      ],
+      "APRatio": [
+        0.6499999761581421,
+        0.6499999761581421,
+        0.6499999761581421,
+        0.6499999761581421,
+        0.6499999761581421,
+        0.6499999761581421,
+        0.6499999761581421
+      ]
+    }
+  },
+  "LuxIlluminatingFraulein": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "LuxIlluminationPassive": {
+    "calculations": {
+      "TotalDamage": {
+        "mSimpleTooltipCalculationDisplay": 6,
+        "mFormulaParts": [
+          {
+            "mValues": [
+              20.0,
+              30.0,
+              40.0,
+              50.0,
+              60.0,
+              70.0,
+              80.0,
+              90.0,
+              100.0,
+              110.0,
+              120.0,
+              130.0,
+              140.0,
+              150.0,
+              160.0,
+              170.0,
+              180.0,
+              190.0,
+              200.0,
+              210.0,
+              220.0,
+              230.0,
+              240.0,
+              250.0,
+              260.0,
+              270.0,
+              280.0,
+              290.0,
+              300.0,
+              310.0,
+              320.0
+            ],
+            "__type": "ByCharLevelFormulaCalculationPart"
+          },
+          {
+            "mDataValue": "APRatio",
+            "__type": "StatByNamedDataValueCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      }
+    },
+    "dataValues": {
+      "DebuffDuration": [
+        6.0,
+        6.0,
+        6.0,
+        6.0,
+        6.0,
+        6.0,
+        6.0
+      ],
+      "APRatio": [
+        0.30000001192092896,
+        0.30000001192092896,
+        0.30000001192092896,
+        0.30000001192092896,
+        0.30000001192092896,
+        0.30000001192092896,
+        0.30000001192092896
+      ]
+    }
+  },
+  "LuxLightStrikeKugel": {
+    "calculations": {
+      "TotalDamageTT": {
+        "mSimpleTooltipCalculationDisplay": 6,
+        "mFormulaParts": [
+          {
+            "mEffectIndex": 2,
+            "__type": "EffectValueCalculationPart"
+          },
+          {
+            "mCoefficient": 0.800000011920929,
+            "__type": "StatByCoefficientCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      },
+      "{ee9714e4}": {
+        "mMultiplier": {
+          "mNumber": -0.009999999776482582,
+          "__type": "NumberCalculationPart"
+        },
+        "mFormulaParts": [
+          {
+            "mDataValue": "SlowPercent",
+            "__type": "NamedDataValueCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      }
+    },
+    "dataValues": {
+      "VisionRadius": [
+        650.0,
+        650.0,
+        650.0,
+        650.0,
+        650.0,
+        650.0,
+        650.0
+      ],
+      "SlowLingerDuration": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "SlowPercent": [
+        20.0,
+        25.0,
+        30.0,
+        35.0,
+        40.0,
+        45.0,
+        50.0
+      ],
+      "SlowZoneDuration": [
+        5.0,
+        5.0,
+        5.0,
+        5.0,
+        5.0,
+        5.0,
+        5.0
+      ]
+    }
+  },
+  "LuxLightstrikeToggle": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "LuxUltimateSkinElementMissile": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "LuxR": {
+    "calculations": {
+      "TotalDamage": {
+        "mSimpleTooltipCalculationDisplay": 6,
+        "mFormulaParts": [
+          {
+            "mDataValue": "Damage",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          {
+            "mCoefficient": 1.2000000476837158,
+            "__type": "StatByCoefficientCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      }
+    },
+    "dataValues": {
+      "Damage": [
+        200.0,
+        300.0,
+        400.0,
+        500.0,
+        600.0,
+        700.0,
+        800.0
+      ],
+      "ResetPercent": [
+        0.20000000298023224,
+        0.30000001192092896,
+        0.4000000059604645,
+        0.5,
+        0.6000000238418579,
+        0.699999988079071,
+        0.800000011920929
+      ],
+      "ResetAssistWindow": [
+        1.75,
+        1.75,
+        1.75,
+        1.75,
+        1.75,
+        1.75,
+        1.75
+      ]
+    }
+  },
+  "LuxRVfxMis": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "LuxBasicAttack2": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "LuxUltimateSkinTransformAnimation": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "LuxRMis": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "LuxCritAttack": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "LuxBasicAttack": {
+    "calculations": {},
+    "dataValues": {}
+  }
+}

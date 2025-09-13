@@ -1,0 +1,290 @@
+{
+  "XerathLocusPulse": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "XerathLocusOfPower2": {
+    "calculations": {
+      "TooltipTotalDamage": {
+        "mFormulaParts": [
+          {
+            "mDataValue": "BaseDamage",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          {
+            "mCoefficient": 0.44999998807907104,
+            "__type": "StatByCoefficientCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      },
+      "RampDamageCalc": {
+        "mFormulaParts": [
+          {
+            "mDataValue": "RampBaseDamage",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          {
+            "mCoefficient": 0.05000000074505806,
+            "__type": "StatByCoefficientCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      }
+    },
+    "dataValues": {
+      "RampBaseDamage": [
+        15.0,
+        20.0,
+        25.0,
+        30.0,
+        35.0,
+        40.0,
+        45.0
+      ],
+      "BaseDamage": [
+        120.0,
+        170.0,
+        220.0,
+        270.0,
+        320.0,
+        370.0,
+        420.0
+      ]
+    }
+  },
+  "XerathRMissileWrapper": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "XerathArcanopulseChargeUp": {
+    "calculations": {
+      "TooltipTotalDamage": {
+        "mFormulaParts": [
+          {
+            "mDataValue": "BaseDamage",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          {
+            "mCoefficient": 0.8999999761581421,
+            "__type": "StatByCoefficientCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      }
+    },
+    "dataValues": {
+      "BaseDamage": [
+        35.0,
+        75.0,
+        115.0,
+        155.0,
+        195.0,
+        235.0,
+        275.0
+      ]
+    }
+  },
+  "XerathBasicAttack2": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "XerathBasicAttack": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "XerathArcanopulse2": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "XerathMageSpear": {
+    "calculations": {
+      "TooltipTotalDamage": {
+        "mFormulaParts": [
+          {
+            "mEffectIndex": 1,
+            "__type": "EffectValueCalculationPart"
+          },
+          {
+            "mCoefficient": 0.44999998807907104,
+            "__type": "StatByCoefficientCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      }
+    },
+    "dataValues": {
+      "MinStunDuration": [
+        0.75,
+        0.75,
+        0.75,
+        0.75,
+        0.75,
+        0.75,
+        0.75
+      ],
+      "MaxStunDuration": [
+        2.25,
+        2.25,
+        2.25,
+        2.25,
+        2.25,
+        2.25,
+        2.25
+      ]
+    }
+  },
+  "XerathCritAttack": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "XerathLocusOfPower2Toggle": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "XerathAscended2": {
+    "calculations": {
+      "MinionManaRestoreTT": {
+        "mFormulaParts": [
+          {
+            "mLevel1Value": 30.0,
+            "mInitialBonusPerLevel": 3.0,
+            "mBreakpoints": [
+              {
+                "mLevel": 4,
+                "mBonusPerLevelAtAndAfter": 6.0,
+                "__type": "Breakpoint"
+              },
+              {
+                "mLevel": 7,
+                "mBonusPerLevelAtAndAfter": 9.0,
+                "__type": "Breakpoint"
+              },
+              {
+                "mLevel": 11,
+                "mBonusPerLevelAtAndAfter": 12.0,
+                "__type": "Breakpoint"
+              },
+              {
+                "mLevel": 16,
+                "mBonusPerLevelAtAndAfter": 15.0,
+                "__type": "Breakpoint"
+              }
+            ],
+            "__type": "ByCharLevelBreakpointsCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      },
+      "ChampionManaRestoreTT": {
+        "mMultiplier": {
+          "mNumber": 2.0,
+          "__type": "NumberCalculationPart"
+        },
+        "mModifiedGameCalculation": "MinionManaRestoreTT",
+        "__type": "GameCalculationModified"
+      }
+    },
+    "dataValues": {
+      "CooldownKillRefund": [
+        3.5,
+        3.5,
+        3.5,
+        3.5,
+        3.5,
+        3.5,
+        3.5
+      ]
+    }
+  },
+  "XerathArcaneBarrage2": {
+    "calculations": {
+      "TotalDamage": {
+        "mFormulaParts": [
+          {
+            "mDataValue": "BaseDamage",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          {
+            "mCoefficient": 0.6499999761581421,
+            "__type": "StatByCoefficientCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      },
+      "SweetSpotTotalDamage": {
+        "mMultiplier": {
+          "mDataValue": "SweetSpotMultiplier",
+          "__type": "NamedDataValueCalculationPart"
+        },
+        "mModifiedGameCalculation": "TotalDamage",
+        "__type": "GameCalculationModified"
+      }
+    },
+    "dataValues": {
+      "BaseDamage": [
+        15.0,
+        50.0,
+        85.0,
+        120.0,
+        155.0,
+        190.0,
+        225.0
+      ],
+      "SweetSpotMultiplier": [
+        1.6670000553131104,
+        1.6670000553131104,
+        1.6670000553131104,
+        1.6670000553131104,
+        1.6670000553131104,
+        1.6670000553131104,
+        1.6670000553131104
+      ],
+      "SlowAmount": [
+        0.25,
+        0.25,
+        0.25,
+        0.25,
+        0.25,
+        0.25,
+        0.25
+      ],
+      "SweetSpotSlowAmount": [
+        0.550000011920929,
+        0.6000000238418579,
+        0.6499999761581421,
+        0.699999988079071,
+        0.75,
+        0.800000011920929,
+        0.8500000238418579
+      ],
+      "MultiplicativeSlowDecayRate": [
+        0.800000011920929,
+        0.800000011920929,
+        0.800000011920929,
+        0.800000011920929,
+        0.800000011920929,
+        0.800000011920929,
+        0.800000011920929
+      ],
+      "SlowDuration": [
+        2.5,
+        2.5,
+        2.5,
+        2.5,
+        2.5,
+        2.5,
+        2.5
+      ],
+      "DamageDelay": [
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5
+      ]
+    }
+  }
+}

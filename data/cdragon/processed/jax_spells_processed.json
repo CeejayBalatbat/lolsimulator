@@ -1,0 +1,475 @@
+{
+  "JaxPassive": {
+    "calculations": {
+      "AttackSpeedPerStack": {
+        "mFormulaParts": [
+          {
+            "mLevel1Value": 0.05000000074505806,
+            "mBreakpoints": [
+              {
+                "mLevel": 4,
+                "mAdditionalBonusAtThisLevel": 0.014999999664723873,
+                "__type": "Breakpoint"
+              },
+              {
+                "mLevel": 7,
+                "mAdditionalBonusAtThisLevel": 0.014999999664723873,
+                "__type": "Breakpoint"
+              },
+              {
+                "mLevel": 10,
+                "mAdditionalBonusAtThisLevel": 0.014999999664723873,
+                "__type": "Breakpoint"
+              },
+              {
+                "mLevel": 13,
+                "mAdditionalBonusAtThisLevel": 0.014999999664723873,
+                "__type": "Breakpoint"
+              },
+              {
+                "mLevel": 16,
+                "mAdditionalBonusAtThisLevel": 0.014999999664723873,
+                "__type": "Breakpoint"
+              }
+            ],
+            "__type": "ByCharLevelBreakpointsCalculationPart"
+          }
+        ],
+        "mDisplayAsPercent": true,
+        "mPrecision": 1,
+        "__type": "GameCalculation"
+      },
+      "MaxBonusAttackSpeed": {
+        "mMultiplier": {
+          "mDataValue": "MaxStacks",
+          "__type": "NamedDataValueCalculationPart"
+        },
+        "tooltipOnly": true,
+        "mModifiedGameCalculation": "AttackSpeedPerStack",
+        "__type": "GameCalculationModified"
+      },
+      "BelvethVsJaxQuestRewardAttackSpeedPerStack": {
+        "mFormulaParts": [
+          {
+            "mLevel1Value": 0.00279999990016222,
+            "mInitialBonusPerLevel": 0.0006000000284984708,
+            "mBreakpoints": [
+              {
+                "mLevel": 14,
+                "__type": "Breakpoint"
+              }
+            ],
+            "__type": "ByCharLevelBreakpointsCalculationPart"
+          }
+        ],
+        "mDisplayAsPercent": true,
+        "mPrecision": 2,
+        "__type": "GameCalculation"
+      },
+      "BelvethVsJaxQuestRewardAttackSpeed": {
+        "mMultiplier": {
+          "mBuffName": "{a8a3dd7a}",
+          "mCoefficient": 1.0,
+          "__type": "BuffCounterByCoefficientCalculationPart"
+        },
+        "mSimpleTooltipCalculationDisplay": 5,
+        "mExpandedTooltipCalculationDisplay": 5,
+        "StaticTooltipCalculationDisplay": 4,
+        "mModifiedGameCalculation": "BelvethVsJaxQuestRewardAttackSpeedPerStack",
+        "__type": "GameCalculationModified"
+      }
+    },
+    "dataValues": {
+      "BuffDuration": [
+        2.5,
+        2.5,
+        2.5,
+        2.5,
+        2.5,
+        2.5,
+        2.5
+      ],
+      "MaxStacks": [
+        8.0,
+        8.0,
+        8.0,
+        8.0,
+        8.0,
+        8.0,
+        8.0
+      ],
+      "FallOffRate": [
+        0.3499999940395355,
+        0.3499999940395355,
+        0.3499999940395355,
+        0.3499999940395355,
+        0.3499999940395355,
+        0.3499999940395355,
+        0.3499999940395355
+      ],
+      "BelvethVsJaxQuestRewardStacks": [
+        5.0,
+        5.0,
+        5.0,
+        5.0,
+        5.0,
+        5.0,
+        5.0
+      ]
+    }
+  },
+  "JaxW": {
+    "calculations": {
+      "TotalDamage": {
+        "mFormulaParts": [
+          {
+            "mDataValue": "Damage",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          {
+            "mCoefficient": 0.6000000238418579,
+            "__type": "StatByCoefficientCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      }
+    },
+    "dataValues": {
+      "Damage": [
+        15.0,
+        50.0,
+        85.0,
+        120.0,
+        155.0,
+        190.0,
+        225.0
+      ],
+      "StructureMod": [
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5
+      ]
+    }
+  },
+  "JaxR": {
+    "calculations": {
+      "OnHitDamage": {
+        "mFormulaParts": [
+          {
+            "mDataValue": "PassiveBaseDamage",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          {
+            "mCoefficient": 0.6000000238418579,
+            "__type": "StatByCoefficientCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      },
+      "BaseArmor": {
+        "mFormulaParts": [
+          {
+            "mDataValue": "BaseResists",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          {
+            "mStat": 2,
+            "mStatFormula": 2,
+            "mCoefficient": 0.4000000059604645,
+            "__type": "StatByCoefficientCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      },
+      "BonusArmor": {
+        "mFormulaParts": [
+          {
+            "mDataValue": "ResistsPerExtraTarget",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          {
+            "mStat": 2,
+            "mStatFormula": 2,
+            "mCoefficient": 0.10000000149011612,
+            "__type": "StatByCoefficientCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      },
+      "SwingDamageTotal": {
+        "mFormulaParts": [
+          {
+            "mDataValue": "SwingDamageBase",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          {
+            "mStatFormula": 2,
+            "mCoefficient": 1.0,
+            "__type": "StatByCoefficientCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      },
+      "BaseMR": {
+        "mMultiplier": {
+          "mDataValue": "MRMult",
+          "__type": "NamedDataValueCalculationPart"
+        },
+        "mModifiedGameCalculation": "BaseArmor",
+        "__type": "GameCalculationModified"
+      },
+      "BonusMR": {
+        "mMultiplier": {
+          "mDataValue": "MRMult",
+          "__type": "NamedDataValueCalculationPart"
+        },
+        "mModifiedGameCalculation": "BonusArmor",
+        "__type": "GameCalculationModified"
+      }
+    },
+    "dataValues": {
+      "Duration": [
+        8.0,
+        8.0,
+        8.0,
+        8.0,
+        8.0,
+        8.0,
+        8.0
+      ],
+      "PassiveBaseDamage": [
+        20.0,
+        75.0,
+        130.0,
+        185.0,
+        240.0,
+        295.0,
+        350.0
+      ],
+      "PassiveFallOffTime": [
+        2.5,
+        2.5,
+        2.5,
+        2.5,
+        2.5,
+        2.5,
+        2.5
+      ],
+      "BaseResists": [
+        -10.0,
+        25.0,
+        50.0,
+        75.0,
+        75.0,
+        75.0,
+        75.0
+      ],
+      "ResistsPerExtraTarget": [
+        15.0,
+        20.0,
+        25.0,
+        30.0,
+        35.0,
+        40.0,
+        45.0
+      ],
+      "MRMult": [
+        0.6000000238418579,
+        0.6000000238418579,
+        0.6000000238418579,
+        0.6000000238418579,
+        0.6000000238418579,
+        0.6000000238418579,
+        0.6000000238418579
+      ],
+      "SwingDamageBase": [
+        25.0,
+        100.0,
+        175.0,
+        250.0,
+        325.0,
+        400.0,
+        475.0
+      ],
+      "AoESize": [
+        375.0,
+        375.0,
+        375.0,
+        375.0,
+        375.0,
+        375.0,
+        375.0
+      ],
+      "StructureMod": [
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5
+      ]
+    }
+  },
+  "JaxBasicAttack": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "JaxBasicAttackTower": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "JaxBasicAttack2": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "JaxE": {
+    "calculations": {
+      "TotalDamage": {
+        "mFormulaParts": [
+          {
+            "mDataValue": "BaseDamage",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          {
+            "mStatFormula": 2,
+            "mCoefficient": 0.699999988079071,
+            "__type": "StatByCoefficientCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      },
+      "MaxDamage": {
+        "mMultiplier": {
+          "mNumber": 2.0,
+          "__type": "NumberCalculationPart"
+        },
+        "tooltipOnly": true,
+        "mModifiedGameCalculation": "TotalDamage",
+        "__type": "GameCalculationModified"
+      },
+      "MaxPercentHealthDamage": {
+        "mMultiplier": {
+          "mNumber": 2.0,
+          "__type": "NumberCalculationPart"
+        },
+        "mExpandedTooltipCalculationDisplay": 5,
+        "tooltipOnly": true,
+        "mFormulaParts": [
+          {
+            "mDataValue": "PercentHealthDamage",
+            "__type": "NamedDataValueCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      }
+    },
+    "dataValues": {
+      "BaseDamage": [
+        10.0,
+        40.0,
+        70.0,
+        100.0,
+        130.0,
+        160.0,
+        190.0
+      ],
+      "StunDuration": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "PercentIncreasedPerDodge": [
+        0.20000000298023224,
+        0.20000000298023224,
+        0.20000000298023224,
+        0.20000000298023224,
+        0.20000000298023224,
+        0.20000000298023224,
+        0.20000000298023224
+      ],
+      "MaxDodgesForDamageIncrease": [
+        5.0,
+        5.0,
+        5.0,
+        5.0,
+        5.0,
+        5.0,
+        5.0
+      ],
+      "PercentHealthDamage": [
+        3.5,
+        3.5,
+        3.5,
+        3.5,
+        3.5,
+        3.5,
+        3.5
+      ],
+      "DodgeDuration": [
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0
+      ],
+      "AoEDamageReduction": [
+        25.0,
+        25.0,
+        25.0,
+        25.0,
+        25.0,
+        25.0,
+        25.0
+      ]
+    }
+  },
+  "JaxBasicAttackTower2": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "JaxQ": {
+    "calculations": {
+      "TotalDamage": {
+        "mFormulaParts": [
+          {
+            "mDataValue": "Damage",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          {
+            "mStat": 2,
+            "mStatFormula": 2,
+            "mCoefficient": 1.0,
+            "__type": "StatByCoefficientCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      }
+    },
+    "dataValues": {
+      "Damage": [
+        25.0,
+        65.0,
+        105.0,
+        145.0,
+        185.0,
+        225.0,
+        265.0
+      ]
+    }
+  },
+  "JaxCritAttack": {
+    "calculations": {},
+    "dataValues": {}
+  }
+}

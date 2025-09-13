@@ -1,0 +1,624 @@
+{
+  "RenektonExecute": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "RenektonPreExecute": {
+    "calculations": {
+      "BasicTotalDamage": {
+        "mMultiplier": {
+          "mNumber": 2.0,
+          "__type": "NumberCalculationPart"
+        },
+        "mModifiedGameCalculation": "HitDamage",
+        "__type": "GameCalculationModified"
+      },
+      "EmpTotalDamage": {
+        "mMultiplier": {
+          "mNumber": 3.0,
+          "__type": "NumberCalculationPart"
+        },
+        "mModifiedGameCalculation": "HitDamage",
+        "__type": "GameCalculationModified"
+      },
+      "HitDamage": {
+        "mFormulaParts": [
+          {
+            "mDataValue": "BaseDamagePerHit",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          {
+            "mStat": 2,
+            "mDataValue": "TotalADPerHit",
+            "__type": "StatByNamedDataValueCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      }
+    },
+    "dataValues": {
+      "BaseDamagePerHit": [
+        -10.0,
+        5.0,
+        20.0,
+        35.0,
+        50.0,
+        65.0,
+        80.0
+      ],
+      "TotalADPerHit": [
+        0.75,
+        0.75,
+        0.75,
+        0.75,
+        0.75,
+        0.75,
+        0.75
+      ],
+      "StunDuration": [
+        0.75,
+        0.75,
+        0.75,
+        0.75,
+        0.75,
+        0.75,
+        0.75
+      ],
+      "EnragedStunDuration": [
+        1.5,
+        1.5,
+        1.5,
+        1.5,
+        1.5,
+        1.5,
+        1.5
+      ],
+      "BonusFuryVsChamps": [
+        10.0,
+        10.0,
+        10.0,
+        10.0,
+        10.0,
+        10.0,
+        10.0
+      ],
+      "BuffDuration": [
+        6.0,
+        6.0,
+        6.0,
+        6.0,
+        6.0,
+        6.0,
+        6.0
+      ]
+    }
+  },
+  "RenektonExecuteAttack": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "RenektonPredator": {
+    "calculations": {},
+    "dataValues": {
+      "FuryPerAttack": [
+        5.0,
+        5.0,
+        5.0,
+        5.0,
+        5.0,
+        5.0,
+        5.0
+      ],
+      "FuryIncreasePercent": [
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5
+      ],
+      "LowHealthPercentThreshold": [
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5
+      ],
+      "InCombatDuration": [
+        12.0,
+        12.0,
+        12.0,
+        12.0,
+        12.0,
+        12.0,
+        12.0
+      ],
+      "FuryCost": [
+        50.0,
+        50.0,
+        50.0,
+        50.0,
+        50.0,
+        50.0,
+        50.0
+      ]
+    }
+  },
+  "RenektonDice": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "RenektonSliceAndDice": {
+    "calculations": {
+      "BasicDamage": {
+        "mFormulaParts": [
+          {
+            "mDataValue": "BaseDamage",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          {
+            "mStat": 2,
+            "mStatFormula": 2,
+            "mDataValue": "BaseADRatio",
+            "__type": "StatByNamedDataValueCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      },
+      "EmpDamage": {
+        "mFormulaParts": [
+          {
+            "mDataValue": "EnragedBaseDamage",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          {
+            "mStat": 2,
+            "mStatFormula": 2,
+            "mDataValue": "EnragedADRatio",
+            "__type": "StatByNamedDataValueCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      },
+      "DashSpeed": {
+        "mFormulaParts": [
+          {
+            "mDataValue": "BaseDashSpeed",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          {
+            "mStat": 7,
+            "mCoefficient": 1.0,
+            "__type": "StatByCoefficientCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      }
+    },
+    "dataValues": {
+      "BaseDamage": [
+        10.0,
+        40.0,
+        70.0,
+        100.0,
+        130.0,
+        160.0,
+        190.0
+      ],
+      "BaseADRatio": [
+        0.8999999761581421,
+        0.8999999761581421,
+        0.8999999761581421,
+        0.8999999761581421,
+        0.8999999761581421,
+        0.8999999761581421,
+        0.8999999761581421
+      ],
+      "EnragedBaseDamage": [
+        25.0,
+        70.0,
+        115.0,
+        160.0,
+        205.0,
+        250.0,
+        295.0
+      ],
+      "EnragedADRatio": [
+        1.350000023841858,
+        1.350000023841858,
+        1.350000023841858,
+        1.350000023841858,
+        1.350000023841858,
+        1.350000023841858,
+        1.350000023841858
+      ],
+      "EnragedArmorShred": [
+        22.5,
+        25.0,
+        27.5,
+        30.0,
+        32.5,
+        35.0,
+        37.5
+      ],
+      "ShredTimer": [
+        4.0,
+        4.0,
+        4.0,
+        4.0,
+        4.0,
+        4.0,
+        4.0
+      ],
+      "MinionRageGeneration": [
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0
+      ],
+      "ChampionRageGeneration": [
+        10.0,
+        10.0,
+        10.0,
+        10.0,
+        10.0,
+        10.0,
+        10.0
+      ],
+      "FuryMax": [
+        30.0,
+        30.0,
+        30.0,
+        30.0,
+        30.0,
+        30.0,
+        30.0
+      ],
+      "DiceTimer": [
+        4.0,
+        4.0,
+        4.0,
+        4.0,
+        4.0,
+        4.0,
+        4.0
+      ],
+      "BaseDashSpeed": [
+        750.0,
+        750.0,
+        750.0,
+        750.0,
+        750.0,
+        750.0,
+        750.0
+      ]
+    }
+  },
+  "RenektonCleave": {
+    "calculations": {
+      "BasicDamage": {
+        "mFormulaParts": [
+          {
+            "mDataValue": "BaseDamage",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          {
+            "mStat": 2,
+            "mStatFormula": 2,
+            "mDataValue": "BaseADRatio",
+            "__type": "StatByNamedDataValueCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      },
+      "EmpDamage": {
+        "mFormulaParts": [
+          {
+            "mDataValue": "EmpoweredBaseDamage",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          {
+            "mStat": 2,
+            "mStatFormula": 2,
+            "mDataValue": "EmpoweredADRatio",
+            "__type": "StatByNamedDataValueCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      },
+      "NonChampHealing": {
+        "mFormulaParts": [
+          {
+            "mDataValue": "BaseMinionHeal",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          {
+            "mStat": 2,
+            "mStatFormula": 2,
+            "mDataValue": "MinionHealADRatio",
+            "__type": "StatByNamedDataValueCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      },
+      "ChampHealing": {
+        "mFormulaParts": [
+          {
+            "mDataValue": "ChampHeal",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          {
+            "mStat": 2,
+            "mStatFormula": 2,
+            "mDataValue": "ChampionHealADRatio",
+            "__type": "StatByNamedDataValueCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      },
+      "EmpNonChampHealing": {
+        "mMultiplier": {
+          "mDataValue": "EmpoweredHealMultiplier",
+          "__type": "NamedDataValueCalculationPart"
+        },
+        "mModifiedGameCalculation": "NonChampHealing",
+        "__type": "GameCalculationModified"
+      },
+      "EmpChampHealing": {
+        "mMultiplier": {
+          "mDataValue": "EmpoweredHealMultiplier",
+          "__type": "NamedDataValueCalculationPart"
+        },
+        "mModifiedGameCalculation": "ChampHealing",
+        "__type": "GameCalculationModified"
+      }
+    },
+    "dataValues": {
+      "BaseDamage": [
+        30.0,
+        60.0,
+        90.0,
+        120.0,
+        150.0,
+        180.0,
+        210.0
+      ],
+      "BaseADRatio": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "BaseMinionHeal": [
+        1.0,
+        2.0,
+        3.0,
+        4.0,
+        5.0,
+        6.0,
+        7.0
+      ],
+      "MinionHealADRatio": [
+        0.019999999552965164,
+        0.019999999552965164,
+        0.019999999552965164,
+        0.019999999552965164,
+        0.019999999552965164,
+        0.019999999552965164,
+        0.019999999552965164
+      ],
+      "ChampHeal": [
+        4.0,
+        12.0,
+        20.0,
+        28.0,
+        36.0,
+        44.0,
+        52.0
+      ],
+      "ChampionHealADRatio": [
+        0.17000000178813934,
+        0.17000000178813934,
+        0.17000000178813934,
+        0.17000000178813934,
+        0.17000000178813934,
+        0.17000000178813934,
+        0.17000000178813934
+      ],
+      "BasicHealCap": [
+        25.0,
+        50.0,
+        75.0,
+        100.0,
+        125.0,
+        150.0,
+        175.0
+      ],
+      "EmpoweredBaseDamage": [
+        45.0,
+        90.0,
+        135.0,
+        180.0,
+        225.0,
+        270.0,
+        315.0
+      ],
+      "EmpoweredADRatio": [
+        1.399999976158142,
+        1.399999976158142,
+        1.399999976158142,
+        1.399999976158142,
+        1.399999976158142,
+        1.399999976158142,
+        1.399999976158142
+      ],
+      "EmpoweredHealCap": [
+        100.0,
+        200.0,
+        300.0,
+        400.0,
+        500.0,
+        600.0,
+        700.0
+      ],
+      "EmpoweredHealMultiplier": [
+        3.0,
+        3.0,
+        3.0,
+        3.0,
+        3.0,
+        3.0,
+        3.0
+      ],
+      "Range": [
+        400.0,
+        400.0,
+        400.0,
+        400.0,
+        400.0,
+        400.0,
+        400.0
+      ],
+      "UltimateRangeMod": [
+        1.2000000476837158,
+        1.2000000476837158,
+        1.2000000476837158,
+        1.2000000476837158,
+        1.2000000476837158,
+        1.2000000476837158,
+        1.2000000476837158
+      ],
+      "MinionFuryGain": [
+        2.5,
+        2.5,
+        2.5,
+        2.5,
+        2.5,
+        2.5,
+        2.5
+      ],
+      "ChampionFuryGain": [
+        10.0,
+        10.0,
+        10.0,
+        10.0,
+        10.0,
+        10.0,
+        10.0
+      ],
+      "FuryGainCap": [
+        30.0,
+        30.0,
+        30.0,
+        30.0,
+        30.0,
+        30.0,
+        30.0
+      ]
+    }
+  },
+  "RenektonBasicAttack": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "RenektonSuperExecute": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "RenektonCritAttack": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "RenektonBasicAttack2": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "RenektonReignOfTheTyrant": {
+    "calculations": {
+      "TotalDamagePerSecond": {
+        "mFormulaParts": [
+          {
+            "mDataValue": "AuraDamagePerSecond",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          {
+            "mCoefficient": 0.10000000149011612,
+            "__type": "StatByCoefficientCalculationPart"
+          },
+          {
+            "mStat": 2,
+            "mStatFormula": 2,
+            "mCoefficient": 0.10000000149011612,
+            "__type": "StatByCoefficientCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      }
+    },
+    "dataValues": {
+      "HealthGain": [
+        100.0,
+        300.0,
+        500.0,
+        700.0,
+        900.0,
+        1100.0,
+        1300.0
+      ],
+      "AuraDamagePerSecond": [
+        -30.0,
+        60.0,
+        150.0,
+        240.0,
+        330.0,
+        420.0,
+        510.0
+      ],
+      "FuryPerSecond": [
+        5.0,
+        5.0,
+        5.0,
+        5.0,
+        5.0,
+        5.0,
+        5.0
+      ],
+      "FuryOnCast": [
+        20.0,
+        20.0,
+        20.0,
+        20.0,
+        20.0,
+        20.0,
+        20.0
+      ],
+      "BuffDuration": [
+        15.0,
+        15.0,
+        15.0,
+        15.0,
+        15.0,
+        15.0,
+        15.0
+      ],
+      "TickRate": [
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5
+      ]
+    }
+  }
+}

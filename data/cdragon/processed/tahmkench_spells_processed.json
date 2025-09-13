@@ -1,0 +1,575 @@
+{
+  "TahmKenchQ": {
+    "calculations": {
+      "TotalDamage": {
+        "mFormulaParts": [
+          {
+            "mDataValue": "BaseDamage",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          {
+            "mCoefficient": 1.0,
+            "__type": "StatByCoefficientCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      }
+    },
+    "dataValues": {
+      "BaseDamage": [
+        30.0,
+        75.0,
+        120.0,
+        165.0,
+        210.0,
+        255.0,
+        300.0
+      ],
+      "SlowAmount": [
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5
+      ],
+      "SlowDuration": [
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0
+      ],
+      "StunDuration": [
+        1.5,
+        1.5,
+        1.5,
+        1.5,
+        1.5,
+        1.5,
+        1.5
+      ],
+      "PercentHealthHealing": [
+        0.04500000178813934,
+        0.05000000074505806,
+        0.054999999701976776,
+        0.05999999865889549,
+        0.06499999761581421,
+        0.07000000029802322,
+        0.07500000298023224
+      ],
+      "BaseHeal": [
+        5.0,
+        10.0,
+        15.0,
+        20.0,
+        25.0,
+        30.0,
+        35.0
+      ]
+    }
+  },
+  "TahmKenchW": {
+    "calculations": {
+      "TotalDamage": {
+        "mFormulaParts": [
+          {
+            "mDataValue": "BaseDamage",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          {
+            "mCoefficient": 1.5,
+            "__type": "StatByCoefficientCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      }
+    },
+    "dataValues": {
+      "BaseDamage": [
+        65.0,
+        100.0,
+        135.0,
+        170.0,
+        205.0,
+        240.0,
+        275.0
+      ],
+      "KnockUpDuration": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "AoEDelayFromChannelStart": [
+        1.5,
+        1.5,
+        1.5,
+        1.5,
+        1.5,
+        1.5,
+        1.5
+      ],
+      "TotalTime": [
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0
+      ],
+      "ChannelTime": [
+        1.350000023841858,
+        1.350000023841858,
+        1.350000023841858,
+        1.350000023841858,
+        1.350000023841858,
+        1.350000023841858,
+        1.350000023841858
+      ],
+      "EnemyWarningDelayFromChannelStart": [
+        0.75,
+        0.75,
+        0.75,
+        0.75,
+        0.75,
+        0.75,
+        0.75
+      ],
+      "ChampRefund": [
+        0.375,
+        0.4000000059604645,
+        0.42500001192092896,
+        0.44999998807907104,
+        0.4749999940395355,
+        0.5,
+        0.5249999761581421
+      ]
+    }
+  },
+  "TahmKenchPassive": {
+    "calculations": {
+      "TotalDamage": {
+        "mSimpleTooltipCalculationDisplay": 6,
+        "mFormulaParts": [
+          {
+            "mLevel1Value": 6.0,
+            "mInitialBonusPerLevel": 4.0,
+            "mBreakpoints": [
+              {
+                "mLevel": 11,
+                "mAdditionalBonusAtThisLevel": 6.0,
+                "__type": "Breakpoint"
+              }
+            ],
+            "__type": "ByCharLevelBreakpointsCalculationPart"
+          },
+          {
+            "mStat": 12,
+            "mStatFormula": 2,
+            "mCoefficient": 0.03999999910593033,
+            "__type": "StatByCoefficientCalculationPart"
+          },
+          {
+            "mSubpart": {
+              "mPart1": {
+                "mStat": 12,
+                "mStatFormula": 2,
+                "mDataValue": "APRatioPer100BonusHP",
+                "__type": "StatByNamedDataValueCalculationPart"
+              },
+              "mPart2": {
+                "mNumber": 0.009999999776482582,
+                "__type": "NumberCalculationPart"
+              },
+              "__type": "ProductOfSubPartsCalculationPart"
+            },
+            "__type": "StatBySubPartCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      },
+      "{6c966659}": {
+        "mMultiplier": {
+          "mCoefficient": 0.009999999776482582,
+          "__type": "StatByCoefficientCalculationPart"
+        },
+        "mFormulaParts": [
+          {
+            "mStat": 12,
+            "mStatFormula": 2,
+            "mDataValue": "APRatioPer100BonusHP",
+            "__type": "StatByNamedDataValueCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      },
+      "{301fe730}": {
+        "mSimpleTooltipCalculationDisplay": 1,
+        "mExpandedTooltipCalculationDisplay": 1,
+        "StaticTooltipCalculationDisplay": 1,
+        "mFormulaParts": [
+          {
+            "mLevel1Value": 8.0,
+            "mInitialBonusPerLevel": 4.0,
+            "mBreakpoints": [
+              {
+                "mLevel": 11,
+                "mBonusPerLevelAtAndAfter": 2.0,
+                "__type": "Breakpoint"
+              }
+            ],
+            "__type": "ByCharLevelBreakpointsCalculationPart"
+          },
+          {
+            "mStat": 12,
+            "mStatFormula": 2,
+            "mCoefficient": 0.029999999329447746,
+            "__type": "StatByCoefficientCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      }
+    },
+    "dataValues": {
+      "Duration": [
+        5.0,
+        5.0,
+        5.0,
+        5.0,
+        5.0,
+        5.0,
+        5.0
+      ],
+      "MaxStacks": [
+        3.0,
+        3.0,
+        3.0,
+        3.0,
+        3.0,
+        3.0,
+        3.0
+      ],
+      "PerStackDecayTimer": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "APRatioPer100BonusHP": [
+        0.014999999664723873,
+        0.014999999664723873,
+        0.014999999664723873,
+        0.014999999664723873,
+        0.014999999664723873,
+        0.014999999664723873,
+        0.014999999664723873
+      ]
+    }
+  },
+  "TahmKenchR2": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "TahmKenchRTargetAlly": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "TahmKenchR": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "TahmKenchRWrapper": {
+    "calculations": {
+      "PercentHPDamage": {
+        "mFormulaParts": [
+          {
+            "mDataValue": "BasePercentHPDamage",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          {
+            "mCoefficient": 0.000699999975040555,
+            "__type": "StatByCoefficientCalculationPart"
+          }
+        ],
+        "mDisplayAsPercent": true,
+        "__type": "GameCalculation"
+      },
+      "TotalShield": {
+        "mFormulaParts": [
+          {
+            "mDataValue": "BaseShield",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          {
+            "mCoefficient": 1.0,
+            "__type": "StatByCoefficientCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      },
+      "CDCalc": {
+        "mSimpleTooltipCalculationDisplay": 5,
+        "mExpandedTooltipCalculationDisplay": 5,
+        "StaticTooltipCalculationDisplay": 5,
+        "mFormulaParts": [
+          {
+            "mPart1": {
+              "mDataValue": "DataCooldown",
+              "__type": "NamedDataValueCalculationPart"
+            },
+            "mPart2": {
+              "__type": "CooldownMultiplierCalculationPart"
+            },
+            "__type": "ProductOfSubPartsCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      }
+    },
+    "dataValues": {
+      "EnemyDuration": [
+        3.0,
+        3.0,
+        3.0,
+        3.0,
+        3.0,
+        3.0,
+        3.0
+      ],
+      "BaseDamage": [
+        -50.0,
+        100.0,
+        250.0,
+        400.0,
+        550.0,
+        700.0,
+        850.0
+      ],
+      "AllyDuration": [
+        3.0,
+        3.0,
+        3.0,
+        3.0,
+        3.0,
+        3.0,
+        3.0
+      ],
+      "BaseShield": [
+        500.0,
+        650.0,
+        800.0,
+        950.0,
+        1100.0,
+        1250.0,
+        1400.0
+      ],
+      "SlowAmount": [
+        0.4000000059604645,
+        0.4000000059604645,
+        0.4000000059604645,
+        0.4000000059604645,
+        0.4000000059604645,
+        0.4000000059604645,
+        0.4000000059604645
+      ],
+      "BasePercentHPDamage": [
+        0.15000000596046448,
+        0.15000000596046448,
+        0.15000000596046448,
+        0.15000000596046448,
+        0.15000000596046448,
+        0.15000000596046448,
+        0.15000000596046448
+      ],
+      "DataCooldown": [
+        140.0,
+        120.0,
+        100.0,
+        80.0,
+        60.0,
+        40.0,
+        20.0
+      ],
+      "DataManaCost": [
+        100.0,
+        100.0,
+        100.0,
+        100.0,
+        100.0,
+        100.0,
+        100.0
+      ],
+      "SpitOutRangeAlly": [
+        300.0,
+        300.0,
+        300.0,
+        300.0,
+        300.0,
+        300.0,
+        300.0
+      ],
+      "SpitOutRangeEnemy": [
+        300.0,
+        300.0,
+        300.0,
+        300.0,
+        300.0,
+        300.0,
+        300.0
+      ],
+      "CastTime": [
+        0.25,
+        0.25,
+        0.25,
+        0.25,
+        0.25,
+        0.25,
+        0.25
+      ],
+      "MinimumAllyDuration": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "AllySpeedAmount": [
+        0.4000000059604645,
+        0.4000000059604645,
+        0.4000000059604645,
+        0.4000000059604645,
+        0.4000000059604645,
+        0.4000000059604645,
+        0.4000000059604645
+      ],
+      "ShieldDecayPerSecond": [
+        200.0,
+        200.0,
+        200.0,
+        200.0,
+        200.0,
+        200.0,
+        200.0
+      ]
+    }
+  },
+  "TahmKenchE": {
+    "calculations": {
+      "GreyHealthHealingRatio": {
+        "mFormulaParts": [
+          {
+            "mStartValue": 0.44999998807907104,
+            "mEndValue": 1.0,
+            "__type": "ByCharLevelInterpolationCalculationPart"
+          }
+        ],
+        "mDisplayAsPercent": true,
+        "__type": "GameCalculation"
+      },
+      "GreyHealthMaximum": {
+        "mFormulaParts": [
+          {
+            "mStat": 12,
+            "mCoefficient": 3.0,
+            "__type": "StatByCoefficientCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      }
+    },
+    "dataValues": {
+      "ShieldDuration": [
+        2.5,
+        2.5,
+        2.5,
+        2.5,
+        2.5,
+        2.5,
+        2.5
+      ],
+      "OOCTimer": [
+        4.0,
+        4.0,
+        4.0,
+        4.0,
+        4.0,
+        4.0,
+        4.0
+      ],
+      "GreyHealthRatio": [
+        0.07000000029802322,
+        0.15000000596046448,
+        0.23000000417232513,
+        0.3100000023841858,
+        0.38999998569488525,
+        0.4699999988079071,
+        0.550000011920929
+      ],
+      "MaxHPHealRatio": [
+        0.10000000149011612,
+        0.10000000149011612,
+        0.10000000149011612,
+        0.10000000149011612,
+        0.10000000149011612,
+        0.10000000149011612,
+        0.10000000149011612
+      ],
+      "GreyHealthRatioEnhanced": [
+        0.4000000059604645,
+        0.41999998688697815,
+        0.4399999976158142,
+        0.46000000834465027,
+        0.47999998927116394,
+        0.5,
+        0.5199999809265137
+      ],
+      "EnhancedThreshold": [
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0
+      ],
+      "ThresholdRadius": [
+        2400.0,
+        2400.0,
+        2400.0,
+        2400.0,
+        2400.0,
+        2400.0,
+        2400.0
+      ]
+    }
+  },
+  "TahmKenchBasicAttack3": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "TahmKenchBasicAttack2": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "TahmKenchCritAttack": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "TahmKenchBasicAttack": {
+    "calculations": {},
+    "dataValues": {}
+  }
+}

@@ -1,0 +1,714 @@
+{
+  "DrMundoBasicAttack": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "DrMundoP": {
+    "calculations": {
+      "PassiveCooldown": {
+        "mFormulaParts": [
+          {
+            "mLevel1Value": 60.0,
+            "mBreakpoints": [
+              {
+                "mLevel": 3,
+                "mAdditionalBonusAtThisLevel": -9.0,
+                "__type": "Breakpoint"
+              },
+              {
+                "mLevel": 6,
+                "mAdditionalBonusAtThisLevel": -9.0,
+                "__type": "Breakpoint"
+              },
+              {
+                "mLevel": 9,
+                "mAdditionalBonusAtThisLevel": -9.0,
+                "__type": "Breakpoint"
+              },
+              {
+                "mLevel": 12,
+                "mAdditionalBonusAtThisLevel": -9.0,
+                "__type": "Breakpoint"
+              },
+              {
+                "mLevel": 15,
+                "mAdditionalBonusAtThisLevel": -9.0,
+                "__type": "Breakpoint"
+              },
+              {
+                "mLevel": 21,
+                "mAdditionalBonusAtThisLevel": -9.0,
+                "__type": "Breakpoint"
+              }
+            ],
+            "__type": "ByCharLevelBreakpointsCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      },
+      "MaxHealthRegen": {
+        "mFormulaParts": [
+          {
+            "mLevel1Value": 0.004000000189989805,
+            "mInitialBonusPerLevel": 0.0005000000237487257,
+            "mBreakpoints": [
+              {
+                "mLevel": 7,
+                "mBonusPerLevelAtAndAfter": 0.0010000000474974513,
+                "__type": "Breakpoint"
+              },
+              {
+                "mLevel": 13,
+                "mBonusPerLevelAtAndAfter": 0.001500000013038516,
+                "__type": "Breakpoint"
+              },
+              {
+                "mLevel": 16,
+                "mBonusPerLevelAtAndAfter": 0.0020000000949949026,
+                "__type": "Breakpoint"
+              }
+            ],
+            "__type": "ByCharLevelBreakpointsCalculationPart"
+          }
+        ],
+        "mDisplayAsPercent": true,
+        "mPrecision": 2,
+        "__type": "GameCalculation"
+      }
+    },
+    "dataValues": {
+      "CannisterGroundDuration": [
+        7.0,
+        7.0,
+        7.0,
+        7.0,
+        7.0,
+        7.0,
+        7.0
+      ],
+      "CannisterPickupRadius": [
+        115.0,
+        115.0,
+        115.0,
+        115.0,
+        115.0,
+        115.0,
+        115.0
+      ],
+      "CannisterDistanceAway": [
+        525.0,
+        525.0,
+        525.0,
+        525.0,
+        525.0,
+        525.0,
+        525.0
+      ],
+      "CannisterMaxAngle": [
+        70.0,
+        70.0,
+        70.0,
+        70.0,
+        70.0,
+        70.0,
+        70.0
+      ],
+      "VFXLineIndicatorRange": [
+        1000.0,
+        1000.0,
+        1000.0,
+        1000.0,
+        1000.0,
+        1000.0,
+        1000.0
+      ],
+      "PassiveCooldownRefund": [
+        15.0,
+        15.0,
+        15.0,
+        15.0,
+        15.0,
+        15.0,
+        15.0
+      ],
+      "CurrentHealthLoss": [
+        0.03999999910593033,
+        0.03999999910593033,
+        0.03999999910593033,
+        0.03999999910593033,
+        0.03999999910593033,
+        0.03999999910593033,
+        0.03999999910593033
+      ],
+      "MaxHealthGain": [
+        0.03999999910593033,
+        0.03999999910593033,
+        0.03999999910593033,
+        0.03999999910593033,
+        0.03999999910593033,
+        0.03999999910593033,
+        0.03999999910593033
+      ]
+    }
+  },
+  "DrMundoPObjectMissile": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "DrMundoPImmunity": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "DrMundoE": {
+    "calculations": {
+      "AdditionalDamage": {
+        "mFormulaParts": [
+          {
+            "mDataValue": "BaseDamage",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          {
+            "mStat": 12,
+            "mStatFormula": 2,
+            "mDataValue": "BonusHealthRatio",
+            "__type": "StatByNamedDataValueCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      },
+      "MaxDamageAmpTooltip": {
+        "mExpandedTooltipCalculationDisplay": 5,
+        "tooltipOnly": true,
+        "mFormulaParts": [
+          {
+            "mDataValue": "MaxDamageAmp",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          {
+            "mNumber": -1.0,
+            "__type": "NumberCalculationPart"
+          }
+        ],
+        "mDisplayAsPercent": true,
+        "__type": "GameCalculation"
+      },
+      "PassiveBonusAD": {
+        "mFormulaParts": [
+          {
+            "mStat": 12,
+            "mDataValue": "HealthToADRatio",
+            "__type": "StatByNamedDataValueCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      }
+    },
+    "dataValues": {
+      "AttackOverrideDuration": [
+        4.0,
+        4.0,
+        4.0,
+        4.0,
+        4.0,
+        4.0,
+        4.0
+      ],
+      "FlatHealthCost": [
+        -5.0,
+        10.0,
+        25.0,
+        40.0,
+        55.0,
+        70.0,
+        85.0
+      ],
+      "BaseDamage": [
+        -5.0,
+        5.0,
+        15.0,
+        25.0,
+        35.0,
+        45.0,
+        55.0
+      ],
+      "BonusHealthRatio": [
+        0.07000000029802322,
+        0.07000000029802322,
+        0.07000000029802322,
+        0.07000000029802322,
+        0.07000000029802322,
+        0.07000000029802322,
+        0.07000000029802322
+      ],
+      "MaxMissingHealthThreshold": [
+        0.699999988079071,
+        0.699999988079071,
+        0.699999988079071,
+        0.699999988079071,
+        0.699999988079071,
+        0.699999988079071,
+        0.699999988079071
+      ],
+      "MaxDamageAmp": [
+        1.399999976158142,
+        1.399999976158142,
+        1.399999976158142,
+        1.399999976158142,
+        1.399999976158142,
+        1.399999976158142,
+        1.399999976158142
+      ],
+      "MinionMod": [
+        1.399999976158142,
+        1.399999976158142,
+        1.399999976158142,
+        1.399999976158142,
+        1.399999976158142,
+        1.399999976158142,
+        1.399999976158142
+      ],
+      "MissileDistance": [
+        800.0,
+        800.0,
+        800.0,
+        800.0,
+        800.0,
+        800.0,
+        800.0
+      ],
+      "MonsterMod": [
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0
+      ],
+      "HealthToADRatio": [
+        0.017999999225139618,
+        0.019999999552965164,
+        0.02199999988079071,
+        0.024000000208616257,
+        0.026000000536441803,
+        0.02800000086426735,
+        0.029999999329447746
+      ]
+    }
+  },
+  "DrMundoEAttack": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "DrMundoEPassive": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "DrMundoBasicAttack3": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "DrMundoBasicAttack2": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "DrMundoWRecast": {
+    "calculations": {
+      "TotalDamage": {
+        "mFormulaParts": [
+          {
+            "mStat": 2,
+            "mCoefficient": 1.0,
+            "__type": "StatByCoefficientCalculationPart"
+          },
+          {
+            "mDataValue": "BaseDamage",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          {
+            "mStat": 12,
+            "mCoefficient": 0.05000000074505806,
+            "__type": "StatByCoefficientCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      }
+    },
+    "dataValues": {
+      "FlatHeal": [
+        50.0,
+        60.0,
+        70.0,
+        80.0,
+        90.0,
+        100.0,
+        110.0
+      ],
+      "BaseDamage": [
+        10.0,
+        15.0,
+        20.0,
+        25.0,
+        30.0,
+        35.0,
+        40.0
+      ],
+      "CastRange": [
+        200.0,
+        200.0,
+        200.0,
+        200.0,
+        200.0,
+        200.0,
+        200.0
+      ],
+      "Duration": [
+        5.0,
+        5.0,
+        5.0,
+        5.0,
+        5.0,
+        5.0,
+        5.0
+      ],
+      "MaxStacks": [
+        5.0,
+        5.0,
+        5.0,
+        5.0,
+        5.0,
+        5.0,
+        5.0
+      ],
+      "HealOverTime": [
+        0.009999999776482582,
+        0.009999999776482582,
+        0.009999999776482582,
+        0.009999999776482582,
+        0.009999999776482582,
+        0.009999999776482582,
+        0.009999999776482582
+      ],
+      "MinimumCooldown": {
+        "mName": "MinimumCooldown",
+        "__type": "SpellDataValue"
+      },
+      "HealAmpPerStack": [
+        0.20000000298023224,
+        0.20000000298023224,
+        0.20000000298023224,
+        0.20000000298023224,
+        0.20000000298023224,
+        0.20000000298023224,
+        0.20000000298023224
+      ]
+    }
+  },
+  "DrMundoW": {
+    "calculations": {
+      "TotalDamage": {
+        "mFormulaParts": [
+          {
+            "mDataValue": "RecastBaseDamage",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          {
+            "mStat": 12,
+            "mStatFormula": 2,
+            "mCoefficient": 0.07000000029802322,
+            "__type": "StatByCoefficientCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      },
+      "GrayHealthStorageInitial": {
+        "mFormulaParts": [
+          {
+            "mStartValue": 0.800000011920929,
+            "mEndValue": 0.949999988079071,
+            "__type": "ByCharLevelInterpolationCalculationPart"
+          }
+        ],
+        "mDisplayAsPercent": true,
+        "__type": "GameCalculation"
+      }
+    },
+    "dataValues": {
+      "Duration": [
+        3.0,
+        3.0,
+        3.0,
+        3.0,
+        3.0,
+        3.0,
+        3.0
+      ],
+      "CurrentHealthCost": [
+        0.07999999821186066,
+        0.07999999821186066,
+        0.07999999821186066,
+        0.07999999821186066,
+        0.07999999821186066,
+        0.07999999821186066,
+        0.07999999821186066
+      ],
+      "GrayHealthStorage": [
+        0.25,
+        0.25,
+        0.25,
+        0.25,
+        0.25,
+        0.25,
+        0.25
+      ],
+      "GrayHealthInitialDuration": [
+        0.75,
+        0.75,
+        0.75,
+        0.75,
+        0.75,
+        0.75,
+        0.75
+      ],
+      "GrayHealthBigMod": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "GrayHealthSmallMod": [
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5
+      ],
+      "SecondCastRange": [
+        325.0,
+        325.0,
+        325.0,
+        325.0,
+        325.0,
+        325.0,
+        325.0
+      ],
+      "SecondCastLockout": [
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5
+      ],
+      "DamagePerTick": [
+        1.25,
+        5.0,
+        8.75,
+        12.5,
+        16.25,
+        20.0,
+        23.75
+      ],
+      "RecastBaseDamage": [
+        5.0,
+        20.0,
+        35.0,
+        50.0,
+        65.0,
+        80.0,
+        95.0
+      ]
+    }
+  },
+  "DrMundoRHeal": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "DrMundoR": {
+    "calculations": {},
+    "dataValues": {
+      "Duration": [
+        10.0,
+        10.0,
+        10.0,
+        10.0,
+        10.0,
+        10.0,
+        10.0
+      ],
+      "SpeedBoostAmount": [
+        0.05000000074505806,
+        0.15000000596046448,
+        0.25,
+        0.3499999940395355,
+        0.44999998807907104,
+        0.550000011920929,
+        0.6499999761581421
+      ],
+      "MissingHealthHeal": [
+        0.10000000149011612,
+        0.15000000596046448,
+        0.20000000298023224,
+        0.25,
+        0.30000001192092896,
+        0.3499999940395355,
+        0.4000000059604645
+      ],
+      "MaxHealthHoT": [
+        0.0,
+        0.20000000298023224,
+        0.4000000059604645,
+        0.6000000238418579,
+        0.800000011920929,
+        1.0,
+        1.2000000476837158
+      ],
+      "TakedownDurationExtension": [
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0
+      ],
+      "BonusPerNearbyChampion": [
+        0.05000000074505806,
+        0.05000000074505806,
+        0.05000000074505806,
+        0.05000000074505806,
+        0.05000000074505806,
+        0.05000000074505806,
+        0.05000000074505806
+      ]
+    }
+  },
+  "DrMundoQ": {
+    "calculations": {
+      "HealthRestoreOnHitChampionMonster": {
+        "mExpandedTooltipCalculationDisplay": 5,
+        "tooltipOnly": true,
+        "mFormulaParts": [
+          {
+            "mPart1": {
+              "mDataValue": "HealthRefundOnHitChampionMonsterPercent",
+              "__type": "NamedDataValueCalculationPart"
+            },
+            "mPart2": {
+              "mDataValue": "HealthCost",
+              "__type": "NamedDataValueCalculationPart"
+            },
+            "__type": "ProductOfSubPartsCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      },
+      "HealthRestoreOnHitMinion": {
+        "mExpandedTooltipCalculationDisplay": 5,
+        "tooltipOnly": true,
+        "mFormulaParts": [
+          {
+            "mPart1": {
+              "mDataValue": "HealthRefundOnHitMinionPercent",
+              "__type": "NamedDataValueCalculationPart"
+            },
+            "mPart2": {
+              "mDataValue": "HealthCost",
+              "__type": "NamedDataValueCalculationPart"
+            },
+            "__type": "ProductOfSubPartsCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      }
+    },
+    "dataValues": {
+      "SlowDuration": [
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0
+      ],
+      "SlowAmount": [
+        0.4000000059604645,
+        0.4000000059604645,
+        0.4000000059604645,
+        0.4000000059604645,
+        0.4000000059604645,
+        0.4000000059604645,
+        0.4000000059604645
+      ],
+      "CurrentHealthDamage": [
+        0.17499999701976776,
+        0.20000000298023224,
+        0.22499999403953552,
+        0.25,
+        0.2750000059604645,
+        0.30000001192092896,
+        0.32499998807907104
+      ],
+      "MinimumDamage": [
+        30.0,
+        80.0,
+        130.0,
+        180.0,
+        230.0,
+        280.0,
+        330.0
+      ],
+      "MaximumMonsterDamage": [
+        275.0,
+        350.0,
+        425.0,
+        500.0,
+        575.0,
+        650.0,
+        725.0
+      ],
+      "HealthCost": [
+        40.0,
+        50.0,
+        60.0,
+        70.0,
+        80.0,
+        90.0,
+        100.0
+      ],
+      "HealthRefundOnHitChampionMonsterPercent": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "HealthRefundOnHitMinionPercent": [
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5
+      ]
+    }
+  },
+  "DrMundoCritAttack": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "DrMundoBasicAttackTower": {
+    "calculations": {},
+    "dataValues": {}
+  }
+}

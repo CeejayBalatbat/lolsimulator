@@ -1,0 +1,270 @@
+{
+  "TrundlePainHeal": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "TrundlePainHealBig": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "TrundlePain": {
+    "calculations": {
+      "TotalPercentHPDamage": {
+        "mFormulaParts": [
+          {
+            "mDataValue": "PercentHPDamage",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          {
+            "mDataValue": "PercentHPDamageAPRatio",
+            "__type": "StatByNamedDataValueCalculationPart"
+          }
+        ],
+        "mDisplayAsPercent": true,
+        "__type": "GameCalculation"
+      }
+    },
+    "dataValues": {
+      "PercentHPDamage": [
+        0.15000000596046448,
+        0.20000000298023224,
+        0.25,
+        0.30000001192092896,
+        0.3499999940395355,
+        0.4000000059604645,
+        0.45000001788139343
+      ],
+      "ArmorMRShred": [
+        0.4000000059604645,
+        0.4000000059604645,
+        0.4000000059604645,
+        0.4000000059604645,
+        0.4000000059604645,
+        0.4000000059604645,
+        0.4000000059604645
+      ],
+      "DurationOfDrainForTooltip": [
+        4.0,
+        4.0,
+        4.0,
+        4.0,
+        4.0,
+        4.0,
+        4.0
+      ],
+      "NumberOfTicks": [
+        4.0,
+        4.0,
+        4.0,
+        4.0,
+        4.0,
+        4.0,
+        4.0
+      ],
+      "ShredDuration": [
+        8.0,
+        8.0,
+        8.0,
+        8.0,
+        8.0,
+        8.0,
+        8.0
+      ],
+      "PercentOfDamageAndShredUpfront": [
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5
+      ],
+      "ActualDurationOfDrainBuff": [
+        5.0,
+        5.0,
+        5.0,
+        5.0,
+        5.0,
+        5.0,
+        5.0
+      ],
+      "ScaleModelAmount": [
+        0.019999999552965164,
+        0.019999999552965164,
+        0.019999999552965164,
+        0.019999999552965164,
+        0.019999999552965164,
+        0.019999999552965164,
+        0.019999999552965164
+      ],
+      "PercentHPDamageAPRatio": [
+        0.00019999999494757503,
+        0.00019999999494757503,
+        0.00019999999494757503,
+        0.00019999999494757503,
+        0.00019999999494757503,
+        0.00019999999494757503,
+        0.00019999999494757503
+      ]
+    }
+  },
+  "TrundlePainBuff": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "TrundleBasicAttack": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "TrundleDiseaseOverseer": {
+    "calculations": {
+      "RegenPercent": {
+        "mFormulaParts": [
+          {
+            "mStartValue": 0.017999999225139618,
+            "mEndValue": 0.054999999701976776,
+            "__type": "ByCharLevelInterpolationCalculationPart"
+          }
+        ],
+        "mDisplayAsPercent": true,
+        "mPrecision": 1,
+        "__type": "GameCalculation"
+      }
+    },
+    "dataValues": {}
+  },
+  "trundledesecrate": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "TrundleCircle": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "TrundleTrollSmash": {
+    "calculations": {
+      "TotalDamage": {
+        "mFormulaParts": [
+          {
+            "mDataValue": "BonusDamage",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          {
+            "mStat": 2,
+            "mDataValue": "ADScaling",
+            "__type": "StatByNamedDataValueCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      }
+    },
+    "dataValues": {
+      "TooltipQADRatio": [
+        0.05000000074505806,
+        0.15000000596046448,
+        0.25,
+        0.3499999940395355,
+        0.44999998807907104,
+        0.550000011920929,
+        0.6499999761581421
+      ],
+      "BonusRange": [
+        25.0,
+        25.0,
+        25.0,
+        25.0,
+        25.0,
+        25.0,
+        25.0
+      ],
+      "ADScaling": [
+        1.0499999523162842,
+        1.149999976158142,
+        1.25,
+        1.350000023841858,
+        1.4500000476837158,
+        1.5499999523162842,
+        1.649999976158142
+      ],
+      "BonusDamage": [
+        -10.0,
+        10.0,
+        30.0,
+        50.0,
+        70.0,
+        90.0,
+        110.0
+      ],
+      "BonusAD": [
+        15.0,
+        20.0,
+        25.0,
+        30.0,
+        35.0,
+        40.0,
+        45.0
+      ],
+      "SappedAD": [
+        -7.5,
+        -10.0,
+        -12.5,
+        -15.0,
+        -17.5,
+        -20.0,
+        -22.5
+      ],
+      "SapDebuffDuration": [
+        5.0,
+        5.0,
+        5.0,
+        5.0,
+        5.0,
+        5.0,
+        5.0
+      ],
+      "SlowDuration": [
+        0.10000000149011612,
+        0.10000000149011612,
+        0.10000000149011612,
+        0.10000000149011612,
+        0.10000000149011612,
+        0.10000000149011612,
+        0.10000000149011612
+      ],
+      "SlowAmount": [
+        0.75,
+        0.75,
+        0.75,
+        0.75,
+        0.75,
+        0.75,
+        0.75
+      ],
+      "PrepDuration": [
+        7.0,
+        7.0,
+        7.0,
+        7.0,
+        7.0,
+        7.0,
+        7.0
+      ]
+    }
+  },
+  "TrundleQ": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "TrundleCritAttack": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "TrundleBasicAttack3": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "TrundleBasicAttack2": {
+    "calculations": {},
+    "dataValues": {}
+  }
+}

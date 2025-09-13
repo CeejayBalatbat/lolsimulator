@@ -1,0 +1,336 @@
+{
+  "EkkoPassive": {
+    "calculations": {
+      "BonusMS": {
+        "tooltipOnly": true,
+        "mFormulaParts": [
+          {
+            "mLevel1Value": 0.5,
+            "mBreakpoints": [
+              {
+                "mLevel": 6,
+                "mAdditionalBonusAtThisLevel": 0.10000000149011612,
+                "__type": "Breakpoint"
+              },
+              {
+                "mLevel": 11,
+                "mAdditionalBonusAtThisLevel": 0.10000000149011612,
+                "__type": "Breakpoint"
+              },
+              {
+                "mLevel": 16,
+                "mAdditionalBonusAtThisLevel": 0.10000000149011612,
+                "__type": "Breakpoint"
+              }
+            ],
+            "__type": "ByCharLevelBreakpointsCalculationPart"
+          }
+        ],
+        "mDisplayAsPercent": true,
+        "__type": "GameCalculation"
+      },
+      "ThreeHitDamage": {
+        "mMultiplier": {
+          "mDataValue": "ModesMultiplier",
+          "__type": "NamedDataValueCalculationPart"
+        },
+        "tooltipOnly": true,
+        "mFormulaParts": [
+          {
+            "mLevel1Value": 30.0,
+            "mInitialBonusPerLevel": 10.0,
+            "mBreakpoints": [
+              {
+                "mLevel": 7,
+                "mBonusPerLevelAtAndAfter": 5.0,
+                "__type": "Breakpoint"
+              }
+            ],
+            "__type": "ByCharLevelBreakpointsCalculationPart"
+          },
+          {
+            "mCoefficient": 0.8999999761581421,
+            "__type": "StatByCoefficientCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      },
+      "SpeedDuration": {
+        "mFormulaParts": [
+          {
+            "mLevel1Value": 2.0,
+            "mBreakpoints": [
+              {
+                "mLevel": 6,
+                "mAdditionalBonusAtThisLevel": 0.5,
+                "__type": "Breakpoint"
+              },
+              {
+                "mLevel": 11,
+                "mAdditionalBonusAtThisLevel": 0.5,
+                "__type": "Breakpoint"
+              }
+            ],
+            "__type": "ByCharLevelBreakpointsCalculationPart"
+          }
+        ],
+        "mPrecision": 1,
+        "__type": "GameCalculation"
+      }
+    },
+    "dataValues": {
+      "ModesMultiplier": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ]
+    }
+  },
+  "EkkoR": {
+    "calculations": {
+      "TotalDamage": {
+        "mFormulaParts": [
+          {
+            "mDataValue": "Damage",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          {
+            "mCoefficient": 1.75,
+            "__type": "StatByCoefficientCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      },
+      "TotalBaseHeal": {
+        "mFormulaParts": [
+          {
+            "mDataValue": "FlatHeal",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          {
+            "mCoefficient": 0.6000000238418579,
+            "__type": "StatByCoefficientCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      }
+    },
+    "dataValues": {
+      "Damage": [
+        50.0,
+        200.0,
+        350.0,
+        500.0,
+        650.0,
+        800.0,
+        950.0
+      ],
+      "FlatHeal": [
+        50.0,
+        100.0,
+        150.0,
+        200.0,
+        250.0,
+        300.0,
+        350.0
+      ],
+      "AoERadius": [
+        375.0,
+        375.0,
+        375.0,
+        375.0,
+        375.0,
+        375.0,
+        375.0
+      ],
+      "PercentHealAmpPerPercentMissingHealth": [
+        3.0,
+        3.0,
+        3.0,
+        3.0,
+        3.0,
+        3.0,
+        3.0
+      ]
+    }
+  },
+  "EkkoWPassive": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "EkkoWShield": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "EkkoW": {
+    "calculations": {
+      "MissingHealthPercent": {
+        "mMultiplier": {
+          "mNumber": 0.009999999776482582,
+          "__type": "NumberCalculationPart"
+        },
+        "tooltipOnly": true,
+        "mFormulaParts": [
+          {
+            "mDataValue": "BaseOnHitDamage",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          {
+            "mCoefficient": 0.029999999329447746,
+            "__type": "StatByCoefficientCalculationPart"
+          }
+        ],
+        "mDisplayAsPercent": true,
+        "__type": "GameCalculation"
+      },
+      "TotalShield": {
+        "tooltipOnly": true,
+        "mFormulaParts": [
+          {
+            "mEffectIndex": 4,
+            "__type": "EffectValueCalculationPart"
+          },
+          {
+            "mCoefficient": 1.5,
+            "__type": "StatByCoefficientCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      }
+    },
+    "dataValues": {
+      "BaseOnHitDamage": [
+        3.0,
+        3.0,
+        3.0,
+        3.0,
+        3.0,
+        3.0,
+        3.0
+      ]
+    }
+  },
+  "EkkoBasicAttackP3": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "EkkoBasicAttackP2": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "EkkoBasicAttackP1": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "EkkoQReturnDead": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "EkkoQReturn": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "EkkoQ": {
+    "calculations": {
+      "InitialDamage": {
+        "tooltipOnly": true,
+        "mFormulaParts": [
+          {
+            "mDataValue": "OutgoingDamage",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          {
+            "mCoefficient": 0.30000001192092896,
+            "__type": "StatByCoefficientCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      },
+      "RecallDamage": {
+        "tooltipOnly": true,
+        "mFormulaParts": [
+          {
+            "mDataValue": "ReturnDamage",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          {
+            "mCoefficient": 0.6000000238418579,
+            "__type": "StatByCoefficientCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      }
+    },
+    "dataValues": {
+      "OutgoingDamage": [
+        65.0,
+        80.0,
+        95.0,
+        110.0,
+        125.0,
+        140.0,
+        155.0
+      ],
+      "ReturnDamage": [
+        15.0,
+        40.0,
+        65.0,
+        90.0,
+        115.0,
+        140.0,
+        165.0
+      ]
+    }
+  },
+  "EkkoQMis": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "EkkoBasicAttackTower": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "EkkoE": {
+    "calculations": {
+      "TotalDamage": {
+        "tooltipOnly": true,
+        "mFormulaParts": [
+          {
+            "mEffectIndex": 1,
+            "__type": "EffectValueCalculationPart"
+          },
+          {
+            "mCoefficient": 0.4000000059604645,
+            "__type": "StatByCoefficientCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      }
+    },
+    "dataValues": {}
+  },
+  "EkkoBasicAttack": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "EkkoBasicAttack3": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "EkkoBasicAttack2": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "EkkoCritAttack": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "EkkoEAttack": {
+    "calculations": {},
+    "dataValues": {}
+  }
+}

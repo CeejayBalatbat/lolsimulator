@@ -1,0 +1,244 @@
+{
+  "CassiopeiaPassive": {
+    "calculations": {
+      "TotalMovementSpeed": {
+        "mMultiplier": {
+          "mDataValue": "ModesMSMod",
+          "__type": "NamedDataValueCalculationPart"
+        },
+        "mFormulaParts": [
+          {
+            "mLevel1Value": 4.0,
+            "mInitialBonusPerLevel": 4.0,
+            "__type": "ByCharLevelBreakpointsCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      }
+    },
+    "dataValues": {
+      "ModesMSMod": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ]
+    }
+  },
+  "CassiopeiaQ": {
+    "calculations": {
+      "TooltipTotalDamage": {
+        "tooltipOnly": true,
+        "mFormulaParts": [
+          {
+            "mEffectIndex": 1,
+            "__type": "EffectValueCalculationPart"
+          },
+          {
+            "mCoefficient": 0.6499999761581421,
+            "__type": "StatByCoefficientCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      }
+    },
+    "dataValues": {}
+  },
+  "CassiopeiaE": {
+    "calculations": {
+      "HealCalc": {
+        "mFormulaParts": [
+          {
+            "mDataValue": "HealRatio",
+            "__type": "StatByNamedDataValueCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      },
+      "BonusPoisonedDamage": {
+        "mFormulaParts": [
+          {
+            "mDataValue": "BonusDamage",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          {
+            "mDataValue": "BonusAPRatio",
+            "__type": "StatByNamedDataValueCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      },
+      "BasicDamage": {
+        "mFormulaParts": [
+          {
+            "mLevel1Value": 52.0,
+            "mInitialBonusPerLevel": 4.0,
+            "__type": "ByCharLevelBreakpointsCalculationPart"
+          },
+          {
+            "mDataValue": "BasicAPRatio",
+            "__type": "StatByNamedDataValueCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      },
+      "HealCalcMinion": {
+        "mMultiplier": {
+          "mDataValue": "MinionReductionModifier",
+          "__type": "NamedDataValueCalculationPart"
+        },
+        "tooltipOnly": true,
+        "mModifiedGameCalculation": "HealCalc",
+        "__type": "GameCalculationModified"
+      }
+    },
+    "dataValues": {
+      "BasicAPRatio": [
+        0.10000000149011612,
+        0.10000000149011612,
+        0.10000000149011612,
+        0.10000000149011612,
+        0.10000000149011612,
+        0.10000000149011612,
+        0.10000000149011612
+      ],
+      "BonusDamage": [
+        0.0,
+        20.0,
+        43.0,
+        66.0,
+        89.0,
+        112.0,
+        138.0
+      ],
+      "BonusAPRatio": [
+        0.550000011920929,
+        0.550000011920929,
+        0.550000011920929,
+        0.550000011920929,
+        0.550000011920929,
+        0.550000011920929,
+        0.550000011920929
+      ],
+      "HealRatio": [
+        0.08500000089406967,
+        0.10000000149011612,
+        0.11500000208616257,
+        0.12999999523162842,
+        0.14499999582767487,
+        0.1599999964237213,
+        0.17499999701976776
+      ],
+      "MinionReductionModifier": [
+        0.25,
+        0.25,
+        0.25,
+        0.25,
+        0.25,
+        0.25,
+        0.25
+      ]
+    }
+  },
+  "CassiopeiaCritAttack": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "CassiopeiaWMissile": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "CassiopeiaW": {
+    "calculations": {
+      "DamagePerSecond": {
+        "tooltipOnly": true,
+        "mFormulaParts": [
+          {
+            "mEffectIndex": 1,
+            "__type": "EffectValueCalculationPart"
+          },
+          {
+            "mCoefficient": 0.10000000149011612,
+            "__type": "StatByCoefficientCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      }
+    },
+    "dataValues": {}
+  },
+  "CassiopeiaWSlow": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "CassiopeiaRStun": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "CassiopeiaR": {
+    "calculations": {
+      "RDamage": {
+        "mFormulaParts": [
+          {
+            "mDataValue": "RBaseDamage",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          {
+            "mDataValue": "APRatio",
+            "__type": "StatByNamedDataValueCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      }
+    },
+    "dataValues": {
+      "RCCDuration": [
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0
+      ],
+      "RSlowPercent": [
+        40.0,
+        40.0,
+        40.0,
+        40.0,
+        40.0,
+        40.0,
+        40.0
+      ],
+      "RBaseDamage": [
+        50.0,
+        150.0,
+        250.0,
+        350.0,
+        450.0,
+        550.0,
+        650.0
+      ],
+      "APRatio": [
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5
+      ]
+    }
+  },
+  "CassiopeiaBasicAttack2": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "CassiopeiaBasicAttack": {
+    "calculations": {},
+    "dataValues": {}
+  }
+}

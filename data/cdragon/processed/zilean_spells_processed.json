@@ -1,0 +1,282 @@
+{
+  "HeightenedLearning": {
+    "calculations": {
+      "{e359ec0d}": {
+        "mFormulaParts": [
+          {
+            "mLevel1Value": 0.800000011920929,
+            "mBreakpoints": [
+              {
+                "mLevel": 6,
+                "mAdditionalBonusAtThisLevel": 0.6000000238418579,
+                "__type": "Breakpoint"
+              },
+              {
+                "mLevel": 11,
+                "mAdditionalBonusAtThisLevel": 0.6000000238418579,
+                "__type": "Breakpoint"
+              },
+              {
+                "mLevel": 16,
+                "mAdditionalBonusAtThisLevel": 0.4000000059604645,
+                "__type": "Breakpoint"
+              },
+              {
+                "mLevel": 21,
+                "mAdditionalBonusAtThisLevel": 0.6000000238418579,
+                "__type": "Breakpoint"
+              },
+              {
+                "mLevel": 26,
+                "mAdditionalBonusAtThisLevel": 0.6000000238418579,
+                "__type": "Breakpoint"
+              },
+              {
+                "mLevel": 31,
+                "mAdditionalBonusAtThisLevel": 0.6000000238418579,
+                "__type": "Breakpoint"
+              }
+            ],
+            "__type": "ByCharLevelBreakpointsCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      },
+      "TotalXP": {
+        "mSimpleTooltipCalculationDisplay": 5,
+        "mExpandedTooltipCalculationDisplay": 5,
+        "mFormulaParts": [
+          {
+            "mBuffName": "{79ba1a32}",
+            "mCoefficient": 1.0,
+            "__type": "BuffCounterByCoefficientCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      },
+      "XPPer5": {
+        "mMultiplier": {
+          "mNumber": 2.5,
+          "__type": "NumberCalculationPart"
+        },
+        "mModifiedGameCalculation": "{e359ec0d}",
+        "__type": "GameCalculationModified"
+      }
+    },
+    "dataValues": {
+      "PassiveCooldown": [
+        120.0,
+        120.0,
+        120.0,
+        120.0,
+        120.0,
+        120.0,
+        120.0
+      ],
+      "GamemodeInteger": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ]
+    }
+  },
+  "ZileanPRecourseVFX": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "ZileanPassiveChannel": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "ZileanPLevel": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "ZileanQAttachAudio": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "ZileanQAllyBomb": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "ZileanQAttachMissileMinion": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "ZileanQAttachMissileShort": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "ZileanQMissileImplementor": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "ZileanQLandingAudio": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "ZileanQ": {
+    "calculations": {
+      "TotalDamage": {
+        "mSimpleTooltipCalculationDisplay": 6,
+        "mFormulaParts": [
+          {
+            "mDataValue": "BombBaseDamage",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          {
+            "mDataValue": "APRatio",
+            "__type": "StatByNamedDataValueCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      }
+    },
+    "dataValues": {
+      "BombBaseDamage": [
+        30.0,
+        75.0,
+        115.0,
+        165.0,
+        230.0,
+        300.0,
+        380.0
+      ],
+      "APRatio": [
+        0.8999999761581421,
+        0.8999999761581421,
+        0.8999999761581421,
+        0.8999999761581421,
+        0.8999999761581421,
+        0.8999999761581421,
+        0.8999999761581421
+      ],
+      "StunDuration": [
+        1.0,
+        1.100000023841858,
+        1.2000000476837158,
+        1.2999999523162842,
+        1.399999976158142,
+        1.5,
+        1.600000023841858
+      ]
+    }
+  },
+  "ZileanQEnemyBomb": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "ZileanQMissile": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "ZileanQAttachMissileTall": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "ZileanQAttachMissile": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "ZileanQGround": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "ZileanQBuffer": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "ChronoShift": {
+    "calculations": {
+      "RTotalHeal": {
+        "mSimpleTooltipCalculationDisplay": 6,
+        "mFormulaParts": [
+          {
+            "mDataValue": "RBaseHeal",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          {
+            "mDataValue": "APRatio",
+            "__type": "StatByNamedDataValueCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      }
+    },
+    "dataValues": {
+      "RBaseHeal": [
+        350.0,
+        600.0,
+        850.0,
+        1100.0,
+        1350.0,
+        1600.0,
+        1850.0
+      ],
+      "RDuration": [
+        5.0,
+        5.0,
+        5.0,
+        5.0,
+        5.0,
+        5.0,
+        5.0
+      ],
+      "APRatio": [
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0
+      ],
+      "ReviveStateDuration": [
+        3.0,
+        3.0,
+        3.0,
+        3.0,
+        3.0,
+        3.0,
+        3.0
+      ]
+    }
+  },
+  "ZileanBasicAttack": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "ZileanCritAttack": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "ChronoRevive": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "ZileanStunAnim": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "Rewind": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "ZileanW": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "ZileanBasicAttack2": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "TimeWarp": {
+    "calculations": {},
+    "dataValues": {}
+  }
+}

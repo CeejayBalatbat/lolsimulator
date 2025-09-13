@@ -1,0 +1,467 @@
+{
+  "ZedMarker": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "ZedPassive": {
+    "calculations": {
+      "{6a1a62e9}": {
+        "mFormulaParts": [
+          {
+            "mLevel1Value": 0.05999999865889549,
+            "mBreakpoints": [
+              {
+                "mLevel": 7,
+                "mAdditionalBonusAtThisLevel": 0.019999999552965164,
+                "__type": "Breakpoint"
+              },
+              {
+                "mLevel": 17,
+                "mAdditionalBonusAtThisLevel": 0.019999999552965164,
+                "__type": "Breakpoint"
+              },
+              {
+                "mLevel": 25,
+                "mAdditionalBonusAtThisLevel": 0.019999999552965164,
+                "__type": "Breakpoint"
+              }
+            ],
+            "__type": "ByCharLevelBreakpointsCalculationPart"
+          }
+        ],
+        "mDisplayAsPercent": true,
+        "__type": "GameCalculation"
+      },
+      "{ad3d785f}": {
+        "mFormulaParts": [
+          {
+            "mSpellCalculationKey": "{6a1a62e9}",
+            "__type": "{f3cbe7b2}"
+          },
+          {
+            "mDataValue": "ShenZedQuestBonus",
+            "__type": "NamedDataValueCalculationPart"
+          }
+        ],
+        "mDisplayAsPercent": true,
+        "__type": "GameCalculation"
+      },
+      "MaxHPDamage": {
+        "mDefaultGameCalculation": "{6a1a62e9}",
+        "mConditionalGameCalculation": "{ad3d785f}",
+        "mConditionalCalculationRequirements": {
+          "mBuffName": "{ecbd8e2e}",
+          "__type": "HasBuffCastRequirement"
+        },
+        "__type": "GameCalculationConditional"
+      }
+    },
+    "dataValues": {
+      "CurrentHealthThreshold": [
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5
+      ],
+      "PerUnitCD": [
+        10.0,
+        10.0,
+        10.0,
+        10.0,
+        10.0,
+        10.0,
+        10.0
+      ],
+      "MonsterDamageCap": [
+        300.0,
+        300.0,
+        300.0,
+        300.0,
+        300.0,
+        300.0,
+        300.0
+      ],
+      "MonsterDamageMod": [
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0
+      ],
+      "ShenZedQuestKillCount": [
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0
+      ],
+      "ShenZedQuestBonus": [
+        0.019999999552965164,
+        0.019999999552965164,
+        0.019999999552965164,
+        0.019999999552965164,
+        0.019999999552965164,
+        0.019999999552965164,
+        0.019999999552965164
+      ]
+    }
+  },
+  "ZedW": {
+    "calculations": {},
+    "dataValues": {
+      "RecastRange": [
+        2000.0,
+        2000.0,
+        2000.0,
+        2000.0,
+        2000.0,
+        2000.0,
+        2000.0
+      ],
+      "MimickRange": [
+        25000.0,
+        25000.0,
+        25000.0,
+        25000.0,
+        25000.0,
+        25000.0,
+        25000.0
+      ]
+    }
+  },
+  "ZedWMissile": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "ZedWHandler": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "ZedShadowDashMissile": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "ZedShadowDash": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "ZedW2": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "ZedUltMissile": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "ZedR": {
+    "calculations": {
+      "{43a019eb}": {
+        "mFormulaParts": [
+          {
+            "mDataValue": "RShadowDurationDisplayed",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          {
+            "mNumber": 0.5,
+            "__type": "NumberCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      },
+      "RCalculatedDamage": {
+        "mFormulaParts": [
+          {
+            "mStat": 2,
+            "mCoefficient": 1.0,
+            "__type": "StatByCoefficientCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      }
+    },
+    "dataValues": {
+      "RDamageAmp": [
+        0.10000000149011612,
+        0.25,
+        0.4000000059604645,
+        0.550000011920929,
+        0.699999988079071,
+        0.8500000238418579,
+        1.0
+      ],
+      "RReactivateCD": [
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5
+      ],
+      "RShadowDurationDisplayed": [
+        7.5,
+        7.5,
+        7.5,
+        7.5,
+        7.5,
+        7.5,
+        7.5
+      ],
+      "RDeathMarkDuration": [
+        3.0,
+        3.0,
+        3.0,
+        3.0,
+        3.0,
+        3.0,
+        3.0
+      ],
+      "RCanSwapBuffDuration": [
+        7.5,
+        7.5,
+        7.5,
+        7.5,
+        7.5,
+        7.5,
+        7.5
+      ],
+      "RGhostedDuration": [
+        4.0,
+        4.0,
+        4.0,
+        4.0,
+        4.0,
+        4.0,
+        4.0
+      ],
+      "RBaseDamage": {
+        "mName": "RBaseDamage",
+        "__type": "SpellDataValue"
+      },
+      "RVisionDuration": [
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5
+      ]
+    }
+  },
+  "ZedUlt": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "ZedR2": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "ZedRDashEffectShadow": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "ZedUltDashCloneMaker": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "ZedRHandler": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "ZedUltDash": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "ZedRMissile": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "ZedShadowBasicAttack": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "ZedPBAOE": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "ZedPBAOEDummy": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "ZedE": {
+    "calculations": {
+      "TotalDamage": {
+        "mFormulaParts": [
+          {
+            "mDataValue": "BaseDamage",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          {
+            "mStat": 2,
+            "mStatFormula": 2,
+            "mDataValue": "ADRatio",
+            "__type": "StatByNamedDataValueCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      }
+    },
+    "dataValues": {
+      "BaseDamage": [
+        45.0,
+        70.0,
+        95.0,
+        120.0,
+        145.0,
+        170.0,
+        195.0
+      ],
+      "ADRatio": [
+        0.800000011920929,
+        0.800000011920929,
+        0.800000011920929,
+        0.800000011920929,
+        0.800000011920929,
+        0.800000011920929,
+        0.800000011920929
+      ],
+      "MoveSpeedMod": [
+        -0.15000000596046448,
+        -0.20000000298023224,
+        -0.25,
+        -0.30000001192092896,
+        -0.3499999940395355,
+        -0.4000000059604645,
+        -0.44999998807907104
+      ],
+      "MoveSpeedModBonus": [
+        -0.22499999403953552,
+        -0.30000001192092896,
+        -0.375,
+        -0.44999998807907104,
+        -0.5249999761581421,
+        -0.6000000238418579,
+        -0.675000011920929
+      ],
+      "SlowDuration": [
+        1.5,
+        1.5,
+        1.5,
+        1.5,
+        1.5,
+        1.5,
+        1.5
+      ],
+      "ShadowHitCDR": [
+        3.0,
+        3.0,
+        3.0,
+        3.0,
+        3.0,
+        3.0,
+        3.0
+      ],
+      "ZedRadius": [
+        315.0,
+        315.0,
+        315.0,
+        315.0,
+        315.0,
+        315.0,
+        315.0
+      ],
+      "ShadowRadius": [
+        290.0,
+        290.0,
+        290.0,
+        290.0,
+        290.0,
+        290.0,
+        290.0
+      ]
+    }
+  },
+  "ZedQ": {
+    "calculations": {
+      "TotalDamage": {
+        "mFormulaParts": [
+          {
+            "mDataValue": "BaseDamage",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          {
+            "mStat": 2,
+            "mStatFormula": 2,
+            "mDataValue": "BonusADRatio",
+            "__type": "StatByNamedDataValueCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      },
+      "PassThroughDamage": {
+        "mMultiplier": {
+          "mNumber": 0.6000000238418579,
+          "__type": "NumberCalculationPart"
+        },
+        "mModifiedGameCalculation": "TotalDamage",
+        "__type": "GameCalculationModified"
+      }
+    },
+    "dataValues": {
+      "BaseDamage": [
+        40.0,
+        80.0,
+        120.0,
+        160.0,
+        200.0,
+        240.0,
+        280.0
+      ],
+      "BonusADRatio": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ]
+    }
+  },
+  "ZedShurikenMisOne": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "ZedShurikenMisTwo": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "ZedShurikenMisThree": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "ZedQMissile": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "ZedCritAttack": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "ZedBasicAttack": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "ZedBasicAttack2": {
+    "calculations": {},
+    "dataValues": {}
+  }
+}

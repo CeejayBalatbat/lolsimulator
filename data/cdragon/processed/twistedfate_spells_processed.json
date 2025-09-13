@@ -1,0 +1,513 @@
+{
+  "PickACard": {
+    "calculations": {
+      "BlueDamage": {
+        "mSimpleTooltipCalculationDisplay": 6,
+        "mExpandedTooltipCalculationDisplay": 0,
+        "StaticTooltipCalculationDisplay": 6,
+        "mFormulaParts": [
+          {
+            "mDataValue": "BlueBase",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          {
+            "mStat": 2,
+            "mCoefficient": 1.0,
+            "__type": "StatByCoefficientCalculationPart"
+          },
+          {
+            "mCoefficient": 1.0,
+            "__type": "StatByCoefficientCalculationPart"
+          },
+          {
+            "mStat": 8,
+            "mSubpart": {
+              "mPart1": {
+                "mDataValue": "BlueCritMultiplier",
+                "__type": "NamedDataValueCalculationPart"
+              },
+              "mPart2": {
+                "mSubparts": [
+                  {
+                    "mDataValue": "BlueBase",
+                    "__type": "NamedDataValueCalculationPart"
+                  },
+                  {
+                    "mStat": 2,
+                    "mCoefficient": 1.0,
+                    "__type": "StatByCoefficientCalculationPart"
+                  },
+                  {
+                    "mCoefficient": 1.0,
+                    "__type": "StatByCoefficientCalculationPart"
+                  }
+                ],
+                "__type": "SumOfSubPartsCalculationPart"
+              },
+              "__type": "ProductOfSubPartsCalculationPart"
+            },
+            "__type": "StatBySubPartCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      },
+      "RedDamage": {
+        "mSimpleTooltipCalculationDisplay": 6,
+        "mExpandedTooltipCalculationDisplay": 0,
+        "StaticTooltipCalculationDisplay": 6,
+        "mFormulaParts": [
+          {
+            "mDataValue": "RedBase",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          {
+            "mStat": 2,
+            "mCoefficient": 1.0,
+            "__type": "StatByCoefficientCalculationPart"
+          },
+          {
+            "mCoefficient": 0.699999988079071,
+            "__type": "StatByCoefficientCalculationPart"
+          },
+          {
+            "mStat": 8,
+            "mSubpart": {
+              "mPart1": {
+                "mDataValue": "RedCritMultiplier",
+                "__type": "NamedDataValueCalculationPart"
+              },
+              "mPart2": {
+                "mSubparts": [
+                  {
+                    "mDataValue": "RedBase",
+                    "__type": "NamedDataValueCalculationPart"
+                  },
+                  {
+                    "mStat": 2,
+                    "mCoefficient": 1.0,
+                    "__type": "StatByCoefficientCalculationPart"
+                  },
+                  {
+                    "mCoefficient": 0.699999988079071,
+                    "__type": "StatByCoefficientCalculationPart"
+                  }
+                ],
+                "__type": "SumOfSubPartsCalculationPart"
+              },
+              "__type": "ProductOfSubPartsCalculationPart"
+            },
+            "__type": "StatBySubPartCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      },
+      "GoldDamage": {
+        "mSimpleTooltipCalculationDisplay": 6,
+        "mExpandedTooltipCalculationDisplay": 0,
+        "StaticTooltipCalculationDisplay": 6,
+        "mFormulaParts": [
+          {
+            "mDataValue": "GoldBase",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          {
+            "mStat": 2,
+            "mCoefficient": 1.0,
+            "__type": "StatByCoefficientCalculationPart"
+          },
+          {
+            "mCoefficient": 0.5,
+            "__type": "StatByCoefficientCalculationPart"
+          },
+          {
+            "mStat": 8,
+            "mSubpart": {
+              "mPart1": {
+                "mDataValue": "GoldCritMultiplier",
+                "__type": "NamedDataValueCalculationPart"
+              },
+              "mPart2": {
+                "mSubparts": [
+                  {
+                    "mDataValue": "GoldBase",
+                    "__type": "NamedDataValueCalculationPart"
+                  },
+                  {
+                    "mStat": 2,
+                    "mCoefficient": 1.0,
+                    "__type": "StatByCoefficientCalculationPart"
+                  },
+                  {
+                    "mCoefficient": 0.5,
+                    "__type": "StatByCoefficientCalculationPart"
+                  }
+                ],
+                "__type": "SumOfSubPartsCalculationPart"
+              },
+              "__type": "ProductOfSubPartsCalculationPart"
+            },
+            "__type": "StatBySubPartCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      },
+      "ttBlueDamage": {
+        "mMultiplier": {
+          "mNumber": 1.0,
+          "__type": "NumberCalculationPart"
+        },
+        "mSimpleTooltipCalculationDisplay": 5,
+        "mExpandedTooltipCalculationDisplay": 5,
+        "StaticTooltipCalculationDisplay": 5,
+        "mModifiedGameCalculation": "BlueDamage",
+        "__type": "GameCalculationModified"
+      },
+      "ttRedDamage": {
+        "mMultiplier": {
+          "mNumber": 1.0,
+          "__type": "NumberCalculationPart"
+        },
+        "mSimpleTooltipCalculationDisplay": 5,
+        "mExpandedTooltipCalculationDisplay": 5,
+        "StaticTooltipCalculationDisplay": 5,
+        "mModifiedGameCalculation": "RedDamage",
+        "__type": "GameCalculationModified"
+      },
+      "ttGoldDamage": {
+        "mMultiplier": {
+          "mNumber": 1.0,
+          "__type": "NumberCalculationPart"
+        },
+        "mSimpleTooltipCalculationDisplay": 5,
+        "mExpandedTooltipCalculationDisplay": 5,
+        "StaticTooltipCalculationDisplay": 5,
+        "mModifiedGameCalculation": "GoldDamage",
+        "__type": "GameCalculationModified"
+      }
+    },
+    "dataValues": {
+      "BlueBase": [
+        20.0,
+        40.0,
+        60.0,
+        80.0,
+        100.0,
+        120.0,
+        140.0
+      ],
+      "RedBase": [
+        15.0,
+        30.0,
+        45.0,
+        60.0,
+        75.0,
+        90.0,
+        105.0
+      ],
+      "GoldBase": [
+        7.5,
+        15.0,
+        22.5,
+        30.0,
+        37.5,
+        45.0,
+        52.5
+      ],
+      "BlueCritMultiplier": [
+        0.574999988079071,
+        0.574999988079071,
+        0.574999988079071,
+        0.574999988079071,
+        0.574999988079071,
+        0.574999988079071,
+        0.574999988079071
+      ],
+      "RedCritMultiplier": [
+        0.3499999940395355,
+        0.3499999940395355,
+        0.3499999940395355,
+        0.3499999940395355,
+        0.3499999940395355,
+        0.3499999940395355,
+        0.3499999940395355
+      ],
+      "GoldCritMultiplier": [
+        0.25,
+        0.25,
+        0.25,
+        0.25,
+        0.25,
+        0.25,
+        0.25
+      ],
+      "ttBlueAP": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "ttRedAP": [
+        0.699999988079071,
+        0.699999988079071,
+        0.699999988079071,
+        0.699999988079071,
+        0.699999988079071,
+        0.699999988079071,
+        0.699999988079071
+      ],
+      "ttGoldAP": [
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5
+      ],
+      "ttAD": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ]
+    }
+  },
+  "BlueCardLock": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "RedCardLock": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "GoldCardLock": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "BlueCardAttack": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "WildCards": {
+    "calculations": {
+      "TotalDamage": {
+        "mFormulaParts": [
+          {
+            "mDataValue": "BaseDamage",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          {
+            "mStat": 2,
+            "mStatFormula": 2,
+            "mDataValue": "BonusADRatio",
+            "__type": "StatByNamedDataValueCalculationPart"
+          },
+          {
+            "mDataValue": "APRatio",
+            "__type": "StatByNamedDataValueCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      }
+    },
+    "dataValues": {
+      "BaseDamage": [
+        15.0,
+        60.0,
+        105.0,
+        150.0,
+        195.0,
+        240.0,
+        285.0
+      ],
+      "APRatio": [
+        0.8500000238418579,
+        0.8500000238418579,
+        0.8500000238418579,
+        0.8500000238418579,
+        0.8500000238418579,
+        0.8500000238418579,
+        0.8500000238418579
+      ],
+      "BonusADRatio": [
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5
+      ]
+    }
+  },
+  "TwistedFateCritAttack": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "Gate": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "Destiny": {
+    "calculations": {},
+    "dataValues": {
+      "RecastDuration": [
+        6.0,
+        6.0,
+        8.0,
+        10.0,
+        12.0,
+        14.0,
+        16.0
+      ]
+    }
+  },
+  "RedCardPreAttack": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "TwistedFateBasicAttack4": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "TwistedFateBasicAttack3": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "TwistedFateBasicAttack2": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "BlueCardPreAttack": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "RedCardAttack": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "CardmasterStack": {
+    "calculations": {
+      "BonusDamage": {
+        "mFormulaParts": [
+          {
+            "mDataValue": "Damage",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          {
+            "mStat": 2,
+            "mStatFormula": 2,
+            "mDataValue": "BonusADRatio",
+            "__type": "StatByNamedDataValueCalculationPart"
+          },
+          {
+            "mDataValue": "APRatio",
+            "__type": "StatByNamedDataValueCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      }
+    },
+    "dataValues": {
+      "AttackSpeedBonus": [
+        5.0,
+        15.0,
+        25.0,
+        35.0,
+        45.0,
+        55.0,
+        65.0
+      ],
+      "Damage": [
+        40.0,
+        65.0,
+        90.0,
+        115.0,
+        140.0,
+        165.0,
+        190.0
+      ],
+      "APRatio": [
+        0.4000000059604645,
+        0.4000000059604645,
+        0.4000000059604645,
+        0.4000000059604645,
+        0.4000000059604645,
+        0.4000000059604645,
+        0.4000000059604645
+      ],
+      "BonusADRatio": [
+        0.20000000298023224,
+        0.20000000298023224,
+        0.20000000298023224,
+        0.20000000298023224,
+        0.20000000298023224,
+        0.20000000298023224,
+        0.20000000298023224
+      ],
+      "TowerEffectiveness": [
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5
+      ]
+    }
+  },
+  "SecondSight": {
+    "calculations": {},
+    "dataValues": {
+      "GoldRatioMinCherry": [
+        0.019999999552965164,
+        0.019999999552965164,
+        0.019999999552965164,
+        0.019999999552965164,
+        0.019999999552965164,
+        0.019999999552965164,
+        0.019999999552965164
+      ],
+      "GoldRatioMaxCherry": [
+        0.07999999821186066,
+        0.07999999821186066,
+        0.07999999821186066,
+        0.07999999821186066,
+        0.07999999821186066,
+        0.07999999821186066,
+        0.07999999821186066
+      ],
+      "GameModeInteger": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ]
+    }
+  },
+  "GoldCardAttack": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "SealFateMissile": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "TwistedFateBasicAttack": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "GoldCardPreAttack": {
+    "calculations": {},
+    "dataValues": {}
+  }
+}

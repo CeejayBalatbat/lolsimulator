@@ -1,0 +1,875 @@
+{
+  "NunuStructureAttack": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "NunuW": {
+    "calculations": {
+      "MaximumSnowballDamage": {
+        "mFormulaParts": [
+          {
+            "mDataValue": "BaseDamage",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          {
+            "mDataValue": "MaximumAPRatio",
+            "__type": "StatByNamedDataValueCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      },
+      "NoImpactSnowballDamage": {
+        "mMultiplier": {
+          "mDataValue": "NoImpactDamageScalar",
+          "__type": "NamedDataValueCalculationPart"
+        },
+        "mModifiedGameCalculation": "MaximumSnowballDamage",
+        "__type": "GameCalculationModified"
+      },
+      "MaximumStunDuration": {
+        "mSimpleTooltipCalculationDisplay": 5,
+        "mFormulaParts": [
+          {
+            "mDataValue": "BaseKnockupDuration",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          {
+            "mDataValue": "AdditionalStunDurationOverTime",
+            "__type": "NamedDataValueCalculationPart"
+          }
+        ],
+        "mPrecision": 2,
+        "__type": "GameCalculation"
+      }
+    },
+    "dataValues": {
+      "MonsterCollisionRadiusScalar": [
+        1.25,
+        1.25,
+        1.25,
+        1.25,
+        1.25,
+        1.25,
+        1.25
+      ],
+      "MonsterImpactRadiusScalar": [
+        1.75,
+        1.75,
+        1.75,
+        1.75,
+        1.75,
+        1.75,
+        1.75
+      ],
+      "InitialCastRadiusScalar": [
+        2.5,
+        2.5,
+        2.5,
+        2.5,
+        2.5,
+        2.5,
+        2.5
+      ],
+      "WalkDistanceAfterThrow": [
+        0.0,
+        350.0,
+        350.0,
+        350.0,
+        350.0,
+        350.0,
+        350.0
+      ],
+      "TurnRateMultiplier1": [
+        1.75,
+        1.75,
+        1.75,
+        1.75,
+        1.75,
+        1.75,
+        1.75
+      ],
+      "TurnRateMultiplier2": [
+        2.5,
+        2.5,
+        2.5,
+        2.5,
+        2.5,
+        2.5,
+        2.5
+      ],
+      "TurnRateMultiplier3": [
+        3.25,
+        3.25,
+        3.25,
+        3.25,
+        3.25,
+        3.25,
+        3.25
+      ],
+      "TurnRateMultTime1": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "TurnRateMultTime2": [
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0
+      ],
+      "TurnRateMultTime3": [
+        3.0,
+        3.0,
+        3.0,
+        3.0,
+        3.0,
+        3.0,
+        3.0
+      ],
+      "BaseDamage": [
+        135.0,
+        180.0,
+        225.0,
+        270.0,
+        315.0,
+        360.0,
+        405.0
+      ],
+      "MaxDamageTime": [
+        5.0,
+        5.0,
+        5.0,
+        5.0,
+        5.0,
+        5.0,
+        5.0
+      ],
+      "MaxDamageScalar": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "MaxDuration": [
+        10.0,
+        10.0,
+        10.0,
+        10.0,
+        10.0,
+        10.0,
+        10.0
+      ],
+      "BaseKnockupDuration": [
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5
+      ],
+      "AdditionalKnockupOverTime": [
+        0.25,
+        0.25,
+        0.25,
+        0.25,
+        0.25,
+        0.25,
+        0.25
+      ],
+      "AdditionalStunDurationOverTime": [
+        0.75,
+        0.75,
+        0.75,
+        0.75,
+        0.75,
+        0.75,
+        0.75
+      ],
+      "NoImpactDamageScalar": [
+        0.3330000042915344,
+        0.3330000042915344,
+        0.3330000042915344,
+        0.3330000042915344,
+        0.3330000042915344,
+        0.3330000042915344,
+        0.3330000042915344
+      ],
+      "MaximumSnowballRollDistance": [
+        1750.0,
+        1750.0,
+        1750.0,
+        1750.0,
+        1750.0,
+        1750.0,
+        1750.0
+      ],
+      "MinimumSnowballRollDistance": [
+        750.0,
+        750.0,
+        750.0,
+        750.0,
+        750.0,
+        750.0,
+        750.0
+      ],
+      "SlowAmount": [
+        -0.5,
+        -0.5,
+        -0.5,
+        -0.5,
+        -0.5,
+        -0.5,
+        -0.5
+      ],
+      "SlowDuration": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "MinimumSnowballRadius": [
+        75.0,
+        75.0,
+        75.0,
+        75.0,
+        75.0,
+        75.0,
+        75.0
+      ],
+      "MaximumSnowballRadius": [
+        200.0,
+        200.0,
+        200.0,
+        200.0,
+        200.0,
+        200.0,
+        200.0
+      ],
+      "AdditionalStartingSpeed": [
+        75.0,
+        75.0,
+        75.0,
+        75.0,
+        75.0,
+        75.0,
+        75.0
+      ],
+      "AdditionalSpeedPerLevel": [
+        10.0,
+        10.0,
+        10.0,
+        10.0,
+        10.0,
+        10.0,
+        10.0
+      ],
+      "AdditionalSpeedCapPerLevel": [
+        10.0,
+        10.0,
+        10.0,
+        10.0,
+        10.0,
+        10.0,
+        10.0
+      ],
+      "MinimumSnowballMissileSpeed": [
+        350.0,
+        350.0,
+        350.0,
+        350.0,
+        350.0,
+        350.0,
+        350.0
+      ],
+      "LargeSnowballTime": [
+        5.0,
+        5.0,
+        5.0,
+        5.0,
+        5.0,
+        5.0,
+        5.0
+      ],
+      "MediumSnowballTime": [
+        2.5,
+        2.5,
+        2.5,
+        2.5,
+        2.5,
+        2.5,
+        2.5
+      ],
+      "LargeSnowballMissileWidth": [
+        200.0,
+        200.0,
+        200.0,
+        200.0,
+        200.0,
+        200.0,
+        200.0
+      ],
+      "MediumSnowballMissileWidth": [
+        137.5,
+        137.5,
+        137.5,
+        137.5,
+        137.5,
+        137.5,
+        137.5
+      ],
+      "SmallSnowballMissileWidth": [
+        75.0,
+        75.0,
+        75.0,
+        75.0,
+        75.0,
+        75.0,
+        75.0
+      ],
+      "MaximumAPRatio": [
+        1.5,
+        1.5,
+        1.5,
+        1.5,
+        1.5,
+        1.5,
+        1.5
+      ]
+    }
+  },
+  "NunuWCircleMissile2": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "NunuWSnowballMissile": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "NunuW_Recast": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "BloodBoil": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "NunuPBloodBoilMissile": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "NunuPassive": {
+    "calculations": {
+      "CleaveDamage": {
+        "mFormulaParts": [
+          {
+            "mStat": 2,
+            "mDataValue": "ADRatioForAOE",
+            "__type": "StatByNamedDataValueCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      }
+    },
+    "dataValues": {
+      "MonsterRadius": [
+        700.0,
+        700.0,
+        700.0,
+        700.0,
+        700.0,
+        700.0,
+        700.0
+      ],
+      "LargeRadius": [
+        1000.0,
+        1000.0,
+        1000.0,
+        1000.0,
+        1000.0,
+        1000.0,
+        1000.0
+      ],
+      "BloodBoilBaseDuration": [
+        4.0,
+        4.0,
+        4.0,
+        4.0,
+        4.0,
+        4.0,
+        4.0
+      ],
+      "ADRatioForAOE": [
+        0.30000001192092896,
+        0.30000001192092896,
+        0.30000001192092896,
+        0.30000001192092896,
+        0.30000001192092896,
+        0.30000001192092896,
+        0.30000001192092896
+      ],
+      "ASIncrease": [
+        0.20000000298023224,
+        0.20000000298023224,
+        0.20000000298023224,
+        0.20000000298023224,
+        0.20000000298023224,
+        0.20000000298023224,
+        0.20000000298023224
+      ],
+      "MSIncrease": [
+        0.10000000149011612,
+        0.10000000149011612,
+        0.10000000149011612,
+        0.10000000149011612,
+        0.10000000149011612,
+        0.10000000149011612,
+        0.10000000149011612
+      ]
+    }
+  },
+  "NunuE": {
+    "calculations": {
+      "TotalSnowballDamage": {
+        "mFormulaParts": [
+          {
+            "mDataValue": "BaseDamage",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          {
+            "mCoefficient": 0.15000000596046448,
+            "__type": "StatByCoefficientCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      },
+      "TotalRootDamage": {
+        "mFormulaParts": [
+          {
+            "mDataValue": "RootDamage",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          {
+            "mCoefficient": 0.800000011920929,
+            "__type": "StatByCoefficientCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      },
+      "RootDuration": {
+        "mFormulaParts": [
+          {
+            "mStartValue": 0.5,
+            "mEndValue": 1.5,
+            "__type": "ByCharLevelInterpolationCalculationPart"
+          }
+        ],
+        "mPrecision": 1,
+        "__type": "GameCalculation"
+      }
+    },
+    "dataValues": {
+      "BaseDamage": [
+        8.0,
+        16.0,
+        24.0,
+        32.0,
+        40.0,
+        48.0,
+        56.0
+      ],
+      "SlowAmount": [
+        -0.25,
+        -0.30000001192092896,
+        -0.3499999940395355,
+        -0.4000000059604645,
+        -0.44999998807907104,
+        -0.5,
+        -0.550000011920929
+      ],
+      "SlowDuration": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "RootDamage": [
+        10.0,
+        20.0,
+        30.0,
+        40.0,
+        50.0,
+        60.0,
+        70.0
+      ],
+      "TotalSpellDuration": [
+        3.0,
+        3.0,
+        3.0,
+        3.0,
+        3.0,
+        3.0,
+        3.0
+      ],
+      "DelayBetweenSnowballs": [
+        0.15000000596046448,
+        0.15000000596046448,
+        0.15000000596046448,
+        0.15000000596046448,
+        0.15000000596046448,
+        0.15000000596046448,
+        0.15000000596046448
+      ],
+      "SplashConeLength": [
+        225.0,
+        225.0,
+        225.0,
+        225.0,
+        225.0,
+        225.0,
+        225.0
+      ],
+      "SplashConeAngle": [
+        22.5,
+        22.5,
+        22.5,
+        22.5,
+        22.5,
+        22.5,
+        22.5
+      ]
+    }
+  },
+  "NunuESnowballBurstFire": {
+    "calculations": {},
+    "dataValues": {
+      "MaxBursts": [
+        3.0,
+        3.0,
+        3.0,
+        3.0,
+        3.0,
+        3.0,
+        3.0
+      ]
+    }
+  },
+  "NunuESnowballMissile": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "NunuR_Recast": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "NunuR": {
+    "calculations": {
+      "TotalShieldAmount": {
+        "mFormulaParts": [
+          {
+            "mDataValue": "BaseShieldAmount",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          {
+            "mStat": 12,
+            "mStatFormula": 2,
+            "mDataValue": "ShieldBonusHealthPercent",
+            "__type": "StatByNamedDataValueCalculationPart"
+          },
+          {
+            "mCoefficient": 1.5,
+            "__type": "StatByCoefficientCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      },
+      "MaximumDamage": {
+        "mFormulaParts": [
+          {
+            "mDataValue": "BaseDamage",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          {
+            "mCoefficient": 3.0,
+            "__type": "StatByCoefficientCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      },
+      "MinDamage": {
+        "mMultiplier": {
+          "mNumber": 0.5,
+          "__type": "NumberCalculationPart"
+        },
+        "tooltipOnly": true,
+        "mModifiedGameCalculation": "MaximumDamage",
+        "__type": "GameCalculationModified"
+      }
+    },
+    "dataValues": {
+      "BaseDamage": [
+        625.0,
+        625.0,
+        925.0,
+        1275.0,
+        1275.0,
+        1275.0,
+        1275.0
+      ],
+      "SlowStartAmount": [
+        -0.5,
+        -0.5,
+        -0.5,
+        -0.5,
+        -0.5,
+        -0.5,
+        -0.5
+      ],
+      "MaxSlowAmount": [
+        -0.949999988079071,
+        -0.949999988079071,
+        -0.949999988079071,
+        -0.949999988079071,
+        -0.949999988079071,
+        -0.949999988079071,
+        -0.949999988079071
+      ],
+      "ChannelDuration": [
+        3.0,
+        3.0,
+        3.0,
+        3.0,
+        3.0,
+        3.0,
+        3.0
+      ],
+      "SlowDuration": [
+        3.0,
+        3.0,
+        3.0,
+        3.0,
+        3.0,
+        3.0,
+        3.0
+      ],
+      "MaxShieldDuration": [
+        6.0,
+        6.0,
+        6.0,
+        6.0,
+        6.0,
+        6.0,
+        6.0
+      ],
+      "ShieldDecayDuration": [
+        3.0,
+        3.0,
+        3.0,
+        3.0,
+        3.0,
+        3.0,
+        3.0
+      ],
+      "BaseShieldAmount": [
+        55.0,
+        65.0,
+        75.0,
+        85.0,
+        95.0,
+        105.0,
+        115.0
+      ],
+      "ShieldBonusHealthPercent": [
+        0.20000000298023224,
+        0.30000001192092896,
+        0.4000000059604645,
+        0.5,
+        0.6000000238418579,
+        0.699999988079071,
+        0.800000011920929
+      ]
+    }
+  },
+  "NunuQ": {
+    "calculations": {
+      "MonsterHealing": {
+        "mFormulaParts": [
+          {
+            "mDataValue": "BaseHealing",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          {
+            "mStat": 12,
+            "mStatFormula": 2,
+            "mDataValue": "PercentageOfBonusHP",
+            "__type": "StatByNamedDataValueCalculationPart"
+          },
+          {
+            "mDataValue": "{ecdc82e3}",
+            "__type": "StatByNamedDataValueCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      },
+      "TotalChampionDamage": {
+        "mFormulaParts": [
+          {
+            "mDataValue": "ChampionDamage",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          {
+            "mStat": 12,
+            "mStatFormula": 2,
+            "mDataValue": "BonusMaxHPDamage",
+            "__type": "StatByNamedDataValueCalculationPart"
+          },
+          {
+            "mDataValue": "ChampDamageAPRatio",
+            "__type": "StatByNamedDataValueCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      },
+      "ChampionHealing": {
+        "mMultiplier": {
+          "mDataValue": "ChampionHealingScalar",
+          "__type": "NamedDataValueCalculationPart"
+        },
+        "mModifiedGameCalculation": "MonsterHealing",
+        "__type": "GameCalculationModified"
+      }
+    },
+    "dataValues": {
+      "MonsterMinionDamage": [
+        200.0,
+        400.0,
+        600.0,
+        800.0,
+        1000.0,
+        1200.0,
+        1400.0
+      ],
+      "BaseHealing": [
+        35.0,
+        65.0,
+        95.0,
+        125.0,
+        155.0,
+        185.0,
+        215.0
+      ],
+      "ChampionDamage": [
+        20.0,
+        60.0,
+        100.0,
+        140.0,
+        180.0,
+        220.0,
+        260.0
+      ],
+      "PercentageOfBonusHP": [
+        0.10000000149011612,
+        0.10000000149011612,
+        0.10000000149011612,
+        0.10000000149011612,
+        0.10000000149011612,
+        0.10000000149011612,
+        0.10000000149011612
+      ],
+      "ChampionHealingScalar": [
+        0.6000000238418579,
+        0.6000000238418579,
+        0.6000000238418579,
+        0.6000000238418579,
+        0.6000000238418579,
+        0.6000000238418579,
+        0.6000000238418579
+      ],
+      "LowHealthThreshhold": [
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5
+      ],
+      "LowHealthHealingScalar": [
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5
+      ],
+      "BonusMaxHPDamage": [
+        0.05000000074505806,
+        0.05000000074505806,
+        0.05000000074505806,
+        0.05000000074505806,
+        0.05000000074505806,
+        0.05000000074505806,
+        0.05000000074505806
+      ],
+      "ChampDamageAPRatio": [
+        0.6499999761581421,
+        0.6499999761581421,
+        0.6499999761581421,
+        0.6499999761581421,
+        0.6499999761581421,
+        0.6499999761581421,
+        0.6499999761581421
+      ],
+      "MonsterHealingAPRatio": [
+        0.8999999761581421,
+        0.8999999761581421,
+        0.8999999761581421,
+        0.8999999761581421,
+        0.8999999761581421,
+        0.8999999761581421,
+        0.8999999761581421
+      ]
+    }
+  },
+  "NunuCritAttack": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "NunuBasicAttack": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "NunuBasicAttack2": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "NunuBloodBoilAttack1": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "NunuBloodBoilAttack3": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "NunuBloodBoilAttack2": {
+    "calculations": {},
+    "dataValues": {}
+  }
+}

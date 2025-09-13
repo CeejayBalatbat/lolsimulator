@@ -1,0 +1,398 @@
+{
+  "RyzeW": {
+    "calculations": {
+      "WDamageCalc": {
+        "mFormulaParts": [
+          {
+            "mDataValue": "BaseDamage",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          {
+            "mCoefficient": 0.699999988079071,
+            "__type": "StatByCoefficientCalculationPart"
+          },
+          {
+            "mCoefficient": 0.03999999910593033,
+            "mStatFormula": 2,
+            "__type": "AbilityResourceByCoefficientCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      }
+    },
+    "dataValues": {
+      "SlowAmount": [
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5
+      ],
+      "BaseDamage": [
+        30.0,
+        60.0,
+        90.0,
+        120.0,
+        150.0,
+        180.0,
+        210.0
+      ],
+      "CCDuration": [
+        1.5,
+        1.5,
+        1.5,
+        1.5,
+        1.5,
+        1.5,
+        1.5
+      ]
+    }
+  },
+  "RyzeQ": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "RyzeQUncharged": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "RyzeQWrapper": {
+    "calculations": {
+      "QDamageCalc": {
+        "mFormulaParts": [
+          {
+            "mDataValue": "BaseDamage",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          {
+            "mCoefficient": 0.550000011920929,
+            "__type": "StatByCoefficientCalculationPart"
+          },
+          {
+            "mCoefficient": 0.019999999552965164,
+            "mStatFormula": 2,
+            "__type": "AbilityResourceByCoefficientCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      }
+    },
+    "dataValues": {
+      "BaseDamage": [
+        55.0,
+        75.0,
+        95.0,
+        115.0,
+        135.0,
+        155.0,
+        175.0
+      ],
+      "DamageAmp": [
+        30.0,
+        40.0,
+        50.0,
+        60.0,
+        70.0,
+        80.0,
+        90.0
+      ],
+      "MovementSpeedAmount": [
+        24.0,
+        28.0,
+        32.0,
+        36.0,
+        40.0,
+        44.0,
+        48.0
+      ],
+      "MovementSpeedDuration": [
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0
+      ],
+      "MaximumRunes": [
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0
+      ],
+      "RuneDuration": [
+        4.0,
+        4.0,
+        4.0,
+        4.0,
+        4.0,
+        4.0,
+        4.0
+      ]
+    }
+  },
+  "RyzeQMS": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "RyzeQMissile": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "RyzeQShield": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "RyzeQCharged": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "RyzeBasicAttack4": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "RyzeBasicAttack3": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "RyzeBasicAttack2": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "RyzeBasicAttack": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "RyzeR2": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "RyzeRChannel": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "RyzeR": {
+    "calculations": {},
+    "dataValues": {
+      "ChargeTime": [
+        2.0999999046325684,
+        2.0999999046325684,
+        2.0999999046325684,
+        2.0999999046325684,
+        2.0999999046325684,
+        2.0999999046325684,
+        2.0999999046325684
+      ],
+      "TeleportTime": [
+        0.6499999761581421,
+        0.6499999761581421,
+        0.6499999761581421,
+        0.6499999761581421,
+        0.6499999761581421,
+        0.6499999761581421,
+        0.6499999761581421
+      ],
+      "AllyIndicatorBuffDuration": [
+        0.75,
+        0.75,
+        0.75,
+        0.75,
+        0.75,
+        0.75,
+        0.75
+      ],
+      "ChargeTimeTooltip": [
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0
+      ],
+      "OverloadDamageBonus": [
+        25.0,
+        50.0,
+        75.0,
+        100.0,
+        125.0,
+        150.0,
+        175.0
+      ],
+      "OverloadHealPercent": [
+        0.0,
+        20.0,
+        25.0,
+        30.0,
+        40.0,
+        50.0,
+        60.0
+      ],
+      "HealPercentMinionMod": [
+        0.33000001311302185,
+        0.33000001311302185,
+        0.33000001311302185,
+        0.33000001311302185,
+        0.33000001311302185,
+        0.33000001311302185,
+        0.33000001311302185
+      ],
+      "MinimumCastRange": [
+        1000.0,
+        1000.0,
+        1000.0,
+        1000.0,
+        1000.0,
+        1000.0,
+        1000.0
+      ]
+    }
+  },
+  "RyzeEMissile": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "RyzeE": {
+    "calculations": {
+      "EDamageCalc": {
+        "mFormulaParts": [
+          {
+            "mDataValue": "BaseDamage",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          {
+            "mCoefficient": 0.5,
+            "__type": "StatByCoefficientCalculationPart"
+          },
+          {
+            "mCoefficient": 0.019999999552965164,
+            "mStatFormula": 2,
+            "__type": "AbilityResourceByCoefficientCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      }
+    },
+    "dataValues": {
+      "BaseDamage": [
+        30.0,
+        60.0,
+        90.0,
+        120.0,
+        150.0,
+        180.0,
+        210.0
+      ],
+      "DebuffDuration": [
+        4.0,
+        4.0,
+        4.0,
+        4.0,
+        4.0,
+        4.0,
+        4.0
+      ],
+      "BounceRadius": [
+        350.0,
+        350.0,
+        350.0,
+        350.0,
+        350.0,
+        350.0,
+        350.0
+      ],
+      "DamageAmp": [
+        0.0,
+        10.0,
+        20.0,
+        30.0,
+        40.0,
+        50.0,
+        60.0
+      ],
+      "BounceRadiusLargeUnit": [
+        400.0,
+        400.0,
+        400.0,
+        400.0,
+        400.0,
+        400.0,
+        400.0
+      ],
+      "BounceRadiusQSmallUnit": [
+        350.0,
+        350.0,
+        350.0,
+        350.0,
+        350.0,
+        350.0,
+        350.0
+      ],
+      "BounceRadiusQLargeUnit": [
+        500.0,
+        500.0,
+        500.0,
+        500.0,
+        500.0,
+        500.0,
+        500.0
+      ]
+    }
+  },
+  "RyzeCritAttack": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "RyzePassive": {
+    "calculations": {
+      "{92bc0080}": {
+        "mFormulaParts": [
+          {
+            "mCoefficient": 0.05000000074505806,
+            "__type": "StatByCoefficientCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      },
+      "PassiveManaCalcTooltip": {
+        "mMultiplier": {
+          "mNumber": 0.009999999776482582,
+          "__type": "NumberCalculationPart"
+        },
+        "mFormulaParts": [
+          {
+            "mDataValue": "PercentManaIncrease",
+            "__type": "StatByNamedDataValueCalculationPart"
+          }
+        ],
+        "mPrecision": -1,
+        "__type": "GameCalculation"
+      }
+    },
+    "dataValues": {
+      "PercentManaIncrease": [
+        10.0,
+        10.0,
+        10.0,
+        10.0,
+        10.0,
+        10.0,
+        10.0
+      ],
+      "APAmount": [
+        100.0,
+        100.0,
+        100.0,
+        100.0,
+        100.0,
+        100.0,
+        100.0
+      ]
+    }
+  }
+}

@@ -1,0 +1,379 @@
+{
+  "ThreshQLeap": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "ThreshQ": {
+    "calculations": {
+      "TotalDamage": {
+        "mSimpleTooltipCalculationDisplay": 6,
+        "mFormulaParts": [
+          {
+            "mDataValue": "BaseDamage",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          {
+            "mDataValue": "APRatio",
+            "__type": "StatByNamedDataValueCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      }
+    },
+    "dataValues": {
+      "BaseDamage": [
+        50.0,
+        100.0,
+        150.0,
+        200.0,
+        250.0,
+        300.0,
+        350.0
+      ],
+      "APRatio": [
+        0.8999999761581421,
+        0.8999999761581421,
+        0.8999999761581421,
+        0.8999999761581421,
+        0.8999999761581421,
+        0.8999999761581421,
+        0.8999999761581421
+      ],
+      "TauntLength": [
+        1.5,
+        1.5,
+        1.5,
+        1.5,
+        1.5,
+        1.5,
+        1.5
+      ],
+      "SlowPercent": [
+        75.0,
+        75.0,
+        75.0,
+        75.0,
+        75.0,
+        75.0,
+        75.0
+      ],
+      "HitBonusCooldown": [
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0
+      ]
+    }
+  },
+  "ThreshQInternal": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "ThreshQPullMissile": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "ThreshQMissile": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "ThreshQSelfRoot": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "ThreshWLanternOut": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "ThreshWLanternIn": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "ThreshWShield": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "ThreshWLanternReturn": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "ThreshW": {
+    "calculations": {
+      "TotalShield": {
+        "mFormulaParts": [
+          {
+            "mDataValue": "BaseShieldValue",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          {
+            "mBuffName": "{5fbfbf13}",
+            "mIconKey": "%i:threshScalingIcon%",
+            "mDataValue": "ShieldPerSoul",
+            "__type": "BuffCounterByNamedDataValueCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      }
+    },
+    "dataValues": {
+      "ShieldPerSoul": [
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0
+      ],
+      "LanternDuration": [
+        6.0,
+        6.0,
+        6.0,
+        6.0,
+        6.0,
+        6.0,
+        6.0
+      ],
+      "BaseShieldValue": [
+        30.0,
+        50.0,
+        70.0,
+        90.0,
+        110.0,
+        130.0,
+        150.0
+      ],
+      "ShieldDuration": [
+        4.0,
+        4.0,
+        4.0,
+        4.0,
+        4.0,
+        4.0,
+        4.0
+      ]
+    }
+  },
+  "ThreshE": {
+    "calculations": {
+      "PAttackDamageMin": {
+        "tooltipOnly": true,
+        "mFormulaParts": [
+          {
+            "mBuffName": "{5fbfbf13}",
+            "mIconKey": "%i:threshScalingIcon%",
+            "mCoefficient": 1.7000000476837158,
+            "__type": "BuffCounterByCoefficientCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      },
+      "PAttackDamageMax": {
+        "tooltipOnly": true,
+        "mFormulaParts": [
+          {
+            "mBuffName": "{5fbfbf13}",
+            "mIconKey": "%i:threshScalingIcon%",
+            "mCoefficient": 1.7000000476837158,
+            "__type": "BuffCounterByCoefficientCalculationPart"
+          },
+          {
+            "mStat": 2,
+            "mDataValue": "PassiveADRatioTT",
+            "__type": "StatByNamedDataValueCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      },
+      "TotalDamage": {
+        "mFormulaParts": [
+          {
+            "mEffectIndex": 1,
+            "__type": "EffectValueCalculationPart"
+          },
+          {
+            "mDataValue": "APRatio",
+            "__type": "StatByNamedDataValueCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      }
+    },
+    "dataValues": {
+      "PassiveADRatioTT": [
+        0.6000000238418579,
+        0.8999999761581421,
+        1.2000000476837158,
+        1.5,
+        1.7999999523162842,
+        2.0999999046325684,
+        2.4000000953674316
+      ],
+      "PassiveADRatio": [
+        60.0,
+        90.0,
+        120.0,
+        150.0,
+        180.0,
+        210.0,
+        240.0
+      ],
+      "APRatio": [
+        0.699999988079071,
+        0.699999988079071,
+        0.699999988079071,
+        0.699999988079071,
+        0.699999988079071,
+        0.699999988079071,
+        0.699999988079071
+      ]
+    }
+  },
+  "ThreshEPassive": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "ThreshEMissile1": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "ThreshPassiveSouls": {
+    "calculations": {
+      "CurrentSoulBonus": {
+        "tooltipOnly": true,
+        "mFormulaParts": [
+          {
+            "mBuffName": "{5fbfbf13}",
+            "mIconKey": "%i:threshScalingIcon%",
+            "mDataValue": "StatValuePerSoul",
+            "__type": "BuffCounterByNamedDataValueCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      }
+    },
+    "dataValues": {
+      "StatValuePerSoul": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "SoulsToGainOnPickUp": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ]
+    }
+  },
+  "ThreshPassiveSoulsVlad": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "ThreshRTrigger3": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "ThreshRTrigger2": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "ThreshRTrigger1": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "ThreshRTrigger5": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "ThreshRTrigger4": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "ThreshRPenta": {
+    "calculations": {
+      "TotalDamage": {
+        "tooltipOnly": true,
+        "mFormulaParts": [
+          {
+            "mEffectIndex": 1,
+            "__type": "EffectValueCalculationPart"
+          },
+          {
+            "mDataValue": "APRatio",
+            "__type": "StatByNamedDataValueCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      }
+    },
+    "dataValues": {
+      "ThreshRCageRadius": [
+        400.0,
+        400.0,
+        400.0,
+        400.0,
+        400.0,
+        400.0,
+        400.0
+      ],
+      "ThreshRWallThickness": [
+        30.0,
+        30.0,
+        30.0,
+        30.0,
+        30.0,
+        30.0,
+        30.0
+      ],
+      "ThreshRWallLength": [
+        470.2279968261719,
+        470.2279968261719,
+        470.2279968261719,
+        470.2279968261719,
+        470.2279968261719,
+        470.2279968261719,
+        470.2279968261719
+      ],
+      "APRatio": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ]
+    }
+  },
+  "ThreshBasicAttack": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "ThreshBasicAttack1M": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "ThreshBasicAttack1S": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "ThreshBasicAttack2S": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "ThreshBasicAttack2M": {
+    "calculations": {},
+    "dataValues": {}
+  }
+}

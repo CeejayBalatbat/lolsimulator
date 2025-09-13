@@ -1,0 +1,438 @@
+{
+  "JinxWMissile": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "JinxW": {
+    "calculations": {
+      "TotalDamage": {
+        "mFormulaParts": [
+          {
+            "mDataValue": "Damage",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          {
+            "mStat": 2,
+            "mDataValue": "ADRatio",
+            "__type": "StatByNamedDataValueCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      }
+    },
+    "dataValues": {
+      "JinxLowEndWCastTime": [
+        0.4000000059604645,
+        0.4000000059604645,
+        0.4000000059604645,
+        0.4000000059604645,
+        0.4000000059604645,
+        0.4000000059604645,
+        0.4000000059604645
+      ],
+      "JinxWASpeedCastTimeScalarPerHundrethSecond": [
+        0.07999999821186066,
+        0.07999999821186066,
+        0.07999999821186066,
+        0.07999999821186066,
+        0.07999999821186066,
+        0.07999999821186066,
+        0.07999999821186066
+      ],
+      "Damage": [
+        -40.0,
+        10.0,
+        60.0,
+        110.0,
+        160.0,
+        210.0,
+        260.0
+      ],
+      "SlowPercent": [
+        30.0,
+        40.0,
+        50.0,
+        60.0,
+        70.0,
+        80.0,
+        90.0
+      ],
+      "SlowDuration": [
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0
+      ],
+      "ADRatio": [
+        1.399999976158142,
+        1.399999976158142,
+        1.399999976158142,
+        1.399999976158142,
+        1.399999976158142,
+        1.399999976158142,
+        1.399999976158142
+      ]
+    }
+  },
+  "JinxEHit": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "JinxEMine": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "JinxEFireBurn": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "JinxEMineSnare": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "JinxE": {
+    "calculations": {
+      "TotalDamage": {
+        "mFormulaParts": [
+          {
+            "mDataValue": "Damage",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          {
+            "mCoefficient": 1.0,
+            "__type": "StatByCoefficientCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      }
+    },
+    "dataValues": {
+      "Damage": [
+        20.0,
+        70.0,
+        120.0,
+        170.0,
+        220.0,
+        270.0,
+        320.0
+      ],
+      "RootDuration": [
+        1.5,
+        1.5,
+        1.5,
+        1.5,
+        1.5,
+        1.5,
+        1.5
+      ],
+      "GrenadeDuration": [
+        5.0,
+        5.0,
+        5.0,
+        5.0,
+        5.0,
+        5.0,
+        5.0
+      ],
+      "GrenadeArmTime": [
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5
+      ]
+    }
+  },
+  "JinxQ": {
+    "calculations": {
+      "RocketDamage": {
+        "mFormulaParts": [
+          {
+            "mStat": 2,
+            "mDataValue": "RocketTAD",
+            "__type": "StatByNamedDataValueCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      }
+    },
+    "dataValues": {
+      "RocketAoERadius": [
+        250.0,
+        250.0,
+        250.0,
+        250.0,
+        250.0,
+        250.0,
+        250.0
+      ],
+      "RocketBonusRange": [
+        50.0,
+        80.0,
+        110.0,
+        140.0,
+        170.0,
+        200.0,
+        230.0
+      ],
+      "MinigunAttackSpeedMax": [
+        5.0,
+        30.0,
+        55.0,
+        80.0,
+        105.0,
+        130.0,
+        155.0
+      ],
+      "MinigunAttackSpeedDuration": [
+        2.5,
+        2.5,
+        2.5,
+        2.5,
+        2.5,
+        2.5,
+        2.5
+      ],
+      "MinigunAttackSpeedStacks": [
+        3.0,
+        3.0,
+        3.0,
+        3.0,
+        3.0,
+        3.0,
+        3.0
+      ],
+      "RocketTAD": [
+        1.100000023841858,
+        1.100000023841858,
+        1.100000023841858,
+        1.100000023841858,
+        1.100000023841858,
+        1.100000023841858,
+        1.100000023841858
+      ],
+      "RocketASPDPenalty": [
+        0.10000000149011612,
+        0.10000000149011612,
+        0.10000000149011612,
+        0.10000000149011612,
+        0.10000000149011612,
+        0.10000000149011612,
+        0.10000000149011612
+      ]
+    }
+  },
+  "JinxQAttack2": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "JinxQCritAttack": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "JinxQAttack": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "JinxPassiveKillAttackSpeed": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "JinxPassiveMarker": {
+    "calculations": {},
+    "dataValues": {
+      "BuffDuration": [
+        6.0,
+        6.0,
+        6.0,
+        6.0,
+        6.0,
+        6.0,
+        6.0
+      ],
+      "ASBuff": [
+        25.0,
+        25.0,
+        25.0,
+        25.0,
+        25.0,
+        25.0,
+        25.0
+      ],
+      "MSBuff": [
+        175.0,
+        175.0,
+        175.0,
+        175.0,
+        175.0,
+        175.0,
+        175.0
+      ],
+      "MSDecayRate": [
+        0.875,
+        0.875,
+        0.875,
+        0.875,
+        0.875,
+        0.875,
+        0.875
+      ],
+      "AssistMarkerDuration": [
+        3.0,
+        3.0,
+        3.0,
+        3.0,
+        3.0,
+        3.0,
+        3.0
+      ]
+    }
+  },
+  "ItemHurricaneJinxAttack": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "JinxR": {
+    "calculations": {
+      "DamageFloor": {
+        "mFormulaParts": [
+          {
+            "mDataValue": "BaseDamage",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          {
+            "mStat": 2,
+            "mStatFormula": 2,
+            "mCoefficient": 0.1550000011920929,
+            "__type": "StatByCoefficientCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      },
+      "DamageMax": {
+        "mFormulaParts": [
+          {
+            "mDataValue": "MaxDamage",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          {
+            "mStat": 2,
+            "mStatFormula": 2,
+            "mCoefficient": 1.5499999523162842,
+            "__type": "StatByCoefficientCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      }
+    },
+    "dataValues": {
+      "BaseDamage": [
+        15.0,
+        30.0,
+        45.0,
+        60.0,
+        75.0,
+        90.0,
+        105.0
+      ],
+      "MaxDamage": [
+        150.0,
+        300.0,
+        450.0,
+        600.0,
+        750.0,
+        900.0,
+        1050.0
+      ],
+      "PercentDamage": [
+        20.0,
+        25.0,
+        30.0,
+        35.0,
+        40.0,
+        45.0,
+        50.0
+      ],
+      "AoEDamageMult": [
+        0.800000011920929,
+        0.800000011920929,
+        0.800000011920929,
+        0.800000011920929,
+        0.800000011920929,
+        0.800000011920929,
+        0.800000011920929
+      ],
+      "MonsterExecuteMax": [
+        1200.0,
+        1200.0,
+        1200.0,
+        1200.0,
+        1200.0,
+        1200.0,
+        1200.0
+      ],
+      "AoERadius": [
+        400.0,
+        400.0,
+        400.0,
+        400.0,
+        400.0,
+        400.0,
+        400.0
+      ]
+    }
+  },
+  "JinxCritAttack": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "JinxCritAttack5": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "JinxCritAttack4": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "JinxCritAttack6": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "JinxCritAttack3": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "JinxCritAttack2": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "JinxBasicAttack": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "JinxBasicAttack5": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "JinxBasicAttack4": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "JinxBasicAttack6": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "JinxBasicAttack3": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "JinxBasicAttack2": {
+    "calculations": {},
+    "dataValues": {}
+  }
+}

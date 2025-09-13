@@ -1,0 +1,541 @@
+{
+  "MonkeyKingCritAttack": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "MonkeyKingNimbus": {
+    "calculations": {
+      "TotalDamage": {
+        "mSimpleTooltipCalculationDisplay": 6,
+        "mFormulaParts": [
+          {
+            "mDataValue": "BaseDamage",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          {
+            "mCoefficient": 1.0,
+            "__type": "StatByCoefficientCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      },
+      "TotalDamageMonsters": {
+        "mMultiplier": {
+          "mDataValue": "MonsterDamageRatio",
+          "__type": "NamedDataValueCalculationPart"
+        },
+        "mModifiedGameCalculation": "TotalDamage",
+        "__type": "GameCalculationModified"
+      }
+    },
+    "dataValues": {
+      "BaseDamage": [
+        50.0,
+        80.0,
+        110.0,
+        140.0,
+        170.0,
+        200.0,
+        230.0
+      ],
+      "AttackSpeed": [
+        0.30000001192092896,
+        0.3499999940395355,
+        0.4000000059604645,
+        0.44999998807907104,
+        0.5,
+        0.550000011920929,
+        0.6000000238418579
+      ],
+      "AttackSpeedDuration": [
+        5.0,
+        5.0,
+        5.0,
+        5.0,
+        5.0,
+        5.0,
+        5.0
+      ],
+      "DashSpeed": [
+        1050.0,
+        1050.0,
+        1050.0,
+        1050.0,
+        1050.0,
+        1050.0,
+        1050.0
+      ],
+      "EndPointOffsetDistance": [
+        75.0,
+        75.0,
+        75.0,
+        75.0,
+        75.0,
+        75.0,
+        75.0
+      ],
+      "ExtraTargets": [
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0
+      ],
+      "ExtraTargetRange": [
+        700.0,
+        700.0,
+        700.0,
+        700.0,
+        700.0,
+        700.0,
+        700.0
+      ],
+      "MonsterDamageRatio": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ]
+    }
+  },
+  "MonkeyKingSpinToWin": {
+    "calculations": {
+      "DamagePerSecondTotal": {
+        "mSimpleTooltipCalculationDisplay": 6,
+        "mFormulaParts": [
+          {
+            "mStat": 2,
+            "mDataValue": "ADRatioPerSecond",
+            "__type": "StatByNamedDataValueCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      },
+      "{26c20668}": {
+        "mExpandedTooltipCalculationDisplay": 5,
+        "mFormulaParts": [
+          {
+            "mDataValue": "BasePercentMaxHPDmgPerSec",
+            "__type": "NamedDataValueCalculationPart"
+          }
+        ],
+        "mDisplayAsPercent": true,
+        "__type": "GameCalculation"
+      },
+      "MonsterCap": {
+        "mFormulaParts": [
+          {
+            "mLevel1Value": 200.0,
+            "mBreakpoints": [
+              {
+                "mLevel": 11,
+                "mAdditionalBonusAtThisLevel": 200.0,
+                "__type": "Breakpoint"
+              },
+              {
+                "mLevel": 16,
+                "mAdditionalBonusAtThisLevel": 200.0,
+                "__type": "Breakpoint"
+              }
+            ],
+            "__type": "ByCharLevelBreakpointsCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      },
+      "TotalDamageTT": {
+        "mMultiplier": {
+          "mDataValue": "SpinDuration",
+          "__type": "NamedDataValueCalculationPart"
+        },
+        "mSimpleTooltipCalculationDisplay": 6,
+        "tooltipOnly": true,
+        "mModifiedGameCalculation": "DamagePerSecondTotal",
+        "__type": "GameCalculationModified"
+      },
+      "PercentHPDamageTT": {
+        "mMultiplier": {
+          "mDataValue": "SpinDuration",
+          "__type": "NamedDataValueCalculationPart"
+        },
+        "mExpandedTooltipCalculationDisplay": 5,
+        "tooltipOnly": true,
+        "mModifiedGameCalculation": "{26c20668}",
+        "__type": "GameCalculationModified"
+      },
+      "MonsterCapTT": {
+        "mMultiplier": {
+          "mDataValue": "SpinDuration",
+          "__type": "NamedDataValueCalculationPart"
+        },
+        "mSimpleTooltipCalculationDisplay": 6,
+        "tooltipOnly": true,
+        "mModifiedGameCalculation": "MonsterCap",
+        "__type": "GameCalculationModified"
+      }
+    },
+    "dataValues": {
+      "KnockupDuration": [
+        0.6000000238418579,
+        0.6000000238418579,
+        0.6000000238418579,
+        0.6000000238418579,
+        0.6000000238418579,
+        0.6000000238418579,
+        0.6000000238418579
+      ],
+      "SpinDuration": [
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0
+      ],
+      "MoveSpeed": [
+        0.20000000298023224,
+        0.20000000298023224,
+        0.20000000298023224,
+        0.20000000298023224,
+        0.20000000298023224,
+        0.20000000298023224,
+        0.20000000298023224
+      ],
+      "BasePercentMaxHPDmgPerSec": [
+        0.019999999552965164,
+        0.03999999910593033,
+        0.05999999865889549,
+        0.07999999821186066,
+        0.10000000149011612,
+        0.11999999731779099,
+        0.14000000059604645
+      ],
+      "SecondsPerTick": [
+        0.25,
+        0.25,
+        0.25,
+        0.25,
+        0.25,
+        0.25,
+        0.25
+      ],
+      "RecastWindow": [
+        8.0,
+        8.0,
+        8.0,
+        8.0,
+        8.0,
+        8.0,
+        8.0
+      ],
+      "LockoutTimeBetweenCasts": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "ADRatioPerSecond": [
+        1.375,
+        1.375,
+        1.375,
+        1.375,
+        1.375,
+        1.375,
+        1.375
+      ]
+    }
+  },
+  "MonkeyKingSpinToWinLeave": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "MonkeyKingQAttack": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "MonkeyKingDummySpell": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "MonkeyKingNimbusKick": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "MonkeyKingDecoy": {
+    "calculations": {},
+    "dataValues": {
+      "CloneDamageMod": [
+        0.30000001192092896,
+        0.3499999940395355,
+        0.4000000059604645,
+        0.44999998807907104,
+        0.5,
+        0.550000011920929,
+        0.6000000238418579
+      ],
+      "StealthDuration": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "CloneDuration": [
+        3.25,
+        3.25,
+        3.25,
+        3.25,
+        3.25,
+        3.25,
+        3.25
+      ],
+      "DashSpeed": [
+        900.0,
+        900.0,
+        900.0,
+        900.0,
+        900.0,
+        900.0,
+        900.0
+      ],
+      "RangeClamp": [
+        300.0,
+        300.0,
+        300.0,
+        300.0,
+        300.0,
+        300.0,
+        300.0
+      ],
+      "MinRange": [
+        100.0,
+        100.0,
+        100.0,
+        100.0,
+        100.0,
+        100.0,
+        100.0
+      ]
+    }
+  },
+  "MonkeyKingPassive": {
+    "calculations": {
+      "BonusArmor": {
+        "mFormulaParts": [
+          {
+            "mStartValue": 6.0,
+            "mEndValue": 10.0,
+            "__type": "ByCharLevelInterpolationCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      },
+      "TooltipMaxArmor": {
+        "mMultiplier": {
+          "mDataValue": "TooltipMult",
+          "__type": "NamedDataValueCalculationPart"
+        },
+        "mModifiedGameCalculation": "BonusArmor",
+        "__type": "GameCalculationModified"
+      }
+    },
+    "dataValues": {
+      "CombatDuration": [
+        3.0,
+        3.0,
+        3.0,
+        3.0,
+        3.0,
+        3.0,
+        3.0
+      ],
+      "StackDuration": [
+        5.0,
+        5.0,
+        5.0,
+        5.0,
+        5.0,
+        5.0,
+        5.0
+      ],
+      "MaxStacks": [
+        5.0,
+        5.0,
+        5.0,
+        5.0,
+        5.0,
+        5.0,
+        5.0
+      ],
+      "StackMultiplier": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "HealthPercentPer5": [
+        0.0035000001080334187,
+        0.0035000001080334187,
+        0.0035000001080334187,
+        0.0035000001080334187,
+        0.0035000001080334187,
+        0.0035000001080334187,
+        0.0035000001080334187
+      ],
+      "TooltipMult": [
+        6.0,
+        6.0,
+        6.0,
+        6.0,
+        6.0,
+        6.0,
+        6.0
+      ],
+      "TooltipMaxHealthPercentPer5": [
+        2.0999999046325684,
+        2.0999999046325684,
+        2.0999999046325684,
+        2.0999999046325684,
+        2.0999999046325684,
+        2.0999999046325684,
+        2.0999999046325684
+      ],
+      "FallOffRate": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ]
+    }
+  },
+  "MonkeyKingNimbusKickClone": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "MonkeyKingBasicAttack2": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "MonkeyKingBasicAttack": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "MonkeyKingDoubleAttack": {
+    "calculations": {
+      "TotalDamage": {
+        "mSimpleTooltipCalculationDisplay": 6,
+        "mFormulaParts": [
+          {
+            "mDataValue": "BaseDamage",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          {
+            "mStat": 2,
+            "mStatFormula": 2,
+            "mCoefficient": 0.550000011920929,
+            "__type": "StatByCoefficientCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      },
+      "BonusDamageTT": {
+        "mSimpleTooltipCalculationDisplay": 6,
+        "mFormulaParts": [
+          {
+            "mDataValue": "BaseDamage",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          {
+            "mStat": 2,
+            "mStatFormula": 2,
+            "mDataValue": "ADRatio",
+            "__type": "StatByNamedDataValueCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      }
+    },
+    "dataValues": {
+      "BaseDamage": [
+        -5.0,
+        20.0,
+        45.0,
+        70.0,
+        95.0,
+        120.0,
+        145.0
+      ],
+      "ArmorShredPercent": [
+        0.05000000074505806,
+        0.10000000149011612,
+        0.15000000596046448,
+        0.20000000298023224,
+        0.25,
+        0.30000001192092896,
+        0.3499999940395355
+      ],
+      "ShredDuration": [
+        3.0,
+        3.0,
+        3.0,
+        3.0,
+        3.0,
+        3.0,
+        3.0
+      ],
+      "BuffDuration": [
+        6.0,
+        6.0,
+        6.0,
+        6.0,
+        6.0,
+        6.0,
+        6.0
+      ],
+      "AttackRangeBonus": [
+        125.0,
+        135.0,
+        145.0,
+        155.0,
+        165.0,
+        175.0,
+        185.0
+      ],
+      "CooldownDecrease": [
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5
+      ],
+      "ADRatio": [
+        0.550000011920929,
+        0.550000011920929,
+        0.550000011920929,
+        0.550000011920929,
+        0.550000011920929,
+        0.550000011920929,
+        0.550000011920929
+      ]
+    }
+  }
+}

@@ -1,0 +1,444 @@
+{
+  "ZoeEb4": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "ZoeEb5": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "ZoeEv8": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "ZoeEMis2": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "ZoeEMisAudio": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "ZoeEb": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "ZoeEc": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "ZoeWPassive": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "ZoeEMis": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "ZoeEDistanceSolver2": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "ZoeEDistanceSolver3": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "ZoeEDistanceSolver4": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "ZoeEDistanceSolver": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "ZoeE": {
+    "calculations": {
+      "TotalDamageTooltip": {
+        "mFormulaParts": [
+          {
+            "mDataValue": "BaseDamage",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          {
+            "mCoefficient": 0.44999998807907104,
+            "__type": "StatByCoefficientCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      },
+      "BreakDamageTooltip": {
+        "mFormulaParts": [
+          {
+            "mDataValue": "BaseDamage",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          {
+            "mCoefficient": 0.44999998807907104,
+            "__type": "StatByCoefficientCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      }
+    },
+    "dataValues": {
+      "PercentPen": [
+        0.30000001192092896,
+        0.30000001192092896,
+        0.30000001192092896,
+        0.30000001192092896,
+        0.30000001192092896,
+        0.30000001192092896,
+        0.30000001192092896
+      ],
+      "BaseDamage": [
+        30.0,
+        70.0,
+        110.0,
+        150.0,
+        190.0,
+        230.0,
+        270.0
+      ]
+    }
+  },
+  "ZoeEb2": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "ZoeEb3": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "ZoeW_SummonerExhaust": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "ZoeW_SummonerFlash": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "ZoeW_SummonerBarrier": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "ZoeWPassiveMissileTwo": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "ZoeW_SummonerHeal": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "ZoeWVisualMis4": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "ZoeW": {
+    "calculations": {
+      "MissileDamageTooltip": {
+        "mFormulaParts": [
+          {
+            "mDataValue": "TotalBaseDamage",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          {
+            "mDataValue": "TotalAPRatio",
+            "__type": "StatByNamedDataValueCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      }
+    },
+    "dataValues": {
+      "TotalBaseDamage": [
+        10.0,
+        20.0,
+        30.0,
+        40.0,
+        50.0,
+        60.0,
+        70.0
+      ],
+      "TotalAPRatio": [
+        0.15000000596046448,
+        0.15000000596046448,
+        0.15000000596046448,
+        0.15000000596046448,
+        0.15000000596046448,
+        0.15000000596046448,
+        0.15000000596046448
+      ],
+      "MoveSpeedMod": [
+        0.20000000298023224,
+        0.30000001192092896,
+        0.4000000059604645,
+        0.5,
+        0.6000000238418579,
+        0.699999988079071,
+        0.800000011920929
+      ],
+      "MoveSpeedDuration": [
+        1.75,
+        2.0,
+        2.25,
+        2.5,
+        2.75,
+        3.0,
+        3.25
+      ]
+    }
+  },
+  "ZoeW_S5_SummonerSmiteDuel": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "ZoeWVisualMissile": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "ZoeW_SummonerTeleport": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "ZoeW_SummonerDot": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "ZoeWPassiveMissile": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "ZoeW_SummonerBoost": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "ZoeW_S5_SummonerSmitePlayerGanker": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "ZoeW_SummonerHaste": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "ZoeW_SummonerSmite": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "ZoePYoYoAttack2": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "ZoePassive": {
+    "calculations": {
+      "PassiveDamage": {
+        "mFormulaParts": [
+          {
+            "mLevel1Value": 16.0,
+            "mInitialBonusPerLevel": 4.0,
+            "mBreakpoints": [
+              {
+                "mLevel": 7,
+                "mBonusPerLevelAtAndAfter": 6.0,
+                "__type": "Breakpoint"
+              },
+              {
+                "mLevel": 12,
+                "mBonusPerLevelAtAndAfter": 8.0,
+                "__type": "Breakpoint"
+              },
+              {
+                "mLevel": 15,
+                "mBonusPerLevelAtAndAfter": 10.0,
+                "__type": "Breakpoint"
+              }
+            ],
+            "__type": "ByCharLevelBreakpointsCalculationPart"
+          },
+          {
+            "mDataValue": "APRatio",
+            "__type": "StatByNamedDataValueCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      }
+    },
+    "dataValues": {
+      "APRatio": [
+        0.20000000298023224,
+        0.20000000298023224,
+        0.20000000298023224,
+        0.20000000298023224,
+        0.20000000298023224,
+        0.20000000298023224,
+        0.20000000298023224
+      ]
+    }
+  },
+  "ZoePassiveYoYoAttack": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "ZoeQ": {
+    "calculations": {
+      "TotalDamageTooltip": {
+        "mFormulaParts": [
+          {
+            "mDataValue": "BaseDamage",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          {
+            "mLevel1Value": 2.0,
+            "mInitialBonusPerLevel": 2.0,
+            "mBreakpoints": [
+              {
+                "mLevel": 10,
+                "mBonusPerLevelAtAndAfter": 3.0,
+                "__type": "Breakpoint"
+              },
+              {
+                "mLevel": 14,
+                "mBonusPerLevelAtAndAfter": 4.0,
+                "__type": "Breakpoint"
+              }
+            ],
+            "__type": "ByCharLevelBreakpointsCalculationPart"
+          },
+          {
+            "mDataValue": "APRatio",
+            "__type": "StatByNamedDataValueCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      },
+      "MaxDamageTooltip": {
+        "mMultiplier": {
+          "mNumber": 2.5,
+          "__type": "NumberCalculationPart"
+        },
+        "mModifiedGameCalculation": "TotalDamageTooltip",
+        "__type": "GameCalculationModified"
+      }
+    },
+    "dataValues": {
+      "BaseDamage": [
+        20.0,
+        50.0,
+        80.0,
+        110.0,
+        140.0,
+        170.0,
+        200.0
+      ],
+      "APRatio": [
+        0.6000000238418579,
+        0.6000000238418579,
+        0.6000000238418579,
+        0.6000000238418579,
+        0.6000000238418579,
+        0.6000000238418579,
+        0.6000000238418579
+      ],
+      "MinionDamageMod": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ]
+    }
+  },
+  "ZoeQMis2Warning": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "ZoeQInterstitial": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "ZoeQMis2": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "ZoeQRecast": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "ZoeQMis2Warning2": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "ZoeQMis2WarningSleepCombo": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "ZoeQMissile": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "ZoeQMis2SleepCombo": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "ZoeBasicAttack3": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "ZoeBasicAttack2": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "ZoeBasicAttackSpecial2": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "ZoeBasicAttackPassive": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "ZoeBasicAttackSpecial3": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "ZoeBasicAttackSpecial1": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "ZoeBasicAttackSpecial4": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "ZoeCritAttack": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "ZoeBasicAttackSpecial": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "ZoeRVFXTrail": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "ZoeR": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "ZoeRv7Atk": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "ZoeAltRunManager": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "ZoeDummySpell": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "ZoeBasicAttack": {
+    "calculations": {},
+    "dataValues": {}
+  }
+}

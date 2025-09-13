@@ -1,0 +1,595 @@
+{
+  "OrnnBasicAttack": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "OrnnW": {
+    "calculations": {
+      "BrittlePercentMaxHPCalc": {
+        "mFormulaParts": [
+          {
+            "mStartValue": 0.10000000149011612,
+            "mEndValue": 0.18000000715255737,
+            "__type": "ByCharLevelInterpolationCalculationPart"
+          }
+        ],
+        "mDisplayAsPercent": true,
+        "mPrecision": 1,
+        "__type": "GameCalculation"
+      },
+      "TotalMinimumDamage": {
+        "mExpandedTooltipCalculationDisplay": 5,
+        "mFormulaParts": [
+          {
+            "mPart1": {
+              "mDataValue": "MinimumDamagePerTick",
+              "__type": "NamedDataValueCalculationPart"
+            },
+            "mPart2": {
+              "mDataValue": "NumberOfTicks",
+              "__type": "NamedDataValueCalculationPart"
+            },
+            "__type": "ProductOfSubPartsCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      },
+      "TotalMonsterDamageCap": {
+        "mMultiplier": {
+          "mDataValue": "NumberOfTicks",
+          "__type": "NamedDataValueCalculationPart"
+        },
+        "mExpandedTooltipCalculationDisplay": 5,
+        "mFormulaParts": [
+          {
+            "mDataValue": "MonsterDamagePerTickCap",
+            "__type": "NamedDataValueCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      }
+    },
+    "dataValues": {
+      "MinimumDamagePerTick": [
+        6.0,
+        16.0,
+        26.0,
+        36.0,
+        46.0,
+        56.0,
+        66.0
+      ],
+      "NumberOfTicks": [
+        5.0,
+        5.0,
+        5.0,
+        5.0,
+        5.0,
+        5.0,
+        5.0
+      ],
+      "BaseDamageTooltip": [
+        50.0,
+        100.0,
+        150.0,
+        200.0,
+        250.0,
+        300.0,
+        350.0
+      ],
+      "BreathDuration": [
+        0.75,
+        0.75,
+        0.75,
+        0.75,
+        0.75,
+        0.75,
+        0.75
+      ],
+      "RectangleWidth": [
+        175.0,
+        175.0,
+        175.0,
+        175.0,
+        175.0,
+        175.0,
+        175.0
+      ],
+      "RectangleLength": [
+        500.0,
+        500.0,
+        500.0,
+        500.0,
+        500.0,
+        500.0,
+        500.0
+      ],
+      "MovementSpeedReduction": [
+        0.3499999940395355,
+        0.3499999940395355,
+        0.3499999940395355,
+        0.3499999940395355,
+        0.3499999940395355,
+        0.3499999940395355,
+        0.3499999940395355
+      ],
+      "FinalTickRectangleLength": [
+        560.0,
+        560.0,
+        560.0,
+        560.0,
+        560.0,
+        560.0,
+        560.0
+      ],
+      "PercentHPPerTick": [
+        0.02199999988079071,
+        0.024000000208616257,
+        0.026000000536441803,
+        0.02800000086426735,
+        0.029999999329447746,
+        0.03200000151991844,
+        0.03400000184774399
+      ],
+      "MaxPercentHPPerTickTooltip": [
+        11.0,
+        12.0,
+        13.0,
+        14.0,
+        15.0,
+        16.0,
+        17.0
+      ],
+      "MonsterDamagePerTickCap": [
+        26.0,
+        31.0,
+        36.0,
+        41.0,
+        46.0,
+        51.0,
+        56.0
+      ],
+      "BrittleDuration": [
+        3.0,
+        3.0,
+        3.0,
+        3.0,
+        3.0,
+        3.0,
+        3.0
+      ]
+    }
+  },
+  "OrnnVulnerableDebuff": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "OrnnRCharge": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "OrnnRWave2": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "OrnnR": {
+    "calculations": {
+      "RDamageCalc": {
+        "mFormulaParts": [
+          {
+            "mDataValue": "RBaseDamage",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          {
+            "mDataValue": "RRatio",
+            "__type": "StatByNamedDataValueCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      },
+      "MinStun": {
+        "mExpandedTooltipCalculationDisplay": 5,
+        "tooltipOnly": true,
+        "mFormulaParts": [
+          {
+            "mPart1": {
+              "mDataValue": "RStunDuration",
+              "__type": "NamedDataValueCalculationPart"
+            },
+            "mPart2": {
+              "mDataValue": "RStunReduction",
+              "__type": "NamedDataValueCalculationPart"
+            },
+            "__type": "ProductOfSubPartsCalculationPart"
+          }
+        ],
+        "mPrecision": 1,
+        "__type": "GameCalculation"
+      }
+    },
+    "dataValues": {
+      "RCastRange": [
+        2500.0,
+        2500.0,
+        2500.0,
+        2500.0,
+        2500.0,
+        2500.0,
+        2500.0
+      ],
+      "RBaseDamage": [
+        75.0,
+        125.0,
+        175.0,
+        225.0,
+        275.0,
+        325.0,
+        375.0
+      ],
+      "RMissileMaxSpeed": [
+        1200.0,
+        1200.0,
+        1200.0,
+        1200.0,
+        1200.0,
+        1200.0,
+        1200.0
+      ],
+      "RMissileAccelerationBase": [
+        100.0,
+        100.0,
+        100.0,
+        100.0,
+        100.0,
+        100.0,
+        100.0
+      ],
+      "RSlowPercentBasePreMath": [
+        30.0,
+        40.0,
+        50.0,
+        60.0,
+        70.0,
+        80.0,
+        90.0
+      ],
+      "RSlowDuration": [
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0
+      ],
+      "RRatio": [
+        0.20000000298023224,
+        0.20000000298023224,
+        0.20000000298023224,
+        0.20000000298023224,
+        0.20000000298023224,
+        0.20000000298023224,
+        0.20000000298023224
+      ],
+      "BrittleDurationTOOLTIPONLY": [
+        3.0,
+        3.0,
+        3.0,
+        3.0,
+        3.0,
+        3.0,
+        3.0
+      ],
+      "RStunDuration": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "RStunReduction": [
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5
+      ]
+    }
+  },
+  "OrnnRWave": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "OrnnBasicAttack3": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "OrnnBasicAttack2": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "OrnnP": {
+    "calculations": {},
+    "dataValues": {
+      "MasterworkLevel": [
+        13.0,
+        13.0,
+        13.0,
+        13.0,
+        13.0,
+        13.0,
+        13.0
+      ],
+      "BaseStatAmp": [
+        0.10000000149011612,
+        0.10000000149011612,
+        0.10000000149011612,
+        0.10000000149011612,
+        0.10000000149011612,
+        0.10000000149011612,
+        0.10000000149011612
+      ],
+      "AdditionalMythicStatAmp": [
+        0.03999999910593033,
+        0.03999999910593033,
+        0.03999999910593033,
+        0.03999999910593033,
+        0.03999999910593033,
+        0.03999999910593033,
+        0.03999999910593033
+      ],
+      "GameModeInteger": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "UpgradeTotalGoldValue": [
+        1000.0,
+        1000.0,
+        1000.0,
+        1000.0,
+        1000.0,
+        1000.0,
+        1000.0
+      ],
+      "UpgradeADEff": [
+        35.0,
+        35.0,
+        35.0,
+        35.0,
+        35.0,
+        35.0,
+        35.0
+      ],
+      "UpgradeAPEff": [
+        20.0,
+        20.0,
+        20.0,
+        20.0,
+        20.0,
+        20.0,
+        20.0
+      ],
+      "UpgradeHPEff": [
+        2.6600000858306885,
+        2.6600000858306885,
+        2.6600000858306885,
+        2.6600000858306885,
+        2.6600000858306885,
+        2.6600000858306885,
+        2.6600000858306885
+      ],
+      "UpgradeAREff": [
+        20.0,
+        20.0,
+        20.0,
+        20.0,
+        20.0,
+        20.0,
+        20.0
+      ],
+      "UpgradeMREff": [
+        18.0,
+        18.0,
+        18.0,
+        18.0,
+        18.0,
+        18.0,
+        18.0
+      ],
+      "UpgradeAHEff": [
+        31.25,
+        31.25,
+        31.25,
+        31.25,
+        31.25,
+        31.25,
+        31.25
+      ],
+      "UpgradeASEff": [
+        30.0,
+        30.0,
+        30.0,
+        30.0,
+        30.0,
+        30.0,
+        30.0
+      ]
+    }
+  },
+  "OrnnPGrantItem": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "OrnnPAllyItemGive": {
+    "calculations": {},
+    "dataValues": {
+      "MasterworkLevel": [
+        13.0,
+        13.0,
+        13.0,
+        13.0,
+        13.0,
+        13.0,
+        13.0
+      ]
+    }
+  },
+  "OrnnPAllyItemReady": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "OrnnPItemCurrency": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "OrnnQ": {
+    "calculations": {
+      "TotalDamage": {
+        "mFormulaParts": [
+          {
+            "mDataValue": "BaseDamage",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          {
+            "mStat": 2,
+            "mCoefficient": 1.100000023841858,
+            "__type": "StatByCoefficientCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      }
+    },
+    "dataValues": {
+      "BaseDamage": [
+        -5.0,
+        20.0,
+        45.0,
+        70.0,
+        95.0,
+        120.0,
+        145.0
+      ]
+    }
+  },
+  "OrnnE": {
+    "calculations": {
+      "TotalDamage": {
+        "mFormulaParts": [
+          {
+            "mDataValue": "BaseDamage",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          {
+            "mStat": 1,
+            "mStatFormula": 2,
+            "mDataValue": "ArmorRatio",
+            "__type": "StatByNamedDataValueCalculationPart"
+          },
+          {
+            "mStat": 6,
+            "mStatFormula": 2,
+            "mDataValue": "MRRatio",
+            "__type": "StatByNamedDataValueCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      }
+    },
+    "dataValues": {
+      "BaseDamage": [
+        35.0,
+        80.0,
+        125.0,
+        170.0,
+        215.0,
+        260.0,
+        305.0
+      ],
+      "KnockupDuration": [
+        1.25,
+        1.25,
+        1.25,
+        1.25,
+        1.25,
+        1.25,
+        1.25
+      ],
+      "DashRange": [
+        650.0,
+        650.0,
+        650.0,
+        650.0,
+        650.0,
+        650.0,
+        650.0
+      ],
+      "ShockwaveRadius": [
+        360.0,
+        360.0,
+        360.0,
+        360.0,
+        360.0,
+        360.0,
+        360.0
+      ],
+      "DashWallCheating": [
+        150.0,
+        150.0,
+        150.0,
+        150.0,
+        150.0,
+        150.0,
+        150.0
+      ],
+      "DashSpeed": [
+        1600.0,
+        1600.0,
+        1600.0,
+        1600.0,
+        1600.0,
+        1600.0,
+        1600.0
+      ],
+      "DashRadius": [
+        175.0,
+        175.0,
+        175.0,
+        175.0,
+        175.0,
+        175.0,
+        175.0
+      ],
+      "ArmorRatio": [
+        0.4000000059604645,
+        0.4000000059604645,
+        0.4000000059604645,
+        0.4000000059604645,
+        0.4000000059604645,
+        0.4000000059604645,
+        0.4000000059604645
+      ],
+      "MRRatio": [
+        0.4000000059604645,
+        0.4000000059604645,
+        0.4000000059604645,
+        0.4000000059604645,
+        0.4000000059604645,
+        0.4000000059604645,
+        0.4000000059604645
+      ]
+    }
+  },
+  "OrnnCritAttack": {
+    "calculations": {},
+    "dataValues": {}
+  }
+}

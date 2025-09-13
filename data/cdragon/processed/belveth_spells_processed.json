@@ -1,0 +1,810 @@
+{
+  "BelvethQDummySpellCast": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "BelvethQ": {
+    "calculations": {
+      "BaseDamage": {
+        "mFormulaParts": [
+          {
+            "mDataValue": "Damage",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          {
+            "mStat": 2,
+            "mDataValue": "ADRatio",
+            "__type": "StatByNamedDataValueCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      },
+      "{290ee56e}": {
+        "mFormulaParts": [
+          {
+            "mStat": 4,
+            "mCoefficient": 1.0,
+            "__type": "StatByCoefficientCalculationPart"
+          }
+        ],
+        "mDisplayAsPercent": true,
+        "__type": "GameCalculation"
+      }
+    },
+    "dataValues": {
+      "PerSideCooldown": [
+        16.0,
+        16.0,
+        15.0,
+        14.0,
+        13.0,
+        12.0,
+        11.0
+      ],
+      "PerSideCDAttackSpeedMultiplier": [
+        0.25,
+        0.25,
+        0.25,
+        0.25,
+        0.25,
+        0.25,
+        0.25
+      ],
+      "BaseDashSpeed": [
+        750.0,
+        800.0,
+        850.0,
+        900.0,
+        950.0,
+        1000.0,
+        1050.0
+      ],
+      "DashDistance": [
+        400.0,
+        400.0,
+        400.0,
+        400.0,
+        400.0,
+        400.0,
+        400.0
+      ],
+      "MaxDistanceOverWalls": [
+        625.0,
+        625.0,
+        625.0,
+        625.0,
+        625.0,
+        625.0,
+        625.0
+      ],
+      "RiftDashSpeed": [
+        1500.0,
+        1500.0,
+        1500.0,
+        1500.0,
+        1500.0,
+        1500.0,
+        1500.0
+      ],
+      "CDReduction": [
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5
+      ],
+      "AttackSpeed": [
+        0.4000000059604645,
+        0.4000000059604645,
+        0.4000000059604645,
+        0.4000000059604645,
+        0.4000000059604645,
+        0.4000000059604645,
+        0.4000000059604645
+      ],
+      "NumberOfAttacks": [
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0
+      ],
+      "SpeedDuration": [
+        4.0,
+        4.0,
+        4.0,
+        4.0,
+        4.0,
+        4.0,
+        4.0
+      ],
+      "AttackSpeedDuration": [
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0
+      ],
+      "BaseHealthSteal": [
+        0.0,
+        0.009999999776482582,
+        0.019999999552965164,
+        0.029999999329447746,
+        0.03999999910593033,
+        0.05000000074505806,
+        0.05999999865889549
+      ],
+      "ADRatio": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "Damage": [
+        -5.0,
+        0.0,
+        5.0,
+        10.0,
+        15.0,
+        20.0,
+        25.0
+      ],
+      "MonsterMod": [
+        45.0,
+        55.0,
+        65.0,
+        75.0,
+        85.0,
+        95.0,
+        105.0
+      ],
+      "MinonMod": [
+        0.5,
+        0.6000000238418579,
+        0.699999988079071,
+        0.800000011920929,
+        0.8999999761581421,
+        1.0,
+        1.100000023841858
+      ]
+    }
+  },
+  "BelvethBasicAttack2": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "BelvethR": {
+    "calculations": {
+      "FinalOnHitDamage": {
+        "mFormulaParts": [
+          {
+            "mDataValue": "OnHitDamage",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          {
+            "mStat": 2,
+            "mStatFormula": 2,
+            "mCoefficient": 0.11999999731779099,
+            "__type": "StatByCoefficientCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      },
+      "MaxHealthOnDevour": {
+        "mFormulaParts": [
+          {
+            "mDataValue": "BaseMaxHealth",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          {
+            "mStat": 2,
+            "mStatFormula": 2,
+            "mCoefficient": 1.2000000476837158,
+            "__type": "StatByCoefficientCalculationPart"
+          },
+          {
+            "mCoefficient": 0.8999999761581421,
+            "__type": "StatByCoefficientCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      },
+      "TotalExplosionDamage": {
+        "mFormulaParts": [
+          {
+            "mDataValue": "BaseDamage",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          {
+            "mCoefficient": 1.0,
+            "__type": "StatByCoefficientCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      },
+      "MaxMonsterOnHitTooltip": {
+        "mMultiplier": {
+          "mPart1": {
+            "mDataValue": "MaxEpicMonsterStacks",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          "mPart2": {
+            "mNumber": 0.5,
+            "__type": "NumberCalculationPart"
+          },
+          "__type": "ProductOfSubPartsCalculationPart"
+        },
+        "tooltipOnly": true,
+        "mModifiedGameCalculation": "FinalOnHitDamage",
+        "__type": "GameCalculationModified"
+      }
+    },
+    "dataValues": {
+      "PassiveStacksOnDevour": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "OnHitDamage": [
+        4.0,
+        6.0,
+        8.0,
+        10.0,
+        12.0,
+        14.0,
+        16.0
+      ],
+      "CorpseDuration": [
+        15.0,
+        15.0,
+        15.0,
+        15.0,
+        15.0,
+        15.0,
+        15.0
+      ],
+      "BaseDamage": [
+        100.0,
+        150.0,
+        200.0,
+        250.0,
+        300.0,
+        350.0,
+        400.0
+      ],
+      "MissingHealthDamage": [
+        0.25,
+        0.25,
+        0.25,
+        0.25,
+        0.25,
+        0.25,
+        0.25
+      ],
+      "AoERange": [
+        500.0,
+        500.0,
+        500.0,
+        500.0,
+        500.0,
+        500.0,
+        500.0
+      ],
+      "MaxExecuteVsMonsters": [
+        1500.0,
+        1500.0,
+        1500.0,
+        1500.0,
+        1500.0,
+        1500.0,
+        1500.0
+      ],
+      "SteroidDuration": [
+        60.0,
+        60.0,
+        60.0,
+        60.0,
+        60.0,
+        60.0,
+        60.0
+      ],
+      "VoidDuration": [
+        180.0,
+        180.0,
+        180.0,
+        180.0,
+        180.0,
+        180.0,
+        180.0
+      ],
+      "MinionRadius": [
+        1000.0,
+        1000.0,
+        1000.0,
+        1000.0,
+        1000.0,
+        1000.0,
+        1000.0
+      ],
+      "BonusAARange": [
+        75.0,
+        75.0,
+        75.0,
+        75.0,
+        75.0,
+        75.0,
+        75.0
+      ],
+      "RPassiveStackDuration": [
+        5.0,
+        5.0,
+        5.0,
+        5.0,
+        5.0,
+        5.0,
+        5.0
+      ],
+      "OOCMS": [
+        -25.0,
+        10.0,
+        45.0,
+        80.0,
+        115.0,
+        150.0,
+        185.0
+      ],
+      "BaseMaxHealth": [
+        50.0,
+        100.0,
+        150.0,
+        200.0,
+        250.0,
+        300.0,
+        350.0
+      ],
+      "TotalASMod": [
+        0.05000000074505806,
+        0.10000000149011612,
+        0.15000000596046448,
+        0.20000000298023224,
+        0.25,
+        0.30000001192092896,
+        0.3499999940395355
+      ],
+      "MaxEpicMonsterStacks": [
+        10.0,
+        10.0,
+        10.0,
+        10.0,
+        10.0,
+        10.0,
+        10.0
+      ],
+      "VoidlingHPScale": [
+        -0.05000000074505806,
+        0.20000000298023224,
+        0.44999998807907104,
+        0.699999988079071,
+        0.949999988079071,
+        1.2000000476837158,
+        1.4500000476837158
+      ],
+      "VoidlingADScale": [
+        1.100000023841858,
+        1.100000023841858,
+        1.100000023841858,
+        1.100000023841858,
+        1.100000023841858,
+        1.100000023841858,
+        1.100000023841858
+      ],
+      "MeleeVoidlingSkinScaleMod": [
+        0.15000000596046448,
+        0.15000000596046448,
+        0.15000000596046448,
+        0.15000000596046448,
+        0.15000000596046448,
+        0.15000000596046448,
+        0.15000000596046448
+      ],
+      "VoidlingMovementSpeedMod": [
+        100.0,
+        100.0,
+        100.0,
+        100.0,
+        100.0,
+        100.0,
+        100.0
+      ]
+    }
+  },
+  "BelvethEMissile": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "BelvethE": {
+    "calculations": {
+      "TotalStrikes": {
+        "mFormulaParts": [
+          {
+            "mDataValue": "NumberOfStrikes",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          {
+            "mPart1": {
+              "mDataValue": "NumberOfStrikes",
+              "__type": "NamedDataValueCalculationPart"
+            },
+            "mPart2": {
+              "mStat": 4,
+              "mStatFormula": 2,
+              "mCoefficient": 0.5,
+              "__type": "StatByCoefficientCalculationPart"
+            },
+            "__type": "ProductOfSubPartsCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      },
+      "DamagePerStrike": {
+        "mFormulaParts": [
+          {
+            "mDataValue": "DamagePerHit",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          {
+            "mStat": 2,
+            "mCoefficient": 0.07999999821186066,
+            "__type": "StatByCoefficientCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      },
+      "TotalLifesteal": {
+        "mFormulaParts": [
+          {
+            "mDataValue": "BonusLifesteal",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          {
+            "mStat": 18,
+            "mCoefficient": 1.0,
+            "__type": "StatByCoefficientCalculationPart"
+          }
+        ],
+        "mDisplayAsPercent": true,
+        "__type": "GameCalculation"
+      },
+      "MaxDamagePerStrikeTooltip": {
+        "mMultiplier": {
+          "mNumber": 4.0,
+          "__type": "NumberCalculationPart"
+        },
+        "tooltipOnly": true,
+        "mModifiedGameCalculation": "DamagePerStrike",
+        "__type": "GameCalculationModified"
+      }
+    },
+    "dataValues": {
+      "TotalDuration": [
+        1.5,
+        1.5,
+        1.5,
+        1.5,
+        1.5,
+        1.5,
+        1.5
+      ],
+      "AttackSpeedMult": [
+        8.0,
+        8.0,
+        8.0,
+        8.0,
+        8.0,
+        8.0,
+        8.0
+      ],
+      "DamagePerHit": [
+        5.0,
+        6.0,
+        7.0,
+        8.0,
+        9.0,
+        10.0,
+        11.0
+      ],
+      "OnHitRatio": [
+        0.07999999821186066,
+        0.07999999821186066,
+        0.07999999821186066,
+        0.07999999821186066,
+        0.07999999821186066,
+        0.07999999821186066,
+        0.07999999821186066
+      ],
+      "NumberOfStrikes": [
+        6.0,
+        6.0,
+        6.0,
+        6.0,
+        6.0,
+        6.0,
+        6.0
+      ],
+      "MonsterMod": [
+        1.5,
+        1.5,
+        1.5,
+        1.5,
+        1.5,
+        1.5,
+        1.5
+      ],
+      "MissingHealthMult": [
+        3.0,
+        3.0,
+        3.0,
+        3.0,
+        3.0,
+        3.0,
+        3.0
+      ],
+      "DRPercent": [
+        0.30000001192092896,
+        0.3499999940395355,
+        0.4000000059604645,
+        0.44999998807907104,
+        0.5,
+        0.550000011920929,
+        0.6000000238418579
+      ],
+      "BonusLifeSteal": [
+        0.20000000298023224,
+        0.20000000298023224,
+        0.20000000298023224,
+        0.20000000298023224,
+        0.20000000298023224,
+        0.20000000298023224,
+        0.20000000298023224
+      ]
+    }
+  },
+  "BelvethPassiveStacks": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "BelvethPassive": {
+    "calculations": {
+      "AttackSpeedPerStack": {
+        "mFormulaParts": [
+          {
+            "mStartValue": 0.2800000011920929,
+            "mEndValue": 1.100000023841858,
+            "__type": "ByCharLevelInterpolationCalculationPart"
+          }
+        ],
+        "mPrecision": 2,
+        "__type": "GameCalculation"
+      },
+      "SheenSpeedPerStack": {
+        "mFormulaParts": [
+          {
+            "mStartValue": 0.20000000298023224,
+            "mEndValue": 0.4000000059604645,
+            "mScaleByStatProgressionMultiplier": true,
+            "__type": "ByCharLevelInterpolationCalculationPart"
+          }
+        ],
+        "mDisplayAsPercent": true,
+        "__type": "GameCalculation"
+      },
+      "TotalAttackSpeedFromStacks": {
+        "mMultiplier": {
+          "mBuffName": "{7f3c01cf}",
+          "mCoefficient": 1.0,
+          "__type": "BuffCounterByCoefficientCalculationPart"
+        },
+        "mSimpleTooltipCalculationDisplay": 5,
+        "mExpandedTooltipCalculationDisplay": 5,
+        "StaticTooltipCalculationDisplay": 5,
+        "mModifiedGameCalculation": "AttackSpeedPerStack",
+        "__type": "GameCalculationModified"
+      }
+    },
+    "dataValues": {
+      "MonsterStacks": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "ChampionStacks": [
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0
+      ],
+      "ARAMBonusStacks": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "TakedownDuration": [
+        4.0,
+        4.0,
+        4.0,
+        4.0,
+        4.0,
+        4.0,
+        4.0
+      ],
+      "SheenDuration": [
+        5.0,
+        5.0,
+        5.0,
+        5.0,
+        5.0,
+        5.0,
+        5.0
+      ],
+      "BaronBuffDuration": [
+        180.0,
+        180.0,
+        180.0,
+        180.0,
+        180.0,
+        180.0,
+        180.0
+      ],
+      "SheenNumberOfAttacks": [
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0
+      ],
+      "AttackADRatio": [
+        0.75,
+        0.75,
+        0.75,
+        0.75,
+        0.75,
+        0.75,
+        0.75
+      ],
+      "OnHitRatio": [
+        0.75,
+        0.75,
+        0.75,
+        0.75,
+        0.75,
+        0.75,
+        0.75
+      ],
+      "BrawlBonusStacks": [
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0
+      ]
+    }
+  },
+  "BelvethPassiveMissile4": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "BelvethPassiveMissile1": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "BelvethPassiveMissile2": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "BelvethPassiveMissile3": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "BelvethCritAttack": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "BelvethW": {
+    "calculations": {
+      "Damage": {
+        "mFormulaParts": [
+          {
+            "mDataValue": "BaseDamage",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          {
+            "mStatFormula": 2,
+            "mCoefficient": 1.25,
+            "__type": "StatByCoefficientCalculationPart"
+          },
+          {
+            "mStat": 2,
+            "mStatFormula": 2,
+            "mCoefficient": 1.0,
+            "__type": "StatByCoefficientCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      }
+    },
+    "dataValues": {
+      "Duration": [
+        0.75,
+        0.75,
+        0.75,
+        0.75,
+        0.75,
+        0.75,
+        0.75
+      ],
+      "BaseDamage": [
+        30.0,
+        70.0,
+        110.0,
+        150.0,
+        190.0,
+        230.0,
+        270.0
+      ],
+      "SlowPercent": [
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5
+      ],
+      "SlowDuration": [
+        1.0,
+        1.25,
+        1.5,
+        1.75,
+        2.0,
+        2.25,
+        2.5
+      ]
+    }
+  },
+  "BelvethCritAttack2": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "BelvethBasicAttack": {
+    "calculations": {},
+    "dataValues": {}
+  }
+}

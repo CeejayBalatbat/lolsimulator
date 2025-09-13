@@ -1,0 +1,300 @@
+{
+  "KassadinCritAttack": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "ForcePulse": {
+    "calculations": {
+      "TotalDamage": {
+        "mFormulaParts": [
+          {
+            "mDataValue": "BaseDamage",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          {
+            "mDataValue": "APRatio",
+            "__type": "StatByNamedDataValueCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      }
+    },
+    "dataValues": {
+      "ReductionPerSpellCast": [
+        0.75,
+        0.75,
+        0.75,
+        0.75,
+        0.75,
+        0.75,
+        0.75
+      ],
+      "BaseDamage": [
+        40.0,
+        70.0,
+        100.0,
+        130.0,
+        160.0,
+        190.0,
+        220.0
+      ],
+      "APRatio": [
+        0.699999988079071,
+        0.699999988079071,
+        0.699999988079071,
+        0.699999988079071,
+        0.699999988079071,
+        0.699999988079071,
+        0.699999988079071
+      ]
+    }
+  },
+  "NullLance": {
+    "calculations": {
+      "TotalShield": {
+        "mFormulaParts": [
+          {
+            "mEffectIndex": 3,
+            "__type": "EffectValueCalculationPart"
+          },
+          {
+            "mCoefficient": 0.30000001192092896,
+            "__type": "StatByCoefficientCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      },
+      "TotalDamage": {
+        "mFormulaParts": [
+          {
+            "mDataValue": "BaseDamage",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          {
+            "mCoefficient": 0.699999988079071,
+            "__type": "StatByCoefficientCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      }
+    },
+    "dataValues": {
+      "BaseDamage": [
+        35.0,
+        65.0,
+        95.0,
+        125.0,
+        155.0,
+        185.0,
+        215.0
+      ]
+    }
+  },
+  "NetherBlade": {
+    "calculations": {
+      "ActiveDamage": {
+        "mFormulaParts": [
+          {
+            "mDataValue": "ActiveBaseDamage",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          {
+            "mCoefficient": 0.800000011920929,
+            "__type": "StatByCoefficientCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      },
+      "OnHitDamage": {
+        "tooltipOnly": true,
+        "mFormulaParts": [
+          {
+            "mEffectIndex": 2,
+            "__type": "EffectValueCalculationPart"
+          },
+          {
+            "mCoefficient": 0.10000000149011612,
+            "__type": "StatByCoefficientCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      }
+    },
+    "dataValues": {
+      "ActiveBaseDamage": [
+        25.0,
+        50.0,
+        75.0,
+        100.0,
+        125.0,
+        150.0,
+        175.0
+      ]
+    }
+  },
+  "VoidStone": {
+    "calculations": {},
+    "dataValues": {
+      "DamageReductionPercent": [
+        0.10000000149011612,
+        0.10000000149011612,
+        0.10000000149011612,
+        0.10000000149011612,
+        0.10000000149011612,
+        0.10000000149011612,
+        0.10000000149011612
+      ]
+    }
+  },
+  "RiftWalk": {
+    "calculations": {
+      "BaseDamage": {
+        "mFormulaParts": [
+          {
+            "mDataValue": "RBaseDamage",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          {
+            "mDataValue": "APRatio",
+            "__type": "StatByNamedDataValueCalculationPart"
+          },
+          {
+            "mCoefficient": 0.019999999552965164,
+            "__type": "AbilityResourceByCoefficientCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      },
+      "BonusDamage": {
+        "mFormulaParts": [
+          {
+            "mDataValue": "StackDamage",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          {
+            "mDataValue": "APStackRatio",
+            "__type": "StatByNamedDataValueCalculationPart"
+          },
+          {
+            "mCoefficient": 0.009999999776482582,
+            "__type": "AbilityResourceByCoefficientCalculationPart"
+          }
+        ],
+        "__type": "GameCalculation"
+      }
+    },
+    "dataValues": {
+      "BaseCD": [
+        5.0,
+        5.0,
+        3.5,
+        2.0,
+        2.0,
+        2.0,
+        2.0
+      ],
+      "RBaseCost": [
+        40.0,
+        40.0,
+        40.0,
+        40.0,
+        40.0,
+        40.0,
+        40.0
+      ],
+      "RBaseDamage": [
+        70.0,
+        70.0,
+        90.0,
+        110.0,
+        110.0,
+        110.0,
+        110.0
+      ],
+      "StackDamage": [
+        35.0,
+        35.0,
+        45.0,
+        55.0,
+        55.0,
+        55.0,
+        55.0
+      ],
+      "APRatio": [
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5
+      ],
+      "APStackRatio": [
+        0.07000000029802322,
+        0.07000000029802322,
+        0.07000000029802322,
+        0.07000000029802322,
+        0.07000000029802322,
+        0.07000000029802322,
+        0.07000000029802322
+      ],
+      "RStackDuration": [
+        15.0,
+        15.0,
+        15.0,
+        15.0,
+        15.0,
+        15.0,
+        15.0
+      ],
+      "MaxStacks": [
+        4.0,
+        4.0,
+        4.0,
+        4.0,
+        4.0,
+        4.0,
+        4.0
+      ],
+      "RManaRatio": [
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0
+      ],
+      "RStackManaRatio": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "RiftWalkBaseDamage": [
+        70.0,
+        70.0,
+        90.0,
+        110.0,
+        110.0,
+        110.0,
+        110.0
+      ]
+    }
+  },
+  "KassadinBasicAttack3": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "KassadinBasicAttack2": {
+    "calculations": {},
+    "dataValues": {}
+  },
+  "KassadinBasicAttack": {
+    "calculations": {},
+    "dataValues": {}
+  }
+}
