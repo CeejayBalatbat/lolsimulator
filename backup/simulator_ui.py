@@ -1,24 +1,32 @@
-# scripts/simulator_ui.py
-
 import streamlit as st
 import pandas as pd
 import json
 from pathlib import Path
-from simulator import compute_stats
+from simulator import compute_stats  # backend handles stats calculation
 from PIL import Image
 
+
 # =====================================================================
-# CONFIG & DATA PATHS
+# CONFIG SECTION
 # =====================================================================
 data_folder = Path(__file__).resolve().parent.parent / "data"
+
+# =====================================================================
+# PATH CONFIGURATION
+# =====================================================================
 champ_icon_dir = data_folder / "champion_icons"
 item_icon_dir = data_folder / "item_icons"
 
+# Ensure folders exist
 champ_icon_dir.mkdir(parents=True, exist_ok=True)
 item_icon_dir.mkdir(parents=True, exist_ok=True)
 
-# Load banned items
+# =====================================================================
+# LOAD BANNED_ITEMS DATA
+# =====================================================================
+
 def load_banned_items(path=data_folder / "banned_items.json"):
+    """Load banned items list from JSON file in the data folder."""
     if not path.exists():
         return []
     with open(path, "r", encoding="utf-8") as f:
@@ -28,31 +36,31 @@ def load_banned_items(path=data_folder / "banned_items.json"):
 BANNED_ITEMS = load_banned_items()
 
 # =====================================================================
-# LOAD CHAMPIONS & ITEMS
+# LOAD DATA
 # =====================================================================
+# Champions
 with open(data_folder / "champions_full.json", "r", encoding="utf-8") as f:
     champions = json.load(f)
 
 champ_df = pd.DataFrame(champions)
 champion_list = sorted([champ["name"] for champ in champions], key=lambda x: x.lower())
 
+# Items
 with open(data_folder / "items_full.json", "r", encoding="utf-8") as f:
     items = json.load(f)
 
 all_items = []
 for item in items:
-    if item.get("name") not in BANNED_ITEMS:
+    if item.get("name") not in BANNED_ITEMS:  # uses JSON now
         item_id = item.get("image", {}).get("full", "").replace(".png", "")
         all_items.append({
             "id": item_id,
             "name": item.get("name"),
-            "depth": item.get("depth", 0),
-            "tags": item.get("tags", []),
-            "image": item.get("image", {}),
+            "depth": item.get("depth", 0)
         })
 
 # =====================================================================
-# STREAMLIT CONFIG
+# STREAMLIT UI START
 # =====================================================================
 st.set_page_config(page_title="LoL Build Simulator", layout="wide")
 st.title("⚔️ League of Legends Build Simulator")
@@ -63,18 +71,43 @@ st.title("⚔️ League of Legends Build Simulator")
 st.sidebar.header("Champion Selection")
 selected_champion = st.sidebar.selectbox("Choose your champion", champion_list)
 
+# Champion level slider
 champ_level = st.sidebar.slider(
     "Select Champion Level",
     min_value=1,
     max_value=18,
-    value=1,
+    value=1,  # default starting level
     step=1
 )
+
+# =====================================================================
+# SIDEBAR: ITEM SELECTION
+# =====================================================================
+st.sidebar.header("Item Build")
+
+selected_items = []
+num_slots = 6
+for slot in range(num_slots):
+    available_items = [
+        it["name"]
+        for it in all_items
+        if not (it["depth"] == 3 and it["name"] in selected_items)  # no duplicate legendaries
+    ]
+
+    choice = st.sidebar.selectbox(
+        f"Item Slot {slot+1}",
+        ["None"] + available_items,
+        key=f"item_slot_{slot}"
+    )
+
+    if choice != "None":
+        selected_items.append(choice)
 
 # =====================================================================
 # SIDEBAR: ENEMY ARCHETYPE
 # =====================================================================
 st.sidebar.header("Enemy Archetype")
+
 archetypes = {
     "Squishy": {"hp": 1200, "armor": 30, "mr": 30},
     "Bruiser": {"hp": 2000, "armor": 80, "mr": 60},
@@ -98,184 +131,155 @@ else:
     st.sidebar.text(f"MR: {enemy_mr}")
 
 # =====================================================================
-# SIDEBAR: ITEM SELECTION (SHOP INTERFACE)
-# =====================================================================
-st.sidebar.header("Item Build")
-num_slots = 6
-if "selected_items" not in st.session_state:
-    st.session_state.selected_items = [None] * num_slots
-
-# Keep track of which slot is active for selection
-slot_to_select = st.sidebar.radio(
-    "Select Item Slot to Edit",
-    [f"Slot {i+1}" for i in range(num_slots)]
-)
-active_slot = int(slot_to_select.split()[1]) - 1
-
-# Tabs for categories
-tab_names = ["All", "Fighter", "Mage", "Tank", "Support", "Marksman", "Assassin"]
-category = st.sidebar.selectbox("Item Category", tab_names)
-
-# Search box
-search_query = st.sidebar.text_input("Search Items")
-
-# Filter items based on category & search
-filtered_items = []
-for item in all_items:
-    if category != "All" and category not in item.get("tags", []):
-        continue
-    if search_query.lower() not in item["name"].lower():
-        continue
-    filtered_items.append(item)
-
-# Display current selected items
-st.sidebar.write("Current Build:")
-for idx, it in enumerate(st.session_state.selected_items):
-    st.sidebar.write(f"Slot {idx+1}: {it or 'None'}")
-
-# =====================================================================
-# MAIN PANEL: ITEM SELECTION GRID
-# =====================================================================
-st.subheader("Item Selection")
-st.write(f"Select an item for {slot_to_select}:")
-
-# Create a grid of items with buttons containing both image and text
-cols_per_row = 6  # Reduced for better spacing
-rows = (len(filtered_items) // cols_per_row) + 1
-
-# Display items in a grid
-for row in range(rows):
-    cols = st.columns(cols_per_row)
-    for col in range(cols_per_row):
-        idx = row * cols_per_row + col
-        if idx < len(filtered_items):
-            item = filtered_items[idx]
-            with cols[col]:
-                img_file = item_icon_dir / f"{item['id']}.png"
-                
-                if img_file.exists():
-                    # Create a container with border for the item
-                    with st.container():
-                        # Display the image
-                        st.image(str(img_file), width=48)
-                        
-                        # Display truncated item name
-                        display_name = item["name"]
-                        if len(display_name) > 16:
-                            display_name = display_name[:14] + "..."
-                        
-                        # Create a button with the item name
-                        if st.button(
-                            display_name, 
-                            key=f"item_btn_{item['id']}_{active_slot}",
-                            help=f"Add {item['name']} to {slot_to_select}",
-                            use_container_width=True
-                        ):
-                            st.session_state.selected_items[active_slot] = item["name"]
-                            st.rerun()
-
-# =====================================================================
 # MAIN PANEL: SIMULATION OUTPUT
 # =====================================================================
 st.subheader("Simulation Results")
 
-# Champion display
-champ_icon_path = champ_icon_dir / f"{selected_champion}.png"
+# Champion
+champ_icon_path = champ_icon_dir / f"{selected_champion}.png"  # or the exact file name if needed
+st.write("**Champion:**")
 col1, col2 = st.columns([1, 4])
 with col1:
     if champ_icon_path.exists():
         st.image(str(champ_icon_path), width=64)
-    st.write(selected_champion)
+    st.write(selected_champion)  # name under icon
 with col2:
-    st.write("")
-
-# Items display
+    st.write("")  # optional: other info, or leave empty
+    
+# Items
 st.write("**Items:**")
-item_cols = st.columns(len([it for it in st.session_state.selected_items if it]))
-for i, item_name in enumerate([it for it in st.session_state.selected_items if it]):
-    file_name = next((itm["image"]["full"] for itm in items if itm["name"] == item_name), None)
-    if file_name:
-        img_path = item_icon_dir / file_name
-        with item_cols[i]:
-            if img_path.exists():
-                st.image(str(img_path), width=48)
-            st.write(item_name)
 
-# Enemy display
+if selected_items:
+    # Inject CSS to reduce space between columns
+    st.markdown(
+        """
+        <style>
+        .stColumns [class*="stColumn"] {
+            padding-left: 2px;
+            padding-right: 2px;
+        }
+        </style>
+        """,
+        unsafe_allow_html=True
+    )
+
+    item_cols = st.columns(len(selected_items))
+    for i, item_name in enumerate(selected_items):
+        # Match item name to its icon file (numbers like 1001.png)
+        file_name = next((it["image"]["full"] for it in items if it["name"] == item_name), None)
+        if file_name:
+            img_path = item_icon_dir / file_name
+            with item_cols[i]:
+                if img_path.exists():
+                    st.image(str(img_path), width=48)
+                st.write(item_name)
+else:
+    st.write("No items selected")
+
+
+# Enemy
 st.write(f"**Enemy:** {enemy_type} (HP: {enemy_hp}, Armor: {enemy_armor}, MR: {enemy_mr})")
 
-# =====================================================================
-# COMPUTE STATS
-# =====================================================================
+# --- Compute stats ---
 if selected_champion:
-    stats = compute_stats(selected_champion, [it for it in st.session_state.selected_items if it], level=champ_level)
+    stats = compute_stats(selected_champion, selected_items, level=champ_level)  # ✅ pass string, not dict
 
     st.subheader("Simulation Stats")
 
+    # Define stat pairs for table layout
     stat_pairs = [
         ("AD", "AP"),
         ("Armor", "MR"),
         ("Attack Speed", "Ability Haste"),
         ("Crit Chance", "Move Speed"),
         ("HP Regen", "Resource Regen"),
-        ("Armor Penetration", None),
-        ("Magic Penetration", None),
+        ("Armor Penetration", None),   # ✅ its own row
+        ("Magic Penetration", None),   # ✅ its own row
         ("Lifesteal", "Omnivamp"),
         ("Range", "Tenacity"),
     ]
 
-    # Add HP + resource dynamically
+
+    # Add HP + dynamic resource
+    champ_data = next((c for c in champions if c["name"] == selected_champion), None)
     resource_type = stats.get("resource_type", "None")
-    if resource_type.lower() != "none":
+
+    if resource_type and resource_type.lower() != "none":
         stat_pairs.append(("HP", resource_type))
     else:
         stat_pairs.append(("HP", None))
 
+    # Build table rows
     rows = []
     for left, right in stat_pairs:
         left_key = left.lower().replace(" ", "_")
         right_key = right.lower().replace(" ", "_") if right else None
 
-        # Magic Pen
+        # Handle Magic Penetration
         if left == "Magic Penetration" or right == "Magic Penetration":
             flat = stats.get("flat_magic_pen", 0)
             percent = stats.get("percent_magic_pen", 0)
             value = f"{flat}|{percent:.0%}"
             if left == "Magic Penetration":
-                rows.append([f"{left}: {value}", ""])
+                rows.append([f"{left}: {value}", f"{right}: {stats.get(right.lower().replace(' ', '_'), '')}" if right else ""])
             else:
-                rows.append(["", f"{right}: {value}"])
+                rows.append([f"{left}: {stats.get(left_key, '')}", f"{right}: {value}"])
             continue
 
-        # Armor Pen
+        # Handle Armor Penetration + Lethality
+        # Handle Armor Penetration
         if left == "Armor Penetration" or right == "Armor Penetration":
             flat = stats.get("flat_armor_pen", 0)
             percent = stats.get("percent_armor_pen", 0)
             value = f"{flat}|{percent:.0%}"
             if left == "Armor Penetration":
-                rows.append([f"{left}: {value}", ""])
+                rows.append([
+                    f"{left}: {value}",
+                    f"{right}: {stats.get(right.lower().replace(' ', '_'), '')}" if right else ""
+                ])
             else:
-                rows.append(["", f"{right}: {value}"])
+                rows.append([
+                    f"{left}: {stats.get(left_key, '')}",
+                    f"{right}: {value}"
+                ])
             continue
+
+
+
+
+
 
         left_val = stats.get(left_key, 0)
         right_val = stats.get(right_key, "") if right_key else ""
+
         if left_key == "attack_speed":
             left_val = round(left_val, 3)
         if right_key == "attack_speed" and right_val != "":
             right_val = round(right_val, 3)
 
-        rows.append([f"{left}: {left_val}", f"{right}: {right_val}" if right else ""])
+        rows.append([
+            f"{left}: {left_val}",
+            f"{right}: {right_val}" if right else ""
+        ])
 
+
+
+    # Render as a table
     st.table(rows)
+    st.write([f"Magic Penetration: {stats['flat_magic_pen']}|{stats['percent_magic_pen']:.0%}", ""])
+    st.write([f"Armor Penetration: {stats['flat_armor_pen']}|{stats['percent_armor_pen']:.0%}", ""])
+
 
 # =====================================================================
-# TABS (Overview, Skill Tooltips, Item Damage)
+# TABS: START OF TABS
 # =====================================================================
+
+
 tab1, tab2, tab3 = st.tabs(["Overview", "Skill Tooltips", "Item Damage"])
 
 with tab1:
     st.subheader("Fight Overview")
+
 
 with tab2:
     st.subheader("Skill Tooltips")
@@ -283,11 +287,4 @@ with tab2:
 
 with tab3:
     st.subheader("Item Damage")
-    st.write("Damage breakdown from items.")
-
-# =====================================================================
-# CLEAR BUTTON
-# =====================================================================
-if st.button("Clear All Items"):
-    st.session_state.selected_items = [None] * num_slots
-    st.rerun()
+    st.write("Damage breakdown from items like Spear of Shojin, Liandry's, Teemo shrooms, etc.")

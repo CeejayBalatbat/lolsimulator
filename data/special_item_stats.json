@@ -1,0 +1,22 @@
+{
+  "Sorcerer's Shoes": { "flat_magic_pen": 18 },
+  "Oblivion Orb": { "flat_magic_pen": 15 },
+  "Shadowflame": { "flat_magic_pen": 15 },
+  "Cryptbloom": { "flat_magic_pen": 10 },
+  "Void Staff": { "percent_magic_pen": 0.40 },
+
+  "Serylda's Grudge": { "percent_armor_pen": 0.30 },
+  "Lord Dominik's Regards": { "percent_armor_pen": 0.35 },
+
+  "Youmuu's Ghostblade": { "flat_armor_pen": 18 },
+  "Duskblade of Draktharr": { "flat_armor_pen": 18 },
+  "Eclipse": { "flat_armor_pen": 18 },
+  "Prowler's Claw": { "flat_armor_pen": 18 },
+  "Axiom Arc": { "flat_armor_pen": 10 },
+  "Serpent's Fang": { "flat_armor_pen": 12 },
+  "The Collector": { "flat_armor_pen": 12 },
+
+  "Immortal Shieldbow": { "lifesteal": 7 },
+  "Blade of the Ruined King": { "lifesteal": 8 },
+  "Ravenous Hydra": { "omnivamp": 10 }
+}

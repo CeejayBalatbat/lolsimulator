@@ -14,8 +14,13 @@ with open(data_folder / "champions_full.json", "r", encoding="utf-8") as f:
 with open(data_folder / "items_full.json", "r", encoding="utf-8") as f:
     items = json.load(f)
 
+# Missing stats for items (custom)
+with open(data_folder / "special_item_stats.json", "r", encoding="utf-8") as f:
+    special_item_stats = json.load(f)
+
 # Convert items list into dict for quick lookup by name
 items_by_name = {item["name"]: item for item in items}
+
 
 # =====================================================================
 # BACKEND HELPERS
@@ -43,10 +48,14 @@ def compute_stats(champion_name, item_names, level=1):
         "crit_chance": base_stats.get("crit", 0) + base_stats.get("critperlevel", 0) * (level - 1),
         "move_speed": base_stats.get("movespeed", 0),
         "hp_regen": base_stats.get("hpregen", 0) + base_stats.get("hpregenperlevel", 0) * (level - 1),
+        "resource": base_stats.get("mp", 0) + base_stats.get("mpperlevel", 0) * (level - 1),
         "resource_regen": base_stats.get("mpregen", 0) + base_stats.get("mpregenperlevel", 0) * (level - 1),
-        "lethality": 0,
-        "armor_pen": 0,
-        "magic_pen": 0,
+        "resource_type": champion.get("partype", "None"),
+        "lethality": 0,       
+        "flat_armor_pen": 0,
+        "percent_armor_pen": 0,
+        "flat_magic_pen": 0,      
+        "percent_magic_pen": 0.0,
         "lifesteal": 0,
         "omnivamp": 0,
         "range": base_stats.get("attackrange", 0),
@@ -69,7 +78,6 @@ def compute_stats(champion_name, item_names, level=1):
     )
 
     total_bonus_as = bonus_as + item_bonus_as
-
     stats["attack_speed"] = base_as + (ratio_as * total_bonus_as)
 
     # --- Add item stats ---
@@ -78,6 +86,7 @@ def compute_stats(champion_name, item_names, level=1):
         if not item:
             continue
         item_stats = item.get("stats", {})
+
         stats["ad"] += item_stats.get("FlatPhysicalDamageMod", 0)
         stats["ap"] += item_stats.get("FlatMagicDamageMod", 0)
         stats["armor"] += item_stats.get("FlatArmorMod", 0)
@@ -89,14 +98,24 @@ def compute_stats(champion_name, item_names, level=1):
         stats["hp_regen"] += item_stats.get("FlatHPRegenMod", 0)
         stats["resource_regen"] += item_stats.get("FlatMPRegenMod", 0)
         stats["lethality"] += item_stats.get("Lethality", 0)
-        stats["armor_pen"] += item_stats.get("ArmorPen", 0)
-        stats["magic_pen"] += item_stats.get("MagicPen", 0)
+        stats["flat_armor_pen"] += item_stats.get("FlatArmorPen", 0)
+        stats["percent_armor_pen"] += item_stats.get("PercentArmorPen", 0)
+        stats["flat_magic_pen"] += item_stats.get("FlatMagicPen", 0)
+        stats["percent_magic_pen"] += item_stats.get("PercentMagicPen", 0)
         stats["lifesteal"] += item_stats.get("LifeSteal", 0)
         stats["omnivamp"] += item_stats.get("Omnivamp", 0)
         stats["tenacity"] += item_stats.get("Tenacity", 0)
         stats["hp"] += item_stats.get("FlatHPPoolMod", 0)
 
+        # --- Apply special overrides from special_item_stats.json ---
+        if item_name in special_item_stats:
+            overrides = special_item_stats[item_name]
+            for stat_key, value in overrides.items():
+                stats[stat_key] += value
+
     return stats
+
+
 def calculate_damage(champion_name, item_names, enemy_stats):
     """
     Placeholder backend function.
