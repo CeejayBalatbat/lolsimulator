@@ -16,6 +16,13 @@ def load_item_image(path):
     """Load a PIL image from disk and cache it in memory."""
     return Image.open(path)
 
+@st.cache_data
+def filter_items(all_items, query):
+    if not query:
+        return all_items
+    query = query.lower()
+    return [item for item in all_items if query in item["name"].lower()]
+
 # =====================================================================
 # CONFIG & DATA PATHS
 # =====================================================================
@@ -109,44 +116,48 @@ else:
     st.sidebar.text(f"MR: {enemy_mr}")
 
 # =====================================================================
-# SIDEBAR: ITEM SELECTION WITH POPOVER
+# SIDEBAR: ITEM SELECTION WITH POPOVER (OPTIMIZED)
 # =====================================================================
 st.sidebar.header("Item Build (Popover Version)")
 num_slots = 6
 if "selected_items" not in st.session_state:
-    # store item IDs here instead of names
     st.session_state.selected_items = [None] * num_slots
 
-# Create a mapping of item_id -> item data for quick lookup
+# Create mapping of item_id -> item data
 items_by_id = {item["id"]: item for item in all_items}
 
+# Cached filtering function
+@st.cache_data
+def filter_items(items, query):
+    query = query.lower()
+    return [item for item in items if query in item["name"].lower()]
+
+# Track how many rows to show per slot (lazy load)
+if "rows_to_show" not in st.session_state:
+    st.session_state.rows_to_show = [3] * num_slots  # start with 3 rows per slot
+
 for i in range(num_slots):
-    # Show current slot label using the item name for readability
+    # Current slot label
     current_item_name = (
-        next((x["name"] for x in all_items if x["id"] == st.session_state.selected_items[i]), None)
-        or "None"
+        items_by_id[st.session_state.selected_items[i]]["name"]
+        if st.session_state.selected_items[i] else "None"
     )
     slot_label = f"Slot {i+1}: {current_item_name}"
 
     with st.sidebar.popover(slot_label):
         st.write(f"Select item for Slot {i+1}")
 
-        # Search bar INSIDE the popover
-        search_query = st.text_input(
-            "Search items",
-            key=f"search_{i}"
-        )
+        # Search bar inside popover
+        search_query = st.text_input(f"Search items (Slot {i+1})", key=f"search_{i}")
+        filtered_items = filter_items(all_items, search_query)
 
-        # Filter items
-        filtered_items = [
-            item for item in all_items
-            if search_query.lower() in item["name"].lower()
-        ]
-
-        # Show items as grid
+        # Lazy rendering
         cols_per_row = 6
-        rows = (len(filtered_items) + cols_per_row - 1) // cols_per_row  # ceil
-        for row in range(rows):
+        max_rows_to_show = st.session_state.rows_to_show[i]
+        total_rows = (len(filtered_items) + cols_per_row - 1) // cols_per_row
+        rows_to_show = min(total_rows, max_rows_to_show)
+
+        for row in range(rows_to_show):
             cols = st.columns(cols_per_row)
             for col in range(cols_per_row):
                 idx = row * cols_per_row + col
@@ -155,23 +166,18 @@ for i in range(num_slots):
                     img_file = item_icon_dir / f"{item['id']}.png"
                     with cols[col]:
                         if img_file.exists():
-                            st.image(str(img_file), width=48)
+                            st.image(load_item_image(img_file), width=48)
                         display_name = (
-                            item["name"][:14] + "..."
-                            if len(item["name"]) > 16 else item["name"]
+                            item["name"][:14] + "..." if len(item["name"]) > 16 else item["name"]
                         )
                         if st.button(display_name, key=f"btn_{i}_{item['id']}"):
                             st.session_state.selected_items[i] = item["id"]
-                            # no st.rerun()
 
-# Display currently selected build
-st.sidebar.write("Current Build:")
-for idx, it in enumerate(st.session_state.selected_items):
-    if it:
-        item_name = items_by_id[it]["name"]  # lookup name by ID
-        st.sidebar.write(f"Slot {idx+1}: {item_name}")
-    else:
-        st.sidebar.write(f"Slot {idx+1}: None")
+        # "Load more" button
+        if total_rows > max_rows_to_show:
+            if st.button(f"Load more items (Slot {i+1})", key=f"load_more_{i}"):
+                st.session_state.rows_to_show[i] += 3  # show 3 more rows next rerun
+
 
 # =====================================================================
 # MAIN PANEL: SIMULATION OUTPUT
@@ -282,4 +288,3 @@ with tab3:
 # =====================================================================
 if st.button("Clear All Items"):
     st.session_state.selected_items = [None] * num_slots
-    st.rerun()
