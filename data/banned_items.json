@@ -1,7 +1,75 @@
 {
   "banned_items": [
+    
+    "Comment: Gangplank Passive",
+    "Gangplank Placeholder",
     "<rarityLegendary>Fire at Will</rarityLegendary><br><subtitleLeft><silver>500 Silver Serpents</silver></subtitleLeft>",
     "<rarityLegendary>Raise Morale</rarityLegendary><br><subtitleLeft><silver>500 Silver Serpents</silver></subtitleLeft>",
-    "<rarityLegendary>Death's Daughter</rarityLegendary><br><subtitleLeft><silver>500 Silver Serpents</silver></subtitleLeft>"
+    "<rarityLegendary>Death's Daughter</rarityLegendary><br><subtitleLeft><silver>500 Silver Serpents</silver></subtitleLeft>",
+    
+    "Comment: Tower & Minion Items",
+    "Penetrating Bullets",
+    "Fortification",
+    "Reinforced Armor",
+    "Warden's Eye",
+    "Overcharged",
+    "Anti-tower Socks",
+    "Gusto",
+    "Phreakish Gusto",
+    "Super Mech Armor",
+    "Super Mech Power Field",
+    "Turret Plating",
+    "Structure Bounty",
+    "OvererchargedHA",
+    "Tower Power-Up",
+
+
+    "Comment: Consumables",
+    "Health Potion",
+    "Total Biscuit of Everlasting Will",
+    "Refillable Potion",
+    "Corrupting Potion",
+    "Poro-Snax",
+    "Control Ward",
+    "Cappa Juice",
+    "Elixir of Skill",
+    "Elixir of Avarice",
+    "Elixir of Force",
+    "Minion Dematerializer",
+    
+    "Comment: Wards",
+    "Stealth Ward",
+    "Farsight Alteration",
+    "Oracle Lens",
+
+    "Comment: Champion Specific Items",
+    "Scarecrow Effigy",
+    "Your Cut",
+    "Kalista's Black Spear",
+
+    "Comment: Doombots Items",
+    "Atma's Reckoning",
+    "Demon King's Crown",
+    "Shield of Molten Stone",
+    "Cloak of Starry Night",
+    "Sword of the Divine",
+    "Veigar's Talisman of Ascension",
+    "Hextech Gunblade",
+    "Zephyr",
+    "Gargoyle Stoneplate",
+    "Sword of Blossoming Dawn",
+    "The Golden Spatula",
+    "Crown of the Shattered Queen",
+    "Gambler's Blade",
+    "Cruelty",
+    "Flesheater",
+    "Prowler's Claw",
+
+    "Comment: Idk why still here",
+    "Anathema's Chain",
+    "Mobility Boots",
+
+
+    "Comment: Removed Items"
   ]
 }
