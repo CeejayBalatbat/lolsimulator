@@ -1,0 +1,2864 @@
+[
+    {
+        "id": "1001",
+        "name": "Boots",
+        "tags": [
+            "Boots"
+        ],
+        "classes": [],
+        "passives": [],
+        "actives": []
+    },
+    {
+        "id": "1004",
+        "name": "Faerie Charm",
+        "tags": [
+            "ManaRegen"
+        ],
+        "classes": [],
+        "passives": [],
+        "actives": []
+    },
+    {
+        "id": "1006",
+        "name": "Rejuvenation Bead",
+        "tags": [
+            "HealthRegen"
+        ],
+        "classes": [],
+        "passives": [],
+        "actives": []
+    },
+    {
+        "id": "1011",
+        "name": "Giant's Belt",
+        "tags": [
+            "Health"
+        ],
+        "classes": [],
+        "passives": [],
+        "actives": []
+    },
+    {
+        "id": "1018",
+        "name": "Cloak of Agility",
+        "tags": [
+            "CriticalStrike"
+        ],
+        "classes": [],
+        "passives": [],
+        "actives": []
+    },
+    {
+        "id": "1026",
+        "name": "Blasting Wand",
+        "tags": [
+            "SpellDamage"
+        ],
+        "classes": [],
+        "passives": [],
+        "actives": []
+    },
+    {
+        "id": "1027",
+        "name": "Sapphire Crystal",
+        "tags": [
+            "Mana"
+        ],
+        "classes": [],
+        "passives": [],
+        "actives": []
+    },
+    {
+        "id": "1028",
+        "name": "Ruby Crystal",
+        "tags": [
+            "Health"
+        ],
+        "classes": [],
+        "passives": [],
+        "actives": []
+    },
+    {
+        "id": "1029",
+        "name": "Cloth Armor",
+        "tags": [
+            "Armor"
+        ],
+        "classes": [],
+        "passives": [],
+        "actives": []
+    },
+    {
+        "id": "1031",
+        "name": "Chain Vest",
+        "tags": [
+            "Armor"
+        ],
+        "classes": [],
+        "passives": [],
+        "actives": []
+    },
+    {
+        "id": "1033",
+        "name": "Null-Magic Mantle",
+        "tags": [
+            "SpellBlock"
+        ],
+        "classes": [],
+        "passives": [],
+        "actives": []
+    },
+    {
+        "id": "1036",
+        "name": "Long Sword",
+        "tags": [
+            "Damage",
+            "Lane"
+        ],
+        "classes": [],
+        "passives": [],
+        "actives": []
+    },
+    {
+        "id": "1037",
+        "name": "Pickaxe",
+        "tags": [
+            "Damage"
+        ],
+        "classes": [],
+        "passives": [],
+        "actives": []
+    },
+    {
+        "id": "1038",
+        "name": "B. F. Sword",
+        "tags": [
+            "Damage"
+        ],
+        "classes": [],
+        "passives": [],
+        "actives": []
+    },
+    {
+        "id": "1042",
+        "name": "Dagger",
+        "tags": [
+            "AttackSpeed"
+        ],
+        "classes": [],
+        "passives": [],
+        "actives": []
+    },
+    {
+        "id": "1043",
+        "name": "Recurve Bow",
+        "tags": [
+            "AttackSpeed",
+            "OnHit"
+        ],
+        "classes": [],
+        "passives": [],
+        "actives": []
+    },
+    {
+        "id": "1052",
+        "name": "Amplifying Tome",
+        "tags": [
+            "SpellDamage"
+        ],
+        "classes": [],
+        "passives": [],
+        "actives": []
+    },
+    {
+        "id": "1053",
+        "name": "Vampiric Scepter",
+        "tags": [
+            "Damage",
+            "LifeSteal"
+        ],
+        "classes": [],
+        "passives": [],
+        "actives": []
+    },
+    {
+        "id": "1054",
+        "name": "Doran's Shield",
+        "tags": [
+            "Health",
+            "HealthRegen",
+            "Lane"
+        ],
+        "classes": [],
+        "passives": [],
+        "actives": []
+    },
+    {
+        "id": "1055",
+        "name": "Doran's Blade",
+        "tags": [
+            "Health",
+            "Damage",
+            "SpellVamp",
+            "Lane"
+        ],
+        "classes": [],
+        "passives": [],
+        "actives": []
+    },
+    {
+        "id": "1056",
+        "name": "Doran's Ring",
+        "tags": [
+            "Health",
+            "Lane",
+            "ManaRegen",
+            "SpellDamage"
+        ],
+        "classes": [],
+        "passives": [],
+        "actives": []
+    },
+    {
+        "id": "1057",
+        "name": "Negatron Cloak",
+        "tags": [
+            "SpellBlock"
+        ],
+        "classes": [],
+        "passives": [],
+        "actives": []
+    },
+    {
+        "id": "1058",
+        "name": "Needlessly Large Rod",
+        "tags": [
+            "SpellDamage"
+        ],
+        "classes": [],
+        "passives": [],
+        "actives": []
+    },
+    {
+        "id": "1082",
+        "name": "Dark Seal",
+        "tags": [
+            "Health",
+            "SpellDamage",
+            "Lane"
+        ],
+        "classes": [],
+        "passives": [],
+        "actives": []
+    },
+    {
+        "id": "1083",
+        "name": "Cull",
+        "tags": [
+            "Damage",
+            "OnHit",
+            "Lane"
+        ],
+        "classes": [],
+        "passives": [],
+        "actives": []
+    },
+    {
+        "id": "1101",
+        "name": "Scorchclaw Pup",
+        "tags": [
+            "Jungle"
+        ],
+        "classes": [],
+        "passives": [],
+        "actives": []
+    },
+    {
+        "id": "1102",
+        "name": "Gustwalker Hatchling",
+        "tags": [
+            "Jungle"
+        ],
+        "classes": [],
+        "passives": [],
+        "actives": []
+    },
+    {
+        "id": "1103",
+        "name": "Mosstomper Seedling",
+        "tags": [
+            "Jungle"
+        ],
+        "classes": [],
+        "passives": [],
+        "actives": []
+    },
+    {
+        "id": "1105",
+        "name": "Mosstomper Seedling",
+        "tags": [
+            "Jungle"
+        ],
+        "classes": [],
+        "passives": [],
+        "actives": []
+    },
+    {
+        "id": "1106",
+        "name": "Gustwalker Hatchling",
+        "tags": [
+            "Jungle"
+        ],
+        "classes": [],
+        "passives": [],
+        "actives": []
+    },
+    {
+        "id": "1107",
+        "name": "Scorchclaw Pup",
+        "tags": [
+            "Jungle"
+        ],
+        "classes": [],
+        "passives": [],
+        "actives": []
+    },
+    {
+        "id": "2019",
+        "name": "Steel Sigil",
+        "tags": [
+            "Armor",
+            "Damage"
+        ],
+        "classes": [],
+        "passives": [],
+        "actives": []
+    },
+    {
+        "id": "2020",
+        "name": "The Brutalizer",
+        "tags": [
+            "Damage",
+            "CooldownReduction",
+            "ArmorPenetration"
+        ],
+        "classes": [],
+        "passives": [],
+        "actives": []
+    },
+    {
+        "id": "2021",
+        "name": "Tunneler",
+        "tags": [
+            "Health",
+            "Damage"
+        ],
+        "classes": [],
+        "passives": [],
+        "actives": []
+    },
+    {
+        "id": "2022",
+        "name": "Glowing Mote",
+        "tags": [
+            "CooldownReduction"
+        ],
+        "classes": [],
+        "passives": [],
+        "actives": []
+    },
+    {
+        "id": "2065",
+        "name": "Shurelya's Battlesong",
+        "tags": [
+            "SpellDamage",
+            "ManaRegen",
+            "Active",
+            "CooldownReduction",
+            "NonbootsMovement",
+            "AbilityHaste"
+        ],
+        "classes": [],
+        "passives": [],
+        "actives": []
+    },
+    {
+        "id": "2138",
+        "name": "Elixir of Iron",
+        "tags": [
+            "Health",
+            "Consumable",
+            "NonbootsMovement",
+            "Tenacity"
+        ],
+        "classes": [],
+        "passives": [],
+        "actives": []
+    },
+    {
+        "id": "2139",
+        "name": "Elixir of Sorcery",
+        "tags": [
+            "Consumable",
+            "ManaRegen",
+            "SpellDamage"
+        ],
+        "classes": [],
+        "passives": [],
+        "actives": []
+    },
+    {
+        "id": "2140",
+        "name": "Elixir of Wrath",
+        "tags": [
+            "Consumable",
+            "Damage",
+            "LifeSteal",
+            "SpellVamp"
+        ],
+        "classes": [],
+        "passives": [],
+        "actives": []
+    },
+    {
+        "id": "2420",
+        "name": "Seeker's Armguard",
+        "tags": [
+            "Armor",
+            "SpellDamage",
+            "Active"
+        ],
+        "classes": [],
+        "passives": [],
+        "actives": []
+    },
+    {
+        "id": "2421",
+        "name": "Shattered Armguard",
+        "tags": [],
+        "classes": [],
+        "passives": [],
+        "actives": []
+    },
+    {
+        "id": "2422",
+        "name": "Slightly Magical Footwear",
+        "tags": [
+            "Boots"
+        ],
+        "classes": [],
+        "passives": [],
+        "actives": []
+    },
+    {
+        "id": "2501",
+        "name": "Overlord's Bloodmail",
+        "tags": [
+            "Health",
+            "Damage"
+        ],
+        "classes": [],
+        "passives": [],
+        "actives": []
+    },
+    {
+        "id": "2502",
+        "name": "Unending Despair",
+        "tags": [
+            "Health",
+            "SpellBlock",
+            "Armor",
+            "CooldownReduction",
+            "AbilityHaste"
+        ],
+        "classes": [],
+        "passives": [],
+        "actives": []
+    },
+    {
+        "id": "2503",
+        "name": "Blackfire Torch",
+        "tags": [
+            "SpellDamage",
+            "Mana",
+            "CooldownReduction",
+            "AbilityHaste"
+        ],
+        "classes": [],
+        "passives": [],
+        "actives": []
+    },
+    {
+        "id": "2504",
+        "name": "Kaenic Rookern",
+        "tags": [
+            "Health",
+            "SpellBlock",
+            "HealthRegen"
+        ],
+        "classes": [],
+        "passives": [],
+        "actives": []
+    },
+    {
+        "id": "2508",
+        "name": "Fated Ashes",
+        "tags": [
+            "SpellDamage"
+        ],
+        "classes": [],
+        "passives": [],
+        "actives": []
+    },
+    {
+        "id": "3002",
+        "name": "Trailblazer",
+        "tags": [
+            "Health",
+            "Armor",
+            "NonbootsMovement"
+        ],
+        "classes": [],
+        "passives": [],
+        "actives": []
+    },
+    {
+        "id": "3003",
+        "name": "Archangel's Staff",
+        "tags": [
+            "SpellDamage",
+            "Mana",
+            "AbilityHaste"
+        ],
+        "classes": [],
+        "passives": [],
+        "actives": []
+    },
+    {
+        "id": "3004",
+        "name": "Manamune",
+        "tags": [
+            "Damage",
+            "Mana",
+            "CooldownReduction",
+            "OnHit",
+            "AbilityHaste"
+        ],
+        "classes": [],
+        "passives": [],
+        "actives": []
+    },
+    {
+        "id": "3006",
+        "name": "Berserker's Greaves",
+        "tags": [
+            "AttackSpeed",
+            "Boots"
+        ],
+        "classes": [],
+        "passives": [],
+        "actives": []
+    },
+    {
+        "id": "3009",
+        "name": "Boots of Swiftness",
+        "tags": [
+            "Boots"
+        ],
+        "classes": [],
+        "passives": [],
+        "actives": []
+    },
+    {
+        "id": "3010",
+        "name": "Symbiotic Soles",
+        "tags": [
+            "Boots"
+        ],
+        "classes": [],
+        "passives": [],
+        "actives": []
+    },
+    {
+        "id": "3011",
+        "name": "Chemtech Putrifier",
+        "tags": [
+            "SpellDamage",
+            "ManaRegen",
+            "AbilityHaste"
+        ],
+        "classes": [],
+        "passives": [],
+        "actives": []
+    },
+    {
+        "id": "3013",
+        "name": "Synchronized Souls",
+        "tags": [
+            "Boots"
+        ],
+        "classes": [],
+        "passives": [],
+        "actives": []
+    },
+    {
+        "id": "3020",
+        "name": "Sorcerer's Shoes",
+        "tags": [
+            "Boots",
+            "MagicPenetration"
+        ],
+        "classes": [],
+        "passives": [],
+        "actives": []
+    },
+    {
+        "id": "3024",
+        "name": "Glacial Buckler",
+        "tags": [
+            "Armor",
+            "Mana",
+            "CooldownReduction",
+            "AbilityHaste"
+        ],
+        "classes": [],
+        "passives": [],
+        "actives": []
+    },
+    {
+        "id": "3026",
+        "name": "Guardian Angel",
+        "tags": [
+            "Armor",
+            "Damage"
+        ],
+        "classes": [],
+        "passives": [],
+        "actives": []
+    },
+    {
+        "id": "3031",
+        "name": "Infinity Edge",
+        "tags": [
+            "CriticalStrike",
+            "Damage"
+        ],
+        "classes": [],
+        "passives": [],
+        "actives": []
+    },
+    {
+        "id": "3032",
+        "name": "Yun Tal Wildarrows",
+        "tags": [
+            "Damage",
+            "CriticalStrike",
+            "AttackSpeed"
+        ],
+        "classes": [],
+        "passives": [],
+        "actives": []
+    },
+    {
+        "id": "3033",
+        "name": "Mortal Reminder",
+        "tags": [
+            "Damage",
+            "CriticalStrike",
+            "ArmorPenetration"
+        ],
+        "classes": [],
+        "passives": [],
+        "actives": []
+    },
+    {
+        "id": "3035",
+        "name": "Last Whisper",
+        "tags": [
+            "ArmorPenetration",
+            "Damage"
+        ],
+        "classes": [],
+        "passives": [],
+        "actives": []
+    },
+    {
+        "id": "3036",
+        "name": "Lord Dominik's Regards",
+        "tags": [
+            "Damage",
+            "CriticalStrike",
+            "ArmorPenetration"
+        ],
+        "classes": [],
+        "passives": [],
+        "actives": []
+    },
+    {
+        "id": "3040",
+        "name": "Seraph's Embrace",
+        "tags": [
+            "SpellDamage",
+            "Mana",
+            "AbilityHaste"
+        ],
+        "classes": [],
+        "passives": [],
+        "actives": []
+    },
+    {
+        "id": "3041",
+        "name": "Mejai's Soulstealer",
+        "tags": [
+            "Health",
+            "SpellDamage",
+            "NonbootsMovement"
+        ],
+        "classes": [],
+        "passives": [],
+        "actives": []
+    },
+    {
+        "id": "3042",
+        "name": "Muramana",
+        "tags": [
+            "Damage",
+            "Mana",
+            "CooldownReduction",
+            "OnHit",
+            "ArmorPenetration"
+        ],
+        "classes": [],
+        "passives": [],
+        "actives": []
+    },
+    {
+        "id": "3044",
+        "name": "Phage",
+        "tags": [
+            "Health",
+            "Damage",
+            "NonbootsMovement"
+        ],
+        "classes": [],
+        "passives": [],
+        "actives": []
+    },
+    {
+        "id": "3046",
+        "name": "Phantom Dancer",
+        "tags": [
+            "CriticalStrike",
+            "AttackSpeed",
+            "NonbootsMovement"
+        ],
+        "classes": [],
+        "passives": [],
+        "actives": []
+    },
+    {
+        "id": "3047",
+        "name": "Plated Steelcaps",
+        "tags": [
+            "Armor",
+            "Boots"
+        ],
+        "classes": [],
+        "passives": [],
+        "actives": []
+    },
+    {
+        "id": "3050",
+        "name": "Zeke's Convergence",
+        "tags": [
+            "Health",
+            "SpellBlock",
+            "Armor",
+            "AbilityHaste"
+        ],
+        "classes": [],
+        "passives": [],
+        "actives": []
+    },
+    {
+        "id": "3051",
+        "name": "Hearthbound Axe",
+        "tags": [
+            "Damage",
+            "AttackSpeed"
+        ],
+        "classes": [],
+        "passives": [],
+        "actives": []
+    },
+    {
+        "id": "3053",
+        "name": "Sterak's Gage",
+        "tags": [
+            "Health",
+            "Damage",
+            "Tenacity"
+        ],
+        "classes": [],
+        "passives": [],
+        "actives": []
+    },
+    {
+        "id": "3057",
+        "name": "Sheen",
+        "tags": [
+            "OnHit",
+            "AbilityHaste"
+        ],
+        "classes": [],
+        "passives": [],
+        "actives": []
+    },
+    {
+        "id": "3065",
+        "name": "Spirit Visage",
+        "tags": [
+            "Health",
+            "SpellBlock",
+            "HealthRegen",
+            "CooldownReduction",
+            "AbilityHaste"
+        ],
+        "classes": [],
+        "passives": [],
+        "actives": []
+    },
+    {
+        "id": "3066",
+        "name": "Winged Moonplate",
+        "tags": [
+            "Health",
+            "NonbootsMovement"
+        ],
+        "classes": [],
+        "passives": [],
+        "actives": []
+    },
+    {
+        "id": "3067",
+        "name": "Kindlegem",
+        "tags": [
+            "Health",
+            "CooldownReduction",
+            "AbilityHaste"
+        ],
+        "classes": [],
+        "passives": [],
+        "actives": []
+    },
+    {
+        "id": "3068",
+        "name": "Sunfire Aegis",
+        "tags": [
+            "Health",
+            "Armor",
+            "Aura",
+            "AbilityHaste"
+        ],
+        "classes": [],
+        "passives": [],
+        "actives": []
+    },
+    {
+        "id": "3070",
+        "name": "Tear of the Goddess",
+        "tags": [
+            "Mana",
+            "ManaRegen"
+        ],
+        "classes": [],
+        "passives": [],
+        "actives": []
+    },
+    {
+        "id": "3071",
+        "name": "Black Cleaver",
+        "tags": [
+            "Health",
+            "Damage",
+            "CooldownReduction",
+            "OnHit",
+            "NonbootsMovement",
+            "ArmorPenetration",
+            "AbilityHaste"
+        ],
+        "classes": [],
+        "passives": [],
+        "actives": []
+    },
+    {
+        "id": "3072",
+        "name": "Bloodthirster",
+        "tags": [
+            "Damage",
+            "LifeSteal"
+        ],
+        "classes": [],
+        "passives": [],
+        "actives": []
+    },
+    {
+        "id": "3073",
+        "name": "Experimental Hexplate",
+        "tags": [
+            "Health",
+            "Damage",
+            "AttackSpeed",
+            "CooldownReduction",
+            "NonbootsMovement",
+            "AbilityHaste"
+        ],
+        "classes": [],
+        "passives": [],
+        "actives": []
+    },
+    {
+        "id": "3074",
+        "name": "Ravenous Hydra",
+        "tags": [
+            "Damage",
+            "LifeSteal",
+            "CooldownReduction",
+            "OnHit",
+            "AbilityHaste"
+        ],
+        "classes": [],
+        "passives": [],
+        "actives": []
+    },
+    {
+        "id": "3075",
+        "name": "Thornmail",
+        "tags": [
+            "Health",
+            "Armor"
+        ],
+        "classes": [],
+        "passives": [],
+        "actives": []
+    },
+    {
+        "id": "3076",
+        "name": "Bramble Vest",
+        "tags": [
+            "Armor"
+        ],
+        "classes": [],
+        "passives": [],
+        "actives": []
+    },
+    {
+        "id": "3077",
+        "name": "Tiamat",
+        "tags": [
+            "Damage",
+            "OnHit"
+        ],
+        "classes": [],
+        "passives": [],
+        "actives": []
+    },
+    {
+        "id": "3078",
+        "name": "Trinity Force",
+        "tags": [
+            "Health",
+            "Damage",
+            "AttackSpeed",
+            "CooldownReduction",
+            "OnHit",
+            "NonbootsMovement",
+            "AbilityHaste"
+        ],
+        "classes": [],
+        "passives": [],
+        "actives": []
+    },
+    {
+        "id": "3082",
+        "name": "Warden's Mail",
+        "tags": [
+            "Armor"
+        ],
+        "classes": [],
+        "passives": [],
+        "actives": []
+    },
+    {
+        "id": "3083",
+        "name": "Warmog's Armor",
+        "tags": [
+            "Health",
+            "HealthRegen"
+        ],
+        "classes": [],
+        "passives": [],
+        "actives": []
+    },
+    {
+        "id": "3084",
+        "name": "Heartsteel",
+        "tags": [
+            "Health",
+            "HealthRegen"
+        ],
+        "classes": [],
+        "passives": [],
+        "actives": []
+    },
+    {
+        "id": "3085",
+        "name": "Runaan's Hurricane",
+        "tags": [
+            "CriticalStrike",
+            "AttackSpeed",
+            "OnHit",
+            "NonbootsMovement"
+        ],
+        "classes": [],
+        "passives": [],
+        "actives": []
+    },
+    {
+        "id": "3086",
+        "name": "Zeal",
+        "tags": [
+            "CriticalStrike",
+            "AttackSpeed",
+            "NonbootsMovement"
+        ],
+        "classes": [],
+        "passives": [],
+        "actives": []
+    },
+    {
+        "id": "3087",
+        "name": "Statikk Shiv",
+        "tags": [
+            "Damage",
+            "AttackSpeed",
+            "OnHit",
+            "NonbootsMovement"
+        ],
+        "classes": [],
+        "passives": [],
+        "actives": []
+    },
+    {
+        "id": "3089",
+        "name": "Rabadon's Deathcap",
+        "tags": [
+            "SpellDamage"
+        ],
+        "classes": [],
+        "passives": [],
+        "actives": []
+    },
+    {
+        "id": "3091",
+        "name": "Wit's End",
+        "tags": [
+            "SpellBlock",
+            "AttackSpeed",
+            "OnHit",
+            "Tenacity"
+        ],
+        "classes": [],
+        "passives": [],
+        "actives": []
+    },
+    {
+        "id": "3094",
+        "name": "Rapid Firecannon",
+        "tags": [
+            "CriticalStrike",
+            "AttackSpeed",
+            "NonbootsMovement"
+        ],
+        "classes": [],
+        "passives": [],
+        "actives": []
+    },
+    {
+        "id": "3100",
+        "name": "Lich Bane",
+        "tags": [
+            "SpellDamage",
+            "OnHit",
+            "NonbootsMovement",
+            "AbilityHaste"
+        ],
+        "classes": [],
+        "passives": [],
+        "actives": []
+    },
+    {
+        "id": "3102",
+        "name": "Banshee's Veil",
+        "tags": [
+            "SpellBlock",
+            "SpellDamage"
+        ],
+        "classes": [],
+        "passives": [],
+        "actives": []
+    },
+    {
+        "id": "3105",
+        "name": "Aegis of the Legion",
+        "tags": [
+            "SpellBlock",
+            "Armor",
+            "CooldownReduction",
+            "AbilityHaste"
+        ],
+        "classes": [],
+        "passives": [],
+        "actives": []
+    },
+    {
+        "id": "3107",
+        "name": "Redemption",
+        "tags": [
+            "Health",
+            "ManaRegen",
+            "CooldownReduction",
+            "AbilityHaste"
+        ],
+        "classes": [],
+        "passives": [],
+        "actives": []
+    },
+    {
+        "id": "3108",
+        "name": "Fiendish Codex",
+        "tags": [
+            "SpellDamage",
+            "CooldownReduction",
+            "AbilityHaste"
+        ],
+        "classes": [],
+        "passives": [],
+        "actives": []
+    },
+    {
+        "id": "3109",
+        "name": "Knight's Vow",
+        "tags": [
+            "Health",
+            "HealthRegen",
+            "Armor",
+            "Aura",
+            "Active",
+            "CooldownReduction",
+            "AbilityHaste"
+        ],
+        "classes": [],
+        "passives": [],
+        "actives": []
+    },
+    {
+        "id": "3110",
+        "name": "Frozen Heart",
+        "tags": [
+            "Armor",
+            "Mana",
+            "Aura",
+            "CooldownReduction",
+            "AbilityHaste"
+        ],
+        "classes": [],
+        "passives": [],
+        "actives": []
+    },
+    {
+        "id": "3111",
+        "name": "Mercury's Treads",
+        "tags": [
+            "Boots",
+            "SpellBlock",
+            "Tenacity"
+        ],
+        "classes": [],
+        "passives": [],
+        "actives": []
+    },
+    {
+        "id": "3113",
+        "name": "Aether Wisp",
+        "tags": [
+            "NonbootsMovement",
+            "SpellDamage"
+        ],
+        "classes": [],
+        "passives": [],
+        "actives": []
+    },
+    {
+        "id": "3114",
+        "name": "Forbidden Idol",
+        "tags": [
+            "ManaRegen"
+        ],
+        "classes": [],
+        "passives": [],
+        "actives": []
+    },
+    {
+        "id": "3115",
+        "name": "Nashor's Tooth",
+        "tags": [
+            "AttackSpeed",
+            "SpellDamage",
+            "OnHit",
+            "AbilityHaste"
+        ],
+        "classes": [],
+        "passives": [],
+        "actives": []
+    },
+    {
+        "id": "3116",
+        "name": "Rylai's Crystal Scepter",
+        "tags": [
+            "Health",
+            "SpellDamage",
+            "Slow"
+        ],
+        "classes": [],
+        "passives": [],
+        "actives": []
+    },
+    {
+        "id": "3118",
+        "name": "Malignance",
+        "tags": [
+            "SpellDamage",
+            "Mana",
+            "AbilityHaste"
+        ],
+        "classes": [],
+        "passives": [],
+        "actives": []
+    },
+    {
+        "id": "3119",
+        "name": "Winter's Approach",
+        "tags": [
+            "Health",
+            "Mana",
+            "AbilityHaste"
+        ],
+        "classes": [],
+        "passives": [],
+        "actives": []
+    },
+    {
+        "id": "3121",
+        "name": "Fimbulwinter",
+        "tags": [
+            "Health",
+            "Mana",
+            "AbilityHaste"
+        ],
+        "classes": [],
+        "passives": [],
+        "actives": []
+    },
+    {
+        "id": "3123",
+        "name": "Executioner's Calling",
+        "tags": [
+            "Damage"
+        ],
+        "classes": [],
+        "passives": [],
+        "actives": []
+    },
+    {
+        "id": "3124",
+        "name": "Guinsoo's Rageblade",
+        "tags": [
+            "Damage",
+            "AttackSpeed",
+            "SpellDamage",
+            "OnHit"
+        ],
+        "classes": [],
+        "passives": [],
+        "actives": []
+    },
+    {
+        "id": "3133",
+        "name": "Caulfield's Warhammer",
+        "tags": [
+            "Damage",
+            "CooldownReduction",
+            "AbilityHaste"
+        ],
+        "classes": [],
+        "passives": [],
+        "actives": []
+    },
+    {
+        "id": "3134",
+        "name": "Serrated Dirk",
+        "tags": [
+            "Damage",
+            "ArmorPenetration"
+        ],
+        "classes": [],
+        "passives": [],
+        "actives": []
+    },
+    {
+        "id": "3135",
+        "name": "Void Staff",
+        "tags": [
+            "MagicPenetration",
+            "SpellDamage"
+        ],
+        "classes": [],
+        "passives": [],
+        "actives": []
+    },
+    {
+        "id": "3137",
+        "name": "Cryptbloom",
+        "tags": [
+            "SpellDamage",
+            "MagicPenetration",
+            "AbilityHaste"
+        ],
+        "classes": [],
+        "passives": [],
+        "actives": []
+    },
+    {
+        "id": "3139",
+        "name": "Mercurial Scimitar",
+        "tags": [
+            "SpellBlock",
+            "Damage",
+            "LifeSteal",
+            "Active",
+            "NonbootsMovement",
+            "Tenacity"
+        ],
+        "classes": [],
+        "passives": [],
+        "actives": []
+    },
+    {
+        "id": "3140",
+        "name": "Quicksilver Sash",
+        "tags": [
+            "Active",
+            "SpellBlock"
+        ],
+        "classes": [],
+        "passives": [],
+        "actives": []
+    },
+    {
+        "id": "3142",
+        "name": "Youmuu's Ghostblade",
+        "tags": [
+            "Damage",
+            "Active",
+            "NonbootsMovement",
+            "ArmorPenetration"
+        ],
+        "classes": [],
+        "passives": [],
+        "actives": []
+    },
+    {
+        "id": "3143",
+        "name": "Randuin's Omen",
+        "tags": [
+            "Health",
+            "Armor",
+            "Active",
+            "Slow"
+        ],
+        "classes": [],
+        "passives": [],
+        "actives": []
+    },
+    {
+        "id": "3144",
+        "name": "Scout's Slingshot",
+        "tags": [
+            "AttackSpeed"
+        ],
+        "classes": [],
+        "passives": [],
+        "actives": []
+    },
+    {
+        "id": "3145",
+        "name": "Hextech Alternator",
+        "tags": [
+            "SpellDamage"
+        ],
+        "classes": [],
+        "passives": [],
+        "actives": []
+    },
+    {
+        "id": "3147",
+        "name": "Haunting Guise",
+        "tags": [
+            "Health",
+            "SpellDamage"
+        ],
+        "classes": [],
+        "passives": [],
+        "actives": []
+    },
+    {
+        "id": "3152",
+        "name": "Hextech Rocketbelt",
+        "tags": [
+            "Health",
+            "SpellDamage",
+            "Active",
+            "CooldownReduction",
+            "NonbootsMovement",
+            "AbilityHaste"
+        ],
+        "classes": [],
+        "passives": [],
+        "actives": []
+    },
+    {
+        "id": "3153",
+        "name": "Blade of The Ruined King",
+        "tags": [
+            "Damage",
+            "AttackSpeed",
+            "LifeSteal",
+            "Slow",
+            "OnHit"
+        ],
+        "classes": [],
+        "passives": [],
+        "actives": []
+    },
+    {
+        "id": "3155",
+        "name": "Hexdrinker",
+        "tags": [
+            "Damage",
+            "SpellBlock"
+        ],
+        "classes": [],
+        "passives": [],
+        "actives": []
+    },
+    {
+        "id": "3156",
+        "name": "Maw of Malmortius",
+        "tags": [
+            "SpellBlock",
+            "Damage",
+            "LifeSteal",
+            "SpellVamp",
+            "AbilityHaste"
+        ],
+        "classes": [],
+        "passives": [],
+        "actives": []
+    },
+    {
+        "id": "3157",
+        "name": "Zhonya's Hourglass",
+        "tags": [
+            "Armor",
+            "SpellDamage",
+            "Active"
+        ],
+        "classes": [],
+        "passives": [],
+        "actives": []
+    },
+    {
+        "id": "3158",
+        "name": "Ionian Boots of Lucidity",
+        "tags": [
+            "Boots",
+            "CooldownReduction"
+        ],
+        "classes": [],
+        "passives": [],
+        "actives": []
+    },
+    {
+        "id": "3161",
+        "name": "Spear of Shojin",
+        "tags": [
+            "Health",
+            "Damage",
+            "AbilityHaste"
+        ],
+        "classes": [],
+        "passives": [],
+        "actives": []
+    },
+    {
+        "id": "3165",
+        "name": "Morellonomicon",
+        "tags": [
+            "Health",
+            "SpellDamage",
+            "CooldownReduction",
+            "AbilityHaste"
+        ],
+        "classes": [],
+        "passives": [],
+        "actives": []
+    },
+    {
+        "id": "3170",
+        "name": "Swiftmarch",
+        "tags": [
+            "Boots"
+        ],
+        "classes": [],
+        "passives": [],
+        "actives": []
+    },
+    {
+        "id": "3171",
+        "name": "Crimson Lucidity",
+        "tags": [
+            "CooldownReduction",
+            "Boots"
+        ],
+        "classes": [],
+        "passives": [],
+        "actives": []
+    },
+    {
+        "id": "3172",
+        "name": "Gunmetal Greaves",
+        "tags": [
+            "AttackSpeed",
+            "NonbootsMovement"
+        ],
+        "classes": [],
+        "passives": [],
+        "actives": []
+    },
+    {
+        "id": "3173",
+        "name": "Chainlaced Crushers",
+        "tags": [
+            "SpellBlock",
+            "Boots",
+            "Tenacity",
+            "MagicResist"
+        ],
+        "classes": [],
+        "passives": [],
+        "actives": []
+    },
+    {
+        "id": "3174",
+        "name": "Armored Advance",
+        "tags": [
+            "Armor",
+            "Boots"
+        ],
+        "classes": [],
+        "passives": [],
+        "actives": []
+    },
+    {
+        "id": "3175",
+        "name": "Spellslinger's Shoes",
+        "tags": [
+            "Boots",
+            "MagicPenetration"
+        ],
+        "classes": [],
+        "passives": [],
+        "actives": []
+    },
+    {
+        "id": "3176",
+        "name": "Forever Forward",
+        "tags": [
+            "Boots"
+        ],
+        "classes": [],
+        "passives": [],
+        "actives": []
+    },
+    {
+        "id": "3179",
+        "name": "Umbral Glaive",
+        "tags": [
+            "Damage",
+            "Vision",
+            "CooldownReduction",
+            "ArmorPenetration",
+            "AbilityHaste"
+        ],
+        "classes": [],
+        "passives": [],
+        "actives": []
+    },
+    {
+        "id": "3181",
+        "name": "Hullbreaker",
+        "tags": [
+            "Health",
+            "Damage",
+            "NonbootsMovement"
+        ],
+        "classes": [],
+        "passives": [],
+        "actives": []
+    },
+    {
+        "id": "3190",
+        "name": "Locket of the Iron Solari",
+        "tags": [
+            "Health",
+            "SpellBlock",
+            "Armor",
+            "Aura",
+            "Active",
+            "MagicResist",
+            "AbilityHaste"
+        ],
+        "classes": [],
+        "passives": [],
+        "actives": []
+    },
+    {
+        "id": "3211",
+        "name": "Spectre's Cowl",
+        "tags": [
+            "Health",
+            "HealthRegen",
+            "SpellBlock"
+        ],
+        "classes": [],
+        "passives": [],
+        "actives": []
+    },
+    {
+        "id": "322065",
+        "name": "Shurelya's Battlesong",
+        "tags": [
+            "SpellDamage",
+            "ManaRegen",
+            "Active",
+            "CooldownReduction",
+            "NonbootsMovement",
+            "AbilityHaste"
+        ],
+        "classes": [],
+        "passives": [],
+        "actives": []
+    },
+    {
+        "id": "3222",
+        "name": "Mikael's Blessing",
+        "tags": [
+            "Health",
+            "ManaRegen",
+            "Active",
+            "CooldownReduction",
+            "Tenacity",
+            "AbilityHaste"
+        ],
+        "classes": [],
+        "passives": [],
+        "actives": []
+    },
+    {
+        "id": "323002",
+        "name": "Trailblazer",
+        "tags": [
+            "Health",
+            "Armor",
+            "NonbootsMovement"
+        ],
+        "classes": [],
+        "passives": [],
+        "actives": []
+    },
+    {
+        "id": "323003",
+        "name": "Archangel's Staff",
+        "tags": [
+            "SpellDamage",
+            "Mana",
+            "AbilityHaste"
+        ],
+        "classes": [],
+        "passives": [],
+        "actives": []
+    },
+    {
+        "id": "323004",
+        "name": "Manamune",
+        "tags": [
+            "Damage",
+            "Mana",
+            "CooldownReduction",
+            "OnHit",
+            "AbilityHaste"
+        ],
+        "classes": [],
+        "passives": [],
+        "actives": []
+    },
+    {
+        "id": "323040",
+        "name": "Seraph's Embrace",
+        "tags": [
+            "SpellDamage",
+            "Mana",
+            "AbilityHaste"
+        ],
+        "classes": [],
+        "passives": [],
+        "actives": []
+    },
+    {
+        "id": "323042",
+        "name": "Muramana",
+        "tags": [
+            "Damage",
+            "Mana",
+            "CooldownReduction",
+            "OnHit",
+            "ArmorPenetration"
+        ],
+        "classes": [],
+        "passives": [],
+        "actives": []
+    },
+    {
+        "id": "323050",
+        "name": "Zeke's Convergence",
+        "tags": [
+            "Health",
+            "SpellBlock",
+            "Armor",
+            "AbilityHaste"
+        ],
+        "classes": [],
+        "passives": [],
+        "actives": []
+    },
+    {
+        "id": "323070",
+        "name": "Tear of the Goddess",
+        "tags": [
+            "Mana",
+            "ManaRegen"
+        ],
+        "classes": [],
+        "passives": [],
+        "actives": []
+    },
+    {
+        "id": "323075",
+        "name": "Thornmail",
+        "tags": [
+            "Health",
+            "Armor"
+        ],
+        "classes": [],
+        "passives": [],
+        "actives": []
+    },
+    {
+        "id": "323107",
+        "name": "Redemption",
+        "tags": [
+            "Health",
+            "ManaRegen",
+            "CooldownReduction",
+            "AbilityHaste"
+        ],
+        "classes": [],
+        "passives": [],
+        "actives": []
+    },
+    {
+        "id": "323109",
+        "name": "Knight's Vow",
+        "tags": [
+            "Health",
+            "HealthRegen",
+            "Armor",
+            "Aura",
+            "Active",
+            "CooldownReduction",
+            "AbilityHaste"
+        ],
+        "classes": [],
+        "passives": [],
+        "actives": []
+    },
+    {
+        "id": "323110",
+        "name": "Frozen Heart",
+        "tags": [
+            "Armor",
+            "Mana",
+            "Aura",
+            "CooldownReduction",
+            "AbilityHaste"
+        ],
+        "classes": [],
+        "passives": [],
+        "actives": []
+    },
+    {
+        "id": "323119",
+        "name": "Winter's Approach",
+        "tags": [
+            "Health",
+            "Mana",
+            "AbilityHaste"
+        ],
+        "classes": [],
+        "passives": [],
+        "actives": []
+    },
+    {
+        "id": "323121",
+        "name": "Fimbulwinter",
+        "tags": [
+            "Health",
+            "Mana",
+            "AbilityHaste"
+        ],
+        "classes": [],
+        "passives": [],
+        "actives": []
+    },
+    {
+        "id": "323190",
+        "name": "Locket of the Iron Solari",
+        "tags": [
+            "Health",
+            "SpellBlock",
+            "Armor",
+            "Aura",
+            "Active",
+            "MagicResist",
+            "AbilityHaste"
+        ],
+        "classes": [],
+        "passives": [],
+        "actives": []
+    },
+    {
+        "id": "323222",
+        "name": "Mikael's Blessing",
+        "tags": [
+            "Health",
+            "ManaRegen",
+            "Active",
+            "CooldownReduction",
+            "Tenacity",
+            "AbilityHaste"
+        ],
+        "classes": [],
+        "passives": [],
+        "actives": []
+    },
+    {
+        "id": "323504",
+        "name": "Ardent Censer",
+        "tags": [
+            "AttackSpeed",
+            "SpellDamage",
+            "ManaRegen",
+            "NonbootsMovement"
+        ],
+        "classes": [],
+        "passives": [],
+        "actives": []
+    },
+    {
+        "id": "324005",
+        "name": "Imperial Mandate",
+        "tags": [
+            "SpellDamage",
+            "ManaRegen",
+            "CooldownReduction",
+            "AbilityHaste"
+        ],
+        "classes": [],
+        "passives": [],
+        "actives": []
+    },
+    {
+        "id": "326616",
+        "name": "Staff of Flowing Water",
+        "tags": [
+            "SpellDamage",
+            "ManaRegen",
+            "CooldownReduction",
+            "AbilityHaste"
+        ],
+        "classes": [],
+        "passives": [],
+        "actives": []
+    },
+    {
+        "id": "326617",
+        "name": "Moonstone Renewer",
+        "tags": [
+            "Health",
+            "SpellDamage",
+            "ManaRegen",
+            "CooldownReduction",
+            "AbilityHaste"
+        ],
+        "classes": [],
+        "passives": [],
+        "actives": []
+    },
+    {
+        "id": "326620",
+        "name": "Echoes of Helia",
+        "tags": [
+            "Health",
+            "SpellDamage",
+            "ManaRegen",
+            "CooldownReduction",
+            "AbilityHaste"
+        ],
+        "classes": [],
+        "passives": [],
+        "actives": []
+    },
+    {
+        "id": "326621",
+        "name": "Dawncore",
+        "tags": [
+            "SpellDamage",
+            "ManaRegen"
+        ],
+        "classes": [],
+        "passives": [],
+        "actives": []
+    },
+    {
+        "id": "326657",
+        "name": "Rod of Ages",
+        "tags": [
+            "Health",
+            "HealthRegen",
+            "SpellDamage",
+            "Mana",
+            "ManaRegen"
+        ],
+        "classes": [],
+        "passives": [],
+        "actives": []
+    },
+    {
+        "id": "328020",
+        "name": "Abyssal Mask",
+        "tags": [
+            "Health",
+            "SpellBlock",
+            "CooldownReduction",
+            "MagicResist",
+            "AbilityHaste"
+        ],
+        "classes": [],
+        "passives": [],
+        "actives": []
+    },
+    {
+        "id": "3302",
+        "name": "Terminus",
+        "tags": [
+            "Damage",
+            "AttackSpeed",
+            "OnHit",
+            "MagicPenetration",
+            "ArmorPenetration"
+        ],
+        "classes": [],
+        "passives": [],
+        "actives": []
+    },
+    {
+        "id": "3504",
+        "name": "Ardent Censer",
+        "tags": [
+            "AttackSpeed",
+            "SpellDamage",
+            "ManaRegen",
+            "NonbootsMovement"
+        ],
+        "classes": [],
+        "passives": [],
+        "actives": []
+    },
+    {
+        "id": "3508",
+        "name": "Essence Reaver",
+        "tags": [
+            "Damage",
+            "CriticalStrike",
+            "ManaRegen",
+            "CooldownReduction",
+            "OnHit",
+            "AbilityHaste"
+        ],
+        "classes": [],
+        "passives": [],
+        "actives": []
+    },
+    {
+        "id": "3742",
+        "name": "Dead Man's Plate",
+        "tags": [
+            "Health",
+            "Armor",
+            "Slow",
+            "NonbootsMovement"
+        ],
+        "classes": [],
+        "passives": [],
+        "actives": []
+    },
+    {
+        "id": "3748",
+        "name": "Titanic Hydra",
+        "tags": [
+            "Health",
+            "HealthRegen",
+            "Damage",
+            "OnHit"
+        ],
+        "classes": [],
+        "passives": [],
+        "actives": []
+    },
+    {
+        "id": "3801",
+        "name": "Crystalline Bracer",
+        "tags": [
+            "Health",
+            "HealthRegen"
+        ],
+        "classes": [],
+        "passives": [],
+        "actives": []
+    },
+    {
+        "id": "3802",
+        "name": "Lost Chapter",
+        "tags": [
+            "SpellDamage",
+            "Mana",
+            "ManaRegen",
+            "CooldownReduction",
+            "AbilityHaste"
+        ],
+        "classes": [],
+        "passives": [],
+        "actives": []
+    },
+    {
+        "id": "3803",
+        "name": "Catalyst of Aeons",
+        "tags": [
+            "Health",
+            "HealthRegen",
+            "Mana",
+            "ManaRegen"
+        ],
+        "classes": [],
+        "passives": [],
+        "actives": []
+    },
+    {
+        "id": "3814",
+        "name": "Edge of Night",
+        "tags": [
+            "Health",
+            "Damage",
+            "ArmorPenetration"
+        ],
+        "classes": [],
+        "passives": [],
+        "actives": []
+    },
+    {
+        "id": "3865",
+        "name": "World Atlas",
+        "tags": [
+            "Health",
+            "ManaRegen",
+            "Vision",
+            "GoldPer",
+            "Lane"
+        ],
+        "classes": [],
+        "passives": [],
+        "actives": []
+    },
+    {
+        "id": "3866",
+        "name": "Runic Compass",
+        "tags": [
+            "SpellDamage",
+            "ManaRegen",
+            "Vision",
+            "GoldPer",
+            "Lane"
+        ],
+        "classes": [],
+        "passives": [],
+        "actives": []
+    },
+    {
+        "id": "3867",
+        "name": "Bounty of Worlds",
+        "tags": [
+            "SpellDamage",
+            "ManaRegen",
+            "Vision",
+            "GoldPer",
+            "Lane"
+        ],
+        "classes": [],
+        "passives": [],
+        "actives": []
+    },
+    {
+        "id": "3869",
+        "name": "Celestial Opposition",
+        "tags": [
+            "Health",
+            "HealthRegen",
+            "ManaRegen",
+            "Vision",
+            "GoldPer",
+            "Lane"
+        ],
+        "classes": [],
+        "passives": [],
+        "actives": []
+    },
+    {
+        "id": "3870",
+        "name": "Dream Maker",
+        "tags": [
+            "Health",
+            "HealthRegen",
+            "ManaRegen",
+            "Vision",
+            "GoldPer",
+            "Lane"
+        ],
+        "classes": [],
+        "passives": [],
+        "actives": []
+    },
+    {
+        "id": "3871",
+        "name": "Zaz'Zak's Realmspike",
+        "tags": [
+            "Health",
+            "HealthRegen",
+            "ManaRegen",
+            "Vision",
+            "GoldPer",
+            "Lane"
+        ],
+        "classes": [],
+        "passives": [],
+        "actives": []
+    },
+    {
+        "id": "3876",
+        "name": "Solstice Sleigh",
+        "tags": [
+            "Health",
+            "HealthRegen",
+            "ManaRegen",
+            "Vision",
+            "GoldPer",
+            "Lane"
+        ],
+        "classes": [],
+        "passives": [],
+        "actives": []
+    },
+    {
+        "id": "3877",
+        "name": "Bloodsong",
+        "tags": [
+            "Health",
+            "HealthRegen",
+            "ManaRegen",
+            "Vision",
+            "GoldPer",
+            "Lane"
+        ],
+        "classes": [],
+        "passives": [],
+        "actives": []
+    },
+    {
+        "id": "3916",
+        "name": "Oblivion Orb",
+        "tags": [
+            "SpellDamage"
+        ],
+        "classes": [],
+        "passives": [],
+        "actives": []
+    },
+    {
+        "id": "4005",
+        "name": "Imperial Mandate",
+        "tags": [
+            "SpellDamage",
+            "ManaRegen",
+            "CooldownReduction",
+            "AbilityHaste"
+        ],
+        "classes": [],
+        "passives": [],
+        "actives": []
+    },
+    {
+        "id": "4401",
+        "name": "Force of Nature",
+        "tags": [
+            "Health",
+            "SpellBlock",
+            "NonbootsMovement"
+        ],
+        "classes": [],
+        "passives": [],
+        "actives": []
+    },
+    {
+        "id": "4628",
+        "name": "Horizon Focus",
+        "tags": [
+            "SpellDamage",
+            "AbilityHaste"
+        ],
+        "classes": [],
+        "passives": [],
+        "actives": []
+    },
+    {
+        "id": "4629",
+        "name": "Cosmic Drive",
+        "tags": [
+            "Health",
+            "SpellDamage",
+            "NonbootsMovement",
+            "AbilityHaste"
+        ],
+        "classes": [],
+        "passives": [],
+        "actives": []
+    },
+    {
+        "id": "4630",
+        "name": "Blighting Jewel",
+        "tags": [
+            "MagicPenetration",
+            "SpellDamage"
+        ],
+        "classes": [],
+        "passives": [],
+        "actives": []
+    },
+    {
+        "id": "4632",
+        "name": "Verdant Barrier",
+        "tags": [
+            "SpellBlock",
+            "SpellDamage"
+        ],
+        "classes": [],
+        "passives": [],
+        "actives": []
+    },
+    {
+        "id": "4633",
+        "name": "Riftmaker",
+        "tags": [
+            "Health",
+            "SpellDamage",
+            "CooldownReduction",
+            "SpellVamp"
+        ],
+        "classes": [],
+        "passives": [],
+        "actives": []
+    },
+    {
+        "id": "4635",
+        "name": "Leeching Leer",
+        "tags": [
+            "Health",
+            "SpellDamage",
+            "SpellVamp"
+        ],
+        "classes": [],
+        "passives": [],
+        "actives": []
+    },
+    {
+        "id": "4636",
+        "name": "Night Harvester",
+        "tags": [
+            "Health",
+            "SpellDamage",
+            "CooldownReduction",
+            "NonbootsMovement",
+            "AbilityHaste"
+        ],
+        "classes": [],
+        "passives": [],
+        "actives": []
+    },
+    {
+        "id": "4637",
+        "name": "Demonic Embrace",
+        "tags": [
+            "Health",
+            "SpellDamage"
+        ],
+        "classes": [],
+        "passives": [],
+        "actives": []
+    },
+    {
+        "id": "4638",
+        "name": "Watchful Wardstone",
+        "tags": [
+            "Health",
+            "SpellBlock",
+            "Armor",
+            "Vision",
+            "Active",
+            "CooldownReduction",
+            "AbilityHaste"
+        ],
+        "classes": [],
+        "passives": [],
+        "actives": []
+    },
+    {
+        "id": "4641",
+        "name": "Stirring Wardstone",
+        "tags": [
+            "Health",
+            "Damage",
+            "SpellDamage",
+            "ManaRegen",
+            "Vision",
+            "Active",
+            "CooldownReduction",
+            "AbilityHaste"
+        ],
+        "classes": [],
+        "passives": [],
+        "actives": []
+    },
+    {
+        "id": "4642",
+        "name": "Bandleglass Mirror",
+        "tags": [
+            "SpellDamage",
+            "ManaRegen",
+            "CooldownReduction",
+            "AbilityHaste"
+        ],
+        "classes": [],
+        "passives": [],
+        "actives": []
+    },
+    {
+        "id": "4643",
+        "name": "Vigilant Wardstone",
+        "tags": [
+            "Health",
+            "SpellBlock",
+            "Armor",
+            "Vision",
+            "Active",
+            "CooldownReduction",
+            "AbilityHaste"
+        ],
+        "classes": [],
+        "passives": [],
+        "actives": []
+    },
+    {
+        "id": "4645",
+        "name": "Shadowflame",
+        "tags": [
+            "SpellDamage",
+            "MagicPenetration"
+        ],
+        "classes": [],
+        "passives": [],
+        "actives": []
+    },
+    {
+        "id": "4646",
+        "name": "Stormsurge",
+        "tags": [
+            "SpellDamage",
+            "GoldPer",
+            "NonbootsMovement",
+            "MagicPenetration"
+        ],
+        "classes": [],
+        "passives": [],
+        "actives": []
+    },
+    {
+        "id": "6333",
+        "name": "Death's Dance",
+        "tags": [
+            "Armor",
+            "Damage",
+            "AbilityHaste"
+        ],
+        "classes": [],
+        "passives": [],
+        "actives": []
+    },
+    {
+        "id": "6609",
+        "name": "Chempunk Chainsword",
+        "tags": [
+            "Health",
+            "Damage",
+            "CooldownReduction",
+            "AbilityHaste"
+        ],
+        "classes": [],
+        "passives": [],
+        "actives": []
+    },
+    {
+        "id": "6610",
+        "name": "Sundered Sky",
+        "tags": [
+            "Health",
+            "Damage",
+            "CooldownReduction",
+            "AbilityHaste"
+        ],
+        "classes": [],
+        "passives": [],
+        "actives": []
+    },
+    {
+        "id": "6616",
+        "name": "Staff of Flowing Water",
+        "tags": [
+            "SpellDamage",
+            "ManaRegen",
+            "CooldownReduction",
+            "AbilityHaste"
+        ],
+        "classes": [],
+        "passives": [],
+        "actives": []
+    },
+    {
+        "id": "6617",
+        "name": "Moonstone Renewer",
+        "tags": [
+            "Health",
+            "SpellDamage",
+            "ManaRegen",
+            "CooldownReduction",
+            "AbilityHaste"
+        ],
+        "classes": [],
+        "passives": [],
+        "actives": []
+    },
+    {
+        "id": "6620",
+        "name": "Echoes of Helia",
+        "tags": [
+            "Health",
+            "SpellDamage",
+            "ManaRegen",
+            "CooldownReduction",
+            "AbilityHaste"
+        ],
+        "classes": [],
+        "passives": [],
+        "actives": []
+    },
+    {
+        "id": "6621",
+        "name": "Dawncore",
+        "tags": [
+            "SpellDamage",
+            "ManaRegen"
+        ],
+        "classes": [],
+        "passives": [],
+        "actives": []
+    },
+    {
+        "id": "6631",
+        "name": "Stridebreaker",
+        "tags": [
+            "Health",
+            "Damage",
+            "AttackSpeed",
+            "Slow"
+        ],
+        "classes": [],
+        "passives": [],
+        "actives": []
+    },
+    {
+        "id": "6653",
+        "name": "Liandry's Torment",
+        "tags": [
+            "Health",
+            "SpellDamage"
+        ],
+        "classes": [],
+        "passives": [],
+        "actives": []
+    },
+    {
+        "id": "6655",
+        "name": "Luden's Companion",
+        "tags": [
+            "SpellDamage",
+            "Mana",
+            "CooldownReduction",
+            "AbilityHaste"
+        ],
+        "classes": [],
+        "passives": [],
+        "actives": []
+    },
+    {
+        "id": "6657",
+        "name": "Rod of Ages",
+        "tags": [
+            "Health",
+            "HealthRegen",
+            "SpellDamage",
+            "Mana",
+            "ManaRegen"
+        ],
+        "classes": [],
+        "passives": [],
+        "actives": []
+    },
+    {
+        "id": "6660",
+        "name": "Bami's Cinder",
+        "tags": [
+            "Health",
+            "AbilityHaste"
+        ],
+        "classes": [],
+        "passives": [],
+        "actives": []
+    },
+    {
+        "id": "6662",
+        "name": "Iceborn Gauntlet",
+        "tags": [
+            "Health",
+            "Armor",
+            "CooldownReduction",
+            "Slow",
+            "OnHit",
+            "AbilityHaste"
+        ],
+        "classes": [],
+        "passives": [],
+        "actives": []
+    },
+    {
+        "id": "6664",
+        "name": "Hollow Radiance",
+        "tags": [
+            "Health",
+            "SpellBlock",
+            "HealthRegen",
+            "Aura",
+            "MagicResist",
+            "AbilityHaste"
+        ],
+        "classes": [],
+        "passives": [],
+        "actives": []
+    },
+    {
+        "id": "6665",
+        "name": "Jak'Sho, The Protean",
+        "tags": [
+            "Health",
+            "SpellBlock",
+            "Armor",
+            "MagicResist"
+        ],
+        "classes": [],
+        "passives": [],
+        "actives": []
+    },
+    {
+        "id": "6670",
+        "name": "Noonquiver",
+        "tags": [
+            "Damage",
+            "CriticalStrike"
+        ],
+        "classes": [],
+        "passives": [],
+        "actives": []
+    },
+    {
+        "id": "6672",
+        "name": "Kraken Slayer",
+        "tags": [
+            "Damage",
+            "AttackSpeed",
+            "OnHit",
+            "NonbootsMovement"
+        ],
+        "classes": [],
+        "passives": [],
+        "actives": []
+    },
+    {
+        "id": "6673",
+        "name": "Immortal Shieldbow",
+        "tags": [
+            "Damage",
+            "CriticalStrike"
+        ],
+        "classes": [],
+        "passives": [],
+        "actives": []
+    },
+    {
+        "id": "6675",
+        "name": "Navori Flickerblade",
+        "tags": [
+            "CriticalStrike",
+            "AttackSpeed",
+            "NonbootsMovement"
+        ],
+        "classes": [],
+        "passives": [],
+        "actives": []
+    },
+    {
+        "id": "6676",
+        "name": "The Collector",
+        "tags": [
+            "Damage",
+            "CriticalStrike",
+            "ArmorPenetration"
+        ],
+        "classes": [],
+        "passives": [],
+        "actives": []
+    },
+    {
+        "id": "667666",
+        "name": "The Collector",
+        "tags": [
+            "Damage",
+            "CriticalStrike",
+            "ArmorPenetration"
+        ],
+        "classes": [],
+        "passives": [],
+        "actives": []
+    },
+    {
+        "id": "6690",
+        "name": "Rectrix",
+        "tags": [
+            "Damage",
+            "NonbootsMovement"
+        ],
+        "classes": [],
+        "passives": [],
+        "actives": []
+    },
+    {
+        "id": "6692",
+        "name": "Eclipse",
+        "tags": [
+            "Damage",
+            "CooldownReduction",
+            "AbilityHaste"
+        ],
+        "classes": [],
+        "passives": [],
+        "actives": []
+    },
+    {
+        "id": "6694",
+        "name": "Serylda's Grudge",
+        "tags": [
+            "Damage",
+            "CooldownReduction",
+            "ArmorPenetration",
+            "AbilityHaste"
+        ],
+        "classes": [],
+        "passives": [],
+        "actives": []
+    },
+    {
+        "id": "6695",
+        "name": "Serpent's Fang",
+        "tags": [
+            "Damage",
+            "ArmorPenetration"
+        ],
+        "classes": [],
+        "passives": [],
+        "actives": []
+    },
+    {
+        "id": "6696",
+        "name": "Axiom Arc",
+        "tags": [
+            "Damage",
+            "ArmorPenetration",
+            "AbilityHaste"
+        ],
+        "classes": [],
+        "passives": [],
+        "actives": []
+    },
+    {
+        "id": "6697",
+        "name": "Hubris",
+        "tags": [
+            "Damage",
+            "Active",
+            "CooldownReduction",
+            "ArmorPenetration",
+            "AbilityHaste"
+        ],
+        "classes": [],
+        "passives": [],
+        "actives": []
+    },
+    {
+        "id": "6698",
+        "name": "Profane Hydra",
+        "tags": [
+            "Damage",
+            "Active",
+            "CooldownReduction",
+            "ArmorPenetration",
+            "AbilityHaste"
+        ],
+        "classes": [],
+        "passives": [],
+        "actives": []
+    },
+    {
+        "id": "6699",
+        "name": "Voltaic Cyclosword",
+        "tags": [
+            "Damage",
+            "Active",
+            "CooldownReduction",
+            "ArmorPenetration",
+            "AbilityHaste"
+        ],
+        "classes": [],
+        "passives": [],
+        "actives": []
+    },
+    {
+        "id": "6701",
+        "name": "Opportunity",
+        "tags": [
+            "Damage",
+            "Active",
+            "NonbootsMovement",
+            "ArmorPenetration"
+        ],
+        "classes": [],
+        "passives": [],
+        "actives": []
+    },
+    {
+        "id": "8001",
+        "name": "Anathema's Chains",
+        "tags": [
+            "Health",
+            "Active",
+            "CooldownReduction",
+            "AbilityHaste"
+        ],
+        "classes": [],
+        "passives": [],
+        "actives": []
+    },
+    {
+        "id": "8010",
+        "name": "Bloodletter's Curse",
+        "tags": [
+            "Health",
+            "SpellDamage",
+            "CooldownReduction",
+            "MagicPenetration"
+        ],
+        "classes": [],
+        "passives": [],
+        "actives": []
+    },
+    {
+        "id": "8020",
+        "name": "Abyssal Mask",
+        "tags": [
+            "Health",
+            "SpellBlock",
+            "CooldownReduction",
+            "MagicResist",
+            "AbilityHaste"
+        ],
+        "classes": [],
+        "passives": [],
+        "actives": []
+    }
+]

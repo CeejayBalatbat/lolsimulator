@@ -18,18 +18,36 @@ with open(data_folder / "items_full.json", "r", encoding="utf-8") as f:
 with open(data_folder / "special_item_stats.json", "r", encoding="utf-8") as f:
     special_item_stats = json.load(f)
 
-# Convert items list into dict for quick lookup by name
-items_by_name = {item["name"]: item for item in items}
+with open(data_folder / "banned_items.json", "r", encoding="utf-8") as f:
+    banned_items = set(json.load(f))
 
+# --- Build mapping only by ID ---
+# Use Riot's image filename (without .png) as the stable unique ID
+items_by_id = {
+    item["image"]["full"].replace(".png", ""): item
+    for item in items
+    if "image" in item and "full" in item["image"]
+}
 
 # =====================================================================
 # BACKEND HELPERS
 # =====================================================================
+def is_banned(item_id: str) -> bool:
+    """
+    Check if an item is banned using only IDs.
+    """
+    return str(item_id) in banned_items
 
-def compute_stats(champion_name, item_names, level=1):
+def get_item(item_id):
+    """
+    Look up an item by ID only.
+    """
+    return items_by_id.get(str(item_id))
+
+def compute_stats(champion_name, item_keys, level=1):
     """
     Compute final stats for a champion given selected items and level.
-    Attack Speed uses Riot's non-linear growth formula.
+    Supports item lookup by both name and ID.
     """
     champion = next((c for c in champions if c["name"] == champion_name), None)
     if not champion:
@@ -51,10 +69,10 @@ def compute_stats(champion_name, item_names, level=1):
         "resource": base_stats.get("mp", 0) + base_stats.get("mpperlevel", 0) * (level - 1),
         "resource_regen": base_stats.get("mpregen", 0) + base_stats.get("mpregenperlevel", 0) * (level - 1),
         "resource_type": champion.get("partype", "None"),
-        "lethality": 0,       
+        "lethality": 0,
         "flat_armor_pen": 0,
         "percent_armor_pen": 0,
-        "flat_magic_pen": 0,      
+        "flat_magic_pen": 0,
         "percent_magic_pen": 0.0,
         "lifesteal": 0,
         "omnivamp": 0,
@@ -68,23 +86,23 @@ def compute_stats(champion_name, item_names, level=1):
     ratio_as = base_stats.get("attackspeed", 0)  # usually same as base
     growth_percent = base_stats.get("attackspeedperlevel", 0) / 100  # convert 2.5 -> 0.025
 
-    # Non-linear growth: bonus AS from level
     bonus_as = growth_percent * (0.7025 + 0.0175 * (level - 1)) * (level - 1)
 
-    # Item bonus
+    # Item bonus AS
     item_bonus_as = sum(
-        items_by_name[item].get("stats", {}).get("PercentAttackSpeedMod", 0) / 100
-        for item in item_names if item in items_by_name
+        get_item(item_key).get("stats", {}).get("PercentAttackSpeedMod", 0) / 100
+        for item_key in item_keys if get_item(item_key)
     )
 
     total_bonus_as = bonus_as + item_bonus_as
     stats["attack_speed"] = base_as + (ratio_as * total_bonus_as)
 
     # --- Add item stats ---
-    for item_name in item_names:
-        item = items_by_name.get(item_name)
+    for item_key in item_keys:
+        item = get_item(item_key)
         if not item:
             continue
+
         item_stats = item.get("stats", {})
 
         stats["ad"] += item_stats.get("FlatPhysicalDamageMod", 0)
@@ -108,23 +126,22 @@ def compute_stats(champion_name, item_names, level=1):
         stats["hp"] += item_stats.get("FlatHPPoolMod", 0)
 
         # --- Apply special overrides from special_item_stats.json ---
-        if item_name in special_item_stats:
-            overrides = special_item_stats[item_name]
+        if item.get("name") in special_item_stats:
+            overrides = special_item_stats[item["name"]]
             for stat_key, value in overrides.items():
                 stats[stat_key] += value
 
     return stats
 
 
-def calculate_damage(champion_name, item_names, enemy_stats):
+def calculate_damage(champion_name, item_keys, enemy_stats):
     """
     Placeholder backend function.
     champion_name: str
-    item_names: list of str
+    item_keys: list of str (names or IDs)
     enemy_stats: dict with keys 'hp', 'armor', 'mr'
     Returns simulated damage (placeholder value for now)
     """
-    # TODO: Replace with actual calculations
     total_damage = 1000  # dummy
     return {
         "total_damage": total_damage,

@@ -7,6 +7,15 @@ from pathlib import Path
 from simulator import compute_stats
 from PIL import Image
 
+
+# =====================================================================
+# CACHE IMAGES
+# =====================================================================
+@st.cache_data
+def load_item_image(path):
+    """Load a PIL image from disk and cache it in memory."""
+    return Image.open(path)
+
 # =====================================================================
 # CONFIG & DATA PATHS
 # =====================================================================
@@ -41,8 +50,9 @@ with open(data_folder / "items_full.json", "r", encoding="utf-8") as f:
 
 all_items = []
 for item in items:
-    if item.get("name") not in BANNED_ITEMS:
-        item_id = item.get("image", {}).get("full", "").replace(".png", "")
+    item_id = item.get("image", {}).get("full", "").replace(".png", "")
+    # ✅ Ban check now uses ID instead of name
+    if item_id not in BANNED_ITEMS:
         all_items.append({
             "id": item_id,
             "name": item.get("name"),
@@ -50,6 +60,7 @@ for item in items:
             "tags": item.get("tags", []),
             "image": item.get("image", {}),
         })
+
 
 # =====================================================================
 # STREAMLIT CONFIG
@@ -98,108 +109,89 @@ else:
     st.sidebar.text(f"MR: {enemy_mr}")
 
 # =====================================================================
-# SIDEBAR: ITEM SELECTION (SHOP INTERFACE)
+# SIDEBAR: ITEM SELECTION WITH POPOVER
 # =====================================================================
-st.sidebar.header("Item Build")
+st.sidebar.header("Item Build (Popover Version)")
 num_slots = 6
 if "selected_items" not in st.session_state:
+    # store item IDs here instead of names
     st.session_state.selected_items = [None] * num_slots
 
-# Keep track of which slot is active for selection
-slot_to_select = st.sidebar.radio(
-    "Select Item Slot to Edit",
-    [f"Slot {i+1}" for i in range(num_slots)]
-)
-active_slot = int(slot_to_select.split()[1]) - 1
+# Create a mapping of item_id -> item data for quick lookup
+items_by_id = {item["id"]: item for item in all_items}
 
-# Tabs for categories
-tab_names = ["All", "Fighter", "Mage", "Tank", "Support", "Marksman", "Assassin"]
-category = st.sidebar.selectbox("Item Category", tab_names)
+for i in range(num_slots):
+    # Show current slot label using the item name for readability
+    current_item_name = (
+        next((x["name"] for x in all_items if x["id"] == st.session_state.selected_items[i]), None)
+        or "None"
+    )
+    slot_label = f"Slot {i+1}: {current_item_name}"
 
-# Search box
-search_query = st.sidebar.text_input("Search Items")
+    with st.sidebar.popover(slot_label):
+        st.write(f"Select item for Slot {i+1}")
 
-# Filter items based on category & search
-filtered_items = []
-for item in all_items:
-    if category != "All" and category not in item.get("tags", []):
-        continue
-    if search_query.lower() not in item["name"].lower():
-        continue
-    filtered_items.append(item)
+        # Search bar INSIDE the popover
+        search_query = st.text_input(
+            "Search items",
+            key=f"search_{i}"
+        )
 
-# Display current selected items
+        # Filter items
+        filtered_items = [
+            item for item in all_items
+            if search_query.lower() in item["name"].lower()
+        ]
+
+        # Show items as grid
+        cols_per_row = 6
+        rows = (len(filtered_items) + cols_per_row - 1) // cols_per_row  # ceil
+        for row in range(rows):
+            cols = st.columns(cols_per_row)
+            for col in range(cols_per_row):
+                idx = row * cols_per_row + col
+                if idx < len(filtered_items):
+                    item = filtered_items[idx]
+                    img_file = item_icon_dir / f"{item['id']}.png"
+                    with cols[col]:
+                        if img_file.exists():
+                            st.image(str(img_file), width=48)
+                        display_name = (
+                            item["name"][:14] + "..."
+                            if len(item["name"]) > 16 else item["name"]
+                        )
+                        if st.button(display_name, key=f"btn_{i}_{item['id']}"):
+                            st.session_state.selected_items[i] = item["id"]
+                            # no st.rerun()
+
+# Display currently selected build
 st.sidebar.write("Current Build:")
 for idx, it in enumerate(st.session_state.selected_items):
-    st.sidebar.write(f"Slot {idx+1}: {it or 'None'}")
-
-# =====================================================================
-# MAIN PANEL: ITEM SELECTION GRID
-# =====================================================================
-st.subheader("Item Selection")
-st.write(f"Select an item for {slot_to_select}:")
-
-# Create a grid of items with buttons containing both image and text
-cols_per_row = 6  # Reduced for better spacing
-rows = (len(filtered_items) // cols_per_row) + 1
-
-# Display items in a grid
-for row in range(rows):
-    cols = st.columns(cols_per_row)
-    for col in range(cols_per_row):
-        idx = row * cols_per_row + col
-        if idx < len(filtered_items):
-            item = filtered_items[idx]
-            with cols[col]:
-                img_file = item_icon_dir / f"{item['id']}.png"
-                
-                if img_file.exists():
-                    # Create a container with border for the item
-                    with st.container():
-                        # Display the image
-                        st.image(str(img_file), width=48)
-                        
-                        # Display truncated item name
-                        display_name = item["name"]
-                        if len(display_name) > 16:
-                            display_name = display_name[:14] + "..."
-                        
-                        # Create a button with the item name
-                        if st.button(
-                            display_name, 
-                            key=f"item_btn_{item['id']}_{active_slot}",
-                            help=f"Add {item['name']} to {slot_to_select}",
-                            use_container_width=True
-                        ):
-                            st.session_state.selected_items[active_slot] = item["name"]
-                            st.rerun()
+    if it:
+        item_name = items_by_id[it]["name"]  # lookup name by ID
+        st.sidebar.write(f"Slot {idx+1}: {item_name}")
+    else:
+        st.sidebar.write(f"Slot {idx+1}: None")
 
 # =====================================================================
 # MAIN PANEL: SIMULATION OUTPUT
 # =====================================================================
-st.subheader("Simulation Results")
-
-# Champion display
-champ_icon_path = champ_icon_dir / f"{selected_champion}.png"
-col1, col2 = st.columns([1, 4])
-with col1:
-    if champ_icon_path.exists():
-        st.image(str(champ_icon_path), width=64)
-    st.write(selected_champion)
-with col2:
-    st.write("")
-
-# Items display
 st.write("**Items:**")
-item_cols = st.columns(len([it for it in st.session_state.selected_items if it]))
-for i, item_name in enumerate([it for it in st.session_state.selected_items if it]):
-    file_name = next((itm["image"]["full"] for itm in items if itm["name"] == item_name), None)
-    if file_name:
-        img_path = item_icon_dir / file_name
-        with item_cols[i]:
-            if img_path.exists():
-                st.image(str(img_path), width=48)
-            st.write(item_name)
+selected_ids = [it for it in st.session_state.selected_items if it]
+
+if selected_ids:
+    item_cols = st.columns(len(selected_ids))
+    for col, it in zip(item_cols, selected_ids):
+        with col:
+            img_file = item_icon_dir / f"{it}.png"
+            if img_file.exists():
+                st.image(str(img_file), width=48)
+            else:
+                st.write(items_by_id[it]["name"])  # fallback to name if icon missing
+else:
+    st.write("No items selected.")
+
+
 
 # Enemy display
 st.write(f"**Enemy:** {enemy_type} (HP: {enemy_hp}, Armor: {enemy_armor}, MR: {enemy_mr})")
