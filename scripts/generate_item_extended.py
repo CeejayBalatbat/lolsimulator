@@ -13,35 +13,49 @@ output_file = data_folder / "items_extended.json"
 # LOAD FILES
 # =====================================================================
 with open(items_file, "r", encoding="utf-8") as f:
-    items = json.load(f)  # <-- this is a list
+    items = json.load(f)  # <-- list of items
 
 if banned_file.exists():
     with open(banned_file, "r", encoding="utf-8") as f:
         banned_data = json.load(f)
-    banned_items = set(banned_data.get("banned_items", []))
+    banned_items = set(str(x) for x in banned_data.get("banned_items", []))
 else:
     banned_items = set()
+
+# Load existing extended file if available
+if output_file.exists():
+    with open(output_file, "r", encoding="utf-8") as f:
+        old_extended = {item["id"]: item for item in json.load(f)}
+else:
+    old_extended = {}
 
 # =====================================================================
 # PROCESS ITEMS
 # =====================================================================
 extended_items = []
 
-for item in items:
-    name = item.get("name")
-    if not name or name in banned_items:
+for item in items:  # items is a list
+    # Grab ID from the image filename ("6676.png" → "6676")
+    item_id = str(item.get("image", {}).get("full", "").replace(".png", ""))
+    if not item_id or item_id in banned_items:
         continue
 
-    item_id = item.get("image", {}).get("full", "").replace(".png", "")
+    name = item.get("name")
+    if not name:
+        continue
+
     tags = item.get("tags", [])
+
+    # Keep user-defined data from old_extended if available
+    old_data = old_extended.get(item_id, {})
 
     extended_items.append({
         "id": item_id,
         "name": name,
-        "tags": tags,       # preserve Riot’s tags
-        "classes": [],      # champion classes this item is recommended for
-        "passives": [],     # list of passive effect descriptions
-        "actives": []       # list of active effect descriptions
+        "tags": tags,                          # update tags from Riot
+        "classes": old_data.get("classes", []),
+        "passives": old_data.get("passives", []),
+        "actives": old_data.get("actives", [])
     })
 
 # =====================================================================

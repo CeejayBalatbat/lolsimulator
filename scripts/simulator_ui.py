@@ -115,6 +115,7 @@ else:
     st.sidebar.text(f"Armor: {enemy_armor}")
     st.sidebar.text(f"MR: {enemy_mr}")
 
+
 # =====================================================================
 # SIDEBAR: ITEM SELECTION WITH POPOVER (OPTIMIZED)
 # =====================================================================
@@ -137,7 +138,6 @@ if "rows_to_show" not in st.session_state:
     st.session_state.rows_to_show = [3] * num_slots  # start with 3 rows per slot
 
 for i in range(num_slots):
-    # Current slot label
     current_item_name = (
         items_by_id[st.session_state.selected_items[i]]["name"]
         if st.session_state.selected_items[i] else "None"
@@ -147,36 +147,92 @@ for i in range(num_slots):
     with st.sidebar.popover(slot_label):
         st.write(f"Select item for Slot {i+1}")
 
-        # Search bar inside popover
-        search_query = st.text_input(f"Search items (Slot {i+1})", key=f"search_{i}")
-        filtered_items = filter_items(all_items, search_query)
+        # ==============================
+        # Filters for this slot (side-by-side)
+        # ==============================
+        col1, col2 = st.columns([1, 1.5])  # adjust width ratio
 
-        # Lazy rendering
-        cols_per_row = 6
-        max_rows_to_show = st.session_state.rows_to_show[i]
-        total_rows = (len(filtered_items) + cols_per_row - 1) // cols_per_row
-        rows_to_show = min(total_rows, max_rows_to_show)
+        with col1:
+            # Collect all unique classes from items
+            all_classes = sorted({cls for item in all_items for cls in item.get("classes", [])})
+            champion_classes = ["All"] + all_classes
+            selected_class = st.selectbox(
+                "Class",
+                champion_classes,
+                index=0,
+                key=f"class_{i}"
+            )
 
-        for row in range(rows_to_show):
-            cols = st.columns(cols_per_row)
-            for col in range(cols_per_row):
-                idx = row * cols_per_row + col
-                if idx < len(filtered_items):
-                    item = filtered_items[idx]
-                    img_file = item_icon_dir / f"{item['id']}.png"
-                    with cols[col]:
-                        if img_file.exists():
-                            st.image(load_item_image(img_file), width=48)
-                        display_name = (
-                            item["name"][:14] + "..." if len(item["name"]) > 16 else item["name"]
-                        )
-                        if st.button(display_name, key=f"btn_{i}_{item['id']}"):
-                            st.session_state.selected_items[i] = item["id"]
+        with col2:
+            search_query = st.text_input("Search", key=f"search_{i}")
 
-        # "Load more" button
-        if total_rows > max_rows_to_show:
-            if st.button(f"Load more items (Slot {i+1})", key=f"load_more_{i}"):
-                st.session_state.rows_to_show[i] += 3  # show 3 more rows next rerun
+        # Tags (full width under)
+        all_tags = sorted({tag for item in all_items for tag in item.get("tags", [])})
+        selected_tags = st.multiselect(
+            "Tags",
+            all_tags,
+            key=f"tags_{i}"
+        )
+
+        # ==============================
+        # Apply filters (now includes classes + tags + search)
+        # ==============================
+        def apply_filters(items, cls, tags, query):
+            filtered = items
+
+            if cls != "All":
+                filtered = [it for it in filtered if cls in it.get("classes", [])]
+
+            if tags:
+                filtered = [it for it in filtered if all(t in it.get("tags", []) for t in tags)]
+
+            if query:
+                q = query.lower()
+                filtered = [it for it in filtered if q in it["name"].lower()]
+
+            return filtered
+
+        filtered_items = apply_filters(all_items, selected_class, selected_tags, search_query)
+
+
+
+        # ---- Insert single-item check here ----
+        if len(filtered_items) == 1:
+            item = filtered_items[0]
+            img_file = item_icon_dir / f"{item['id']}.png"
+            if img_file.exists():
+                st.image(load_item_image(img_file), width=48)
+            display_name = item["name"]
+            if st.button(display_name, key=f"btn_{i}_{item['id']}"):
+                st.session_state.selected_items[i] = item["id"]
+        else:
+            # Lazy rendering for multiple items
+            cols_per_row = 6
+            max_rows_to_show = st.session_state.rows_to_show[i]
+            total_rows = (len(filtered_items) + cols_per_row - 1) // cols_per_row
+            rows_to_show = min(total_rows, max_rows_to_show)
+
+            for row in range(rows_to_show):
+                cols = st.columns(cols_per_row)
+                for col in range(cols_per_row):
+                    idx = row * cols_per_row + col
+                    if idx < len(filtered_items):
+                        item = filtered_items[idx]
+                        img_file = item_icon_dir / f"{item['id']}.png"
+                        with cols[col]:
+                            if img_file.exists():
+                                st.image(load_item_image(img_file), width=48)
+                            display_name = (
+                                item["name"][:14] + "..." if len(item["name"]) > 16 else item["name"]
+                            )
+                            if st.button(display_name, key=f"btn_{i}_{item['id']}"):
+                                st.session_state.selected_items[i] = item["id"]
+
+            # "Load more" button
+            if total_rows > max_rows_to_show:
+                if st.button(f"Load more items (Slot {i+1})", key=f"load_more_{i}"):
+                    st.session_state.rows_to_show[i] += 3
+
 
 
 # =====================================================================
