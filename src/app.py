@@ -3,7 +3,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 from copy import deepcopy
 
-# Import your Engine
+# Import your Engine components
 from scraper import DataDragon
 from loader import ItemLoader
 from engine import Stats, StatType, DamageType, ProcType
@@ -17,12 +17,15 @@ from pipeline import EventManager, CombatSystem, DamageEngine
 @st.cache_resource
 def load_library():
     dd = DataDragon()
+    # Fetch live data from Riot/DataDragon
     raw = dd.fetch_items()
     return ItemLoader.load_all(raw)
 
 st.set_page_config(page_title="LoL Sim 2026", layout="wide")
-st.title("⚔️ League of Legends Simulator (Phase 11)")
+st.title("⚔️ League of Legends Combat Simulator")
+st.caption("Phase 11: Granular Damage Tracking & Event Reset")
 
+# Load Data
 with st.spinner("Downloading Riot Data..."):
     library = load_library()
 
@@ -31,14 +34,17 @@ with st.spinner("Downloading Riot Data..."):
 # ------------------------------------------------------------------
 st.sidebar.header("1. Champion (Ezreal)")
 
+# A. Level & Base Stats
 level = st.sidebar.slider("Level", 1, 18, 9)
 base_ad = 62.0 + (3.0 * level)
 base_as = 0.625
 bonus_as_growth = 0.025 * level
 
-st.sidebar.markdown(f"**Stats:** AD: `{base_ad:.0f}` | AS: `{base_as:.3f} (+{bonus_as_growth:.1%})`")
+st.sidebar.markdown(f"**Base AD:** `{base_ad:.0f}`")
+st.sidebar.markdown(f"**Base AS:** `{base_as:.3f} (+{bonus_as_growth:.1%})`")
 st.sidebar.divider()
 
+# B. Inventory
 st.sidebar.header("2. Build")
 all_items = sorted(list(library.keys()))
 selected_items = st.sidebar.multiselect(
@@ -48,8 +54,9 @@ selected_items = st.sidebar.multiselect(
     max_selections=6
 )
 
+# Cost Calc
 current_cost = sum(library[name].cost for name in selected_items)
-st.sidebar.caption(f"💰 Total Gold: {current_cost}g")
+st.sidebar.info(f"💰 Total Gold: {current_cost}g")
 
 # ------------------------------------------------------------------
 # 3. MAIN PAGE: COMBAT SCENARIO
@@ -71,7 +78,7 @@ st.divider()
 # ------------------------------------------------------------------
 if st.button("🔥 RUN SIMULATION", type="primary", use_container_width=True):
     
-    # A. Setup Objects (CRITICAL: Deepcopy items to reset passive state)
+    # A. Setup Objects (CRITICAL: Deepcopy to reset passive states)
     items = deepcopy([library[name] for name in selected_items])
     
     attacker = Stats(
@@ -84,10 +91,10 @@ if st.button("🔥 RUN SIMULATION", type="primary", use_container_width=True):
         base_hp=target_hp, 
         current_health=target_hp, 
         base_armor=target_armor,
-        base_mr=target_armor # Giving equal MR for simple sim
+        base_mr=target_armor
     )
 
-    # B. Define Abilities
+    # B. Define Ezreal Q (Mystic Shot)
     q_config = AbilityConfig(
         name="Mystic Shot",
         damage_type=DamageType.PHYSICAL,
@@ -97,32 +104,59 @@ if st.button("🔥 RUN SIMULATION", type="primary", use_container_width=True):
     )
     abilities = [Ability(q_config, rank=1)]
     
-    # C. Initialize Engine (Fresh Event Manager for every run)
+    # C. Initialize Pipeline
     bus = EventManager()
     dmg_engine = DamageEngine()
     system = CombatSystem(bus, dmg_engine)
-    sim = TimeEngine(bus, attacker, target, items)
     
-    # D. Register Passives
+    # D. Setup Simulation
+    sim = TimeEngine(bus, attacker, target, items)
+    sim.max_duration = float(sim_duration)
+    
+    # E. Register Passives
     for item in items:
         for p in item.passives:
             if hasattr(p, 'register'): 
                 p.register(bus)
 
-    # E. Run
+    # F. Run
     sim.run(abilities)
     
     # ------------------------------------------------------------------
-    # 5. VISUALIZATION
+    # 5. GRANULAR VISUALIZATION
     # ------------------------------------------------------------------
-    total_dmg = sim.total_damage_done
-    dps = total_dmg / sim_duration
-    
-    m1, m2, m3 = st.columns(3)
-    m1.metric("Total Damage", f"{total_dmg:.1f}")
-    m2.metric("DPS", f"{dps:.1f}")
-    
-    efficiency = (total_dmg / max(1, current_cost)) * 100
-    m3.metric("Gold Efficiency", f"{efficiency:.1f} pts")
+    if hasattr(sim, 'damage_history') and sim.damage_history:
+        df = pd.DataFrame(sim.damage_history)
+        
+        # Row 1: High Level Metrics
+        m1, m2, m3, m4 = st.columns(4)
+        m1.metric("Total Damage", f"{sim.total_damage_done:.1f}")
+        m2.metric("Avg. Hit", f"{df['Post-Mitigation'].mean():.1f}")
+        m3.metric("Highest Crit/Hit", f"{df['Post-Mitigation'].max():.1f}")
+        m4.metric("Gold Efficiency", f"{(sim.total_damage_done/max(1, current_cost)):.2f}")
 
-    st.success(f"Simulation complete! Spellblade and Quicken reset correctly.")
+        # Row 2: Charts
+        col_chart1, col_chart2 = st.columns(2)
+        
+        with col_chart1:
+            st.subheader("📈 Damage per Hit")
+            # Shows exactly when and how hard each ability/attack hit
+            st.scatter_chart(df, x="Time", y="Post-Mitigation", color="Source")
+
+        with col_chart2:
+            st.subheader("⏱️ Cumulative Damage")
+            df["Total"] = df["Post-Mitigation"].cumsum()
+            st.line_chart(df, x="Time", y="Total")
+
+        # Row 3: Breakdown & Log
+        st.subheader("📊 Source Breakdown")
+        breakdown = df.groupby("Source")["Post-Mitigation"].sum().reset_index()
+        st.bar_chart(breakdown.set_index("Source"))
+
+        with st.expander("📂 View Raw Combat Log"):
+            st.dataframe(df, use_container_width=True)
+            
+    else:
+        st.error("Simulation ran but no damage was recorded. Check Ability/Attack logic.")
+
+    st.success(f"Simulation complete for {', '.join(selected_items)}!")

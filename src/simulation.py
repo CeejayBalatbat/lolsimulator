@@ -36,6 +36,7 @@ class TimeEngine:
         # State Tracking
         self.next_attack_time = 0.0
         self.total_damage_done = 0.0
+        self.damage_history = []
         
         # Event Queue
         self.event_queue: List[Tuple[float, CombatEvent]] = []
@@ -56,6 +57,18 @@ class TimeEngine:
     def _on_damage_dealt(self, event: CombatEvent):
         if event.damage_result:
             self.total_damage_done += event.damage_result.post_mitigation_damage
+            
+            # ADD THIS BLOCK:
+            if not hasattr(self, 'damage_history'):
+                self.damage_history = []
+                
+            self.damage_history.append({
+                "Time": event.timestamp,
+                "Source": event.ability_name,
+                "Type": event.base_instance.damage_type.name,
+                "Pre-Mitigation": event.damage_result.pre_mitigation_damage,
+                "Post-Mitigation": event.damage_result.post_mitigation_damage
+            })
 
     def run(self, abilities: list[Ability]):
         print(f"--- STARTING SIMULATION ({self.max_duration}s) ---")
