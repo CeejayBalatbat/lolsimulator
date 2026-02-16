@@ -21,11 +21,14 @@ class TimeEngine:
         self.base_attacker = base_attacker   # Immutable (Naked Stats)
         self.items = items                   # Immutable (Inventory)
         
-        # Initialize Stats immediately so we have a starting state
-        self.buff_manager = BuffManager()
+        self.buff_manager = BuffManager()    # Player Buffs (Trinity Force, Conqueror)
         self.attacker = StatPipeline.resolve(self.base_attacker, self.items, [])
         
-        self.target = target
+        # --- TARGET STATE (Phase 12) ---
+        self.base_target = target            # Immutable (Base Enemy)
+        self.debuff_manager = BuffManager()  # Enemy Debuffs (Black Cleaver, Exhaust)
+        self.target = target                 # Dynamic Enemy (Recalculated every tick)
+        
         self.cd_manager = CooldownManager()
         
         # Simulation Parameters
@@ -41,37 +44,45 @@ class TimeEngine:
         # Event Queue
         self.event_queue: List[Tuple[float, CombatEvent]] = []
 
-        # Listen for damage to track DPS
+        # Subscriptions
         self.bus.subscribe(EventType.POST_MITIGATION_DAMAGE, self._on_damage_dealt, Priority.NORMAL)
-
         self.bus.subscribe(EventType.BUFF_APPLY, self._on_buff_apply, Priority.HIGHEST)
 
     def _on_buff_apply(self, event: CombatEvent):
         if event.buff_config:
-            self.buff_manager.apply_buff(event.buff_config, event.timestamp)
-            # print(f"[{event.timestamp:.2f}s] Event Triggered Buff: {event.buff_config.name}")
+            # PHASE 12: Route buff to the correct manager based on who is the 'target' of the event
+            # If the event target is the ENEMY, it's a Debuff.
+            # If the event target is the PLAYER, it's a Self-Buff.
+            
+            # Simple identity check: 
+            # In our sim, self.target is the Enemy. self.attacker is the Player.
+            # Note: We compare against self.base_target or self.target to be safe.
+            
+            # For now, we assume if the buff source is Player and target is Enemy -> Debuff
+            if event.target == self.target or event.target == self.base_target:
+                 self.debuff_manager.apply_buff(event.buff_config, event.timestamp)
+                 # print(f"[{event.timestamp:.2f}s] DEBUFF APPLIED: {event.buff_config.name}")
+            else:
+                 self.buff_manager.apply_buff(event.buff_config, event.timestamp)
 
     def schedule_event(self, event: CombatEvent):
         heapq.heappush(self.event_queue, (event.timestamp, event))
 
     def _on_damage_dealt(self, event: CombatEvent):
         if event.damage_result:
-            self.total_damage_done += event.damage_result.post_mitigation_damage
+            dmg = event.damage_result.post_mitigation_damage
+            self.total_damage_done += dmg
             
-            # ADD THIS BLOCK:
-            if not hasattr(self, 'damage_history'):
-                self.damage_history = []
-                
+            # Log for UI
             self.damage_history.append({
-                "Time": event.timestamp,
+                "Time": round(event.timestamp, 2),
                 "Source": event.ability_name,
                 "Type": event.base_instance.damage_type.name,
-                "Pre-Mitigation": event.damage_result.pre_mitigation_damage,
-                "Post-Mitigation": event.damage_result.post_mitigation_damage
+                "Damage": round(dmg, 1)
             })
 
     def run(self, abilities: list[Ability]):
-        print(f"--- STARTING SIMULATION ({self.max_duration}s) ---")
+        # print(f"--- STARTING SIMULATION ({self.max_duration}s) ---")
         
         while self.current_time < self.max_duration:
             # 1. Process Due Events
@@ -86,7 +97,7 @@ class TimeEngine:
 
             # 3. PRIORITY 1: Cast Abilities
             action_taken = False
-            haste_mult = self.attacker.cooldown_reduction_multiplier # Uses Dynamic Stats!
+            haste_mult = self.attacker.cooldown_reduction_multiplier
             
             for abil in abilities:
                 if self.cd_manager.is_ready(abil.config.name, self.current_time):
@@ -106,54 +117,45 @@ class TimeEngine:
             # 5. Advance Time
             self._tick()
 
-        # Summary
-        dps = self.total_damage_done / self.max_duration if self.max_duration > 0 else 0
-        print(f"\n--- SIMULATION ENDED ---")
-        print(f"Total Damage: {self.total_damage_done:.1f}")
-        print(f"DPS: {dps:.1f}")
-
     def _tick(self):
         self.current_time += self.time_step
         
-        # --- PHASE 9: THE BUFF LOOP ---
-        
-        # A. Update Buff Timers
+        # A. Update Timers
         self.buff_manager.tick(self.current_time)
+        self.debuff_manager.tick(self.current_time)
         
-        # B. Re-Resolve Stats
-        # We take Base + Items + Current Active Buffs -> New 'self.attacker'
-        active_buffs = self.buff_manager.get_all_buffs()
-        
-        # Only re-calculate if necessary (optimization for later), 
-        # but for now we do it every frame to catch expirations exactly.
+        # B. Re-Resolve Player Stats
         self.attacker = StatPipeline.resolve(
             self.base_attacker, 
             self.items, 
-            active_buffs
+            self.buff_manager.get_all_buffs()
+        )
+        
+        # C. Re-Resolve Enemy Stats (Apply Armor Shred)
+        self.target = StatPipeline.resolve_target(
+            self.base_target,
+            self.debuff_manager
         )
 
     def _perform_cast(self, ability: Ability, haste_mult: float):
-        print(f"[{self.current_time:.2f}s] CAST: {ability.config.name}")
+        # print(f"[{self.current_time:.2f}s] CAST: {ability.config.name}")
         
         cast_time = 0.25 
         travel_time = 0.25
         
-        # Cast Complete (Immediate)
         cast_event = CombatEvent(
             event_type=EventType.CAST_COMPLETE,
             timestamp=self.current_time,
-            source=self.attacker, # Uses current dynamic stats
-            target=self.target,
+            source=self.attacker, 
+            target=self.target, # Current dynamic target
             ability_name=ability.config.name,
             base_instance=None 
         )
         self.bus.publish(cast_event)
 
-        # Calculate Damage (Snapshot!)
         snapshot_stats = self.attacker.snapshot()
         dmg_instance = ability.cast(snapshot_stats, self.target)
         
-        # Schedule Hit
         hit_event = CombatEvent(
             event_type=EventType.PRE_MITIGATION_HIT,
             timestamp=self.current_time + travel_time, 
@@ -164,7 +166,6 @@ class TimeEngine:
         )
         self.schedule_event(hit_event)
 
-        # Update Cooldowns
         rank_data = ability.config.level_data[ability.rank - 1]
         self.cd_manager.put_on_cooldown(
             ability.config.name, 
@@ -175,18 +176,14 @@ class TimeEngine:
         self.cd_manager.trigger_gcd(cast_time, self.current_time)
 
     def _perform_attack(self):
-        # Uses Dynamic Attack Speed
         as_value = self.attacker.total_attack_speed
-        
-        if as_value <= 0:
-            return
+        if as_value <= 0: return
 
         delay = 1.0 / as_value
         windup = delay * 0.2 
         
-        print(f"[{self.current_time:.2f}s] ATTACK LAUNCH (AS: {as_value:.2f})")
+        # print(f"[{self.current_time:.2f}s] ATTACK LAUNCH (AS: {as_value:.2f})")
 
-        # Snapshot Stats at Launch
         snapshot_stats = self.attacker.snapshot()
         
         dmg = DamageInstance(
@@ -197,7 +194,6 @@ class TimeEngine:
             tags={'auto_attack'}
         )
         
-        # Fire Launch Event (Triggers on-attack buffs like Rageblade/Lethal Tempo)
         launch_event = CombatEvent(
             event_type=EventType.ATTACK_LAUNCH,
             timestamp=self.current_time,
@@ -208,7 +204,6 @@ class TimeEngine:
         )
         self.bus.publish(launch_event)
 
-        # Schedule Hit
         hit_event = CombatEvent(
             event_type=EventType.PRE_MITIGATION_HIT,
             timestamp=self.current_time + windup, 

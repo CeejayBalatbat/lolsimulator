@@ -1,6 +1,5 @@
 import streamlit as st
 import pandas as pd
-import matplotlib.pyplot as plt
 from copy import deepcopy
 
 # Import your Engine components
@@ -10,6 +9,7 @@ from engine import Stats, StatType, DamageType, ProcType
 from ability import Ability, AbilityConfig, AbilityLevelData, ScalingRatio
 from simulation import TimeEngine
 from pipeline import EventManager, CombatSystem, DamageEngine
+from stat_pipeline import StatPipeline
 
 # ------------------------------------------------------------------
 # 1. SETUP & CACHING
@@ -59,7 +59,7 @@ current_cost = sum(library[name].cost for name in selected_items)
 st.sidebar.info(f"💰 Total Gold: {current_cost}g")
 
 # ------------------------------------------------------------------
-# 3. MAIN PAGE: COMBAT SCENARIO
+# 3. COMBAT SCENARIO & TARGET ANALYSIS (Live Updates)
 # ------------------------------------------------------------------
 st.header("3. Combat Scenario")
 
@@ -69,7 +69,46 @@ with c1:
 with c2:
     target_armor = st.number_input("Enemy Armor", 0, 500, 50, step=10)
 with c3:
-    sim_duration = st.slider("Fight Duration (seconds)", 1, 30, 10)
+    sim_duration = st.slider("Fight Duration", 1, 30, 10)
+
+st.divider()
+
+# --- LIVE PREVIEW SECTION ---
+# This runs on every slider change, so metrics update instantly.
+
+# A. Create Preview Objects
+preview_items = [library[name] for name in selected_items]
+preview_attacker = Stats(
+    base_ad=base_ad, 
+    base_attack_speed=base_as,
+    bonus_attack_speed=bonus_as_growth
+)
+
+# B. Resolve Stats (Get final Pen/Lethality)
+final_attacker_stats = StatPipeline.resolve(preview_attacker, preview_items, [])
+
+# --- TARGET ANALYSIS DISPLAY ---
+st.subheader("🧐 Target Analysis")
+
+# 1. Get Penetration Stats
+current_lethality = final_attacker_stats.lethality
+current_percent_pen = final_attacker_stats.armor_pen_percent
+
+# 2. Calculate "Post-Penetration" Armor
+eff_armor = target_armor * (1.0 - current_percent_pen)
+eff_armor = max(0, eff_armor - current_lethality)
+
+# 3. Calculate Mitigation & Effective HP
+mitigation = 100.0 / (100.0 + eff_armor)
+reduction_percent = (1.0 - mitigation) * 100.0
+ehp_physical = target_hp * (1.0 + (eff_armor / 100.0))
+
+# 4. Display Metrics
+t1, t2, t3, t4 = st.columns(4)
+t1.metric("Enemy Armor", f"{target_armor:.0f} → {eff_armor:.0f}", help="Base → After Pen")
+t2.metric("Dmg Reduction", f"{reduction_percent:.1f}%")
+t3.metric("Effective HP", f"{ehp_physical:.0f}", delta=f"+{ehp_physical - target_hp:.0f} Armor Value")
+t4.metric("Penetration", f"{current_percent_pen*100:.0f}% + {current_lethality:.0f} Flat")
 
 st.divider()
 
@@ -131,8 +170,8 @@ if st.button("🔥 RUN SIMULATION", type="primary", use_container_width=True):
         # Row 1: High Level Metrics
         m1, m2, m3, m4 = st.columns(4)
         m1.metric("Total Damage", f"{sim.total_damage_done:.1f}")
-        m2.metric("Avg. Hit", f"{df['Post-Mitigation'].mean():.1f}")
-        m3.metric("Highest Crit/Hit", f"{df['Post-Mitigation'].max():.1f}")
+        m2.metric("Avg. Hit", f"{df['Damage'].mean():.1f}") # Make sure key matches sim.py ('Damage')
+        m3.metric("Highest Crit/Hit", f"{df['Damage'].max():.1f}")
         m4.metric("Gold Efficiency", f"{(sim.total_damage_done/max(1, current_cost)):.2f}")
 
         # Row 2: Charts
@@ -140,17 +179,16 @@ if st.button("🔥 RUN SIMULATION", type="primary", use_container_width=True):
         
         with col_chart1:
             st.subheader("📈 Damage per Hit")
-            # Shows exactly when and how hard each ability/attack hit
-            st.scatter_chart(df, x="Time", y="Post-Mitigation", color="Source")
+            st.scatter_chart(df, x="Time", y="Damage", color="Source")
 
         with col_chart2:
             st.subheader("⏱️ Cumulative Damage")
-            df["Total"] = df["Post-Mitigation"].cumsum()
+            df["Total"] = df["Damage"].cumsum()
             st.line_chart(df, x="Time", y="Total")
 
         # Row 3: Breakdown & Log
         st.subheader("📊 Source Breakdown")
-        breakdown = df.groupby("Source")["Post-Mitigation"].sum().reset_index()
+        breakdown = df.groupby("Source")["Damage"].sum().reset_index()
         st.bar_chart(breakdown.set_index("Source"))
 
         with st.expander("📂 View Raw Combat Log"):

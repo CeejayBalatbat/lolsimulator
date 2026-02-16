@@ -41,6 +41,9 @@ class StatType(Enum):
     # Crit / Pen
     CRIT_CHANCE = auto()
     LETHALITY = auto()
+    ARMOR_PEN_PERCENT = auto()  # For Last Whisper items
+    MAGIC_PEN_FLAT = auto()     # For Sorcerer's Shoes
+    MAGIC_PEN_PERCENT = auto()  # For Void Staff
     
     # Special
     BONUS_AD = auto() # Specific target for modifiers

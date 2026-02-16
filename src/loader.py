@@ -1,83 +1,89 @@
-from engine import StatType
+import json
+from typing import Dict, Any
 from item import ItemConfig, StatModifier, StatModType
-from item_overrides import ITEM_OVERRIDES
-from description_parser import DescriptionParser # Import the new tool
-
-# Standard JSON keys
-STAT_MAP = {
-    'FlatPhysicalDamageMod': StatType.AD,
-    'FlatMagicDamageMod': StatType.AP,
-    'FlatHPPoolMod': StatType.HP,
-    'FlatMPPoolMod': StatType.MANA,
-    'FlatArmorMod': StatType.ARMOR,
-    'FlatSpellBlockMod': StatType.MR,
-    # 'FlatMovementSpeedMod': StatType.MS, # Often redundant with description
-    'PercentAttackSpeedMod': StatType.AS,
-    'FlatCritChanceMod': StatType.CRIT_CHANCE,
-}
+from engine import StatType
+from passives import SpellbladePassive, CarvePassive # <--- Import your new passive!
 
 class ItemLoader:
     @staticmethod
-    def parse_item(item_id: str, riot_data: dict) -> ItemConfig:
-        name = riot_data['name']
-        cost = riot_data['gold']['total']
-        
-        modifiers = []
-        parsed_stat_types = set()
-
-        # 1. Parse JSON 'stats' (The Easy Stuff)
-        stats = riot_data.get('stats', {})
-        for key, value in stats.items():
-            if key in STAT_MAP:
-                st = STAT_MAP[key]
-                modifiers.append(StatModifier(st, float(value), StatModType.FLAT))
-                parsed_stat_types.add(st)
-        
-        # 2. Parse Description (The Deep Dive)
-        description = riot_data.get('description', "")
-        if description:
-            hidden_mods = DescriptionParser.parse(description)
-            
-            for mod in hidden_mods:
-                # OPTIONAL: Don't double-add if we already found it in JSON?
-                # Usually parsing description is safer for "missing" stats like Haste.
-                # If JSON has AD and Desc has AD, usually they match.
-                # Let's add it only if NOT in JSON to be safe from duplicates.
-                if mod.stat not in parsed_stat_types:
-                     modifiers.append(mod)
-
-        # 3. Apply Overrides (PASSIVES ONLY)
-        # We assume stats are handled by the parser now.
-        passive_objects = [] 
-        if name in ITEM_OVERRIDES:
-            override_data = ITEM_OVERRIDES[name]
-            if "passives" in override_data:
-                passive_objects = override_data["passives"]
-                
-        return ItemConfig(
-            name=name, 
-            modifiers=modifiers, 
-            cost=cost, 
-            passives=passive_objects
-        )
-
-    @staticmethod
-    def load_all(raw_data: dict) -> dict:
+    def load_all(raw_data: Dict[str, Any]) -> Dict[str, ItemConfig]:
+        """
+        Parses Riot API JSON into our internal ItemConfig format.
+        """
         library = {}
+        
         for item_id, data in raw_data.items():
-            if not data.get('gold', {}).get('purchasable', False): continue
+            name = data.get("name", "Unknown Item")
+            stats_block = data.get("stats", {})
+            gold = data.get("gold", {}).get("total", 0)
             
-            maps = data.get('maps', {})
-            if str(11) not in maps or not maps[str(11)]: continue
-
-            item = ItemLoader.parse_item(item_id, data)
+            # Create Config
+            config = ItemConfig(name=name, cost=gold)
             
-            # Post-Process Overrides
-            if item.name in ITEM_OVERRIDES:
-                data = ITEM_OVERRIDES[item.name]
-                if "passives" in data:
-                    item.passives = data["passives"]
+            # --- PARSE STATS ---
+            # Riot uses specific keys, we map them to our ItemConfig fields
+            # Note: We rely on the 'Paranoid Pipeline' to read these, 
+            # so we can just store them as attributes or modifiers.
+            
+            # Direct Mapping (Simple)
+            if "FlatPhysicalDamageMod" in stats_block:
+                config.base_ad = stats_block["FlatPhysicalDamageMod"]
+            if "FlatMagicDamageMod" in stats_block:
+                config.base_ap = stats_block["FlatMagicDamageMod"]
+            if "FlatHPPoolMod" in stats_block:
+                config.base_hp = stats_block["FlatHPPoolMod"]
+            if "FlatArmorMod" in stats_block:
+                config.base_armor = stats_block["FlatArmorMod"]
+            if "FlatSpellBlockMod" in stats_block:
+                config.base_mr = stats_block["FlatSpellBlockMod"]
+                
+            # Parse Modifiers list for complex stats (AS, Haste, Crit)
+            # (Riot data varies, this is a simplified example of parsing)
+            if "PercentAttackSpeedMod" in stats_block:
+                config.modifiers.append(StatModifier(
+                    stat=StatType.AS, 
+                    value=stats_block["PercentAttackSpeedMod"], 
+                    mod_type=StatModType.PERCENT_BONUS
+                ))
+            
+            # ... (Add other parsers for Haste/Crit as needed) ...
+            
+            # Store in library
+            library[name] = config
 
-            library[item.name] = item
+        # ------------------------------------------------------------------
+        # MANUAL OVERRIDES (The "Hardcoded Backup")
+        # ------------------------------------------------------------------
+        
+        # 1. TRINITY FORCE (Fix Stats & Add Spellblade)
+        if "Trinity Force" in library:
+            tf = library["Trinity Force"]
+            # Ensure stats are correct (API sometimes misses Haste/AS on mythics)
+            tf.base_ad = 45.0
+            tf.bonus_attack_speed = 0.33
+            tf.ability_haste = 20.0
+            tf.base_hp = 300.0
+            
+            # Add Passives
+            tf.passives.append(SpellbladePassive(damage_percent_base_ad=2.0))
+            # (You can add Quicken here too if you want)
+
+        # 2. BLACK CLEAVER (Add Carve)
+        if "Black Cleaver" in library:
+            bc = library["Black Cleaver"]
+            bc.base_ad = 55.0
+            bc.base_hp = 400.0
+            bc.ability_haste = 20.0
+            
+            # Inject Phase 12 Passive
+            bc.passives.append(CarvePassive())
+            print(f"✅ Loaded Black Cleaver with Carve Passive")
+            
+        # 3. THE COLLECTOR (Add Lethality)
+        if "The Collector" in library:
+            col = library["The Collector"]
+            col.base_ad = 60.0
+            col.crit_chance = 0.20
+            col.lethality = 12.0 # Force Lethality
             
         return library

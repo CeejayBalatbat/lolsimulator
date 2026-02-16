@@ -1,7 +1,13 @@
-from engine import ProcType, Stats, DamageType, DamageInstance
+from typing import List, Optional
+from engine import ProcType, Stats, DamageType, DamageInstance, StatType
 from events import EventType, CombatEvent, Priority
 from pipeline import EventManager
 from buffs import BuffConfig
+from item import StatModifier, StatModType
+
+# ------------------------------------------------------------------
+# SIMPLE PASSIVES
+# ------------------------------------------------------------------
 
 class OnHitDamagePassive:
     """
@@ -15,30 +21,31 @@ class OnHitDamagePassive:
         event_manager.subscribe(EventType.PRE_MITIGATION_HIT, self._on_hit, Priority.HIGH)
 
     def _on_hit(self, event: CombatEvent):
-        # 1. Check if this instance triggers On-Hit effects
         if not (event.base_instance.proc_type & ProcType.ON_HIT):
             return
 
-        # 2. Check Coefficient (e.g. Kata R reduces on-hit effectiveness)
         eff = event.base_instance.proc_coefficient
         if eff <= 0: return
 
-        # 3. Create the Extra Damage Instance
         final_amt = self.amount * eff
         
         extra = DamageInstance(
             raw_damage=final_amt,
             damage_type=self.damage_type,
             source_stats=event.source,
-            proc_type=ProcType.NONE, # Don't chain proc infinite loops
+            proc_type=ProcType.NONE, 
             tags={'passive_proc', 'on_hit'}
         )
-        
-        # 4. Attach to the Event
         event.add_instance(extra)
 
+# ------------------------------------------------------------------
+# STATEFUL PASSIVES (Require Reset)
+# ------------------------------------------------------------------
 
 class SpellbladePassive:
+    """
+    Sheen / Trinity Force logic.
+    """
     def __init__(self, damage_percent_base_ad: float):
         self.ratio = damage_percent_base_ad
         self.active = False
@@ -50,7 +57,7 @@ class SpellbladePassive:
         event_manager.subscribe(EventType.PRE_MITIGATION_HIT, self._on_hit, Priority.HIGH)
 
     def _on_cast(self, event: CombatEvent):
-        # Charge the blade only if it is off cooldown
+        # Only charge if off cooldown
         if event.timestamp >= self.last_proc_time + self.cooldown:
             self.active = True
 
@@ -58,46 +65,91 @@ class SpellbladePassive:
         if not self.active:
             return
             
-        # Standard Spellblade internal CD check (safety)
+        # Standard Spellblade internal CD check
         if event.timestamp < self.last_proc_time + self.cooldown:
             return
 
+        # Must be an ON_HIT trigger (usually Basic Attack or Q)
         if not (event.base_instance.proc_type & ProcType.ON_HIT):
             return
 
-        # Use the base_ad from the snapshot source stats
+        # Apply Bonus
         bonus_dmg = event.source.base_ad * self.ratio
         event.base_instance.raw_damage += bonus_dmg
         
+        # Reset
         self.active = False
         self.last_proc_time = event.timestamp
 
 
 class GrantBuffOnHitPassive:
     """
-    Applies a buff when you hit a target.
-    (Trinity Force 'Quicken', Black Cleaver 'Carve', Phantom Dancer)
+    Applies a buff to SELF when you hit. (e.g. Trinity Force Move Speed)
     """
     def __init__(self, buff_config: BuffConfig):
         self.buff_config = buff_config
-        self.bus = None # Will store reference to event manager
+        self.bus = None 
 
     def register(self, event_manager: EventManager):
         self.bus = event_manager
         event_manager.subscribe(EventType.PRE_MITIGATION_HIT, self._on_hit)
 
     def _on_hit(self, event: CombatEvent):
-        # 1. Filter: Triggers on Basic Attacks
         if not (event.base_instance.proc_type & ProcType.BASIC_ATTACK):
             return
 
-        # 2. Fire Buff Request Event
-        # We publish a new event asking the Engine to apply a buff
+        # Apply to SELF (Source)
         buff_event = CombatEvent(
             event_type=EventType.BUFF_APPLY,
             timestamp=event.timestamp,
             source=event.source,
-            target=event.target,
+            target=event.source, # <--- Target is Self
             buff_config=self.buff_config
+        )
+        self.bus.publish(buff_event)
+
+
+# ------------------------------------------------------------------
+# PHASE 12: DEBUFF PASSIVES (Black Cleaver)
+# ------------------------------------------------------------------
+
+class CarvePassive:
+    """
+    Unique Passive: Carve (Black Cleaver)
+    Dealing physical damage applies a stack of 5% Armor Reduction.
+    """
+    def __init__(self):
+        self.bus = None
+        # Define the Debuff (-5% Armor per stack)
+        self.debuff_config = BuffConfig(
+            name="Carve",
+            duration=6.0,
+            max_stacks=6,
+            modifiers=[
+                StatModifier(
+                    stat=StatType.ARMOR, 
+                    value=-0.05, 
+                    mod_type=StatModType.PERCENT_BASE 
+                )
+            ]
+        )
+
+    def register(self, event_manager: EventManager):
+        self.bus = event_manager
+        # Listen for ANY damage completion (Auto, Ability, Spellblade, etc.)
+        event_manager.subscribe(EventType.POST_MITIGATION_DAMAGE, self._on_damage)
+
+    def _on_damage(self, event: CombatEvent):
+        # 1. Check Damage Type
+        if event.base_instance.damage_type != DamageType.PHYSICAL:
+            return
+            
+        # 2. Apply Debuff to ENEMY (Target)
+        buff_event = CombatEvent(
+            event_type=EventType.BUFF_APPLY,
+            timestamp=event.timestamp,
+            source=event.source,
+            target=event.target, # <--- Target is Enemy
+            buff_config=self.debuff_config
         )
         self.bus.publish(buff_event)

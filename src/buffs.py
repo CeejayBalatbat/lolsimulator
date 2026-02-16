@@ -5,10 +5,10 @@ from item import StatModifier
 @dataclass
 class BuffConfig:
     name: str
-    duration: float          # How long it lasts (seconds)
-    max_stacks: int          # 1 for simple buffs, 10+ for stacking
-    modifiers: List[StatModifier] # Stats granted PER STACK
-    refresh_on_stack: bool = True # Does getting a stack reset the timer?
+    duration: float
+    max_stacks: int
+    modifiers: List[StatModifier]   # Move this ABOVE refresh_on_stack
+    refresh_on_stack: bool = True   # Fields with defaults must be last
 
 class ActiveBuff:
     def __init__(self, config: BuffConfig, start_time: float):
