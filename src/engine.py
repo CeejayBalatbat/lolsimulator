@@ -62,6 +62,14 @@ class Stats:
     # Health
     base_hp: float = 0.0
     bonus_hp: float = 0.0
+
+    # --- NEW MANA STATS ---
+    base_mana: float = 0.0
+    bonus_mana: float = 0.0
+    current_mana: float = 0.0
+
+    base_mana_regen: float = 0.0 # Per second
+    bonus_mana_regen: float = 0.0 # % increase usually
     
     # Attack Damage
     base_ad: float = 0.0
@@ -97,6 +105,15 @@ class Stats:
     @property
     def total_hp(self) -> float:
         return self.base_hp + self.bonus_hp
+    
+    @property
+    def total_mana(self) -> float:
+        return self.base_mana + self.bonus_mana
+        
+    @property
+    def total_mana_regen(self) -> float:
+        # Simple formula: Base * (1 + Bonus%)
+        return self.base_mana_regen * (1.0 + self.bonus_mana_regen)
 
     @property
     def total_ad(self) -> float:

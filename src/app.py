@@ -40,6 +40,9 @@ base_ad = 62.0 + (3.0 * level)
 base_as = 0.625
 bonus_as_growth = 0.025 * level
 
+base_mana = st.sidebar.number_input("Base Mana", 0, 2000, 375 + (50 * level)) # Approx Ezreal growth
+base_mana_regen = st.sidebar.number_input("Base Mana Regen", 0.0, 20.0, 2.0) # Per Second
+
 st.sidebar.markdown(f"**Base AD:** `{base_ad:.0f}`")
 st.sidebar.markdown(f"**Base AS:** `{base_as:.3f} (+{bonus_as_growth:.1%})`")
 st.sidebar.divider()
@@ -123,7 +126,12 @@ if st.button("🔥 RUN SIMULATION", type="primary", use_container_width=True):
     attacker = Stats(
         base_ad=base_ad, 
         base_attack_speed=base_as,
-        bonus_attack_speed=bonus_as_growth
+        bonus_attack_speed=bonus_as_growth,
+
+        # NEW MANA STATS
+        base_mana=base_mana,
+        current_mana=base_mana, # Start full
+        base_mana_regen=base_mana_regen
     )
     
     target = Stats(
@@ -138,7 +146,9 @@ if st.button("🔥 RUN SIMULATION", type="primary", use_container_width=True):
         name="Mystic Shot",
         damage_type=DamageType.PHYSICAL,
         ratios=[ScalingRatio(StatType.AD, 1.30)], 
-        level_data=[AbilityLevelData(base_damage=120, mana_cost=30, cooldown=4.5)], 
+        level_data=[AbilityLevelData(base_damage=120, 
+                                     mana_cost=30, 
+                                     cooldown=4.5)], 
         proc_type=ProcType.SPELL | ProcType.ON_HIT
     )
     abilities = [Ability(q_config, rank=1)]
@@ -168,11 +178,12 @@ if st.button("🔥 RUN SIMULATION", type="primary", use_container_width=True):
         df = pd.DataFrame(sim.damage_history)
         
         # Row 1: High Level Metrics
-        m1, m2, m3, m4 = st.columns(4)
+        m1, m2, m3, m4, m5 = st.columns(5)
         m1.metric("Total Damage", f"{sim.total_damage_done:.1f}")
         m2.metric("Avg. Hit", f"{df['Damage'].mean():.1f}") # Make sure key matches sim.py ('Damage')
         m3.metric("Highest Crit/Hit", f"{df['Damage'].max():.1f}")
         m4.metric("Gold Efficiency", f"{(sim.total_damage_done/max(1, current_cost)):.2f}")
+        m5.metric("Mana Remaining", f"{sim.attacker.current_mana:.0f} / {sim.attacker.total_mana:.0f}")
 
         # Row 2: Charts
         col_chart1, col_chart2 = st.columns(2)

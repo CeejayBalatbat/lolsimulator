@@ -8,60 +8,46 @@ from cooldowns import CooldownManager
 from events import EventType, CombatEvent, Priority
 from pipeline import EventManager
 from item import ItemConfig
-
-# Phase 9 Imports
 from buffs import BuffManager
 from stat_pipeline import StatPipeline
 
 class TimeEngine:
-    def __init__(self, bus: EventManager, base_attacker: Stats, target: Stats, items: List[ItemConfig]):
+    def __init__(self, bus, base_attacker, base_target, items):
         self.bus = bus
         
         # --- DYNAMIC STAT ENGINE ---
-        self.base_attacker = base_attacker   # Immutable (Naked Stats)
-        self.items = items                   # Immutable (Inventory)
+        self.base_attacker = base_attacker   
+        self.items = items                   
         
-        self.buff_manager = BuffManager()    # Player Buffs (Trinity Force, Conqueror)
+        self.buff_manager = BuffManager()    
         self.attacker = StatPipeline.resolve(self.base_attacker, self.items, [])
         
-        # --- TARGET STATE (Phase 12) ---
-        self.base_target = target            # Immutable (Base Enemy)
-        self.debuff_manager = BuffManager()  # Enemy Debuffs (Black Cleaver, Exhaust)
-        self.target = target                 # Dynamic Enemy (Recalculated every tick)
+        # Ensure we start with the requested current mana
+        self.attacker.current_mana = self.base_attacker.current_mana
+
+        # --- TARGET STATE ---
+        self.base_target = base_target            
+        self.debuff_manager = BuffManager()  
+        self.target = base_target                 
         
         self.cd_manager = CooldownManager()
         
-        # Simulation Parameters
         self.current_time = 0.0
         self.time_step = 0.033 
         self.max_duration = 10.0
         
-        # State Tracking
         self.next_attack_time = 0.0
         self.total_damage_done = 0.0
         self.damage_history = []
-        
-        # Event Queue
         self.event_queue: List[Tuple[float, CombatEvent]] = []
 
-        # Subscriptions
         self.bus.subscribe(EventType.POST_MITIGATION_DAMAGE, self._on_damage_dealt, Priority.NORMAL)
         self.bus.subscribe(EventType.BUFF_APPLY, self._on_buff_apply, Priority.HIGHEST)
 
     def _on_buff_apply(self, event: CombatEvent):
         if event.buff_config:
-            # PHASE 12: Route buff to the correct manager based on who is the 'target' of the event
-            # If the event target is the ENEMY, it's a Debuff.
-            # If the event target is the PLAYER, it's a Self-Buff.
-            
-            # Simple identity check: 
-            # In our sim, self.target is the Enemy. self.attacker is the Player.
-            # Note: We compare against self.base_target or self.target to be safe.
-            
-            # For now, we assume if the buff source is Player and target is Enemy -> Debuff
             if event.target == self.target or event.target == self.base_target:
                  self.debuff_manager.apply_buff(event.buff_config, event.timestamp)
-                 # print(f"[{event.timestamp:.2f}s] DEBUFF APPLIED: {event.buff_config.name}")
             else:
                  self.buff_manager.apply_buff(event.buff_config, event.timestamp)
 
@@ -72,8 +58,6 @@ class TimeEngine:
         if event.damage_result:
             dmg = event.damage_result.post_mitigation_damage
             self.total_damage_done += dmg
-            
-            # Log for UI
             self.damage_history.append({
                 "Time": round(event.timestamp, 2),
                 "Source": event.ability_name,
@@ -82,15 +66,13 @@ class TimeEngine:
             })
 
     def run(self, abilities: list[Ability]):
-        # print(f"--- STARTING SIMULATION ({self.max_duration}s) ---")
-        
         while self.current_time < self.max_duration:
             # 1. Process Due Events
             while self.event_queue and self.event_queue[0][0] <= self.current_time:
                 timestamp, event = heapq.heappop(self.event_queue)
                 self.bus.publish(event)
 
-            # 2. Check Global Cooldown
+            # 2. Check GCD
             if self.current_time < self.cd_manager.global_cooldown:
                 self._tick()
                 continue
@@ -101,15 +83,17 @@ class TimeEngine:
             
             for abil in abilities:
                 if self.cd_manager.is_ready(abil.config.name, self.current_time):
-                    self._perform_cast(abil, haste_mult)
-                    action_taken = True
-                    break 
+                    # FIX 1: Check return value. If True, we casted. If False, we failed (OOM).
+                    if self._perform_cast(abil, haste_mult):
+                        action_taken = True
+                        break 
             
+            # If we successfully casted, skip auto attacks this frame
             if action_taken:
                 self._tick()
                 continue
 
-            # 4. PRIORITY 2: Auto Attack
+            # 4. PRIORITY 2: Auto Attack (Fallback if casting failed or wasn't ready)
             if self.current_time >= self.next_attack_time:
                 self._perform_attack()
                 action_taken = True
@@ -124,22 +108,45 @@ class TimeEngine:
         self.buff_manager.tick(self.current_time)
         self.debuff_manager.tick(self.current_time)
         
-        # B. Re-Resolve Player Stats
+        # B. FIX 2: PRESERVE MANA before overwriting attacker
+        # The pipeline creates a NEW stats object, so we must save our current mana
+        saved_mana = self.attacker.current_mana
+        
         self.attacker = StatPipeline.resolve(
             self.base_attacker, 
             self.items, 
             self.buff_manager.get_all_buffs()
         )
         
-        # C. Re-Resolve Enemy Stats (Apply Armor Shred)
+        # Restore mana to the new object
+        self.attacker.current_mana = saved_mana
+        
+        # C. Mana Regen
+        regen = self.attacker.total_mana_regen * self.time_step
+        self.attacker.current_mana = min(
+            self.attacker.total_mana, 
+            self.attacker.current_mana + regen
+        )
+
+        # D. Update Enemy
         self.target = StatPipeline.resolve_target(
             self.base_target,
             self.debuff_manager
         )
 
-    def _perform_cast(self, ability: Ability, haste_mult: float):
-        # print(f"[{self.current_time:.2f}s] CAST: {ability.config.name}")
+    def _perform_cast(self, ability: Ability, haste_mult: float) -> bool:
+        """Returns True if cast was successful, False if blocked (OOM)."""
         
+        # 1. Check Mana
+        cost = ability.config.level_data[ability.rank - 1].mana_cost
+        if self.attacker.current_mana < cost:
+            # OOM: Return False so the engine knows to try Auto Attacking instead
+            return False
+
+        # 2. Deduct Mana
+        self.attacker.current_mana -= cost
+
+        # 3. Create Events
         cast_time = 0.25 
         travel_time = 0.25
         
@@ -147,7 +154,7 @@ class TimeEngine:
             event_type=EventType.CAST_COMPLETE,
             timestamp=self.current_time,
             source=self.attacker, 
-            target=self.target, # Current dynamic target
+            target=self.target,
             ability_name=ability.config.name,
             base_instance=None 
         )
@@ -174,6 +181,8 @@ class TimeEngine:
             self.current_time
         )
         self.cd_manager.trigger_gcd(cast_time, self.current_time)
+        
+        return True # Cast Successful
 
     def _perform_attack(self):
         as_value = self.attacker.total_attack_speed
@@ -182,8 +191,6 @@ class TimeEngine:
         delay = 1.0 / as_value
         windup = delay * 0.2 
         
-        # print(f"[{self.current_time:.2f}s] ATTACK LAUNCH (AS: {as_value:.2f})")
-
         snapshot_stats = self.attacker.snapshot()
         
         dmg = DamageInstance(
