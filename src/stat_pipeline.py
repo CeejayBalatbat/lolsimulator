@@ -47,6 +47,17 @@ class StatPipeline:
                     elif mod.stat == StatType.ARMOR_PEN_PERCENT:
                         final.armor_pen_percent += mod.value
 
+        # ==========================================
+        # NEW: DYNAMIC STAT PASSIVES (Awe, Rabadon's)
+        # ==========================================
+        for item in items:
+            # Safely check if the item has passives to loop through
+            if hasattr(item, 'passives'):
+                for p in item.passives:
+                    # If the passive knows how to modify stats, let it!
+                    if hasattr(p, 'modify_stats'):
+                        p.modify_stats(final)
+
         # 3. Apply Buffs
         for buff in buffs:
             for mod in buff.config.modifiers:

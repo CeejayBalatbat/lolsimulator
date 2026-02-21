@@ -2,7 +2,7 @@ import json
 from typing import Dict, Any
 from item import ItemConfig, StatModifier, StatModType
 from engine import StatType
-from passives import SpellbladePassive, CarvePassive # <--- Import your new passive!
+from passives import SpellbladePassive, CarvePassive, AwePassive, ShockPassive, RuinedKingPassive # <--- Import your new passive!
 
 class ItemLoader:
     @staticmethod
@@ -85,5 +85,31 @@ class ItemLoader:
             col.base_ad = 60.0
             col.crit_chance = 0.20
             col.lethality = 12.0 # Force Lethality
+
+        # 4. MURAMANA (Add Awe and Shock)
+        if "Muramana" in library:
+            mur = library["Muramana"]
+            mur.base_ad = 35.0
+            mur.bonus_mana = 860.0
+            mur.ability_haste = 15.0
+            
+            # Need to import them at the top of the file!
+            from passives import AwePassive, ShockPassive 
+            
+            mur.passives.append(AwePassive(0.025))
+            mur.passives.append(ShockPassive(0.015))
+            print("✅ Loaded Muramana with Awe and Shock Passives")
+
+        # 5. BLADE OF THE RUINED KING 
+        # (Using .lower() search so Riot's capitalization doesn't break our code)
+        for item_name, item_config in library.items():
+            if "ruined king" in item_name.lower():
+                item_config.base_ad = 40.0
+                item_config.bonus_attack_speed = 0.25
+                
+                from passives import RuinedKingPassive
+                if not any(isinstance(p, RuinedKingPassive) for p in item_config.passives):
+                    item_config.passives.append(RuinedKingPassive(0.06)) 
+                    print(f"✅ Loaded BoRK passive onto: {item_name}")
             
         return library

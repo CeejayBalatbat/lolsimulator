@@ -119,18 +119,27 @@ st.divider()
 # 4. EXECUTION ENGINE
 # ------------------------------------------------------------------
 if st.button("🔥 RUN SIMULATION", type="primary", use_container_width=True):
-    
-    # A. Setup Objects (CRITICAL: Deepcopy to reset passive states)
+
+    # A. Setup Objects (CRITICAL: Deepcopy only ONCE to reset passive states)
     items = deepcopy([library[name] for name in selected_items])
     
+
+    with st.expander("🔍 Engine Diagnostic: What Passives do I actually have?"):
+        for item in items:
+            st.write(f"**{item.name} Passives:**")
+            if not item.passives:
+                st.write("- None")
+            for p in item.passives:
+                st.write(f"- {p.__class__.__name__}")
+    
+    # B. Define Stats
     attacker = Stats(
         base_ad=base_ad, 
         base_attack_speed=base_as,
         bonus_attack_speed=bonus_as_growth,
-
         # NEW MANA STATS
         base_mana=base_mana,
-        current_mana=base_mana, # Start full
+        current_mana=base_mana, 
         base_mana_regen=base_mana_regen
     )
     
@@ -141,7 +150,7 @@ if st.button("🔥 RUN SIMULATION", type="primary", use_container_width=True):
         base_mr=target_armor
     )
 
-    # B. Define Ezreal Q (Mystic Shot)
+    # C. Define Ezreal Q (Mystic Shot)
     q_config = AbilityConfig(
         name="Mystic Shot",
         damage_type=DamageType.PHYSICAL,
@@ -153,22 +162,22 @@ if st.button("🔥 RUN SIMULATION", type="primary", use_container_width=True):
     )
     abilities = [Ability(q_config, rank=1)]
     
-    # C. Initialize Pipeline
+    # D. Initialize Pipeline
     bus = EventManager()
     dmg_engine = DamageEngine()
     system = CombatSystem(bus, dmg_engine)
     
-    # D. Setup Simulation
+    # E. Setup Simulation
     sim = TimeEngine(bus, attacker, target, items)
     sim.max_duration = float(sim_duration)
     
-    # E. Register Passives
+    # F. Register Passives to the Event Bus
     for item in items:
         for p in item.passives:
             if hasattr(p, 'register'): 
                 p.register(bus)
 
-    # F. Run
+    # G. Run
     sim.run(abilities)
     
     # ------------------------------------------------------------------

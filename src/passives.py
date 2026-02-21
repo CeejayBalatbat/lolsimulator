@@ -38,6 +38,67 @@ class OnHitDamagePassive:
         )
         event.add_instance(extra)
 
+class AwePassive:
+    """
+    Muramana Passive: Awe
+    Grants Bonus AD equal to 2.5% of Max Mana.
+    """
+    def __init__(self, mana_ratio: float = 0.025):
+        self.mana_ratio = mana_ratio
+
+    def modify_stats(self, stats: Stats):
+        # We calculate the bonus based on the Total Mana and inject it into Bonus AD
+        bonus_ad = stats.total_mana * self.mana_ratio
+        stats.bonus_ad += bonus_ad
+
+
+class ShockPassive:
+    """
+    Muramana Passive: Shock
+    Attacks and Abilities deal 1.5% Max Mana as bonus physical damage.
+    """
+    def __init__(self, mana_ratio: float = 0.015):
+        self.mana_ratio = mana_ratio
+
+    def register(self, event_manager: EventManager):
+        # Listen for hits right before mitigation
+        event_manager.subscribe(EventType.PRE_MITIGATION_HIT, self._on_hit, Priority.HIGH)
+
+    def _on_hit(self, event: CombatEvent):
+        # Only trigger on Auto Attacks (ON_HIT) or Abilities (SPELL)
+        if not (event.base_instance.proc_type & (ProcType.ON_HIT | ProcType.SPELL)):
+            return
+
+        # Calculate damage based on the Attacker's Total Mana
+        bonus_dmg = event.source.total_mana * self.mana_ratio
+        
+        extra = DamageInstance(
+            raw_damage=bonus_dmg,
+            damage_type=DamageType.PHYSICAL,
+            source_stats=event.source,
+            proc_type=ProcType.NONE, # NONE prevents infinite loops!
+            tags={'passive_proc', 'shock'}
+        )
+        event.add_instance(extra)
+
+class RuinedKingPassive:
+    def __init__(self, percent_current_hp: float = 0.06): 
+        self.percent_current_hp = percent_current_hp
+
+    def register(self, event_manager: EventManager):
+        event_manager.subscribe(EventType.PRE_MITIGATION_HIT, self._on_hit, Priority.HIGH)
+
+    def _on_hit(self, event: CombatEvent):
+        if not (event.base_instance.proc_type & (ProcType.BASIC_ATTACK | ProcType.ON_HIT)):
+            return
+
+        # Calculate based on target's live health
+        target_current_hp = event.target.current_health
+        bonus_dmg = max(15.0, target_current_hp * self.percent_current_hp)
+
+        # Simply add it directly to the base instance
+        event.base_instance.raw_damage += bonus_dmg
+
 # ------------------------------------------------------------------
 # STATEFUL PASSIVES (Require Reset)
 # ------------------------------------------------------------------

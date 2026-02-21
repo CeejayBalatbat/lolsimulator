@@ -58,6 +58,9 @@ class TimeEngine:
         if event.damage_result:
             dmg = event.damage_result.post_mitigation_damage
             self.total_damage_done += dmg
+
+            self.target.current_health -= dmg
+
             self.damage_history.append({
                 "Time": round(event.timestamp, 2),
                 "Source": event.ability_name,
@@ -70,6 +73,11 @@ class TimeEngine:
             # 1. Process Due Events
             while self.event_queue and self.event_queue[0][0] <= self.current_time:
                 timestamp, event = heapq.heappop(self.event_queue)
+                
+                # FIX: Update the event with the true, LIVE state right before it hits
+                event.source = self.attacker
+                event.target = self.target 
+                
                 self.bus.publish(event)
 
             # 2. Check GCD
@@ -129,10 +137,14 @@ class TimeEngine:
         )
 
         # D. Update Enemy
+        saved_target_hp = self.target.current_health
+
         self.target = StatPipeline.resolve_target(
             self.base_target,
             self.debuff_manager
         )
+
+        self.target.current_health = saved_target_hp
 
     def _perform_cast(self, ability: Ability, haste_mult: float) -> bool:
         """Returns True if cast was successful, False if blocked (OOM)."""
