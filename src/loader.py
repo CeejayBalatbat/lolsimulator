@@ -93,8 +93,6 @@ class ItemLoader:
             mur.bonus_mana = 860.0
             mur.ability_haste = 15.0
             
-            # Need to import them at the top of the file!
-            from passives import AwePassive, ShockPassive 
             
             mur.passives.append(AwePassive(0.025))
             mur.passives.append(ShockPassive(0.015))
@@ -125,7 +123,7 @@ class ItemLoader:
             ldr = library["Lord Dominik's Regards"]
             ldr.base_ad = 40.0
             ldr.crit_chance = 0.25
-            ldr.armor_pen_percent = 0.30 # 30% Armor Penetration
-            print("✅ Loaded LDR with 30% Armor Pen")
-            
+            ldr.armor_pen_percent = 0.45
+            print("✅ Loaded LDR with 45% Armor Pen")
+
         return library
