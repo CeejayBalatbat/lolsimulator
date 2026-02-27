@@ -19,15 +19,31 @@ class DamageEngine:
     def calculate(self, instance: DamageInstance, target_stats) -> DamageResult:
         raw = instance.raw_damage
         
+        # 🟢 NEW: Pull the attacker's stats that were packed into the damage instance!
+        attacker = instance.source_stats 
+        
         # Determine mitigation based on damage type
         if instance.damage_type.name == "PHYSICAL":
-            armor = max(0, target_stats.base_armor) 
-            mitigation = 100 / (100 + armor)
+            # 1. Start with the target's current armor (Black Cleaver shred is already applied here)
+            armor = target_stats.base_armor 
+            
+            # 2. Apply Percent Armor Penetration (e.g., LDR's 30%)
+            armor = armor * (1.0 - attacker.armor_pen_percent)
+            
+            # 3. Apply Flat Lethality
+            armor = armor - attacker.lethality
+            
+            # 4. Calculate Final Mitigation (Armor cannot be reduced below 0 by Lethality)
+            armor = max(0.0, armor) 
+            mitigation = 100.0 / (100.0 + armor)
             final = raw * mitigation
+            
         elif instance.damage_type.name == "MAGIC":
-            mr = max(0, target_stats.base_mr)
-            mitigation = 100 / (100 + mr)
+            mr = max(0.0, target_stats.base_mr)
+            # You can add Magic Pen math here later using the exact same logic!
+            mitigation = 100.0 / (100.0 + mr)
             final = raw * mitigation
+            
         else:
             final = raw # True damage
             

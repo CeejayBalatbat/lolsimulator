@@ -61,6 +61,23 @@ selected_items = st.sidebar.multiselect(
 current_cost = sum(library[name].cost for name in selected_items)
 st.sidebar.info(f"💰 Total Gold: {current_cost}g")
 
+
+st.sidebar.divider()
+
+# ==========================================
+# 🛠️ DEV TOOLS
+# ==========================================
+st.sidebar.header("🛠️ Dev Tools")
+if st.sidebar.button("🗑️ Nuke Cache & Reload", type="secondary", use_container_width=True):
+    # This wipes Streamlit's memory clean
+    st.cache_resource.clear()
+    
+    # This instantly refreshes the page with the new code
+    st.rerun() 
+# ==========================================
+   
+
+
 # ------------------------------------------------------------------
 # 3. COMBAT SCENARIO & TARGET ANALYSIS (Live Updates)
 # ------------------------------------------------------------------

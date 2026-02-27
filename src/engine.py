@@ -90,10 +90,13 @@ class Stats:
     base_attack_speed: float = 0.625 
     bonus_attack_speed: float = 0.0  # 0.50 = +50%
     
-    # Haste & Crit
+    # Haste
     ability_haste: float = 0.0
+
+    # Crit Stats
     crit_chance: float = 0.0         # 0.0 to 1.0
-    crit_damage_multiplier: float = 1.75 # 175%
+    base_crit_damage: float = 1.75  # Modern LoL base crit is 175%
+    bonus_crit_damage: float = 0.0  # For Infinity Edge (+40%)
     
     # Penetration
     lethality: float = 0.0
@@ -142,6 +145,10 @@ class Stats:
         """Converts Haste -> Cooldown Multiplier (e.g. 100 Haste = 0.5)"""
         if self.ability_haste < 0: return 1.0
         return 100.0 / (100.0 + self.ability_haste)
+    
+    @property
+    def total_crit_damage(self) -> float:
+        return self.base_crit_damage + self.bonus_crit_damage
 
     def snapshot(self) -> 'Stats':
         """Creates a frozen copy of stats."""
@@ -161,6 +168,7 @@ class DamageInstance:
     proc_type: ProcType = ProcType.NONE
     proc_coefficient: float = 1.0
     tags: Set[str] = field(default_factory=set)
+    is_crit: bool = False # Crit
 
 @dataclass
 class DamageResult:

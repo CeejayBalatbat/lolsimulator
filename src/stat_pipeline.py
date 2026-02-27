@@ -26,6 +26,12 @@ class StatPipeline:
             final.bonus_ap += getattr(item, 'ability_power', 0.0)
             final.ability_haste += getattr(item, 'ability_haste', 0.0)
             final.bonus_attack_speed += getattr(item, 'attack_speed', 0.0)
+
+            final.crit_chance += getattr(item, 'crit_chance', 0.0)
+            final.bonus_crit_damage += getattr(item, 'bonus_crit_damage', 0.0)
+
+            final.armor_pen_percent += getattr(item, 'armor_pen_percent', 0.0)
+            final.lethality += getattr(item, 'lethality', 0.0)
             
             # CHECK B: Modifiers List (Phase 4 pattern)
             if hasattr(item, 'modifiers'):

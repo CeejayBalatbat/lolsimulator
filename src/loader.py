@@ -112,4 +112,20 @@ class ItemLoader:
                     item_config.passives.append(RuinedKingPassive(0.06)) 
                     print(f"✅ Loaded BoRK passive onto: {item_name}")
             
+        # 6. INFINITY EDGE
+        if "Infinity Edge" in library:
+            ie = library["Infinity Edge"]
+            ie.base_ad = 80.0
+            ie.crit_chance = 0.25 # 25% Crit
+            ie.bonus_crit_damage = 0.40 # IE passive: +40% Crit Damage
+            print("✅ Loaded Infinity Edge with Crit modifiers")
+
+        # 7. LORD DOMINIK'S REGARDS
+        if "Lord Dominik's Regards" in library:
+            ldr = library["Lord Dominik's Regards"]
+            ldr.base_ad = 40.0
+            ldr.crit_chance = 0.25
+            ldr.armor_pen_percent = 0.30 # 30% Armor Penetration
+            print("✅ Loaded LDR with 30% Armor Pen")
+            
         return library

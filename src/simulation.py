@@ -1,4 +1,5 @@
 import heapq
+import random
 from typing import List, Tuple
 from copy import deepcopy
 
@@ -58,12 +59,16 @@ class TimeEngine:
         if event.damage_result:
             dmg = event.damage_result.post_mitigation_damage
             self.total_damage_done += dmg
-
             self.target.current_health -= dmg
-
+            
+            # Add a visual flair to the log if it critted!
+            source_label = event.ability_name
+            if event.base_instance.is_crit:
+                source_label += " (CRIT!)"
+            
             self.damage_history.append({
                 "Time": round(event.timestamp, 2),
-                "Source": event.ability_name,
+                "Source": source_label,
                 "Type": event.base_instance.damage_type.name,
                 "Damage": round(dmg, 1)
             })
@@ -205,12 +210,25 @@ class TimeEngine:
         
         snapshot_stats = self.attacker.snapshot()
         
+        # ==========================================
+        # 🎲 THE CRIT ROLL
+        # ==========================================
+        is_crit = False
+        damage_mult = 1.0
+        
+        # random.random() generates a float between 0.0 and 1.0
+        if random.random() < snapshot_stats.crit_chance:
+            is_crit = True
+            damage_mult = snapshot_stats.total_crit_damage
+        # ==========================================
+        
         dmg = DamageInstance(
-            raw_damage=snapshot_stats.total_ad,
+            raw_damage=snapshot_stats.total_ad * damage_mult,
             damage_type=DamageType.PHYSICAL,
             source_stats=snapshot_stats,
             proc_type=ProcType.BASIC_ATTACK,
-            tags={'auto_attack'}
+            tags={'auto_attack'},
+            is_crit=is_crit # Pass the flag!
         )
         
         launch_event = CombatEvent(
